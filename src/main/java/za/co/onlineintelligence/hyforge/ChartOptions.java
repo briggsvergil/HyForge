@@ -317,7 +317,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
      */
 
     public Accessibility getAccessibility() {
-        return getInstanceOf(Accessibility.class, accessibility);
+        return this.accessibility = getInstanceOf(Accessibility.class, this.accessibility);
     }
 
     public T setAccessibility(Accessibility accessibility) {
@@ -326,7 +326,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Annotations[] getAnnotations() {
-        return getInstanceOf(Annotations[].class, annotations);
+        return this.annotations = getInstanceOf(Annotations[].class, this.annotations);
     }
 
     public T setAnnotations(Annotations[] annotations) {
@@ -335,7 +335,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Boost getBoost() {
-        return getInstanceOf(Boost.class, boost);
+        return this.boost = getInstanceOf(Boost.class, this.boost);
     }
 
     public T setBoost(Boost boost) {
@@ -344,7 +344,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Caption getCaption() {
-        return getInstanceOf(Caption.class, caption);
+        return this.caption = getInstanceOf(Caption.class, this.caption);
     }
 
     public T setCaption(Caption caption) {
@@ -353,7 +353,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Chart getChart() {
-        return getInstanceOf(Chart.class, this.chart);
+        return this.chart = getInstanceOf(Chart.class, this.chart);
     }
 
     public T setChart(Chart chart) {
@@ -362,7 +362,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public HighchartsColorString[] getColors() {
-        return getInstanceOf(HighchartsColorString[].class, colors);
+        return this.colors = getInstanceOf(HighchartsColorString[].class, this.colors);
     }
 
     public T setColors(HighchartsColorString[] colors) {
@@ -371,7 +371,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Credits getCredits() {
-        return getInstanceOf(Credits.class, credits);
+        return this.credits = getInstanceOf(Credits.class, this.credits);
     }
 
     public T setCredits(Credits credits) {
@@ -380,7 +380,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Data getData() {
-        return getInstanceOf(Data.class, data);
+        return this.data = getInstanceOf(Data.class, this.data);
     }
 
     public T setData(Data data) {
@@ -389,7 +389,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Defs getDefs() {
-        return getInstanceOf(Defs.class, defs);
+        return this.defs = getInstanceOf(Defs.class, this.defs);
     }
 
     public T setDefs(Defs defs) {
@@ -398,7 +398,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Exporting getExporting() {
-        return getInstanceOf(Exporting.class, exporting);
+        return this.exporting = getInstanceOf(Exporting.class, this.exporting);
     }
 
     public T setExporting(Exporting exporting) {
@@ -407,7 +407,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Global getGlobal() {
-        return getInstanceOf(Global.class, global);
+        return this.global = getInstanceOf(Global.class, this.global);
     }
 
     public T setGlobal(Global global) {
@@ -416,7 +416,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Lang getLang() {
-        return getInstanceOf(Lang.class, lang);
+        return this.lang = getInstanceOf(Lang.class, this.lang);
     }
 
     public T setLang(Lang lang) {
@@ -425,7 +425,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Legend getLegend() {
-        return getInstanceOf(Legend.class, legend);
+        return this.legend = getInstanceOf(Legend.class, this.legend);
     }
 
     public T setLegend(Legend legend) {
@@ -434,7 +434,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Loading getLoading() {
-        return getInstanceOf(Loading.class, loading);
+        return this.loading = getInstanceOf(Loading.class, this.loading);
     }
 
     public T setLoading(Loading loading) {
@@ -443,7 +443,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Navigation getNavigation() {
-        return getInstanceOf(Navigation.class, navigation);
+        return this.navigation = getInstanceOf(Navigation.class, this.navigation);
     }
 
     public T setNavigation(Navigation navigation) {
@@ -452,7 +452,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public PlotOptions getPlotOptions() {
-        return getInstanceOf(PlotOptions.class, plotOptions);
+        return this.plotOptions = getInstanceOf(PlotOptions.class, this.plotOptions);
     }
 
     public T setPlotOptions(PlotOptions plotOptions) {
@@ -461,7 +461,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Responsive getResponsive() {
-        return getInstanceOf(Responsive.class, responsive);
+        return this.responsive = getInstanceOf(Responsive.class, this.responsive);
     }
 
     public T setResponsive(Responsive responsive) {
@@ -470,7 +470,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Series[] getSeries() {
-        return getInstanceOf(Series[].class, series);
+        return this.series = getInstanceOf(Series[].class, this.series);
     }
 
     public T setSeries(Series[] series) {
@@ -484,7 +484,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Subtitle getSubtitle() {
-        return getInstanceOf(Subtitle.class, subtitle);
+        return this.subtitle = getInstanceOf(Subtitle.class, this.subtitle);
     }
 
     public T setSubtitle(Subtitle subtitle) {
@@ -493,7 +493,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Time getTime() {
-        return getInstanceOf(Time.class, time);
+        return this.time = getInstanceOf(Time.class, this.time);
     }
 
     public T setTime(Time time) {
@@ -502,7 +502,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Title getTitle() {
-        return getInstanceOf(Title.class, title);
+        return this.title = getInstanceOf(Title.class, this.title);
     }
 
     public T setTitle(Title title) {
@@ -511,7 +511,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Tooltip getTooltip() {
-        return getInstanceOf(Tooltip.class, tooltip);
+        return this.tooltip = getInstanceOf(Tooltip.class, this.tooltip);
     }
 
     public T setTooltip(Tooltip tooltip) {
@@ -520,7 +520,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Axis[] getXAxis() {
-        if(xAxis == null) {
+        if (xAxis == null) {
             xAxis = new Axis[1];
         }
         return xAxis;
@@ -537,7 +537,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
     }
 
     public Axis[] getYAxis() {
-        if(yAxis == null) {
+        if (yAxis == null) {
             yAxis = new Axis[1];
         }
         return yAxis;

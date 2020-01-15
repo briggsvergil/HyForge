@@ -192,7 +192,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsAlignValue getAlign() {
-        return getInstanceOf(HighchartsAlignValue.class, this.align);
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public LabelOptions setAlign(HighchartsAlignValue align) {
@@ -201,7 +201,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getAllowOverlap() {
-        return getInstanceOf(Boolean.class, this.allowOverlap);
+        return this.allowOverlap = getInstanceOf(Boolean.class, this.allowOverlap);
     }
 
     public LabelOptions setAllowOverlap(Boolean allowOverlap) {
@@ -210,7 +210,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBackgroundColor() {
-        return getInstanceOf(HighchartsColor.class, this.backgroundColor);
+        return this.backgroundColor = getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
     public LabelOptions setBackgroundColor(HighchartsColor backgroundColor) {
@@ -219,7 +219,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColorString getBorderColor() {
-        return getInstanceOf(HighchartsColorString.class, this.borderColor);
+        return this.borderColor = getInstanceOf(HighchartsColorString.class, this.borderColor);
     }
 
     public LabelOptions setBorderColor(HighchartsColorString borderColor) {
@@ -228,7 +228,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getBorderRadius() {
-        return getInstanceOf(Integer.class, this.borderRadius);
+        return this.borderRadius = getInstanceOf(Integer.class, this.borderRadius);
     }
 
     public LabelOptions setBorderRadius(Integer borderRadius) {
@@ -237,7 +237,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getBorderWidth() {
-        return getInstanceOf(Integer.class, this.borderWidth);
+        return this.borderWidth = getInstanceOf(Integer.class, this.borderWidth);
     }
 
     public LabelOptions setBorderWidth(Integer borderWidth) {
@@ -246,7 +246,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return getInstanceOf(String.class, this.className);
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public LabelOptions setClassName(String className) {
@@ -255,7 +255,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getCrop() {
-        return getInstanceOf(Boolean.class, this.crop);
+        return this.crop = getInstanceOf(Boolean.class, this.crop);
     }
 
     public LabelOptions setCrop(Boolean crop) {
@@ -264,7 +264,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getDistance() {
-        return getInstanceOf(Integer.class, this.distance);
+        return this.distance = getInstanceOf(Integer.class, this.distance);
     }
 
     public LabelOptions setDistance(Integer distance) {
@@ -273,7 +273,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getFormat() {
-        return getInstanceOf(String.class, this.format);
+        return this.format = getInstanceOf(String.class, this.format);
     }
 
     public LabelOptions setFormat(String format) {
@@ -282,7 +282,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getFormatter() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
+        return this.formatter = getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
     }
 
     public LabelOptions setFormatter(HighchartsCallbackFunction formatter) {
@@ -291,7 +291,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getOverflow() {
-        return getInstanceOf(String.class, this.overflow);
+        return this.overflow = getInstanceOf(String.class, this.overflow);
     }
 
     public LabelOptions setOverflow(String overflow) {
@@ -300,7 +300,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getPadding() {
-        return getInstanceOf(Integer.class, this.padding);
+        return this.padding = getInstanceOf(Integer.class, this.padding);
     }
 
     public LabelOptions setPadding(Integer padding) {
@@ -309,7 +309,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsShadowOptionsObject getShadow() {
-        return getInstanceOf(HighchartsShadowOptionsObject.class, this.shadow);
+        return this.shadow = getInstanceOf(HighchartsShadowOptionsObject.class, this.shadow);
     }
 
     public LabelOptions setShadow(HighchartsShadowOptionsObject shadow) {
@@ -318,7 +318,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getShape() {
-        return getInstanceOf(String.class, this.shape);
+        return this.shape = getInstanceOf(String.class, this.shape);
     }
 
     public LabelOptions setShape(String shape) {
@@ -327,7 +327,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public LabelOptions setStyle(HighchartsCSS style) {
@@ -336,7 +336,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return getInstanceOf(String.class, this.text);
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public LabelOptions setText(String text) {
@@ -345,7 +345,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getUseHTML() {
-        return getInstanceOf(Boolean.class, this.useHTML);
+        return this.useHTML = getInstanceOf(Boolean.class, this.useHTML);
     }
 
     public LabelOptions setUseHTML(Boolean useHTML) {
@@ -354,7 +354,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
+        return this.verticalAlign = getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public LabelOptions setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -363,7 +363,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getX() {
-        return getInstanceOf(Integer.class, this.x);
+        return this.x = getInstanceOf(Integer.class, this.x);
     }
 
     public LabelOptions setX(Integer x) {
@@ -372,7 +372,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getY() {
-        return getInstanceOf(Integer.class, this.y);
+        return this.y = getInstanceOf(Integer.class, this.y);
     }
 
     public LabelOptions setY(Integer y) {

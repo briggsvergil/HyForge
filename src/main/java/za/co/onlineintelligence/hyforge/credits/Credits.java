@@ -70,7 +70,7 @@ public class Credits implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Boolean getEnabled() {
-        return getInstanceOf(Boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(Boolean.class, this.enabled);
     }
 
     public Credits setEnabled(Boolean enabled) {
@@ -79,7 +79,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public String getHref() {
-        return getInstanceOf(String.class, this.href);
+        return this.href = getInstanceOf(String.class, this.href);
     }
 
     public Credits setHref(String href) {
@@ -88,7 +88,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public String getMapText() {
-        return getInstanceOf(String.class, this.mapText);
+        return this.mapText = getInstanceOf(String.class, this.mapText);
     }
 
     public Credits setMapText(String mapText) {
@@ -97,7 +97,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public String getMapTextFull() {
-        return getInstanceOf(String.class, this.mapTextFull);
+        return this.mapTextFull = getInstanceOf(String.class, this.mapTextFull);
     }
 
     public Credits setMapTextFull(String mapTextFull) {
@@ -106,7 +106,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAlignObject getPosition() {
-        return getInstanceOf(HighchartsAlignObject.class, this.position);
+        return this.position = getInstanceOf(HighchartsAlignObject.class, this.position);
     }
 
     public Credits setPosition(HighchartsAlignObject position) {
@@ -115,7 +115,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Credits setStyle(HighchartsCSS style) {
@@ -124,7 +124,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return getInstanceOf(String.class, this.text);
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public Credits setText(String text) {

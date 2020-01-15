@@ -99,7 +99,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsCSS getActiveAxisLabelStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.activeAxisLabelStyle);
+        return this.activeAxisLabelStyle = getInstanceOf(HighchartsCSS.class, this.activeAxisLabelStyle);
     }
 
     public Drilldown setActiveAxisLabelStyle(HighchartsCSS activeAxisLabelStyle) {
@@ -108,7 +108,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getActiveDataLabelStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.activeDataLabelStyle);
+        return this.activeDataLabelStyle = getInstanceOf(HighchartsCSS.class, this.activeDataLabelStyle);
     }
 
     public Drilldown setActiveDataLabelStyle(HighchartsCSS activeDataLabelStyle) {
@@ -117,7 +117,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public Boolean getAllowPointDrilldown() {
-        return getInstanceOf(Boolean.class, this.allowPointDrilldown);
+        return this.allowPointDrilldown = getInstanceOf(Boolean.class, this.allowPointDrilldown);
     }
 
     public Drilldown setAllowPointDrilldown(Boolean allowPointDrilldown) {
@@ -126,7 +126,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public Integer getAnimation() {
-        return getInstanceOf(Integer.class, this.animation);
+        return this.animation = getInstanceOf(Integer.class, this.animation);
     }
 
     public Drilldown setAnimation(Integer animation) {
@@ -135,7 +135,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public DrillUpButton getDrillUpButton() {
-        return getInstanceOf(DrillUpButton.class, this.drillUpButton);
+        return this.drillUpButton = getInstanceOf(DrillUpButton.class, this.drillUpButton);
     }
 
     public Drilldown setDrillUpButton(DrillUpButton drillUpButton) {
@@ -144,7 +144,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions[] getSeries() {
-        return getInstanceOf(HighchartsSeriesPlotOptions[].class, this.series);
+        return this.series = getInstanceOf(HighchartsSeriesPlotOptions[].class, this.series);
     }
 
     public Drilldown setSeries(HighchartsSeriesPlotOptions[] series) {

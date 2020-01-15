@@ -112,7 +112,7 @@ public class HighchartsOptions extends ChartOptions<HighchartsOptions> implement
      * **************** ACCESSORS AND BUILDER-STYLE MUTATORS *****************
      */
     public ColorAxis[] getColorAxis() {
-        return getInstanceOf(ColorAxis[].class, colorAxis);
+        return this.colorAxis = getInstanceOf(ColorAxis[].class, this.colorAxis);
     }
 
     public HighchartsOptions setColorAxis(ColorAxis[] colorAxis) {
@@ -121,7 +121,7 @@ public class HighchartsOptions extends ChartOptions<HighchartsOptions> implement
     }
 
     public Drilldown getDrilldown() {
-        return getInstanceOf(Drilldown.class, drilldown);
+        return this.drilldown = getInstanceOf(Drilldown.class, this.drilldown);
     }
 
     public HighchartsOptions setDrilldown(Drilldown drilldown) {
@@ -130,7 +130,7 @@ public class HighchartsOptions extends ChartOptions<HighchartsOptions> implement
     }
 
     public Labels getLabels() {
-        return getInstanceOf(Labels.class, labels);
+        return this.labels = getInstanceOf(Labels.class, this.labels);
     }
 
     public HighchartsOptions setLabels(Labels labels) {
@@ -139,7 +139,7 @@ public class HighchartsOptions extends ChartOptions<HighchartsOptions> implement
     }
 
     public NoData getNoData() {
-        return getInstanceOf(NoData.class, noData);
+        return this.noData = getInstanceOf(NoData.class, this.noData);
     }
 
     public HighchartsOptions setNoData(NoData noData) {
@@ -148,7 +148,7 @@ public class HighchartsOptions extends ChartOptions<HighchartsOptions> implement
     }
 
     public Pane getPane() {
-        return getInstanceOf(Pane.class, pane);
+        return this.pane = getInstanceOf(Pane.class, this.pane);
     }
 
     public HighchartsOptions setPane(Pane pane) {
@@ -157,7 +157,7 @@ public class HighchartsOptions extends ChartOptions<HighchartsOptions> implement
     }
 
     public Axis[] getZAxis() {
-        if(zAxis == null) {
+        if (zAxis == null) {
             zAxis = new Axis[1];
         }
         return zAxis;
@@ -238,7 +238,7 @@ public class HighchartsOptions extends ChartOptions<HighchartsOptions> implement
 
     @Override
     public HighchartsOptions addSeries(Series series) {
-        if(this.series== null) {
+        if (this.series == null) {
             this.series = new Series[0];
         }
         int len = this.series.length;

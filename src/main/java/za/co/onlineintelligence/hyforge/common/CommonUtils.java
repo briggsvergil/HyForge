@@ -1,5 +1,6 @@
 package za.co.onlineintelligence.hyforge.common;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -13,14 +14,84 @@ public class CommonUtils {
         String get();
     }
 
-    public static <E> E getInstanceOf(Class<E> c, E e) {
-        if (e == null) {
-            try {
-                e = (E) c.newInstance();
-            } catch (Exception ex) {
-                e = null;
-            }
+    @SuppressWarnings("unchecked")
+    private static <E> E getSingleInstanceType(Class<E> c, E e) throws IllegalAccessException, InstantiationException {
+        if (c.isAssignableFrom(Integer.class) || c.isAssignableFrom(int.class)) e = (E) new Integer(0);
+        else if (c.isAssignableFrom(Long.class) || c.isAssignableFrom(long.class)) e = (E) new Long(0L);
+        else if (c.isAssignableFrom(Double.class) || c.isAssignableFrom(double.class)) e = (E) new Double(0.0d);
+        else if (c.isAssignableFrom(Float.class) || c.isAssignableFrom(float.class)) e = (E) new Float(0.0f);
+        else if (c.isAssignableFrom(Byte.class) || c.isAssignableFrom(byte.class)) e = (E) new Byte((byte) 0);
+        else if (c.isAssignableFrom(Short.class) || c.isAssignableFrom(short.class)) e = (E) new Short((short) 0);
+        else if (c.isAssignableFrom(Character.class) || c.isAssignableFrom(char.class)) e = (E) new Character('\u0000');
+        else if (c.isAssignableFrom(Boolean.class) || c.isAssignableFrom(boolean.class)) e = (E) Boolean.FALSE;
+        else if (c.isAssignableFrom(String.class)) e = (E) "";
+        else if (c.isEnum()) e = c.getEnumConstants()[0];
+        else e = c.newInstance();
+        return e;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <E> E getArrayInstanceType(Class<?> c, E e) throws IllegalAccessException, InstantiationException {
+        if (c.isAssignableFrom(Integer.class)) {
+            e = (E) new Integer[]{0};
+        } else if (c.isAssignableFrom(int.class)) {
+            e = (E) new int[]{0};
+        } else if (c.isAssignableFrom(Long.class)) {
+            e = (E) new Long[]{0L};
+        } else if (c.isAssignableFrom(long.class)) {
+            e = (E) new long[]{0L};
+        } else if (c.isAssignableFrom(Double.class)) {
+            e = (E) new Double[]{0.0d};
+        } else if (c.isAssignableFrom(double.class)) {
+            e = (E) new double[]{0.0d};
+        } else if (c.isAssignableFrom(Float.class)) {
+            e = (E) new Float[]{0.0f};
+        } else if (c.isAssignableFrom(float.class)) {
+            e = (E) new float[]{0.0f};
+        } else if (c.isAssignableFrom(Byte.class)) {
+            e = (E) new Byte[]{(byte) 0};
+        } else if (c.isAssignableFrom(byte.class)) {
+            e = (E) new byte[]{(byte) 0};
+        } else if (c.isAssignableFrom(Short.class)) {
+            e = (E) new Short[]{(short) 0};
+        } else if (c.isAssignableFrom(short.class)) {
+            e = (E) new short[]{(short) 0};
+        } else if (c.isAssignableFrom(Character.class)) {
+            e = (E) new Character[]{'\u0000'};
+        } else if (c.isAssignableFrom(char.class)) {
+            e = (E) new char[]{'\u0000'};
+        } else if (c.isAssignableFrom(Boolean.class)) {
+            e = (E) new Boolean[]{Boolean.FALSE};
+        } else if (c.isAssignableFrom(boolean.class)) {
+            e = (E) new boolean[]{false};
+        } else if (c.isAssignableFrom(String.class)) {
+            e = (E) new String[]{""};
+        } else if (c.isEnum()) {
+            e = (E) c.getEnumConstants();
+        } else {
+            Object o = Array.newInstance(c, 1);
+            Array.set(o, 0, c.newInstance());
+            e = (E) o;
         }
+
+        return e;
+    }
+
+    @SuppressWarnings("unchecked")
+    public static <E> E getInstanceOf(Class<E> c, E e) {
+        try {
+            if (e == null) {
+                if (c.isArray()) {
+                    Class<?> cc = c.getComponentType();
+                    e = getArrayInstanceType(cc, e);
+                } else
+                    e = getSingleInstanceType(c, e);
+            }
+        } catch (Exception ex) {
+            //fail-safe
+            e = null;
+        }
+
         return e;
     }
 

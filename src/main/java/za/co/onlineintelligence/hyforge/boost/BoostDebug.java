@@ -78,7 +78,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Boolean getShowSkipSummary() {
-        return getInstanceOf(Boolean.class, this.showSkipSummary);
+        return this.showSkipSummary = getInstanceOf(Boolean.class, this.showSkipSummary);
     }
 
     public BoostDebug setShowSkipSummary(Boolean showSkipSummary) {
@@ -87,7 +87,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeBufferCopy() {
-        return getInstanceOf(Boolean.class, this.timeBufferCopy);
+        return this.timeBufferCopy = getInstanceOf(Boolean.class, this.timeBufferCopy);
     }
 
     public BoostDebug setTimeBufferCopy(Boolean timeBufferCopy) {
@@ -96,7 +96,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeKDTree() {
-        return getInstanceOf(Boolean.class, this.timeKDTree);
+        return this.timeKDTree = getInstanceOf(Boolean.class, this.timeKDTree);
     }
 
     public BoostDebug setTimeKDTree(Boolean timeKDTree) {
@@ -105,7 +105,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeRendering() {
-        return getInstanceOf(Boolean.class, this.timeRendering);
+        return this.timeRendering = getInstanceOf(Boolean.class, this.timeRendering);
     }
 
     public BoostDebug setTimeRendering(Boolean timeRendering) {
@@ -114,7 +114,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeSeriesProcessing() {
-        return getInstanceOf(Boolean.class, this.timeSeriesProcessing);
+        return this.timeSeriesProcessing = getInstanceOf(Boolean.class, this.timeSeriesProcessing);
     }
 
     public BoostDebug setTimeSeriesProcessing(Boolean timeSeriesProcessing) {
@@ -123,7 +123,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeSetup() {
-        return getInstanceOf(Boolean.class, this.timeSetup);
+        return this.timeSetup = getInstanceOf(Boolean.class, this.timeSetup);
     }
 
     public BoostDebug setTimeSetup(Boolean timeSetup) {

@@ -52,7 +52,7 @@ public class Select implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public Select setEnabled(boolean enabled) {
@@ -61,7 +61,7 @@ public class Select implements Serializable {
     }
 
     public HighchartsColor getFillColor() {
-        return getInstanceOf(HighchartsColor.class, this.fillColor);
+        return this.fillColor = getInstanceOf(HighchartsColor.class, this.fillColor);
     }
 
     public Select setFillColor(HighchartsColor fillColor) {
@@ -70,7 +70,7 @@ public class Select implements Serializable {
     }
 
     public HighchartsColor getLineColor() {
-        return getInstanceOf(HighchartsColor.class, this.lineColor);
+        return this.lineColor = getInstanceOf(HighchartsColor.class, this.lineColor);
     }
 
     public Select setLineColor(HighchartsColor lineColor) {
@@ -79,7 +79,7 @@ public class Select implements Serializable {
     }
 
     public int getLineWidth() {
-        return getInstanceOf(int.class, this.lineWidth);
+        return this.lineWidth = getInstanceOf(int.class, this.lineWidth);
     }
 
     public Select setLineWidth(int lineWidth) {
@@ -88,7 +88,7 @@ public class Select implements Serializable {
     }
 
     public int getRadius() {
-        return getInstanceOf(int.class, this.radius);
+        return this.radius = getInstanceOf(int.class, this.radius);
     }
 
     public Select setRadius(int radius) {

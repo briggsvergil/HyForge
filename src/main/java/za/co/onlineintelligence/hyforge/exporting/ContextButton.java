@@ -105,7 +105,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
         Getters and Builder-Style Setters
     */
     public String get_titleKey() {
-        return getInstanceOf(String.class, this._titleKey);
+        return this._titleKey = getInstanceOf(String.class, this._titleKey);
     }
 
     public ContextButton set_titleKey(String _titleKey) {
@@ -114,7 +114,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
     }
 
     public String getClassName() {
-        return getInstanceOf(String.class, this.className);
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public ContextButton setClassName(String className) {
@@ -123,7 +123,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
     }
 
     public String getMenuClassName() {
-        return getInstanceOf(String.class, this.menuClassName);
+        return this.menuClassName = getInstanceOf(String.class, this.menuClassName);
     }
 
     public ContextButton setMenuClassName(String menuClassName) {
@@ -132,7 +132,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
     }
 
     public String[] getMenuItems() {
-        return getInstanceOf(String[].class, this.menuItems);
+        return this.menuItems = getInstanceOf(String[].class, this.menuItems);
     }
 
     public ContextButton setMenuItems(String[] menuItems) {
@@ -141,7 +141,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
     }
 
     public HighchartsCallbackFunction getOnclick() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.onclick);
+        return this.onclick = getInstanceOf(HighchartsCallbackFunction.class, this.onclick);
     }
 
     public ContextButton setOnclick(HighchartsCallbackFunction onclick) {
@@ -150,7 +150,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
     }
 
     public HighchartsSymbol getSymbol() {
-        return getInstanceOf(HighchartsSymbol.class, this.symbol);
+        return this.symbol = getInstanceOf(HighchartsSymbol.class, this.symbol);
     }
 
     public ContextButton setSymbol(HighchartsSymbol symbol) {
@@ -159,7 +159,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
     }
 
     public HighchartsColorString getSymbolFill() {
-        return getInstanceOf(HighchartsColorString.class, this.symbolFill);
+        return this.symbolFill = getInstanceOf(HighchartsColorString.class, this.symbolFill);
     }
 
     public ContextButton setSymbolFill(HighchartsColorString symbolFill) {
@@ -168,7 +168,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
     }
 
     public String getTitleKey() {
-        return getInstanceOf(String.class, this.titleKey);
+        return this.titleKey = getInstanceOf(String.class, this.titleKey);
     }
 
     public ContextButton setTitleKey(String titleKey) {
@@ -177,7 +177,7 @@ public class ContextButton extends ButtonOptions implements Serializable, Droste
     }
 
     public Integer getX() {
-        return getInstanceOf(Integer.class, this.x);
+        return this.x = getInstanceOf(Integer.class, this.x);
     }
 
     public ContextButton setX(Integer x) {

@@ -64,7 +64,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsColorString getBorderColor() {
-        return getInstanceOf(HighchartsColorString.class, this.borderColor);
+        return this.borderColor = getInstanceOf(HighchartsColorString.class, this.borderColor);
     }
 
     public AxisGrid setBorderColor(HighchartsColorString borderColor) {
@@ -73,7 +73,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
     }
 
     public int getBorderWidth() {
-        return getInstanceOf(int.class, this.borderWidth);
+        return this.borderWidth = getInstanceOf(int.class, this.borderWidth);
     }
 
     public AxisGrid setBorderWidth(int borderWidth) {
@@ -82,7 +82,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
     }
 
     public int getCellHeight() {
-        return getInstanceOf(int.class, this.cellHeight);
+        return this.cellHeight = getInstanceOf(int.class, this.cellHeight);
     }
 
     public AxisGrid setCellHeight(int cellHeight) {
@@ -91,7 +91,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
     }
 
     public Object getColumns() {
-        return getInstanceOf(Object.class, this.columns);
+        return this.columns = getInstanceOf(Object.class, this.columns);
     }
 
     public AxisGrid setColumns(Object columns) {
@@ -100,7 +100,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public AxisGrid setEnabled(boolean enabled) {

@@ -47,7 +47,7 @@ public class States implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Hover getHover() {
-        return getInstanceOf(Hover.class, this.hover);
+        return this.hover = getInstanceOf(Hover.class, this.hover);
     }
 
     public States setHover(Hover hover) {
@@ -56,7 +56,7 @@ public class States implements Serializable, DrosteDeflater {
     }
 
     public Integer getNormal() {
-        return getInstanceOf(Integer.class, this.normal);
+        return this.normal = getInstanceOf(Integer.class, this.normal);
     }
 
     public States setNormal(Integer normal) {
@@ -65,7 +65,7 @@ public class States implements Serializable, DrosteDeflater {
     }
 
     public Select getSelect() {
-        return getInstanceOf(Select.class, this.select);
+        return this.select = getInstanceOf(Select.class, this.select);
     }
 
     public States setSelect(Select select) {
@@ -75,7 +75,7 @@ public class States implements Serializable, DrosteDeflater {
 
 
     public Inactive getInactive() {
-        return getInstanceOf(Inactive.class, this.inactive);
+        return this.inactive = getInstanceOf(Inactive.class, this.inactive);
     }
 
     public States setInactive(Inactive inactive) {

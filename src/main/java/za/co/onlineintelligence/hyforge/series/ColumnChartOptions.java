@@ -190,79 +190,79 @@ public class ColumnChartOptions extends HighchartsSeriesPlotOptions implements S
         Instance-Safe Getters
     */
     public HighchartsColor getBorderColor() {
-        return getInstanceOf(HighchartsColor.class, this.borderColor);
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public Integer getBorderRadius() {
-        return getInstanceOf(Integer.class, this.borderRadius);
+        return this.borderRadius = getInstanceOf(Integer.class, this.borderRadius);
     }
 
     public Integer getBorderWidth() {
-        return getInstanceOf(Integer.class, this.borderWidth);
+        return this.borderWidth = getInstanceOf(Integer.class, this.borderWidth);
     }
 
     public Boolean getColorByPoint() {
-        return getInstanceOf(Boolean.class, this.colorByPoint);
+        return this.colorByPoint = getInstanceOf(Boolean.class, this.colorByPoint);
     }
 
     public HighchartsColor[] getColors() {
-        return getInstanceOf(HighchartsColor[].class, this.colors);
+        return this.colors = getInstanceOf(HighchartsColor[].class, this.colors);
     }
 
     public Boolean getCrisp() {
-        return getInstanceOf(Boolean.class, this.crisp);
+        return this.crisp = getInstanceOf(Boolean.class, this.crisp);
     }
 
     public DataGrouping getDataGrouping() {
-        return getInstanceOf(DataGrouping.class, this.dataGrouping);
+        return this.dataGrouping = getInstanceOf(DataGrouping.class, this.dataGrouping);
     }
 
     public Integer getDepth() {
-        return getInstanceOf(Integer.class, this.depth);
+        return this.depth = getInstanceOf(Integer.class, this.depth);
     }
 
     public HighchartsColorString getEdgeColor() {
-        return getInstanceOf(HighchartsColorString.class, this.edgeColor);
+        return this.edgeColor = getInstanceOf(HighchartsColorString.class, this.edgeColor);
     }
 
     public Integer getEdgeWidth() {
-        return getInstanceOf(Integer.class, this.edgeWidth);
+        return this.edgeWidth = getInstanceOf(Integer.class, this.edgeWidth);
     }
 
     public Integer getGroupPadding() {
-        return getInstanceOf(Integer.class, this.groupPadding);
+        return this.groupPadding = getInstanceOf(Integer.class, this.groupPadding);
     }
 
     public Integer getGroupZPadding() {
-        return getInstanceOf(Integer.class, this.groupZPadding);
+        return this.groupZPadding = getInstanceOf(Integer.class, this.groupZPadding);
     }
 
     public Boolean getGrouping() {
-        return getInstanceOf(Boolean.class, this.grouping);
+        return this.grouping = getInstanceOf(Boolean.class, this.grouping);
     }
 
     public Integer getMaxPointWidth() {
-        return getInstanceOf(Integer.class, this.maxPointWidth);
+        return this.maxPointWidth = getInstanceOf(Integer.class, this.maxPointWidth);
     }
 
     public Integer getMinPointLength() {
-        return getInstanceOf(Integer.class, this.minPointLength);
+        return this.minPointLength = getInstanceOf(Integer.class, this.minPointLength);
     }
 
     public Integer getPointPadding() {
-        return getInstanceOf(Integer.class, this.pointPadding);
+        return this.pointPadding = getInstanceOf(Integer.class, this.pointPadding);
     }
 
     public Integer getPointRange() {
-        return getInstanceOf(Integer.class, this.pointRange);
+        return this.pointRange = getInstanceOf(Integer.class, this.pointRange);
     }
 
     public Integer getPointWidth() {
-        return getInstanceOf(Integer.class, this.pointWidth);
+        return this.pointWidth = getInstanceOf(Integer.class, this.pointWidth);
     }
 
     public Boolean getSoftThreshold() {
-        return getInstanceOf(Boolean.class, this.softThreshold);
+        return this.softThreshold = getInstanceOf(Boolean.class, this.softThreshold);
     }
 
 

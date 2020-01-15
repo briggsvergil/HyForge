@@ -8,9 +8,12 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsColorAxisTypeValue;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ColorAxis  HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class ColorAxis implements Serializable, DrosteDeflater {
@@ -26,24 +29,24 @@ public class ColorAxis implements Serializable, DrosteDeflater {
 
     /**
      * Determines how to set each data class' color if no individual
-     color is set. The default value, `tween`, computes intermediate
-     colors between `minColor` and `maxColor`. The other possible
-     value, `category`, pulls colors from the global or chart specific
-     [colors](#colors) array.
+     * color is set. The default value, `tween`, computes intermediate
+     * colors between `minColor` and `maxColor`. The other possible
+     * value, `category`, pulls colors from the global or chart specific
+     * [colors](#colors) array.
      */
     private String dataClassColor;
 
     /**
      * An array of data classes or ranges for the choropleth map. If
-     none given, the color axis is scalar and values are distributed
-     as a gradient between the minimum and maximum colors.
+     * none given, the color axis is scalar and values are distributed
+     * as a gradient between the minimum and maximum colors.
      */
     private DataClasses[] dataClasses;
 
     /**
      * Whether to force the axis to end on a tick. Use this option with
-     the [maxPadding](#colorAxis.maxPadding) option to control the
-     axis end.
+     * the [maxPadding](#colorAxis.maxPadding) option to control the
+     * axis end.
      */
     private Boolean endOnTick;
 
@@ -54,122 +57,124 @@ public class ColorAxis implements Serializable, DrosteDeflater {
 
     /**
      * Color of the grid lines extending from the axis across the
-     gradient.
+     * gradient.
      */
     private HighchartsColor gridLineColor;
 
     /**
      * The width of the grid lines extending from the axis across the
-     gradient of a scalar color axis.
+     * gradient of a scalar color axis.
      */
     private Integer gridLineWidth;
 
     /**
      * The axis labels show the number for each tick.
-
-     For more live examples on label options, see [xAxis.labels in the
-     Highcharts API.](/highcharts#xAxis.labels)
+     * <p>
+     * For more live examples on label options, see [xAxis.labels in the
+     * Highcharts API.](/highcharts#xAxis.labels)
      */
     private AxisLabels labels;
 
     /**
      * The layout of the color axis. Can be `'horizontal'` or `'vertical'`.
-     If none given, the color axis has the same layout as the legend.
+     * If none given, the color axis has the same layout as the legend.
+     *
      * @since 7.2.0
      */
     private String layout;
 
     /**
      * The triangular marker on a scalar color axis that points to the
-     value of the hovered area. To disable the marker, set
-     `marker: null`.
+     * value of the hovered area. To disable the marker, set
+     * `marker: null`.
      */
     private ColorAxisMarker marker;
 
     /**
      * The maximum value of the axis in terms of map point values. If
-     `null`, the max value is automatically calculated. If the
-     `endOnTick` option is true, the max value might be rounded up.
+     * `null`, the max value is automatically calculated. If the
+     * `endOnTick` option is true, the max value might be rounded up.
      */
     private Integer max;
 
     /**
      * The color to represent the maximum of the color axis. Unless
-     [dataClasses](#colorAxis.dataClasses) or
-     [stops](#colorAxis.stops) are set, the gradient ends at this
-     value.
-
-     If dataClasses are set, the color is based on minColor and
-     maxColor unless a color is set for each data class, or the
-     [dataClassColor](#colorAxis.dataClassColor) is set.
+     * [dataClasses](#colorAxis.dataClasses) or
+     * [stops](#colorAxis.stops) are set, the gradient ends at this
+     * value.
+     * <p>
+     * If dataClasses are set, the color is based on minColor and
+     * maxColor unless a color is set for each data class, or the
+     * [dataClassColor](#colorAxis.dataClassColor) is set.
      */
     private HighchartsColor maxColor;
 
     /**
      * Padding of the max value relative to the length of the axis. A
-     padding of 0.05 will make a 100px axis 5px longer.
+     * padding of 0.05 will make a 100px axis 5px longer.
      */
     private Integer maxPadding;
 
     /**
      * The minimum value of the axis in terms of map point values. If
-     `null`, the min value is automatically calculated. If the
-     `startOnTick` option is true, the min value might be rounded
-     down.
+     * `null`, the min value is automatically calculated. If the
+     * `startOnTick` option is true, the min value might be rounded
+     * down.
      */
     private Integer min;
 
     /**
      * The color to represent the minimum of the color axis. Unless
-     [dataClasses](#colorAxis.dataClasses) or
-     [stops](#colorAxis.stops) are set, the gradient starts at this
-     value.
-
-     If dataClasses are set, the color is based on minColor and
-     maxColor unless a color is set for each data class, or the
-     [dataClassColor](#colorAxis.dataClassColor) is set.
+     * [dataClasses](#colorAxis.dataClasses) or
+     * [stops](#colorAxis.stops) are set, the gradient starts at this
+     * value.
+     * <p>
+     * If dataClasses are set, the color is based on minColor and
+     * maxColor unless a color is set for each data class, or the
+     * [dataClassColor](#colorAxis.dataClassColor) is set.
      */
     private HighchartsColor minColor;
 
     /**
      * Padding of the min value relative to the length of the axis. A
-     padding of 0.05 will make a 100px axis 5px longer.
+     * padding of 0.05 will make a 100px axis 5px longer.
      */
     private Integer minPadding;
 
     /**
      * Whether to reverse the axis so that the highest number is closest
-     to the origin. Defaults to `false` in a horizontal legend and
-     `true` in a vertical legend, where the smallest value starts on
-     top.
+     * to the origin. Defaults to `false` in a horizontal legend and
+     * `true` in a vertical legend, where the smallest value starts on
+     * top.
      */
     private Boolean reversed;
 
     /**
      * Whether to display the colorAxis in the legend.
+     *
      * @since 4.2.7
      */
     private Boolean showInLegend;
 
     /**
      * Whether to force the axis to start on a tick. Use this option
-     with the `maxPadding` option to control the axis start.
+     * with the `maxPadding` option to control the axis start.
      */
     private Boolean startOnTick;
 
     /**
      * Color stops for the gradient of a scalar color axis. Use this in
-     cases where a linear gradient between a `minColor` and `maxColor`
-     is not sufficient. The stops is an array of tuples, where the
-     first item is a float between 0 and 1 assigning the relative
-     position in the gradient, and the second item is the color.
+     * cases where a linear gradient between a `minColor` and `maxColor`
+     * is not sufficient. The stops is an array of tuples, where the
+     * first item is a float between 0 and 1 assigning the relative
+     * position in the gradient, and the second item is the color.
      */
     private HighchartsColor[] stops;
 
     /**
      * The interval of the tick marks in axis units. When `null`, the
-     tick interval is computed to approximately follow the
-     `tickPixelInterval`.
+     * tick interval is computed to approximately follow the
+     * `tickPixelInterval`.
      */
     private Integer tickInterval;
 
@@ -180,13 +185,13 @@ public class ColorAxis implements Serializable, DrosteDeflater {
 
     /**
      * If [tickInterval](#colorAxis.tickInterval) is `null` this option
-     sets the approximate pixel interval of the tick marks.
+     * sets the approximate pixel interval of the tick marks.
      */
     private Integer tickPixelInterval;
 
     /**
      * The type of interpolation to use for the color axis. Can be
-     `linear` or `logarithmic`.
+     * `linear` or `logarithmic`.
      */
     private HighchartsColorAxisTypeValue type;
 
@@ -194,217 +199,217 @@ public class ColorAxis implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Boolean getAllowDecimals() {
-        return this.allowDecimals;
+        return this.allowDecimals = getInstanceOf(Boolean.class, this.allowDecimals);
     }
 
-    public ColorAxis setAllowDecimals(Boolean allowDecimals){
+    public ColorAxis setAllowDecimals(Boolean allowDecimals) {
         this.allowDecimals = allowDecimals;
         return this;
     }
 
     public String getDataClassColor() {
-        return this.dataClassColor;
+        return this.dataClassColor = getInstanceOf(String.class, this.dataClassColor);
     }
 
-    public ColorAxis setDataClassColor(String dataClassColor){
+    public ColorAxis setDataClassColor(String dataClassColor) {
         this.dataClassColor = dataClassColor;
         return this;
     }
 
     public DataClasses[] getDataClasses() {
-        return this.dataClasses;
+        return this.dataClasses = getInstanceOf(DataClasses[].class, this.dataClasses);
     }
 
-    public ColorAxis setDataClasses(DataClasses[] dataClasses){
+    public ColorAxis setDataClasses(DataClasses[] dataClasses) {
         this.dataClasses = dataClasses;
         return this;
     }
 
     public Boolean getEndOnTick() {
-        return this.endOnTick;
+        return this.endOnTick = getInstanceOf(Boolean.class, this.endOnTick);
     }
 
-    public ColorAxis setEndOnTick(Boolean endOnTick){
+    public ColorAxis setEndOnTick(Boolean endOnTick) {
         this.endOnTick = endOnTick;
         return this;
     }
 
     public ColorAxisEvents getEvents() {
-        return this.events;
+        return this.events = getInstanceOf(ColorAxisEvents.class, this.events);
     }
 
-    public ColorAxis setEvents(ColorAxisEvents events){
+    public ColorAxis setEvents(ColorAxisEvents events) {
         this.events = events;
         return this;
     }
 
     public HighchartsColor getGridLineColor() {
-        return this.gridLineColor;
+        return this.gridLineColor = getInstanceOf(HighchartsColor.class, this.gridLineColor);
     }
 
-    public ColorAxis setGridLineColor(HighchartsColor gridLineColor){
+    public ColorAxis setGridLineColor(HighchartsColor gridLineColor) {
         this.gridLineColor = gridLineColor;
         return this;
     }
 
     public Integer getGridLineWidth() {
-        return this.gridLineWidth;
+        return this.gridLineWidth = getInstanceOf(Integer.class, this.gridLineWidth);
     }
 
-    public ColorAxis setGridLineWidth(Integer gridLineWidth){
+    public ColorAxis setGridLineWidth(Integer gridLineWidth) {
         this.gridLineWidth = gridLineWidth;
         return this;
     }
 
     public AxisLabels getLabels() {
-        return this.labels;
+        return this.labels = getInstanceOf(AxisLabels.class, this.labels);
     }
 
-    public ColorAxis setLabels(AxisLabels labels){
+    public ColorAxis setLabels(AxisLabels labels) {
         this.labels = labels;
         return this;
     }
 
     public String getLayout() {
-        return this.layout;
+        return this.layout = getInstanceOf(String.class, this.layout);
     }
 
-    public ColorAxis setLayout(String layout){
+    public ColorAxis setLayout(String layout) {
         this.layout = layout;
         return this;
     }
 
     public ColorAxisMarker getMarker() {
-        return this.marker;
+        return this.marker = getInstanceOf(ColorAxisMarker.class, this.marker);
     }
 
-    public ColorAxis setMarker(ColorAxisMarker marker){
+    public ColorAxis setMarker(ColorAxisMarker marker) {
         this.marker = marker;
         return this;
     }
 
     public Integer getMax() {
-        return this.max;
+        return this.max = getInstanceOf(Integer.class, this.max);
     }
 
-    public ColorAxis setMax(Integer max){
+    public ColorAxis setMax(Integer max) {
         this.max = max;
         return this;
     }
 
     public HighchartsColor getMaxColor() {
-        return this.maxColor;
+        return this.maxColor = getInstanceOf(HighchartsColor.class, this.maxColor);
     }
 
-    public ColorAxis setMaxColor(HighchartsColor maxColor){
+    public ColorAxis setMaxColor(HighchartsColor maxColor) {
         this.maxColor = maxColor;
         return this;
     }
 
     public Integer getMaxPadding() {
-        return this.maxPadding;
+        return this.maxPadding = getInstanceOf(Integer.class, this.maxPadding);
     }
 
-    public ColorAxis setMaxPadding(Integer maxPadding){
+    public ColorAxis setMaxPadding(Integer maxPadding) {
         this.maxPadding = maxPadding;
         return this;
     }
 
     public Integer getMin() {
-        return this.min;
+        return this.min = getInstanceOf(Integer.class, this.min);
     }
 
-    public ColorAxis setMin(Integer min){
+    public ColorAxis setMin(Integer min) {
         this.min = min;
         return this;
     }
 
     public HighchartsColor getMinColor() {
-        return this.minColor;
+        return this.minColor = getInstanceOf(HighchartsColor.class, this.minColor);
     }
 
-    public ColorAxis setMinColor(HighchartsColor minColor){
+    public ColorAxis setMinColor(HighchartsColor minColor) {
         this.minColor = minColor;
         return this;
     }
 
     public Integer getMinPadding() {
-        return this.minPadding;
+        return this.minPadding = getInstanceOf(Integer.class, this.minPadding);
     }
 
-    public ColorAxis setMinPadding(Integer minPadding){
+    public ColorAxis setMinPadding(Integer minPadding) {
         this.minPadding = minPadding;
         return this;
     }
 
     public Boolean getReversed() {
-        return this.reversed;
+        return this.reversed = getInstanceOf(Boolean.class, this.reversed);
     }
 
-    public ColorAxis setReversed(Boolean reversed){
+    public ColorAxis setReversed(Boolean reversed) {
         this.reversed = reversed;
         return this;
     }
 
     public Boolean getShowInLegend() {
-        return this.showInLegend;
+        return this.showInLegend = getInstanceOf(Boolean.class, this.showInLegend);
     }
 
-    public ColorAxis setShowInLegend(Boolean showInLegend){
+    public ColorAxis setShowInLegend(Boolean showInLegend) {
         this.showInLegend = showInLegend;
         return this;
     }
 
     public Boolean getStartOnTick() {
-        return this.startOnTick;
+        return this.startOnTick = getInstanceOf(Boolean.class, this.startOnTick);
     }
 
-    public ColorAxis setStartOnTick(Boolean startOnTick){
+    public ColorAxis setStartOnTick(Boolean startOnTick) {
         this.startOnTick = startOnTick;
         return this;
     }
 
     public HighchartsColor[] getStops() {
-        return this.stops;
+        return this.stops = getInstanceOf(HighchartsColor[].class, this.stops);
     }
 
-    public ColorAxis setStops(HighchartsColor[] stops){
+    public ColorAxis setStops(HighchartsColor[] stops) {
         this.stops = stops;
         return this;
     }
 
     public Integer getTickInterval() {
-        return this.tickInterval;
+        return this.tickInterval = getInstanceOf(Integer.class, this.tickInterval);
     }
 
-    public ColorAxis setTickInterval(Integer tickInterval){
+    public ColorAxis setTickInterval(Integer tickInterval) {
         this.tickInterval = tickInterval;
         return this;
     }
 
     public Integer getTickLength() {
-        return this.tickLength;
+        return this.tickLength = getInstanceOf(Integer.class, this.tickLength);
     }
 
-    public ColorAxis setTickLength(Integer tickLength){
+    public ColorAxis setTickLength(Integer tickLength) {
         this.tickLength = tickLength;
         return this;
     }
 
     public Integer getTickPixelInterval() {
-        return this.tickPixelInterval;
+        return this.tickPixelInterval = getInstanceOf(Integer.class, this.tickPixelInterval);
     }
 
-    public ColorAxis setTickPixelInterval(Integer tickPixelInterval){
+    public ColorAxis setTickPixelInterval(Integer tickPixelInterval) {
         this.tickPixelInterval = tickPixelInterval;
         return this;
     }
 
     public HighchartsColorAxisTypeValue getType() {
-        return this.type;
+        return this.type = getInstanceOf(HighchartsColorAxisTypeValue.class, this.type);
     }
 
-    public ColorAxis setType(HighchartsColorAxisTypeValue type){
+    public ColorAxis setType(HighchartsColorAxisTypeValue type) {
         this.type = type;
         return this;
     }

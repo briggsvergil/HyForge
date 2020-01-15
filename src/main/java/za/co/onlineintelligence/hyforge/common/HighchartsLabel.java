@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsAlignValue;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsVerticalAlignValue;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * @author Sean
  */
@@ -27,7 +29,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
      *
      * @since 2.1.0
      */
-    private int rotation;
+    private Integer rotation;
 
     /**
      * CSS styles for the text label.
@@ -63,7 +65,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
      *
      * @since 3.0.3
      */
-    private boolean useHTML;
+    private Boolean useHTML;
 
     /**
      * Vertical alignment of the label relative to the plot band. Can be one of
@@ -79,7 +81,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
      *
      * @since 2.1.0
      */
-    private int x;
+    private Integer x;
 
     /**
      * Vertical position of the text baseline relative to the alignment. Default
@@ -87,13 +89,13 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
      *
      * @since 2.1.0
      */
-    private int y;
+    private Integer y;
 
     /*
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsAlignValue getAlign() {
-        return this.align;
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public HighchartsLabel setAlign(HighchartsAlignValue align) {
@@ -102,7 +104,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
     }
 
     public int getRotation() {
-        return this.rotation;
+        return this.rotation = getInstanceOf(int.class, this.rotation);
     }
 
     public HighchartsLabel setRotation(int rotation) {
@@ -111,7 +113,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public HighchartsLabel setStyle(HighchartsCSS style) {
@@ -120,7 +122,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return this.text;
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public HighchartsLabel setText(String text) {
@@ -129,7 +131,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAlignValue getTextAlign() {
-        return this.textAlign;
+        return this.textAlign = getInstanceOf(HighchartsAlignValue.class, this.textAlign);
     }
 
     public HighchartsLabel setTextAlign(HighchartsAlignValue textAlign) {
@@ -138,7 +140,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
     }
 
     public boolean getUseHTML() {
-        return this.useHTML;
+        return this.useHTML = getInstanceOf(boolean.class, this.useHTML);
     }
 
     public HighchartsLabel setUseHTML(boolean useHTML) {
@@ -147,7 +149,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return this.verticalAlign;
+        return this.verticalAlign = getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public HighchartsLabel setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -156,7 +158,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
     }
 
     public int getX() {
-        return this.x;
+        return this.x = getInstanceOf(int.class, this.x);
     }
 
     public HighchartsLabel setX(int x) {
@@ -165,7 +167,7 @@ public class HighchartsLabel implements Serializable, DrosteDeflater {
     }
 
     public int getY() {
-        return this.y;
+        return this.y = getInstanceOf(int.class, this.y);
     }
 
     public HighchartsLabel setY(int y) {

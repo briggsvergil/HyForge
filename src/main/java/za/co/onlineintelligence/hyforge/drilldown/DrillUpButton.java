@@ -56,7 +56,7 @@ public class DrillUpButton implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsAlignObject getPosition() {
-        return getInstanceOf(HighchartsAlignObject.class, this.position);
+        return this.position = getInstanceOf(HighchartsAlignObject.class, this.position);
     }
 
     public DrillUpButton setPosition(HighchartsAlignObject position) {
@@ -65,7 +65,7 @@ public class DrillUpButton implements Serializable, DrosteDeflater {
     }
 
     public HighchartsButtonRelativeToValue getRelativeTo() {
-        return getInstanceOf(HighchartsButtonRelativeToValue.class, this.relativeTo);
+        return this.relativeTo = getInstanceOf(HighchartsButtonRelativeToValue.class, this.relativeTo);
     }
 
     public DrillUpButton setRelativeTo(HighchartsButtonRelativeToValue relativeTo) {
@@ -74,7 +74,7 @@ public class DrillUpButton implements Serializable, DrosteDeflater {
     }
 
     public Object getTheme() {
-        return getInstanceOf(Object.class, this.theme);
+        return this.theme = getInstanceOf(Object.class, this.theme);
     }
 
     public DrillUpButton setTheme(Object theme) {

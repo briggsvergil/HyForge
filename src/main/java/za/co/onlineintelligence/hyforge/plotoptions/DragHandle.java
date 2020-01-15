@@ -80,7 +80,7 @@ public class DragHandle implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getClassName() {
-        return getInstanceOf(String.class, this.className);
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public DragHandle setClassName(String className) {
@@ -89,7 +89,7 @@ public class DragHandle implements Serializable {
     }
 
     public HighchartsColor getColor() {
-        return getInstanceOf(HighchartsColor.class, this.color);
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public DragHandle setColor(HighchartsColor color) {
@@ -98,7 +98,7 @@ public class DragHandle implements Serializable {
     }
 
     public String getCursor() {
-        return getInstanceOf(String.class, this.cursor);
+        return this.cursor = getInstanceOf(String.class, this.cursor);
     }
 
     public DragHandle setCursor(String cursor) {
@@ -107,7 +107,7 @@ public class DragHandle implements Serializable {
     }
 
     public HighchartsColorString getLineColor() {
-        return getInstanceOf(HighchartsColorString.class, this.lineColor);
+        return this.lineColor = getInstanceOf(HighchartsColorString.class, this.lineColor);
     }
 
     public DragHandle setLineColor(HighchartsColorString lineColor) {
@@ -116,7 +116,7 @@ public class DragHandle implements Serializable {
     }
 
     public int getLineWidth() {
-        return getInstanceOf(int.class, this.lineWidth);
+        return this.lineWidth = getInstanceOf(int.class, this.lineWidth);
     }
 
     public DragHandle setLineWidth(int lineWidth) {
@@ -125,7 +125,7 @@ public class DragHandle implements Serializable {
     }
 
     public HighchartsCallbackFunction getPathFormatter() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.pathFormatter);
+        return this.pathFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.pathFormatter);
     }
 
     public DragHandle setPathFormatter(HighchartsCallbackFunction pathFormatter) {
@@ -134,7 +134,7 @@ public class DragHandle implements Serializable {
     }
 
     public int getZIndex() {
-        return getInstanceOf(int.class, this.zIndex);
+        return this.zIndex = getInstanceOf(int.class, this.zIndex);
     }
 
     public DragHandle setZIndex(int zIndex) {

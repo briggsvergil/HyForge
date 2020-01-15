@@ -10,6 +10,8 @@ import za.co.onlineintelligence.hyforge.common.HighchartsMouseEvents;
 import za.co.onlineintelligence.hyforge.common.enums.*;
 import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * PlotLines HighchartsAPI Class
  *
@@ -25,7 +27,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
      *
      * @since 7.1.2
      */
-    private boolean acrossPanes;
+    private Boolean acrossPanes;
 
     /**
      * A custom class name, in addition to the default `highcharts-plot-line`,
@@ -69,25 +71,25 @@ public class PlotLine implements Serializable, DrosteDeflater {
     /**
      * The position of the line in axis units.
      */
-    private int value;
+    private Integer value;
 
     /**
      * The width or thickness of the plot line.
      */
-    private int width;
+    private Integer width;
 
     /**
      * The z index of the plot line within the chart.
      *
      * @since 1.2.0
      */
-    private int zIndex;
+    private Integer zIndex;
 
     /*
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public boolean getAcrossPanes() {
-        return this.acrossPanes;
+        return this.acrossPanes = getInstanceOf(boolean.class, this.acrossPanes);
     }
 
     public PlotLine setAcrossPanes(boolean acrossPanes) {
@@ -96,7 +98,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return this.className;
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public PlotLine setClassName(String className) {
@@ -105,7 +107,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColorString getColor() {
-        return this.color;
+        return this.color = getInstanceOf(HighchartsColorString.class, this.color);
     }
 
     public PlotLine setColor(HighchartsColorString color) {
@@ -119,7 +121,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public HighchartsDashStyleValue getDashStyle() {
-        return this.dashStyle;
+        return this.dashStyle = getInstanceOf(HighchartsDashStyleValue.class, this.dashStyle);
     }
 
     public PlotLine setDashStyle(HighchartsDashStyleValue dashStyle) {
@@ -128,7 +130,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public HighchartsMouseEvents getEvents() {
-        return this.events;
+        return this.events = getInstanceOf(HighchartsMouseEvents.class, this.events);
     }
 
     public PlotLine setEvents(HighchartsMouseEvents events) {
@@ -137,7 +139,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public String getId() {
-        return this.id;
+        return this.id = getInstanceOf(String.class, this.id);
     }
 
     public PlotLine setId(String id) {
@@ -146,7 +148,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public HighchartsLabel getLabel() {
-        return this.label;
+        return this.label = getInstanceOf(HighchartsLabel.class, this.label);
     }
 
     public PlotLine setLabel(HighchartsLabel label) {
@@ -155,7 +157,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public int getValue() {
-        return this.value;
+        return this.value = getInstanceOf(int.class, this.value);
     }
 
     public PlotLine setValue(int value) {
@@ -164,7 +166,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public int getWidth() {
-        return this.width;
+        return this.width = getInstanceOf(int.class, this.width);
     }
 
     public PlotLine setWidth(int width) {
@@ -173,7 +175,7 @@ public class PlotLine implements Serializable, DrosteDeflater {
     }
 
     public int getZIndex() {
-        return this.zIndex;
+        return this.zIndex = getInstanceOf(int.class, this.zIndex);
     }
 
     public PlotLine setZIndex(int zIndex) {

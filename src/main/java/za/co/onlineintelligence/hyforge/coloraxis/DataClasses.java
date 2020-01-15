@@ -59,7 +59,7 @@ public class DataClasses implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsColor getColor() {
-        return getInstanceOf(HighchartsColor.class, this.color);
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public DataClasses setColor(HighchartsColor color){
@@ -73,7 +73,7 @@ public class DataClasses implements Serializable, DrosteDeflater {
     }
 
     public Integer getFrom() {
-        return getInstanceOf(Integer.class, this.from);
+        return this.from = getInstanceOf(Integer.class, this.from);
     }
 
     public DataClasses setFrom(Integer from){
@@ -82,7 +82,7 @@ public class DataClasses implements Serializable, DrosteDeflater {
     }
 
     public String getName() {
-        return getInstanceOf(String.class, this.name);
+        return this.name = getInstanceOf(String.class, this.name);
     }
 
     public DataClasses setName(String name){
@@ -91,7 +91,7 @@ public class DataClasses implements Serializable, DrosteDeflater {
     }
 
     public Integer getTo() {
-        return getInstanceOf(Integer.class, this.to);
+        return this.to = getInstanceOf(Integer.class, this.to);
     }
 
     public DataClasses setTo(Integer to){

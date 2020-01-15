@@ -53,7 +53,7 @@ public class Breaks implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public int getBreakSize() {
-        return getInstanceOf(int.class, this.breakSize);
+        return this.breakSize = getInstanceOf(int.class, this.breakSize);
     }
 
     public Breaks setBreakSize(int breakSize) {
@@ -62,7 +62,7 @@ public class Breaks implements Serializable, DrosteDeflater {
     }
 
     public int getFrom() {
-        return getInstanceOf(int.class, this.from);
+        return this.from = getInstanceOf(int.class, this.from);
     }
 
     public Breaks setFrom(int from) {
@@ -71,7 +71,7 @@ public class Breaks implements Serializable, DrosteDeflater {
     }
 
     public int getRepeat() {
-        return getInstanceOf(int.class, this.repeat);
+        return this.repeat = getInstanceOf(int.class, this.repeat);
     }
 
     public Breaks setRepeat(int repeat) {
@@ -80,7 +80,7 @@ public class Breaks implements Serializable, DrosteDeflater {
     }
 
     public int getTo() {
-        return getInstanceOf(int.class, this.to);
+        return this.to = getInstanceOf(int.class, this.to);
     }
 
     public Breaks setTo(int to) {

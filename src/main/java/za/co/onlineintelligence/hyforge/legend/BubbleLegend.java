@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * BubbleLegend HighchartsAPI Class
@@ -169,7 +171,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsColor getBorderColor() {
-        return this.borderColor;
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public BubbleLegend setBorderColor(HighchartsColor borderColor) {
@@ -178,7 +180,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Integer getBorderWidth() {
-        return this.borderWidth;
+        return this.borderWidth = getInstanceOf(Integer.class, this.borderWidth);
     }
 
     public BubbleLegend setBorderWidth(Integer borderWidth) {
@@ -187,7 +189,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return this.className;
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public BubbleLegend setClassName(String className) {
@@ -196,7 +198,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getColor() {
-        return this.color;
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public BubbleLegend setColor(HighchartsColor color) {
@@ -205,7 +207,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public String getConnectorClassName() {
-        return this.connectorClassName;
+        return this.connectorClassName = getInstanceOf(String.class, this.connectorClassName);
     }
 
     public BubbleLegend setConnectorClassName(String connectorClassName) {
@@ -214,7 +216,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getConnectorColor() {
-        return this.connectorColor;
+        return this.connectorColor = getInstanceOf(HighchartsColor.class, this.connectorColor);
     }
 
     public BubbleLegend setConnectorColor(HighchartsColor connectorColor) {
@@ -223,7 +225,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Integer getConnectorDistance() {
-        return this.connectorDistance;
+        return this.connectorDistance = getInstanceOf(Integer.class, this.connectorDistance);
     }
 
     public BubbleLegend setConnectorDistance(Integer connectorDistance) {
@@ -232,7 +234,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Integer getConnectorWidth() {
-        return this.connectorWidth;
+        return this.connectorWidth = getInstanceOf(Integer.class, this.connectorWidth);
     }
 
     public BubbleLegend setConnectorWidth(Integer connectorWidth) {
@@ -241,7 +243,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.enabled = getInstanceOf(Boolean.class, this.enabled);
     }
 
     public BubbleLegend setEnabled(Boolean enabled) {
@@ -250,7 +252,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public LegendLabelOptions getLabels() {
-        return this.labels;
+        return this.labels = getInstanceOf(LegendLabelOptions.class, this.labels);
     }
 
     public BubbleLegend setLabels(LegendLabelOptions labels) {
@@ -259,7 +261,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Integer getLegendIndex() {
-        return this.legendIndex;
+        return this.legendIndex = getInstanceOf(Integer.class, this.legendIndex);
     }
 
     public BubbleLegend setLegendIndex(Integer legendIndex) {
@@ -268,7 +270,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Integer getMaxSize() {
-        return this.maxSize;
+        return this.maxSize = getInstanceOf(Integer.class, this.maxSize);
     }
 
     public BubbleLegend setMaxSize(Integer maxSize) {
@@ -277,7 +279,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Integer getMinSize() {
-        return this.minSize;
+        return this.minSize = getInstanceOf(Integer.class, this.minSize);
     }
 
     public BubbleLegend setMinSize(Integer minSize) {
@@ -286,7 +288,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public LegendRangeOptions[] getRanges() {
-        return this.ranges;
+        return this.ranges = getInstanceOf(LegendRangeOptions[].class, this.ranges);
     }
 
     public BubbleLegend setRanges(LegendRangeOptions[] ranges) {
@@ -295,7 +297,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public String getSizeBy() {
-        return this.sizeBy;
+        return this.sizeBy = getInstanceOf(String.class, this.sizeBy);
     }
 
     public BubbleLegend setSizeBy(String sizeBy) {
@@ -304,7 +306,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getSizeByAbsoluteValue() {
-        return this.sizeByAbsoluteValue;
+        return this.sizeByAbsoluteValue = getInstanceOf(Boolean.class, this.sizeByAbsoluteValue);
     }
 
     public BubbleLegend setSizeByAbsoluteValue(Boolean sizeByAbsoluteValue) {
@@ -313,7 +315,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Integer getZIndex() {
-        return this.zIndex;
+        return this.zIndex = getInstanceOf(Integer.class, this.zIndex);
     }
 
     public BubbleLegend setZIndex(Integer zIndex) {
@@ -322,7 +324,7 @@ public class BubbleLegend implements Serializable, DrosteDeflater {
     }
 
     public Integer getZThreshold() {
-        return this.zThreshold;
+        return this.zThreshold = getInstanceOf(Integer.class, this.zThreshold);
     }
 
     public BubbleLegend setZThreshold(Integer zThreshold) {

@@ -65,7 +65,7 @@ public class Pane implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Background[] getBackground() {
-        return getInstanceOf(Background[].class, this.background);
+        return this.background = getInstanceOf(Background[].class, this.background);
     }
 
     public Pane setBackground(Background[] background) {
@@ -74,7 +74,7 @@ public class Pane implements Serializable, DrosteDeflater {
     }
 
     public Object[] getCenter() {
-        return getInstanceOf(Object[].class, this.center);
+        return this.center = getInstanceOf(Object[].class, this.center);
     }
 
     public Pane setCenter(Object[] center) {
@@ -83,7 +83,7 @@ public class Pane implements Serializable, DrosteDeflater {
     }
 
     public Integer getEndAngle() {
-        return getInstanceOf(Integer.class, this.endAngle);
+        return this.endAngle = getInstanceOf(Integer.class, this.endAngle);
     }
 
     public Pane setEndAngle(Integer endAngle) {
@@ -92,7 +92,7 @@ public class Pane implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getSize() {
-        return getInstanceOf(HighchartsSize.class, this.size);
+        return this.size = getInstanceOf(HighchartsSize.class, this.size);
     }
 
     public Pane setSize(HighchartsSize size) {
@@ -101,7 +101,7 @@ public class Pane implements Serializable, DrosteDeflater {
     }
 
     public Integer getStartAngle() {
-        return getInstanceOf(Integer.class, this.startAngle);
+        return this.startAngle = getInstanceOf(Integer.class, this.startAngle);
     }
 
     public Pane setStartAngle(Integer startAngle) {

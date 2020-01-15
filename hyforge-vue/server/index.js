@@ -8,8 +8,6 @@ const bp = require('body-parser')
 const config = require('../nuxt.config.js')
 config.dev = process.env.NODE_ENV !== 'production'
 
-var ChartOpts = '{}';
-
 async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
@@ -24,17 +22,19 @@ async function start () {
     await nuxt.ready()
   }
 
+  app.use(bp.json())
+
+  app.post("/api", (req, res) => {
+    console.log('Chart POST received')
+    let buff = new Buffer(req.body.chartData, 'base64')
+    let text = buff.toString('ascii')
+    // ChartOpts = text
+    console.log(text)
+    res.send("200: All good!!")
+    this.$store.commit('SET_CHART', text)
+  })
   // Give nuxt middleware to express
   app.use(nuxt.render)
-
-  app.post("/chart", (req, res) => {
-    console.log('Chart POST received');
-    let buff = new Buffer(req.body.chartData, 'base64');
-    let text = buff.toString('ascii');
-    ChartOpts = text;
-    // console.log(text);
-    res.send("200: All good!!");
-  })
 
   // Listen the server
   app.listen(port, host)

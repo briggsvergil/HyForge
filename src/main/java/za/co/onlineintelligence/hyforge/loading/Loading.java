@@ -55,7 +55,7 @@ public class Loading implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Integer getHideDuration() {
-        return getInstanceOf(Integer.class, this.hideDuration);
+        return this.hideDuration = getInstanceOf(Integer.class, this.hideDuration);
     }
 
     public Loading setHideDuration(Integer hideDuration) {
@@ -64,7 +64,7 @@ public class Loading implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getLabelStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.labelStyle);
+        return this.labelStyle = getInstanceOf(HighchartsCSS.class, this.labelStyle);
     }
 
     public Loading setLabelStyle(HighchartsCSS labelStyle) {
@@ -73,7 +73,7 @@ public class Loading implements Serializable, DrosteDeflater {
     }
 
     public Integer getShowDuration() {
-        return getInstanceOf(Integer.class, this.showDuration);
+        return this.showDuration = getInstanceOf(Integer.class, this.showDuration);
     }
 
     public Loading setShowDuration(Integer showDuration) {
@@ -82,7 +82,7 @@ public class Loading implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Loading setStyle(HighchartsCSS style) {

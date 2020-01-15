@@ -2,11 +2,15 @@ package za.co.onlineintelligence.hyforge.boost;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 
 /**
  * Boost  HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class Boost implements Serializable, DrosteDeflater {
@@ -17,13 +21,13 @@ public class Boost implements Serializable, DrosteDeflater {
 
     /**
      * If set to true, the whole chart will be boosted if one of the series
-     crosses its threshold, and all the series can be boosted.
+     * crosses its threshold, and all the series can be boosted.
      */
     private Boolean allowForce;
 
     /**
      * Debugging options for boost.
-     Useful for benchmarking, and general timing.
+     * Useful for benchmarking, and general timing.
      */
     private BoostDebug debug;
 
@@ -34,39 +38,39 @@ public class Boost implements Serializable, DrosteDeflater {
 
     /**
      * Set the series threshold for when the boost should kick in globally.
-
-     Setting to e.g. 20 will cause the whole chart to enter boost mode
-     if there are 20 or more series active. When the chart is in boost mode,
-     every series in it will be rendered to a common canvas. This offers
-     a significant speed improvment in charts with a very high
-     amount of series.
+     * <p>
+     * Setting to e.g. 20 will cause the whole chart to enter boost mode
+     * if there are 20 or more series active. When the chart is in boost mode,
+     * every series in it will be rendered to a common canvas. This offers
+     * a significant speed improvment in charts with a very high
+     * amount of series.
      */
     private Integer seriesThreshold;
 
     /**
      * Enable or disable GPU translations. GPU translations are faster than doing
-     the translation in JavaScript.
-
-     This option may cause rendering issues with certain datasets.
-     Namely, if your dataset has large numbers with small increments (such as
-     timestamps), it won't work correctly. This is due to floating point
-     precission.
+     * the translation in JavaScript.
+     * <p>
+     * This option may cause rendering issues with certain datasets.
+     * Namely, if your dataset has large numbers with small increments (such as
+     * timestamps), it won't work correctly. This is due to floating point
+     * precission.
      */
     private Boolean useGPUTranslations;
 
     /**
      * Enable or disable pre-allocation of vertex buffers.
-
-     Enabling this will make it so that the binary data arrays required for
-     storing the series data will be allocated prior to transforming the data
-     to a WebGL-compatible format.
-
-     This saves a copy operation on the order of O(n) and so is significantly more
-     performant. However, this is currently an experimental option, and may cause
-     visual artifacts with some datasets.
-
-     As such, care should be taken when using this setting to make sure that
-     it doesn't cause any rendering glitches with the given use-case.
+     * <p>
+     * Enabling this will make it so that the binary data arrays required for
+     * storing the series data will be allocated prior to transforming the data
+     * to a WebGL-compatible format.
+     * <p>
+     * This saves a copy operation on the order of O(n) and so is significantly more
+     * performant. However, this is currently an experimental option, and may cause
+     * visual artifacts with some datasets.
+     * <p>
+     * As such, care should be taken when using this setting to make sure that
+     * it doesn't cause any rendering glitches with the given use-case.
      */
     private Boolean usePreallocated;
 
@@ -74,55 +78,55 @@ public class Boost implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Boolean getAllowForce() {
-        return this.allowForce;
+        return this.allowForce = getInstanceOf(Boolean.class, this.allowForce);
     }
 
-    public Boost setAllowForce(Boolean allowForce){
+    public Boost setAllowForce(Boolean allowForce) {
         this.allowForce = allowForce;
         return this;
     }
 
     public BoostDebug getDebug() {
-        return this.debug;
+        return this.debug = getInstanceOf(BoostDebug.class, this.debug);
     }
 
-    public Boost setDebug(BoostDebug debug){
+    public Boost setDebug(BoostDebug debug) {
         this.debug = debug;
         return this;
     }
 
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.enabled = getInstanceOf(Boolean.class, this.enabled);
     }
 
-    public Boost setEnabled(Boolean enabled){
+    public Boost setEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
 
     public Integer getSeriesThreshold() {
-        return this.seriesThreshold;
+        return this.seriesThreshold = getInstanceOf(Integer.class, this.seriesThreshold);
     }
 
-    public Boost setSeriesThreshold(Integer seriesThreshold){
+    public Boost setSeriesThreshold(Integer seriesThreshold) {
         this.seriesThreshold = seriesThreshold;
         return this;
     }
 
     public Boolean getUseGPUTranslations() {
-        return this.useGPUTranslations;
+        return this.useGPUTranslations = getInstanceOf(Boolean.class, this.useGPUTranslations);
     }
 
-    public Boost setUseGPUTranslations(Boolean useGPUTranslations){
+    public Boost setUseGPUTranslations(Boolean useGPUTranslations) {
         this.useGPUTranslations = useGPUTranslations;
         return this;
     }
 
     public Boolean getUsePreallocated() {
-        return this.usePreallocated;
+        return this.usePreallocated = getInstanceOf(Boolean.class, this.usePreallocated);
     }
 
-    public Boost setUsePreallocated(Boolean usePreallocated){
+    public Boost setUsePreallocated(Boolean usePreallocated) {
         this.usePreallocated = usePreallocated;
         return this;
     }

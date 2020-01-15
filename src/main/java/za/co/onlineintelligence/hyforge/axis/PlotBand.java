@@ -10,6 +10,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.*;
 import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * PlotBands HighchartsAPI Class
  *
@@ -92,7 +94,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public boolean getAcrossPanes() {
-        return this.acrossPanes;
+        return this.acrossPanes = getInstanceOf(boolean.class, this.acrossPanes);
     }
 
     public PlotBand setAcrossPanes(boolean acrossPanes) {
@@ -101,7 +103,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColorString getBorderColor() {
-        return this.borderColor;
+        return this.borderColor = getInstanceOf(HighchartsColorString.class, this.borderColor);
     }
 
     public PlotBand setBorderColor(HighchartsColorString borderColor) {
@@ -110,7 +112,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public int getBorderWidth() {
-        return this.borderWidth;
+        return this.borderWidth = getInstanceOf(int.class, this.borderWidth);
     }
 
     public PlotBand setBorderWidth(int borderWidth) {
@@ -119,7 +121,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return this.className;
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public PlotBand setClassName(String className) {
@@ -128,7 +130,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getColor() {
-        return this.color;
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public PlotBand setColor(HighchartsColor color) {
@@ -142,7 +144,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public HighchartsMouseEvents getEvents() {
-        return this.events;
+        return this.events = getInstanceOf(HighchartsMouseEvents.class, this.events);
     }
 
     public PlotBand setEvents(HighchartsMouseEvents events) {
@@ -151,7 +153,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public int getFrom() {
-        return this.from;
+        return this.from = getInstanceOf(int.class, this.from);
     }
 
     public PlotBand setFrom(int from) {
@@ -160,7 +162,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public String getId() {
-        return this.id;
+        return this.id = getInstanceOf(String.class, this.id);
     }
 
     public PlotBand setId(String id) {
@@ -169,7 +171,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public HighchartsLabel getLabel() {
-        return this.label;
+        return this.label = getInstanceOf(HighchartsLabel.class, this.label);
     }
 
     public PlotBand setLabel(HighchartsLabel label) {
@@ -178,7 +180,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public int getTo() {
-        return this.to;
+        return this.to = getInstanceOf(int.class, this.to);
     }
 
     public PlotBand setTo(int to) {
@@ -187,7 +189,7 @@ public class PlotBand implements Serializable, DrosteDeflater {
     }
 
     public int getZIndex() {
-        return this.zIndex;
+        return this.zIndex = getInstanceOf(int.class, this.zIndex);
     }
 
     public PlotBand setZIndex(int zIndex) {

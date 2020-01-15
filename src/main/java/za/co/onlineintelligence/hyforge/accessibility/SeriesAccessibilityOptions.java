@@ -53,7 +53,7 @@ public class SeriesAccessibilityOptions implements Serializable, DrosteDeflater 
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Boolean getDescribeSingleSeries() {
-        return getInstanceOf(Boolean.class, this.describeSingleSeries);
+        return this.describeSingleSeries = getInstanceOf(Boolean.class, this.describeSingleSeries);
     }
 
     public SeriesAccessibilityOptions setDescribeSingleSeries(Boolean describeSingleSeries) {
@@ -62,7 +62,7 @@ public class SeriesAccessibilityOptions implements Serializable, DrosteDeflater 
     }
 
     public HighchartsCallbackFunction getDescriptionFormatter() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.descriptionFormatter);
+        return this.descriptionFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.descriptionFormatter);
     }
 
     public SeriesAccessibilityOptions setDescriptionFormatter(HighchartsCallbackFunction descriptionFormatter) {
@@ -71,7 +71,7 @@ public class SeriesAccessibilityOptions implements Serializable, DrosteDeflater 
     }
 
     public Integer getPointDescriptionEnabledThreshold() {
-        return getInstanceOf(Integer.class, this.pointDescriptionEnabledThreshold);
+        return this.pointDescriptionEnabledThreshold = getInstanceOf(Integer.class, this.pointDescriptionEnabledThreshold);
     }
 
     public SeriesAccessibilityOptions setPointDescriptionEnabledThreshold(Integer pointDescriptionEnabledThreshold) {

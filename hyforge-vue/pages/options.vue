@@ -5,7 +5,7 @@
       :schema="schema"
       :model="model"
       :options="formOptions"
-    ></vue-form-generator>
+    />
   </div>
 </template>
 

@@ -144,56 +144,56 @@ public class PieChartOptions extends HighchartsSeriesPlotOptions implements Seri
         Instance-Safe Getters
     */
     public HighchartsColor getBorderColor() {
-        return getInstanceOf(HighchartsColor.class, this.borderColor);
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public Integer getBorderWidth() {
-        return getInstanceOf(Integer.class, this.borderWidth);
+        return this.borderWidth = getInstanceOf(Integer.class, this.borderWidth);
     }
 
     public HighchartsSize[] getCenter() {
-        return getInstanceOf(HighchartsSize[].class, this.center);
+        return this.center = getInstanceOf(HighchartsSize[].class, this.center);
     }
 
 
     public HighchartsColor[] getColors() {
-        return getInstanceOf(HighchartsColor[].class, this.colors);
+        return this.colors = getInstanceOf(HighchartsColor[].class, this.colors);
     }
 
     public Integer getDepth() {
-        return getInstanceOf(Integer.class, this.depth);
+        return this.depth = getInstanceOf(Integer.class, this.depth);
     }
 
     public Integer getEndAngle() {
-        return getInstanceOf(Integer.class, this.endAngle);
+        return this.endAngle = getInstanceOf(Integer.class, this.endAngle);
     }
 
     public HighchartsColor getFillColor() {
-        return getInstanceOf(HighchartsColor.class, this.fillColor);
+        return this.fillColor = getInstanceOf(HighchartsColor.class, this.fillColor);
     }
 
     public Boolean getIgnoreHiddenPoint() {
-        return getInstanceOf(Boolean.class, this.ignoreHiddenPoint);
+        return this.ignoreHiddenPoint = getInstanceOf(Boolean.class, this.ignoreHiddenPoint);
     }
 
     public HighchartsSize getInnerSize() {
-        return getInstanceOf(HighchartsSize.class, this.innerSize);
+        return this.innerSize = getInstanceOf(HighchartsSize.class, this.innerSize);
     }
 
     public HighchartsSize getMinSize() {
-        return getInstanceOf(HighchartsSize.class, this.minSize);
+        return this.minSize = getInstanceOf(HighchartsSize.class, this.minSize);
     }
 
     public HighchartsSize getSize() {
-        return getInstanceOf(HighchartsSize.class, this.size);
+        return this.size = getInstanceOf(HighchartsSize.class, this.size);
     }
 
     public Integer getSlicedOffset() {
-        return getInstanceOf(Integer.class, this.slicedOffset);
+        return this.slicedOffset = getInstanceOf(Integer.class, this.slicedOffset);
     }
 
     public Integer getStartAngle() {
-        return getInstanceOf(Integer.class, this.startAngle);
+        return this.startAngle = getInstanceOf(Integer.class, this.startAngle);
     }
 
     /*

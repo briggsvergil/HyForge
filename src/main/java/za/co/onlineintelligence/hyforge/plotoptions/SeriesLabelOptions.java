@@ -94,7 +94,7 @@ public class SeriesLabelOptions implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsLabelIntersectBoxObject[] getBoxesToAvoid() {
-        return getInstanceOf(HighchartsLabelIntersectBoxObject[].class, this.boxesToAvoid);
+        return this.boxesToAvoid = getInstanceOf(HighchartsLabelIntersectBoxObject[].class, this.boxesToAvoid);
     }
 
     public SeriesLabelOptions setBoxesToAvoid(HighchartsLabelIntersectBoxObject[] boxesToAvoid) {
@@ -103,7 +103,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public boolean getConnectorAllowed() {
-        return getInstanceOf(boolean.class, this.connectorAllowed);
+        return this.connectorAllowed = getInstanceOf(boolean.class, this.connectorAllowed);
     }
 
     public SeriesLabelOptions setConnectorAllowed(boolean connectorAllowed) {
@@ -112,7 +112,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public int getConnectorNeighbourDistance() {
-        return getInstanceOf(int.class, this.connectorNeighbourDistance);
+        return this.connectorNeighbourDistance = getInstanceOf(int.class, this.connectorNeighbourDistance);
     }
 
     public SeriesLabelOptions setConnectorNeighbourDistance(int connectorNeighbourDistance) {
@@ -121,7 +121,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public SeriesLabelOptions setEnabled(boolean enabled) {
@@ -130,7 +130,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public Integer getMaxFontSize() {
-        return getInstanceOf(Integer.class, this.maxFontSize);
+        return this.maxFontSize = getInstanceOf(Integer.class, this.maxFontSize);
     }
 
     public SeriesLabelOptions setMaxFontSize(Integer maxFontSize) {
@@ -139,7 +139,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public Integer getMinFontSize() {
-        return getInstanceOf(Integer.class, this.minFontSize);
+        return this.minFontSize = getInstanceOf(Integer.class, this.minFontSize);
     }
 
     public SeriesLabelOptions setMinFontSize(Integer minFontSize) {
@@ -148,7 +148,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public Boolean getOnArea() {
-        return getInstanceOf(Boolean.class, this.onArea);
+        return this.onArea = getInstanceOf(Boolean.class, this.onArea);
     }
 
     public SeriesLabelOptions setOnArea(Boolean onArea) {
@@ -157,7 +157,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public SeriesLabelOptions setStyle(HighchartsCSS style) {

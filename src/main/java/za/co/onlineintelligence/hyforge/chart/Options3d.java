@@ -76,7 +76,7 @@ public class Options3d implements Serializable {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public int getAlpha() {
-        return getInstanceOf(int.class, this.alpha);
+        return this.alpha = getInstanceOf(int.class, this.alpha);
     }
 
     public Options3d setAlpha(int alpha) {
@@ -85,7 +85,7 @@ public class Options3d implements Serializable {
     }
 
     public String getAxisLabelPosition() {
-        return getInstanceOf(String.class, this.axisLabelPosition);
+        return this.axisLabelPosition = getInstanceOf(String.class, this.axisLabelPosition);
     }
 
     public Options3d setAxisLabelPosition(String axisLabelPosition) {
@@ -97,7 +97,7 @@ public class Options3d implements Serializable {
     }
 
     public int getBeta() {
-        return getInstanceOf(int.class, this.beta);
+        return this.beta = getInstanceOf(int.class, this.beta);
     }
 
     public Options3d setBeta(int beta) {
@@ -106,7 +106,7 @@ public class Options3d implements Serializable {
     }
 
     public int getDepth() {
-        return getInstanceOf(int.class, this.depth);
+        return this.depth = getInstanceOf(int.class, this.depth);
     }
 
     public Options3d setDepth(int depth) {
@@ -115,7 +115,7 @@ public class Options3d implements Serializable {
     }
 
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public Options3d setEnabled(boolean enabled) {
@@ -124,7 +124,7 @@ public class Options3d implements Serializable {
     }
 
     public boolean getFitToPlot() {
-        return getInstanceOf(boolean.class, this.fitToPlot);
+        return this.fitToPlot = getInstanceOf(boolean.class, this.fitToPlot);
     }
 
     public Options3d setFitToPlot(boolean fitToPlot) {
@@ -133,7 +133,7 @@ public class Options3d implements Serializable {
     }
 
     public ChartFrame getFrame() {
-        return getInstanceOf(ChartFrame.class, this.frame);
+        return this.frame = getInstanceOf(ChartFrame.class, this.frame);
     }
 
     public Options3d setFrame(ChartFrame frame) {
@@ -142,7 +142,7 @@ public class Options3d implements Serializable {
     }
 
     public int getViewDistance() {
-        return getInstanceOf(int.class, this.viewDistance);
+        return this.viewDistance = getInstanceOf(int.class, this.viewDistance);
     }
 
     public Options3d setViewDistance(int viewDistance) {

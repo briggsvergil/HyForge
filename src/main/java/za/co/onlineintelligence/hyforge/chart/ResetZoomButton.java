@@ -47,7 +47,7 @@ public class ResetZoomButton implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsAlignObject getPosition() {
-        return getInstanceOf(HighchartsAlignObject.class, this.position);
+        return this.position = getInstanceOf(HighchartsAlignObject.class, this.position);
     }
 
     public ResetZoomButton setPosition(HighchartsAlignObject position) {
@@ -56,7 +56,7 @@ public class ResetZoomButton implements Serializable, DrosteDeflater {
     }
 
     public String getRelativeTo() {
-        return getInstanceOf(String.class, this.relativeTo);
+        return this.relativeTo = getInstanceOf(String.class, this.relativeTo);
     }
 
     public ResetZoomButton setRelativeTo(String relativeTo) {
@@ -65,7 +65,7 @@ public class ResetZoomButton implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSVGAttributes getTheme() {
-        return getInstanceOf(HighchartsSVGAttributes.class, this.theme);
+        return this.theme = getInstanceOf(HighchartsSVGAttributes.class, this.theme);
     }
 
     public ResetZoomButton setTheme(HighchartsSVGAttributes theme) {

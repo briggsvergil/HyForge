@@ -27,7 +27,7 @@ public class Point implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public PointEvents getEvents() {
-        return getInstanceOf(PointEvents.class, this.events);
+        return this.events = getInstanceOf(PointEvents.class, this.events);
     }
 
     public Point setEvents(PointEvents events) {

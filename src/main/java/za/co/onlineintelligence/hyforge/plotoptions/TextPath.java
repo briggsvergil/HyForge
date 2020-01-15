@@ -38,7 +38,7 @@ public class TextPath implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsSVGAttributes getAttributes() {
-        return getInstanceOf(HighchartsSVGAttributes.class, this.attributes);
+        return this.attributes = getInstanceOf(HighchartsSVGAttributes.class, this.attributes);
     }
 
     public TextPath setAttributes(HighchartsSVGAttributes attributes) {
@@ -47,7 +47,7 @@ public class TextPath implements Serializable {
     }
 
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public TextPath setEnabled(boolean enabled) {

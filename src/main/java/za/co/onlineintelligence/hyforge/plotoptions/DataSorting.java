@@ -45,7 +45,7 @@ public class DataSorting implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public DataSorting setEnabled(boolean enabled) {
@@ -54,7 +54,7 @@ public class DataSorting implements Serializable {
     }
 
     public boolean getMatchByName() {
-        return getInstanceOf(boolean.class, this.matchByName);
+        return this.matchByName = getInstanceOf(boolean.class, this.matchByName);
     }
 
     public DataSorting setMatchByName(boolean matchByName) {
@@ -63,7 +63,7 @@ public class DataSorting implements Serializable {
     }
 
     public String getSortKey() {
-        return getInstanceOf(String.class, this.sortKey);
+        return this.sortKey = getInstanceOf(String.class, this.sortKey);
     }
 
     public DataSorting setSortKey(String sortKey) {

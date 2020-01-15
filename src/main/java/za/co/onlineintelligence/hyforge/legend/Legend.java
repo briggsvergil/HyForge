@@ -366,7 +366,7 @@ public class Legend implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Accessibility getAccessibility() {
-        return getInstanceOf(Accessibility.class, this.accessibility);
+        return this.accessibility = getInstanceOf(Accessibility.class, this.accessibility);
     }
 
     public Legend setAccessibility(Accessibility accessibility) {
@@ -375,7 +375,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAlignValue getAlign() {
-        return getInstanceOf(HighchartsAlignValue.class, this.align);
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public Legend setAlign(HighchartsAlignValue align) {
@@ -384,7 +384,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getAlignColumns() {
-        return getInstanceOf(Boolean.class, this.alignColumns);
+        return this.alignColumns = getInstanceOf(Boolean.class, this.alignColumns);
     }
 
     public Legend setAlignColumns(Boolean alignColumns) {
@@ -393,7 +393,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBackgroundColor() {
-        return getInstanceOf(HighchartsColor.class, this.backgroundColor);
+        return this.backgroundColor = getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
     public Legend setBackgroundColor(HighchartsColor backgroundColor) {
@@ -402,7 +402,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBorderColor() {
-        return getInstanceOf(HighchartsColor.class, this.borderColor);
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public Legend setBorderColor(HighchartsColor borderColor) {
@@ -411,7 +411,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getBorderRadius() {
-        return getInstanceOf(Integer.class, this.borderRadius);
+        return this.borderRadius = getInstanceOf(Integer.class, this.borderRadius);
     }
 
     public Legend setBorderRadius(Integer borderRadius) {
@@ -420,7 +420,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getBorderWidth() {
-        return getInstanceOf(Integer.class, this.borderWidth);
+        return this.borderWidth = getInstanceOf(Integer.class, this.borderWidth);
     }
 
     public Legend setBorderWidth(Integer borderWidth) {
@@ -429,7 +429,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public BubbleLegend getBubbleLegend() {
-        return getInstanceOf(BubbleLegend.class, this.bubbleLegend);
+        return this.bubbleLegend = getInstanceOf(BubbleLegend.class, this.bubbleLegend);
     }
 
     public Legend setBubbleLegend(BubbleLegend bubbleLegend) {
@@ -438,7 +438,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getEnabled() {
-        return getInstanceOf(Boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(Boolean.class, this.enabled);
     }
 
     public Legend setEnabled(Boolean enabled) {
@@ -447,7 +447,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getFloating() {
-        return getInstanceOf(Boolean.class, this.floating);
+        return this.floating = getInstanceOf(Boolean.class, this.floating);
     }
 
     public Legend setFloating(Boolean floating) {
@@ -456,7 +456,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getItemCheckboxStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.itemCheckboxStyle);
+        return this.itemCheckboxStyle = getInstanceOf(HighchartsCSS.class, this.itemCheckboxStyle);
     }
 
     public Legend setItemCheckboxStyle(HighchartsCSS itemCheckboxStyle) {
@@ -465,7 +465,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getItemDistance() {
-        return getInstanceOf(Integer.class, this.itemDistance);
+        return this.itemDistance = getInstanceOf(Integer.class, this.itemDistance);
     }
 
     public Legend setItemDistance(Integer itemDistance) {
@@ -474,7 +474,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getItemHiddenStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.itemHiddenStyle);
+        return this.itemHiddenStyle = getInstanceOf(HighchartsCSS.class, this.itemHiddenStyle);
     }
 
     public Legend setItemHiddenStyle(HighchartsCSS itemHiddenStyle) {
@@ -483,7 +483,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getItemHoverStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.itemHoverStyle);
+        return this.itemHoverStyle = getInstanceOf(HighchartsCSS.class, this.itemHoverStyle);
     }
 
     public Legend setItemHoverStyle(HighchartsCSS itemHoverStyle) {
@@ -492,7 +492,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getItemMarginBottom() {
-        return getInstanceOf(Integer.class, this.itemMarginBottom);
+        return this.itemMarginBottom = getInstanceOf(Integer.class, this.itemMarginBottom);
     }
 
     public Legend setItemMarginBottom(Integer itemMarginBottom) {
@@ -501,7 +501,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getItemMarginTop() {
-        return getInstanceOf(Integer.class, this.itemMarginTop);
+        return this.itemMarginTop = getInstanceOf(Integer.class, this.itemMarginTop);
     }
 
     public Legend setItemMarginTop(Integer itemMarginTop) {
@@ -510,7 +510,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getItemStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.itemStyle);
+        return this.itemStyle = getInstanceOf(HighchartsCSS.class, this.itemStyle);
     }
 
     public Legend setItemStyle(HighchartsCSS itemStyle) {
@@ -519,7 +519,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getItemWidth() {
-        return getInstanceOf(Integer.class, this.itemWidth);
+        return this.itemWidth = getInstanceOf(Integer.class, this.itemWidth);
     }
 
     public Legend setItemWidth(Integer itemWidth) {
@@ -528,7 +528,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public String getLabelFormat() {
-        return getInstanceOf(String.class, this.labelFormat);
+        return this.labelFormat = getInstanceOf(String.class, this.labelFormat);
     }
 
     public Legend setLabelFormat(String labelFormat) {
@@ -537,7 +537,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getLabelFormatter() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.labelFormatter);
+        return this.labelFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.labelFormatter);
     }
 
     public Legend setLabelFormatter(HighchartsCallbackFunction labelFormatter) {
@@ -546,7 +546,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public String getLayout() {
-        return getInstanceOf(String.class, this.layout);
+        return this.layout = getInstanceOf(String.class, this.layout);
     }
 
     public Legend setLayout(String layout) {
@@ -555,7 +555,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getLineHeight() {
-        return getInstanceOf(Integer.class, this.lineHeight);
+        return this.lineHeight = getInstanceOf(Integer.class, this.lineHeight);
     }
 
     public Legend setLineHeight(Integer lineHeight) {
@@ -564,7 +564,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getMargin() {
-        return getInstanceOf(Integer.class, this.margin);
+        return this.margin = getInstanceOf(Integer.class, this.margin);
     }
 
     public Legend setMargin(Integer margin) {
@@ -573,7 +573,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getMaxHeight() {
-        return getInstanceOf(Integer.class, this.maxHeight);
+        return this.maxHeight = getInstanceOf(Integer.class, this.maxHeight);
     }
 
     public Legend setMaxHeight(Integer maxHeight) {
@@ -582,7 +582,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public LegendNavigation getNavigation() {
-        return getInstanceOf(LegendNavigation.class, this.navigation);
+        return this.navigation = getInstanceOf(LegendNavigation.class, this.navigation);
     }
 
     public Legend setNavigation(LegendNavigation navigation) {
@@ -591,7 +591,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getPadding() {
-        return getInstanceOf(Integer.class, this.padding);
+        return this.padding = getInstanceOf(Integer.class, this.padding);
     }
 
     public Legend setPadding(Integer padding) {
@@ -600,7 +600,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getReversed() {
-        return getInstanceOf(Boolean.class, this.reversed);
+        return this.reversed = getInstanceOf(Boolean.class, this.reversed);
     }
 
     public Legend setReversed(Boolean reversed) {
@@ -609,7 +609,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getRtl() {
-        return getInstanceOf(Boolean.class, this.rtl);
+        return this.rtl = getInstanceOf(Boolean.class, this.rtl);
     }
 
     public Legend setRtl(Boolean rtl) {
@@ -618,7 +618,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsShadowOptionsObject getShadow() {
-        return getInstanceOf(HighchartsShadowOptionsObject.class, this.shadow);
+        return this.shadow = getInstanceOf(HighchartsShadowOptionsObject.class, this.shadow);
     }
 
     public Legend setShadow(HighchartsShadowOptionsObject shadow) {
@@ -627,7 +627,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getSquareSymbol() {
-        return getInstanceOf(Boolean.class, this.squareSymbol);
+        return this.squareSymbol = getInstanceOf(Boolean.class, this.squareSymbol);
     }
 
     public Legend setSquareSymbol(Boolean squareSymbol) {
@@ -636,7 +636,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Legend setStyle(HighchartsCSS style) {
@@ -645,7 +645,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getSymbolHeight() {
-        return getInstanceOf(Integer.class, this.symbolHeight);
+        return this.symbolHeight = getInstanceOf(Integer.class, this.symbolHeight);
     }
 
     public Legend setSymbolHeight(Integer symbolHeight) {
@@ -654,7 +654,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getSymbolPadding() {
-        return getInstanceOf(Integer.class, this.symbolPadding);
+        return this.symbolPadding = getInstanceOf(Integer.class, this.symbolPadding);
     }
 
     public Legend setSymbolPadding(Integer symbolPadding) {
@@ -663,7 +663,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getSymbolRadius() {
-        return getInstanceOf(Integer.class, this.symbolRadius);
+        return this.symbolRadius = getInstanceOf(Integer.class, this.symbolRadius);
     }
 
     public Legend setSymbolRadius(Integer symbolRadius) {
@@ -672,7 +672,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getSymbolWidth() {
-        return getInstanceOf(Integer.class, this.symbolWidth);
+        return this.symbolWidth = getInstanceOf(Integer.class, this.symbolWidth);
     }
 
     public Legend setSymbolWidth(Integer symbolWidth) {
@@ -681,7 +681,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Title getTitle() {
-        return getInstanceOf(Title.class, this.title);
+        return this.title = getInstanceOf(Title.class, this.title);
     }
 
     public Legend setTitle(Title title) {
@@ -690,7 +690,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Boolean getUseHTML() {
-        return getInstanceOf(Boolean.class, this.useHTML);
+        return this.useHTML = getInstanceOf(Boolean.class, this.useHTML);
     }
 
     public Legend setUseHTML(Boolean useHTML) {
@@ -699,7 +699,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
+        return this.verticalAlign = getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public Legend setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -708,7 +708,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getWidth() {
-        return getInstanceOf(HighchartsSize.class, this.width);
+        return this.width = getInstanceOf(HighchartsSize.class, this.width);
     }
 
     public Legend setWidth(HighchartsSize width) {
@@ -717,7 +717,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getX() {
-        return getInstanceOf(Integer.class, this.x);
+        return this.x = getInstanceOf(Integer.class, this.x);
     }
 
     public Legend setX(Integer x) {
@@ -726,7 +726,7 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     public Integer getY() {
-        return getInstanceOf(Integer.class, this.y);
+        return this.y = getInstanceOf(Integer.class, this.y);
     }
 
     public Legend setY(Integer y) {

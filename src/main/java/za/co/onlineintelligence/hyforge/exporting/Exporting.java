@@ -10,6 +10,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsExportingMimeTypeValue;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Exporting  HighchartsAPI Class
@@ -261,7 +263,7 @@ public class Exporting implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Accessibility getAccessibility() {
-        return this.accessibility;
+        return this.accessibility = getInstanceOf(Accessibility.class, this.accessibility);
     }
 
     public Exporting setAccessibility(Accessibility accessibility) {
@@ -270,7 +272,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Boolean getAllowHTML() {
-        return this.allowHTML;
+        return this.allowHTML = getInstanceOf(Boolean.class, this.allowHTML);
     }
 
     public Exporting setAllowHTML(Boolean allowHTML) {
@@ -279,7 +281,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public ExportButtons getButtons() {
-        return this.buttons;
+        return this.buttons = getInstanceOf(ExportButtons.class, this.buttons);
     }
 
     public Exporting setButtons(ExportButtons buttons) {
@@ -288,7 +290,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public HighchartsOptions getChartOptions() {
-        return this.chartOptions;
+        return this.chartOptions = getInstanceOf(HighchartsOptions.class, this.chartOptions);
     }
 
     public Exporting setChartOptions(HighchartsOptions chartOptions) {
@@ -297,7 +299,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Csv getCsv() {
-        return this.csv;
+        return this.csv = getInstanceOf(Csv.class, this.csv);
     }
 
     public Exporting setCsv(Csv csv) {
@@ -306,7 +308,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.enabled = getInstanceOf(Boolean.class, this.enabled);
     }
 
     public Exporting setEnabled(Boolean enabled) {
@@ -315,7 +317,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getError() {
-        return this.error;
+        return this.error = getInstanceOf(HighchartsCallbackFunction.class, this.error);
     }
 
     public Exporting setError(HighchartsCallbackFunction error) {
@@ -324,7 +326,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Boolean getFallbackToExportServer() {
-        return this.fallbackToExportServer;
+        return this.fallbackToExportServer = getInstanceOf(Boolean.class, this.fallbackToExportServer);
     }
 
     public Exporting setFallbackToExportServer(Boolean fallbackToExportServer) {
@@ -333,7 +335,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public String getFilename() {
-        return this.filename;
+        return this.filename = getInstanceOf(String.class, this.filename);
     }
 
     public Exporting setFilename(String filename) {
@@ -342,7 +344,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Map<String, Object> getFormAttributes() {
-        return this.formAttributes;
+        return this.formAttributes = getInstanceOf(Map.class, this.formAttributes);
     }
 
     public Exporting setFormAttributes(Map<String, Object> formAttributes) {
@@ -351,7 +353,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public String getLibURL() {
-        return this.libURL;
+        return this.libURL = getInstanceOf(String.class, this.libURL);
     }
 
     public Exporting setLibURL(String libURL) {
@@ -360,7 +362,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Map<String, HighchartsExportingMenuObject> getMenuItemDefinitions() {
-        return this.menuItemDefinitions;
+        return this.menuItemDefinitions = getInstanceOf(Map.class, this.menuItemDefinitions);
     }
 
     public Exporting setMenuItemDefinitions(Map<String, HighchartsExportingMenuObject> menuItemDefinitions) {
@@ -369,7 +371,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Integer getPrintMaxWidth() {
-        return this.printMaxWidth;
+        return this.printMaxWidth = getInstanceOf(Integer.class, this.printMaxWidth);
     }
 
     public Exporting setPrintMaxWidth(Integer printMaxWidth) {
@@ -378,7 +380,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Integer getScale() {
-        return this.scale;
+        return this.scale = getInstanceOf(Integer.class, this.scale);
     }
 
     public Exporting setScale(Integer scale) {
@@ -387,7 +389,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Boolean getShowTable() {
-        return this.showTable;
+        return this.showTable = getInstanceOf(Boolean.class, this.showTable);
     }
 
     public Exporting setShowTable(Boolean showTable) {
@@ -396,7 +398,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Integer getSourceHeight() {
-        return this.sourceHeight;
+        return this.sourceHeight = getInstanceOf(Integer.class, this.sourceHeight);
     }
 
     public Exporting setSourceHeight(Integer sourceHeight) {
@@ -405,7 +407,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Integer getSourceWidth() {
-        return this.sourceWidth;
+        return this.sourceWidth = getInstanceOf(Integer.class, this.sourceWidth);
     }
 
     public Exporting setSourceWidth(Integer sourceWidth) {
@@ -414,7 +416,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public String getTableCaption() {
-        return this.tableCaption;
+        return this.tableCaption = getInstanceOf(String.class, this.tableCaption);
     }
 
     public Exporting setTableCaption(String tableCaption) {
@@ -423,7 +425,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public HighchartsExportingMimeTypeValue getType() {
-        return this.type;
+        return this.type = getInstanceOf(HighchartsExportingMimeTypeValue.class, this.type);
     }
 
     public Exporting setType(HighchartsExportingMimeTypeValue type) {
@@ -432,7 +434,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public String getUrl() {
-        return this.url;
+        return this.url = getInstanceOf(String.class, this.url);
     }
 
     public Exporting setUrl(String url) {
@@ -441,7 +443,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Boolean getUseMultiLevelHeaders() {
-        return this.useMultiLevelHeaders;
+        return this.useMultiLevelHeaders = getInstanceOf(Boolean.class, this.useMultiLevelHeaders);
     }
 
     public Exporting setUseMultiLevelHeaders(Boolean useMultiLevelHeaders) {
@@ -450,7 +452,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Boolean getUseRowspanHeaders() {
-        return this.useRowspanHeaders;
+        return this.useRowspanHeaders = getInstanceOf(Boolean.class, this.useRowspanHeaders);
     }
 
     public Exporting setUseRowspanHeaders(Boolean useRowspanHeaders) {
@@ -459,7 +461,7 @@ public class Exporting implements Serializable, DrosteDeflater {
     }
 
     public Integer getWidth() {
-        return this.width;
+        return this.width = getInstanceOf(Integer.class, this.width);
     }
 
     public Exporting setWidth(Integer width) {

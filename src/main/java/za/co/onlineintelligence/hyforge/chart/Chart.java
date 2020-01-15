@@ -460,7 +460,7 @@ public class Chart implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public boolean getAlignTicks() {
-        return getInstanceOf(boolean.class, this.alignTicks);
+        return this.alignTicks = getInstanceOf(boolean.class, this.alignTicks);
     }
 
     public Chart setAlignTicks(boolean alignTicks) {
@@ -469,7 +469,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getAnimation() {
-        return getInstanceOf(boolean.class, this.animation);
+        return this.animation = getInstanceOf(boolean.class, this.animation);
     }
 
     public Chart setAnimation(boolean animation) {
@@ -478,7 +478,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBackgroundColor() {
-        return getInstanceOf(HighchartsColor.class, this.backgroundColor);
+        return this.backgroundColor = getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
     public Chart setBackgroundColor(HighchartsColor backgroundColor) {
@@ -487,7 +487,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBorderColor() {
-        return getInstanceOf(HighchartsColor.class, this.borderColor);
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public Chart setBorderColor(HighchartsColor borderColor) {
@@ -496,7 +496,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getBorderRadius() {
-        return getInstanceOf(int.class, this.borderRadius);
+        return this.borderRadius = getInstanceOf(int.class, this.borderRadius);
     }
 
     public Chart setBorderRadius(int borderRadius) {
@@ -505,7 +505,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getBorderWidth() {
-        return getInstanceOf(int.class, this.borderWidth);
+        return this.borderWidth = getInstanceOf(int.class, this.borderWidth);
     }
 
     public Chart setBorderWidth(int borderWidth) {
@@ -514,7 +514,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return getInstanceOf(String.class, this.className);
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public Chart setClassName(String className) {
@@ -523,7 +523,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getColorCount() {
-        return getInstanceOf(int.class, this.colorCount);
+        return this.colorCount = getInstanceOf(int.class, this.colorCount);
     }
 
     public Chart setColorCount(int colorCount) {
@@ -532,7 +532,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getDefaultSeriesType() {
-        return getInstanceOf(String.class, this.defaultSeriesType);
+        return this.defaultSeriesType = getInstanceOf(String.class, this.defaultSeriesType);
     }
 
     @Deprecated
@@ -542,7 +542,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getDisplayErrors() {
-        return getInstanceOf(boolean.class, this.displayErrors);
+        return this.displayErrors = getInstanceOf(boolean.class, this.displayErrors);
     }
 
     public Chart setDisplayErrors(boolean displayErrors) {
@@ -551,7 +551,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public ChartEvents getEvents() {
-        return getInstanceOf(ChartEvents.class, this.events);
+        return this.events = getInstanceOf(ChartEvents.class, this.events);
     }
 
     public Chart setEvents(ChartEvents events) {
@@ -560,7 +560,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getHeight() {
-        return getInstanceOf(HighchartsSize.class, this.height);
+        return this.height = getInstanceOf(HighchartsSize.class, this.height);
     }
 
     public Chart setHeight(HighchartsSize height) {
@@ -589,7 +589,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getIgnoreHiddenSeries() {
-        return getInstanceOf(boolean.class, this.ignoreHiddenSeries);
+        return this.ignoreHiddenSeries = getInstanceOf(boolean.class, this.ignoreHiddenSeries);
     }
 
     public Chart setIgnoreHiddenSeries(boolean ignoreHiddenSeries) {
@@ -598,7 +598,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getInverted() {
-        return getInstanceOf(boolean.class, this.inverted);
+        return this.inverted = getInstanceOf(boolean.class, this.inverted);
     }
 
     public Chart setInverted(boolean inverted) {
@@ -607,7 +607,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getMap() {
-        return getInstanceOf(String.class, this.map);
+        return this.map = getInstanceOf(String.class, this.map);
     }
 
     public Chart setMap(String map) {
@@ -616,7 +616,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public MapTransforms getMapTransforms() {
-        return getInstanceOf(MapTransforms.class, this.mapTransforms);
+        return this.mapTransforms = getInstanceOf(MapTransforms.class, this.mapTransforms);
     }
 
     public Chart setMapTransforms(MapTransforms mapTransforms) {
@@ -625,7 +625,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int[] getMargin() {
-        return getInstanceOf(int[].class, this.margin);
+        return this.margin = getInstanceOf(int[].class, this.margin);
     }
 
     public Chart setMargin(int[] margin) {
@@ -648,7 +648,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getMarginBottom() {
-        return getInstanceOf(int.class, this.marginBottom);
+        return this.marginBottom = getInstanceOf(int.class, this.marginBottom);
     }
 
     public Chart setMarginBottom(int marginBottom) {
@@ -657,7 +657,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getMarginLeft() {
-        return getInstanceOf(int.class, this.marginLeft);
+        return this.marginLeft = getInstanceOf(int.class, this.marginLeft);
     }
 
     public Chart setMarginLeft(int marginLeft) {
@@ -666,7 +666,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getMarginRight() {
-        return getInstanceOf(int.class, this.marginRight);
+        return this.marginRight = getInstanceOf(int.class, this.marginRight);
     }
 
     public Chart setMarginRight(int marginRight) {
@@ -675,7 +675,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getMarginTop() {
-        return getInstanceOf(int.class, this.marginTop);
+        return this.marginTop = getInstanceOf(int.class, this.marginTop);
     }
 
     public Chart setMarginTop(int marginTop) {
@@ -684,7 +684,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getNumberFormatter() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.numberFormatter);
+        return this.numberFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.numberFormatter);
     }
 
     public Chart setNumberFormatter(HighchartsCallbackFunction numberFormatter) {
@@ -693,7 +693,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public Options3d getOptions3d() {
-        return getInstanceOf(Options3d.class, this.options3d);
+        return this.options3d = getInstanceOf(Options3d.class, this.options3d);
     }
 
     public Chart setOptions3d(Options3d options3d) {
@@ -702,7 +702,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getPanKey() {
-        return getInstanceOf(String.class, this.panKey);
+        return this.panKey = getInstanceOf(String.class, this.panKey);
     }
 
     public Chart setPanKey(String panKey) {
@@ -711,7 +711,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public Panning getPanning() {
-        return getInstanceOf(Panning.class, this.panning);
+        return this.panning = getInstanceOf(Panning.class, this.panning);
     }
 
     public Chart setPanning(Panning panning) {
@@ -720,7 +720,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public ParallelAxes getParallelAxes() {
-        return getInstanceOf(ParallelAxes.class, this.parallelAxes);
+        return this.parallelAxes = getInstanceOf(ParallelAxes.class, this.parallelAxes);
     }
 
     public Chart setParallelAxes(ParallelAxes parallelAxes) {
@@ -729,7 +729,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getParallelCoordinates() {
-        return getInstanceOf(boolean.class, this.parallelCoordinates);
+        return this.parallelCoordinates = getInstanceOf(boolean.class, this.parallelCoordinates);
     }
 
     public Chart setParallelCoordinates(boolean parallelCoordinates) {
@@ -738,7 +738,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getPinchType() {
-        return getInstanceOf(String.class, this.pinchType);
+        return this.pinchType = getInstanceOf(String.class, this.pinchType);
     }
 
     public Chart setPinchType(String pinchType) {
@@ -747,7 +747,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getPlotBackgroundColor() {
-        return getInstanceOf(HighchartsColor.class, this.plotBackgroundColor);
+        return this.plotBackgroundColor = getInstanceOf(HighchartsColor.class, this.plotBackgroundColor);
     }
 
     public Chart setPlotBackgroundColor(HighchartsColor plotBackgroundColor) {
@@ -756,7 +756,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getPlotBackgroundImage() {
-        return getInstanceOf(String.class, this.plotBackgroundImage);
+        return this.plotBackgroundImage = getInstanceOf(String.class, this.plotBackgroundImage);
     }
 
     public Chart setPlotBackgroundImage(String plotBackgroundImage) {
@@ -765,7 +765,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getPlotBorderColor() {
-        return getInstanceOf(HighchartsColor.class, this.plotBorderColor);
+        return this.plotBorderColor = getInstanceOf(HighchartsColor.class, this.plotBorderColor);
     }
 
     public Chart setPlotBorderColor(HighchartsColor plotBorderColor) {
@@ -774,7 +774,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getPlotBorderWidth() {
-        return getInstanceOf(int.class, this.plotBorderWidth);
+        return this.plotBorderWidth = getInstanceOf(int.class, this.plotBorderWidth);
     }
 
     public Chart setPlotBorderWidth(int plotBorderWidth) {
@@ -783,7 +783,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getPlotShadow() {
-        return getInstanceOf(boolean.class, this.plotShadow);
+        return this.plotShadow = getInstanceOf(boolean.class, this.plotShadow);
     }
 
     public Chart setPlotShadow(boolean plotShadow) {
@@ -792,7 +792,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getPolar() {
-        return getInstanceOf(boolean.class, this.polar);
+        return this.polar = getInstanceOf(boolean.class, this.polar);
     }
 
     public Chart setPolar(boolean polar) {
@@ -801,7 +801,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getReflow() {
-        return getInstanceOf(boolean.class, this.reflow);
+        return this.reflow = getInstanceOf(boolean.class, this.reflow);
     }
 
     public Chart setReflow(boolean reflow) {
@@ -810,7 +810,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getRenderTo() {
-        return getInstanceOf(String.class, this.renderTo);
+        return this.renderTo = getInstanceOf(String.class, this.renderTo);
     }
 
     public Chart setRenderTo(String renderTo) {
@@ -819,7 +819,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public ResetZoomButton getResetZoomButton() {
-        return getInstanceOf(ResetZoomButton.class, this.resetZoomButton);
+        return this.resetZoomButton = getInstanceOf(ResetZoomButton.class, this.resetZoomButton);
     }
 
     public Chart setResetZoomButton(ResetZoomButton resetZoomButton) {
@@ -828,7 +828,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public ScrollablePlotArea getScrollablePlotArea() {
-        return getInstanceOf(ScrollablePlotArea.class, this.scrollablePlotArea);
+        return this.scrollablePlotArea = getInstanceOf(ScrollablePlotArea.class, this.scrollablePlotArea);
     }
 
     public Chart setScrollablePlotArea(ScrollablePlotArea scrollablePlotArea) {
@@ -837,7 +837,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getSelectionMarkerFill() {
-        return getInstanceOf(HighchartsColor.class, this.selectionMarkerFill);
+        return this.selectionMarkerFill = getInstanceOf(HighchartsColor.class, this.selectionMarkerFill);
     }
 
     public Chart setSelectionMarkerFill(HighchartsColor selectionMarkerFill) {
@@ -846,7 +846,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean isShadow() {
-        return getInstanceOf(boolean.class, this.shadow);
+        return this.shadow = getInstanceOf(boolean.class, this.shadow);
     }
 
     public Chart setShadow(boolean shadow) {
@@ -855,7 +855,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getShowAxes() {
-        return getInstanceOf(boolean.class, this.showAxes);
+        return this.showAxes = getInstanceOf(boolean.class, this.showAxes);
     }
 
     public Chart setShowAxes(boolean showAxes) {
@@ -864,7 +864,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int[] getSpacing() {
-        return getInstanceOf(int[].class, this.spacing);
+        return this.spacing = getInstanceOf(int[].class, this.spacing);
     }
 
     public Chart setSpacing(int[] spacing) {
@@ -873,7 +873,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getSpacingBottom() {
-        return getInstanceOf(int.class, this.spacingBottom);
+        return this.spacingBottom = getInstanceOf(int.class, this.spacingBottom);
     }
 
     public Chart setSpacingBottom(int spacingBottom) {
@@ -882,7 +882,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getSpacingLeft() {
-        return getInstanceOf(int.class, this.spacingLeft);
+        return this.spacingLeft = getInstanceOf(int.class, this.spacingLeft);
     }
 
     public Chart setSpacingLeft(int spacingLeft) {
@@ -891,7 +891,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getSpacingRight() {
-        return getInstanceOf(int.class, this.spacingRight);
+        return this.spacingRight = getInstanceOf(int.class, this.spacingRight);
     }
 
     public Chart setSpacingRight(int spacingRight) {
@@ -900,7 +900,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public int getSpacingTop() {
-        return getInstanceOf(int.class, this.spacingTop);
+        return this.spacingTop = getInstanceOf(int.class, this.spacingTop);
     }
 
     public Chart setSpacingTop(int spacingTop) {
@@ -909,7 +909,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Chart setStyle(HighchartsCSS style) {
@@ -918,7 +918,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public boolean getStyledMode() {
-        return getInstanceOf(boolean.class, this.styledMode);
+        return this.styledMode = getInstanceOf(boolean.class, this.styledMode);
     }
 
     public Chart setStyledMode(boolean styledMode) {
@@ -927,7 +927,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getType() {
-        return getInstanceOf(String.class, this.type);
+        return this.type = getInstanceOf(String.class, this.type);
     }
 
     public Chart setType(String type) {
@@ -936,7 +936,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getWidth() {
-        return getInstanceOf(HighchartsSize.class, this.width);
+        return this.width = getInstanceOf(HighchartsSize.class, this.width);
     }
 
     public Chart setWidth(HighchartsSize width) {
@@ -945,7 +945,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getZoomKey() {
-        return getInstanceOf(String.class, this.zoomKey);
+        return this.zoomKey = getInstanceOf(String.class, this.zoomKey);
     }
 
     public Chart setZoomKey(String zoomKey) {
@@ -954,7 +954,7 @@ public class Chart implements Serializable, DrosteDeflater {
     }
 
     public String getZoomType() {
-        return getInstanceOf(String.class, this.zoomType);
+        return this.zoomType = getInstanceOf(String.class, this.zoomType);
     }
 
     public Chart setZoomType(String zoomType) {

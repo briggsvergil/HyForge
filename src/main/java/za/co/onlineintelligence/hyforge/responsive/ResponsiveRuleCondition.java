@@ -62,7 +62,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsCallbackFunction getCallback() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.callback);
+        return this.callback = getInstanceOf(HighchartsCallbackFunction.class, this.callback);
     }
 
     public ResponsiveRuleCondition setCallback(HighchartsCallbackFunction callback) {
@@ -71,7 +71,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
     }
 
     public Integer getMaxHeight() {
-        return getInstanceOf(Integer.class, this.maxHeight);
+        return this.maxHeight = getInstanceOf(Integer.class, this.maxHeight);
     }
 
     public ResponsiveRuleCondition setMaxHeight(Integer maxHeight) {
@@ -80,7 +80,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
     }
 
     public Integer getMaxWidth() {
-        return getInstanceOf(Integer.class, this.maxWidth);
+        return this.maxWidth = getInstanceOf(Integer.class, this.maxWidth);
     }
 
     public ResponsiveRuleCondition setMaxWidth(Integer maxWidth) {
@@ -89,7 +89,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
     }
 
     public Integer getMinHeight() {
-        return getInstanceOf(Integer.class, this.minHeight);
+        return this.minHeight = getInstanceOf(Integer.class, this.minHeight);
     }
 
     public ResponsiveRuleCondition setMinHeight(Integer minHeight) {
@@ -98,7 +98,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
     }
 
     public Integer getMinWidth() {
-        return getInstanceOf(Integer.class, this.minWidth);
+        return this.minWidth = getInstanceOf(Integer.class, this.minWidth);
     }
 
     public ResponsiveRuleCondition setMinWidth(Integer minWidth) {

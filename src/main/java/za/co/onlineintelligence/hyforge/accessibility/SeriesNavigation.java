@@ -61,7 +61,7 @@ public class SeriesNavigation implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getMode() {
-        return getInstanceOf(String.class, this.mode);
+        return this.mode = getInstanceOf(String.class, this.mode);
     }
 
     public SeriesNavigation setMode(String mode) {
@@ -70,7 +70,7 @@ public class SeriesNavigation implements Serializable, DrosteDeflater {
     }
 
     public Integer getPointNavigationEnabledThreshold() {
-        return getInstanceOf(Integer.class, this.pointNavigationEnabledThreshold);
+        return this.pointNavigationEnabledThreshold = getInstanceOf(Integer.class, this.pointNavigationEnabledThreshold);
     }
 
     public SeriesNavigation setPointNavigationEnabledThreshold(Integer pointNavigationEnabledThreshold) {
@@ -79,7 +79,7 @@ public class SeriesNavigation implements Serializable, DrosteDeflater {
     }
 
     public boolean getSkipNullPoints() {
-        return getInstanceOf(boolean.class, this.skipNullPoints);
+        return this.skipNullPoints = getInstanceOf(boolean.class, this.skipNullPoints);
     }
 
     public SeriesNavigation setSkipNullPoints(boolean skipNullPoints) {

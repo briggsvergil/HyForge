@@ -161,7 +161,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsAxisTitleAlignValue getAlign() {
-        return getInstanceOf(HighchartsAxisTitleAlignValue.class, this.align);
+        return this.align = getInstanceOf(HighchartsAxisTitleAlignValue.class, this.align);
     }
 
     public AxisTitle setAlign(HighchartsAxisTitleAlignValue align) {
@@ -170,7 +170,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public AxisTitle setEnabled(boolean enabled) {
@@ -179,7 +179,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public int getMargin() {
-        return getInstanceOf(int.class, this.margin);
+        return this.margin = getInstanceOf(int.class, this.margin);
     }
 
     public AxisTitle setMargin(int margin) {
@@ -188,7 +188,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public int getOffset() {
-        return getInstanceOf(int.class, this.offset);
+        return this.offset = getInstanceOf(int.class, this.offset);
     }
 
     public AxisTitle setOffset(int offset) {
@@ -197,7 +197,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public Highcharts3DPosition getPosition3d() {
-        return getInstanceOf(Highcharts3DPosition.class, this.position3d);
+        return this.position3d = getInstanceOf(Highcharts3DPosition.class, this.position3d);
     }
 
     public AxisTitle setPosition3d(Highcharts3DPosition position3d) {
@@ -206,7 +206,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public boolean getReserveSpace() {
-        return getInstanceOf(boolean.class, this.reserveSpace);
+        return this.reserveSpace = getInstanceOf(boolean.class, this.reserveSpace);
     }
 
     public AxisTitle setReserveSpace(boolean reserveSpace) {
@@ -215,7 +215,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public int getRotation() {
-        return getInstanceOf(int.class, this.rotation);
+        return this.rotation = getInstanceOf(int.class, this.rotation);
     }
 
     public AxisTitle setRotation(int rotation) {
@@ -224,7 +224,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public Boolean getSkew3d() {
-        return getInstanceOf(Boolean.class, this.skew3d);
+        return this.skew3d = getInstanceOf(Boolean.class, this.skew3d);
     }
 
     public AxisTitle setSkew3d(Boolean skew3d) {
@@ -233,7 +233,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public AxisTitle setStyle(HighchartsCSS style) {
@@ -242,7 +242,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return getInstanceOf(String.class, this.text);
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public AxisTitle setText(String text) {
@@ -254,7 +254,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAlignValue getTextAlign() {
-        return getInstanceOf(HighchartsAlignValue.class, this.textAlign);
+        return this.textAlign = getInstanceOf(HighchartsAlignValue.class, this.textAlign);
     }
 
     public AxisTitle setTextAlign(HighchartsAlignValue textAlign) {
@@ -263,7 +263,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public boolean getUseHTML() {
-        return getInstanceOf(boolean.class, this.useHTML);
+        return this.useHTML = getInstanceOf(boolean.class, this.useHTML);
     }
 
     public AxisTitle setUseHTML(boolean useHTML) {
@@ -272,7 +272,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public int getX() {
-        return getInstanceOf(int.class, this.x);
+        return this.x = getInstanceOf(int.class, this.x);
     }
 
     public AxisTitle setX(int x) {
@@ -281,7 +281,7 @@ public class AxisTitle implements Serializable, DrosteDeflater {
     }
 
     public int getY() {
-        return getInstanceOf(int.class, this.y);
+        return this.y = getInstanceOf(int.class, this.y);
     }
 
     public AxisTitle setY(int y) {

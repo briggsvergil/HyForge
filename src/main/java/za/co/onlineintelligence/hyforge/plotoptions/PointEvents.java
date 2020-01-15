@@ -223,7 +223,7 @@ public class PointEvents implements Serializable {
     Instance-Safe Getters
 */
     public HighchartsCallbackFunction getLegendItemClick() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.legendItemClick);
+        return this.legendItemClick = getInstanceOf(HighchartsCallbackFunction.class, this.legendItemClick);
     }
 
     /*

@@ -106,7 +106,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsAlignValue getAlign() {
-        return getInstanceOf(HighchartsAlignValue.class, this.align);
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public CrosshairLabel setAlign(HighchartsAlignValue align) {
@@ -115,7 +115,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBackgroundColor() {
-        return getInstanceOf(HighchartsColor.class, this.backgroundColor);
+        return this.backgroundColor = getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
     public CrosshairLabel setBackgroundColor(HighchartsColor backgroundColor) {
@@ -124,7 +124,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBorderColor() {
-        return getInstanceOf(HighchartsColor.class, this.borderColor);
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public CrosshairLabel setBorderColor(HighchartsColor borderColor) {
@@ -133,7 +133,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public int getBorderRadius() {
-        return getInstanceOf(int.class, this.borderRadius);
+        return this.borderRadius = getInstanceOf(int.class, this.borderRadius);
     }
 
     public CrosshairLabel setBorderRadius(int borderRadius) {
@@ -142,7 +142,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public int getBorderWidth() {
-        return getInstanceOf(int.class, this.borderWidth);
+        return this.borderWidth = getInstanceOf(int.class, this.borderWidth);
     }
 
     public CrosshairLabel setBorderWidth(int borderWidth) {
@@ -151,7 +151,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public CrosshairLabel setEnabled(boolean enabled) {
@@ -160,7 +160,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public String getFormat() {
-        return getInstanceOf(String.class, this.format);
+        return this.format = getInstanceOf(String.class, this.format);
     }
 
     public CrosshairLabel setFormat(String format) {
@@ -169,7 +169,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getFormatter() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
+        return this.formatter = getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
     }
 
     public CrosshairLabel setFormatter(HighchartsCallbackFunction formatter) {
@@ -178,7 +178,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public int getPadding() {
-        return getInstanceOf(int.class, this.padding);
+        return this.padding = getInstanceOf(int.class, this.padding);
     }
 
     public CrosshairLabel setPadding(int padding) {
@@ -187,7 +187,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public String getShape() {
-        return getInstanceOf(String.class, this.shape);
+        return this.shape = getInstanceOf(String.class, this.shape);
     }
 
     public CrosshairLabel setShape(String shape) {
@@ -196,7 +196,7 @@ public class CrosshairLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public CrosshairLabel setStyle(HighchartsCSS style) {

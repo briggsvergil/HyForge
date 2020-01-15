@@ -10,6 +10,8 @@ import za.co.onlineintelligence.hyforge.axis.DateTimeLabelFormats;
 import za.co.onlineintelligence.hyforge.common.*;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsTooltipShapeValue;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Tooltip HighchartsAPI Class
@@ -422,7 +424,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getAnimation() {
-        return this.animation;
+        return this.animation = getInstanceOf(boolean.class, this.animation);
     }
 
     public Tooltip setAnimation(boolean animation) {
@@ -431,7 +433,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBackgroundColor() {
-        return this.backgroundColor;
+        return this.backgroundColor = getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
     public Tooltip setBackgroundColor(HighchartsColor backgroundColor) {
@@ -440,7 +442,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBorderColor() {
-        return this.borderColor;
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public Tooltip setBorderColor(HighchartsColor borderColor) {
@@ -449,7 +451,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public int getBorderRadius() {
-        return this.borderRadius;
+        return this.borderRadius = getInstanceOf(int.class, this.borderRadius);
     }
 
     public Tooltip setBorderRadius(int borderRadius) {
@@ -458,7 +460,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public int getBorderWidth() {
-        return this.borderWidth;
+        return this.borderWidth = getInstanceOf(int.class, this.borderWidth);
     }
 
     public Tooltip setBorderWidth(int borderWidth) {
@@ -467,7 +469,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public int getChangeDecimals() {
-        return this.changeDecimals;
+        return this.changeDecimals = getInstanceOf(int.class, this.changeDecimals);
     }
 
     public Tooltip setChangeDecimals(int changeDecimals) {
@@ -476,7 +478,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return this.className;
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public Tooltip setClassName(String className) {
@@ -485,7 +487,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public Object getClusterFormat() {
-        return this.clusterFormat;
+        return this.clusterFormat = getInstanceOf(Object.class, this.clusterFormat);
     }
 
     public Tooltip setClusterFormat(Object clusterFormat) {
@@ -494,7 +496,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public Crosshair getCrosshairs() {
-        return this.crosshairs;
+        return this.crosshairs = getInstanceOf(Crosshair.class, this.crosshairs);
     }
 
     public Tooltip setCrosshairs(Crosshair crosshairs) {
@@ -503,7 +505,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public DateTimeLabelFormats getDateTimeLabelFormats() {
-        return this.dateTimeLabelFormats;
+        return this.dateTimeLabelFormats = getInstanceOf(DateTimeLabelFormats.class, this.dateTimeLabelFormats);
     }
 
     public Tooltip setDateTimeLabelFormats(DateTimeLabelFormats dateTimeLabelFormats) {
@@ -512,7 +514,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public int getDistance() {
-        return this.distance;
+        return this.distance = getInstanceOf(int.class, this.distance);
     }
 
     public Tooltip setDistance(int distance) {
@@ -521,7 +523,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return this.enabled;
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public Tooltip setEnabled(boolean enabled) {
@@ -530,7 +532,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public boolean getFollowPointer() {
-        return this.followPointer;
+        return this.followPointer = getInstanceOf(boolean.class, this.followPointer);
     }
 
     public Tooltip setFollowPointer(boolean followPointer) {
@@ -539,7 +541,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public boolean getFollowTouchMove() {
-        return this.followTouchMove;
+        return this.followTouchMove = getInstanceOf(boolean.class, this.followTouchMove);
     }
 
     public Tooltip setFollowTouchMove(boolean followTouchMove) {
@@ -548,7 +550,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public String getFooterFormat() {
-        return this.footerFormat;
+        return this.footerFormat = getInstanceOf(String.class, this.footerFormat);
     }
 
     public Tooltip setFooterFormat(String footerFormat) {
@@ -557,7 +559,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getFormatter() {
-        return this.formatter;
+        return this.formatter = getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
     }
 
     public Tooltip setFormatter(HighchartsCallbackFunction formatter) {
@@ -566,7 +568,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public String getHeaderFormat() {
-        return this.headerFormat;
+        return this.headerFormat = getInstanceOf(String.class, this.headerFormat);
     }
 
     public Tooltip setHeaderFormat(String headerFormat) {
@@ -575,7 +577,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsTooltipShapeValue getHeaderShape() {
-        return this.headerShape;
+        return this.headerShape = getInstanceOf(HighchartsTooltipShapeValue.class, this.headerShape);
     }
 
     public Tooltip setHeaderShape(HighchartsTooltipShapeValue headerShape) {
@@ -584,7 +586,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public int getHideDelay() {
-        return this.hideDelay;
+        return this.hideDelay = getInstanceOf(int.class, this.hideDelay);
     }
 
     public Tooltip setHideDelay(int hideDelay) {
@@ -593,7 +595,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public String getNullFormat() {
-        return this.nullFormat;
+        return this.nullFormat = getInstanceOf(String.class, this.nullFormat);
     }
 
     public Tooltip setNullFormat(String nullFormat) {
@@ -602,7 +604,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getNullFormatter() {
-        return this.nullFormatter;
+        return this.nullFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.nullFormatter);
     }
 
     public Tooltip setNullFormatter(HighchartsCallbackFunction nullFormatter) {
@@ -611,7 +613,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public Boolean getOutside() {
-        return this.outside;
+        return this.outside = getInstanceOf(Boolean.class, this.outside);
     }
 
     public Tooltip setOutside(Boolean outside) {
@@ -620,7 +622,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public int getPadding() {
-        return this.padding;
+        return this.padding = getInstanceOf(int.class, this.padding);
     }
 
     public Tooltip setPadding(int padding) {
@@ -629,7 +631,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public String getPointFormat() {
-        return this.pointFormat;
+        return this.pointFormat = getInstanceOf(String.class, this.pointFormat);
     }
 
     public Tooltip setPointFormat(String pointFormat) {
@@ -638,7 +640,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getPointFormatter() {
-        return this.pointFormatter;
+        return this.pointFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.pointFormatter);
     }
 
     public Tooltip setPointFormatter(HighchartsCallbackFunction pointFormatter) {
@@ -647,7 +649,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getPositioner() {
-        return this.positioner;
+        return this.positioner = getInstanceOf(HighchartsCallbackFunction.class, this.positioner);
     }
 
     public Tooltip setPositioner(HighchartsCallbackFunction positioner) {
@@ -656,7 +658,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsShadowOptionsObject getShadow() {
-        return this.shadow;
+        return this.shadow = getInstanceOf(HighchartsShadowOptionsObject.class, this.shadow);
     }
 
     public Tooltip setShadow(HighchartsShadowOptionsObject shadow) {
@@ -665,7 +667,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsTooltipShapeValue getShape() {
-        return this.shape;
+        return this.shape = getInstanceOf(HighchartsTooltipShapeValue.class, this.shape);
     }
 
     public Tooltip setShape(HighchartsTooltipShapeValue shape) {
@@ -674,7 +676,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public boolean getShared() {
-        return this.shared;
+        return this.shared = getInstanceOf(boolean.class, this.shared);
     }
 
     public Tooltip setShared(boolean shared) {
@@ -683,7 +685,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public int getSnap() {
-        return this.snap;
+        return this.snap = getInstanceOf(int.class, this.snap);
     }
 
     public Tooltip setSnap(int snap) {
@@ -692,7 +694,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public boolean getSplit() {
-        return this.split;
+        return this.split = getInstanceOf(boolean.class, this.split);
     }
 
     public Tooltip setSplit(boolean split) {
@@ -701,7 +703,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Tooltip setStyle(HighchartsCSS style) {
@@ -710,7 +712,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public boolean getUseHTML() {
-        return this.useHTML;
+        return this.useHTML = getInstanceOf(boolean.class, this.useHTML);
     }
 
     public Tooltip setUseHTML(boolean useHTML) {
@@ -719,7 +721,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public int getValueDecimals() {
-        return this.valueDecimals;
+        return this.valueDecimals = getInstanceOf(int.class, this.valueDecimals);
     }
 
     public Tooltip setValueDecimals(int valueDecimals) {
@@ -728,7 +730,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public String getValuePrefix() {
-        return this.valuePrefix;
+        return this.valuePrefix = getInstanceOf(String.class, this.valuePrefix);
     }
 
     public Tooltip setValuePrefix(String valuePrefix) {
@@ -737,7 +739,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public String getValueSuffix() {
-        return this.valueSuffix;
+        return this.valueSuffix = getInstanceOf(String.class, this.valueSuffix);
     }
 
     public Tooltip setValueSuffix(String valueSuffix) {
@@ -746,7 +748,7 @@ public class Tooltip implements Serializable, DrosteDeflater {
     }
 
     public String getXDateFormat() {
-        return this.xDateFormat;
+        return this.xDateFormat = getInstanceOf(String.class, this.xDateFormat);
     }
 
     public Tooltip setXDateFormat(String xDateFormat) {

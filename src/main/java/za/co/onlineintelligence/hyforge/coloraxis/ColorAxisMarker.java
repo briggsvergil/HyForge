@@ -8,6 +8,8 @@ import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ColorAxisMarker  HighchartsAPI Class
@@ -40,7 +42,7 @@ public class ColorAxisMarker implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Integer getAnimation() {
-        return this.animation;
+        return this.animation = getInstanceOf(Integer.class, this.animation);
     }
 
     public ColorAxisMarker setAnimation(Integer animation) {
@@ -49,7 +51,7 @@ public class ColorAxisMarker implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getColor() {
-        return this.color;
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public ColorAxisMarker setColor(HighchartsColor color) {
@@ -63,7 +65,7 @@ public class ColorAxisMarker implements Serializable, DrosteDeflater {
     }
 
     public Integer getWidth() {
-        return this.width;
+        return this.width = getInstanceOf(Integer.class, this.width);
     }
 
     public ColorAxisMarker setWidth(Integer width) {

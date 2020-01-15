@@ -74,7 +74,7 @@ public class AnnounceNewData implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsCallbackFunction getAnnouncementFormatter() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.announcementFormatter);
+        return this.announcementFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.announcementFormatter);
     }
 
     public AnnounceNewData setAnnouncementFormatter(HighchartsCallbackFunction announcementFormatter) {
@@ -83,7 +83,7 @@ public class AnnounceNewData implements Serializable, DrosteDeflater {
     }
 
     public Boolean getEnabled() {
-        return getInstanceOf(Boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(Boolean.class, this.enabled);
     }
 
     public AnnounceNewData setEnabled(Boolean enabled) {
@@ -92,7 +92,7 @@ public class AnnounceNewData implements Serializable, DrosteDeflater {
     }
 
     public Boolean getInterruptUser() {
-        return getInstanceOf(Boolean.class, this.interruptUser);
+        return this.interruptUser = getInstanceOf(Boolean.class, this.interruptUser);
     }
 
     public AnnounceNewData setInterruptUser(Boolean interruptUser) {
@@ -101,7 +101,7 @@ public class AnnounceNewData implements Serializable, DrosteDeflater {
     }
 
     public Integer getMinAnnounceInterval() {
-        return getInstanceOf(Integer.class, this.minAnnounceInterval);
+        return this.minAnnounceInterval = getInstanceOf(Integer.class, this.minAnnounceInterval);
     }
 
     public AnnounceNewData setMinAnnounceInterval(Integer minAnnounceInterval) {

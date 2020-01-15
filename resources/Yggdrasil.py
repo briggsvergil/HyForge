@@ -145,7 +145,7 @@ def createClass(className, fields):
         t = item['type']
         f = item['field']
         lns.append(f"\tpublic {t} get{capitalise(f)}() {{\n")
-        lns.append(f"\t\treturn getInstanceOf({t}.class, this.{f});\n\t}}\n\n")
+        lns.append(f"\t\treturn this.{f} = getInstanceOf({t}.class, this.{f});\n\t}}\n\n")
 
     lns.append("\t/*\n\t\tBuilder-Style Setters\n\t*/\n")
     for item in fields:

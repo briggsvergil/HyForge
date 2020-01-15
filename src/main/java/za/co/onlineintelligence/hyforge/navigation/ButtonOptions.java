@@ -137,7 +137,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsAlignValue getAlign() {
-        return getInstanceOf(HighchartsAlignValue.class, this.align);
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public ButtonOptions setAlign(HighchartsAlignValue align) {
@@ -146,7 +146,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getButtonSpacing() {
-        return getInstanceOf(Integer.class, this.buttonSpacing);
+        return this.buttonSpacing = getInstanceOf(Integer.class, this.buttonSpacing);
     }
 
     public ButtonOptions setButtonSpacing(Integer buttonSpacing) {
@@ -155,7 +155,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getEnabled() {
-        return getInstanceOf(Boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(Boolean.class, this.enabled);
     }
 
     public ButtonOptions setEnabled(Boolean enabled) {
@@ -164,7 +164,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getHeight() {
-        return getInstanceOf(Integer.class, this.height);
+        return this.height = getInstanceOf(Integer.class, this.height);
     }
 
     public ButtonOptions setHeight(Integer height) {
@@ -173,7 +173,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getSymbolFill() {
-        return getInstanceOf(HighchartsColor.class, this.symbolFill);
+        return this.symbolFill = getInstanceOf(HighchartsColor.class, this.symbolFill);
     }
 
     public ButtonOptions setSymbolFill(HighchartsColor symbolFill) {
@@ -182,7 +182,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getSymbolSize() {
-        return getInstanceOf(Integer.class, this.symbolSize);
+        return this.symbolSize = getInstanceOf(Integer.class, this.symbolSize);
     }
 
     public ButtonOptions setSymbolSize(Integer symbolSize) {
@@ -191,7 +191,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColorString getSymbolStroke() {
-        return getInstanceOf(HighchartsColorString.class, this.symbolStroke);
+        return this.symbolStroke = getInstanceOf(HighchartsColorString.class, this.symbolStroke);
     }
 
     public ButtonOptions setSymbolStroke(HighchartsColorString symbolStroke) {
@@ -200,7 +200,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getSymbolStrokeWidth() {
-        return getInstanceOf(Integer.class, this.symbolStrokeWidth);
+        return this.symbolStrokeWidth = getInstanceOf(Integer.class, this.symbolStrokeWidth);
     }
 
     public ButtonOptions setSymbolStrokeWidth(Integer symbolStrokeWidth) {
@@ -209,7 +209,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getSymbolX() {
-        return getInstanceOf(Integer.class, this.symbolX);
+        return this.symbolX = getInstanceOf(Integer.class, this.symbolX);
     }
 
     public ButtonOptions setSymbolX(Integer symbolX) {
@@ -218,7 +218,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getSymbolY() {
-        return getInstanceOf(Integer.class, this.symbolY);
+        return this.symbolY = getInstanceOf(Integer.class, this.symbolY);
     }
 
     public ButtonOptions setSymbolY(Integer symbolY) {
@@ -227,7 +227,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return getInstanceOf(String.class, this.text);
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public ButtonOptions setText(String text) {
@@ -236,7 +236,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Theme getTheme() {
-        return getInstanceOf(Theme.class, this.theme);
+        return this.theme = getInstanceOf(Theme.class, this.theme);
     }
 
     public ButtonOptions setTheme(Theme theme) {
@@ -245,7 +245,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
+        return this.verticalAlign = getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public ButtonOptions setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -254,7 +254,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getWidth() {
-        return getInstanceOf(Integer.class, this.width);
+        return this.width = getInstanceOf(Integer.class, this.width);
     }
 
     public ButtonOptions setWidth(Integer width) {
@@ -263,7 +263,7 @@ public class ButtonOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getY() {
-        return getInstanceOf(Integer.class, this.y);
+        return this.y = getInstanceOf(Integer.class, this.y);
     }
 
     public ButtonOptions setY(Integer y) {

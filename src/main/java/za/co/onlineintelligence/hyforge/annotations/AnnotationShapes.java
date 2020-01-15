@@ -59,7 +59,7 @@ public class AnnotationShapes extends ShapeOptions implements Serializable, Dros
         Getters and Builder-Style Setters
     */
     public String getMarkerEnd() {
-        return getInstanceOf(String.class, this.markerEnd);
+        return this.markerEnd = getInstanceOf(String.class, this.markerEnd);
     }
 
     public AnnotationShapes setMarkerEnd(String markerEnd) {
@@ -68,7 +68,7 @@ public class AnnotationShapes extends ShapeOptions implements Serializable, Dros
     }
 
     public String getMarkerStart() {
-        return getInstanceOf(String.class, this.markerStart);
+        return this.markerStart = getInstanceOf(String.class, this.markerStart);
     }
 
     public AnnotationShapes setMarkerStart(String markerStart) {
@@ -77,7 +77,7 @@ public class AnnotationShapes extends ShapeOptions implements Serializable, Dros
     }
 
     public HighchartsPoint getPoint() {
-        return getInstanceOf(HighchartsPoint.class, this.point);
+        return this.point = getInstanceOf(HighchartsPoint.class, this.point);
     }
 
     public AnnotationShapes setPoint(HighchartsPoint point) {
@@ -86,7 +86,7 @@ public class AnnotationShapes extends ShapeOptions implements Serializable, Dros
     }
 
     public HighchartsPoint[] getPoints() {
-        return getInstanceOf(HighchartsPoint[].class, this.points);
+        return this.points = getInstanceOf(HighchartsPoint[].class, this.points);
     }
 
     public AnnotationShapes setPoints(HighchartsPoint[] points) {

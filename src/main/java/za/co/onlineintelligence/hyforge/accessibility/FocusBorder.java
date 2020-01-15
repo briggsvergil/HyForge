@@ -60,7 +60,7 @@ public class FocusBorder implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getEnabled() {
-        return getInstanceOf(boolean.class, this.enabled);
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public FocusBorder setEnabled(boolean enabled) {
@@ -69,7 +69,7 @@ public class FocusBorder implements Serializable, DrosteDeflater {
     }
 
     public boolean getHideBrowserFocusOutline() {
-        return getInstanceOf(boolean.class, this.hideBrowserFocusOutline);
+        return this.hideBrowserFocusOutline = getInstanceOf(boolean.class, this.hideBrowserFocusOutline);
     }
 
     public FocusBorder setHideBrowserFocusOutline(boolean hideBrowserFocusOutline) {
@@ -78,7 +78,7 @@ public class FocusBorder implements Serializable, DrosteDeflater {
     }
 
     public int getMargin() {
-        return getInstanceOf(int.class, this.margin);
+        return this.margin = getInstanceOf(int.class, this.margin);
     }
 
     public FocusBorder setMargin(int margin) {
@@ -87,7 +87,7 @@ public class FocusBorder implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return getInstanceOf(HighchartsCSS.class, this.style);
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public FocusBorder setStyle(HighchartsCSS style) {

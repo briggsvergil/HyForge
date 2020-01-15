@@ -6,6 +6,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Time  HighchartsAPI Class
@@ -76,7 +78,7 @@ public class Time implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public ZonedDateTime getDate() {
-        return this.Date;
+        return this.Date = getInstanceOf(ZonedDateTime.class, this.Date);
     }
 
     public Time setDate(ZonedDateTime Date) {
@@ -85,7 +87,7 @@ public class Time implements Serializable, DrosteDeflater {
     }
 
     public String getGetTimezoneOffset() {
-        return this.getTimezoneOffset;
+        return this.getTimezoneOffset = getInstanceOf(String.class, this.getTimezoneOffset);
     }
 
     public Time setGetTimezoneOffset(String getTimezoneOffset) {
@@ -94,7 +96,7 @@ public class Time implements Serializable, DrosteDeflater {
     }
 
     public String getTimezone() {
-        return this.timezone;
+        return this.timezone = getInstanceOf(String.class, this.timezone);
     }
 
     public Time setTimezone(String timezone) {
@@ -103,7 +105,7 @@ public class Time implements Serializable, DrosteDeflater {
     }
 
     public Integer getTimezoneOffset() {
-        return this.timezoneOffset;
+        return this.timezoneOffset = getInstanceOf(Integer.class, this.timezoneOffset);
     }
 
     public Time setTimezoneOffset(Integer timezoneOffset) {
@@ -112,7 +114,7 @@ public class Time implements Serializable, DrosteDeflater {
     }
 
     public Boolean getUseUTC() {
-        return this.useUTC;
+        return this.useUTC = getInstanceOf(Boolean.class, this.useUTC);
     }
 
     public Time setUseUTC(Boolean useUTC) {

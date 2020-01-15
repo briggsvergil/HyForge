@@ -5,16 +5,16 @@ package za.co.onlineintelligence.hyforge.common;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * MouseEvents HighchartsAPI Class
  *
  * @author Sean Briggs
  */
-public class HighchartsMouseEvents implements Serializable
-{
+public class HighchartsMouseEvents implements Serializable {
 
-    public HighchartsMouseEvents()
-    {
+    public HighchartsMouseEvents() {
     }
 
     /**
@@ -48,53 +48,44 @@ public class HighchartsMouseEvents implements Serializable
     /*
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
-    public HighchartsCallbackFunction getClick()
-    {
-        return this.click;
+    public HighchartsCallbackFunction getClick() {
+        return this.click = getInstanceOf(HighchartsCallbackFunction.class, this.click);
     }
 
-    public HighchartsMouseEvents setClick(HighchartsCallbackFunction click)
-    {
+    public HighchartsMouseEvents setClick(HighchartsCallbackFunction click) {
         this.click = click;
         return this;
     }
 
-    public HighchartsCallbackFunction getMousemove()
-    {
-        return this.mousemove;
+    public HighchartsCallbackFunction getMousemove() {
+        return this.mousemove = getInstanceOf(HighchartsCallbackFunction.class, this.mousemove);
     }
 
-    public HighchartsMouseEvents setMousemove(HighchartsCallbackFunction mousemove)
-    {
+    public HighchartsMouseEvents setMousemove(HighchartsCallbackFunction mousemove) {
         this.mousemove = mousemove;
         return this;
     }
 
-    public HighchartsCallbackFunction getMouseout()
-    {
-        return this.mouseout;
+    public HighchartsCallbackFunction getMouseout() {
+        return this.mouseout = getInstanceOf(HighchartsCallbackFunction.class, this.mouseout);
     }
 
-    public HighchartsMouseEvents setMouseout(HighchartsCallbackFunction mouseout)
-    {
+    public HighchartsMouseEvents setMouseout(HighchartsCallbackFunction mouseout) {
         this.mouseout = mouseout;
         return this;
     }
 
-    public HighchartsCallbackFunction getMouseover()
-    {
-        return this.mouseover;
+    public HighchartsCallbackFunction getMouseover() {
+        return this.mouseover = getInstanceOf(HighchartsCallbackFunction.class, this.mouseover);
     }
 
-    public HighchartsMouseEvents setMouseover(HighchartsCallbackFunction mouseover)
-    {
+    public HighchartsMouseEvents setMouseover(HighchartsCallbackFunction mouseover) {
         this.mouseover = mouseover;
         return this;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int hash = 3;
         hash = 17 * hash + Objects.hashCode(this.click);
         hash = 17 * hash + Objects.hashCode(this.mousemove);
@@ -105,8 +96,7 @@ public class HighchartsMouseEvents implements Serializable
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "click:" + click
                 + ", mousemove:" + mousemove
                 + ", mouseout:" + mouseout

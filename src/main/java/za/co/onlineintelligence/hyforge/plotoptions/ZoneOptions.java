@@ -62,7 +62,7 @@ public class ZoneOptions implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getClassName() {
-        return getInstanceOf(String.class, this.className);
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public ZoneOptions setClassName(String className) {
@@ -71,7 +71,7 @@ public class ZoneOptions implements Serializable {
     }
 
     public HighchartsColor getColor() {
-        return getInstanceOf(HighchartsColor.class, this.color);
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public ZoneOptions setColor(HighchartsColor color) {
@@ -80,7 +80,7 @@ public class ZoneOptions implements Serializable {
     }
 
     public HighchartsDashStyleValue getDashStyle() {
-        return getInstanceOf(HighchartsDashStyleValue.class, this.dashStyle);
+        return this.dashStyle = getInstanceOf(HighchartsDashStyleValue.class, this.dashStyle);
     }
 
     public ZoneOptions setDashStyle(HighchartsDashStyleValue dashStyle) {
@@ -89,7 +89,7 @@ public class ZoneOptions implements Serializable {
     }
 
     public HighchartsColor getFillColor() {
-        return getInstanceOf(HighchartsColor.class, this.fillColor);
+        return this.fillColor = getInstanceOf(HighchartsColor.class, this.fillColor);
     }
 
     public ZoneOptions setFillColor(HighchartsColor fillColor) {
@@ -98,7 +98,7 @@ public class ZoneOptions implements Serializable {
     }
 
     public int getValue() {
-        return getInstanceOf(int.class, this.value);
+        return this.value = getInstanceOf(int.class, this.value);
     }
 
     public ZoneOptions setValue(int value) {

@@ -7,6 +7,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsSize;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Background  HighchartsAPI Class
@@ -76,7 +78,7 @@ public class Background implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsColor getBackgroundColor() {
-        return this.backgroundColor;
+        return this.backgroundColor = getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
     public Background setBackgroundColor(HighchartsColor backgroundColor) {
@@ -85,7 +87,7 @@ public class Background implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBorderColor() {
-        return this.borderColor;
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public Background setBorderColor(HighchartsColor borderColor) {
@@ -94,7 +96,7 @@ public class Background implements Serializable, DrosteDeflater {
     }
 
     public Integer getBorderWidth() {
-        return this.borderWidth;
+        return this.borderWidth = getInstanceOf(Integer.class, this.borderWidth);
     }
 
     public Background setBorderWidth(Integer borderWidth) {
@@ -103,7 +105,7 @@ public class Background implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return this.className;
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public Background setClassName(String className) {
@@ -112,7 +114,7 @@ public class Background implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getInnerRadius() {
-        return this.innerRadius;
+        return this.innerRadius = getInstanceOf(HighchartsSize.class, this.innerRadius);
     }
 
     public Background setInnerRadius(HighchartsSize innerRadius) {
@@ -121,7 +123,7 @@ public class Background implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getOuterRadius() {
-        return this.outerRadius;
+        return this.outerRadius = getInstanceOf(HighchartsSize.class, this.outerRadius);
     }
 
     public Background setOuterRadius(HighchartsSize outerRadius) {
@@ -130,7 +132,7 @@ public class Background implements Serializable, DrosteDeflater {
     }
 
     public String getShape() {
-        return this.shape;
+        return this.shape = getInstanceOf(String.class, this.shape);
     }
 
     public Background setShape(String shape) {

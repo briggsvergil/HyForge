@@ -30,7 +30,7 @@ public class DataGrouping implements Serializable, DrosteDeflater {
         Instance-Safe Getters
     */
     public Integer getGroupPixelWidth() {
-        return getInstanceOf(Integer.class, this.groupPixelWidth);
+        return this.groupPixelWidth = getInstanceOf(Integer.class, this.groupPixelWidth);
     }
 
     /*

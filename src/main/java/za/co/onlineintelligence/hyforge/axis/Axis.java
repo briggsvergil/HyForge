@@ -770,7 +770,7 @@ public class Axis implements Serializable, DrosteDeflater {
      */
 
     public Accessibility getAccessibility() {
-        return getInstanceOf(Accessibility.class, this.accessibility);
+        return this.accessibility = getInstanceOf(Accessibility.class, this.accessibility);
     }
 
     public Axis setAccessibility(Accessibility accessibility) {
@@ -779,7 +779,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getAlignTicks() {
-        return getInstanceOf(boolean.class, this.alignTicks);
+        return this.alignTicks = getInstanceOf(boolean.class, this.alignTicks);
     }
 
     public Axis setAlignTicks(boolean alignTicks) {
@@ -788,7 +788,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getAllowDecimals() {
-        return getInstanceOf(boolean.class, this.allowDecimals);
+        return this.allowDecimals = getInstanceOf(boolean.class, this.allowDecimals);
     }
 
     public Axis setAllowDecimals(boolean allowDecimals) {
@@ -797,7 +797,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor AxisternateGridColor() {
-        return getInstanceOf(HighchartsColor.class, this.alternateGridColor);
+        return this.alternateGridColor = getInstanceOf(HighchartsColor.class, this.alternateGridColor);
     }
 
     public Axis setAlternateGridColor(HighchartsColor alternateGridColor) {
@@ -806,7 +806,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getAngle() {
-        return getInstanceOf(int.class, this.angle);
+        return this.angle = getInstanceOf(int.class, this.angle);
     }
 
     public Axis setAngle(int angle) {
@@ -815,7 +815,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public Breaks[] getBreaks() {
-        return getInstanceOf(Breaks[].class, this.breaks);
+        return this.breaks = getInstanceOf(Breaks[].class, this.breaks);
     }
 
     public Axis setBreaks(Breaks[] breaks) {
@@ -824,7 +824,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public String[] getCategories() {
-        return getInstanceOf(String[].class, this.categories);
+        return this.categories = getInstanceOf(String[].class, this.categories);
     }
 
     public Axis setCategories(String[] categories) {
@@ -833,7 +833,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getCeiling() {
-        return getInstanceOf(int.class, this.ceiling);
+        return this.ceiling = getInstanceOf(int.class, this.ceiling);
     }
 
     public Axis setCeiling(int ceiling) {
@@ -842,7 +842,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return getInstanceOf(String.class, this.className);
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public Axis setClassName(String className) {
@@ -851,7 +851,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public Crosshair Axisosshair() {
-        return getInstanceOf(Crosshair.class, this.crosshair);
+        return this.crosshair = getInstanceOf(Crosshair.class, this.crosshair);
     }
 
     public Axis setCrosshair(Crosshair crosshair) {
@@ -860,7 +860,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean AxisrrentDateIndicator() {
-        return getInstanceOf(boolean.class, this.currentDateIndicator);
+        return this.currentDateIndicator = getInstanceOf(boolean.class, this.currentDateIndicator);
     }
 
     public Axis setCurrentDateIndicator(boolean currentDateIndicator) {
@@ -869,7 +869,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public DateTimeLabelFormats getDateTimeLabelFormats() {
-        return getInstanceOf(DateTimeLabelFormats.class, this.dateTimeLabelFormats);
+        return this.dateTimeLabelFormats = getInstanceOf(DateTimeLabelFormats.class, this.dateTimeLabelFormats);
     }
 
     public Axis setDateTimeLabelFormats(DateTimeLabelFormats dateTimeLabelFormats) {
@@ -878,7 +878,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getEndOnTick() {
-        return getInstanceOf(boolean.class, this.endOnTick);
+        return this.endOnTick = getInstanceOf(boolean.class, this.endOnTick);
     }
 
     public Axis setEndOnTick(boolean endOnTick) {
@@ -887,7 +887,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public AxisEvents getEvents() {
-        return getInstanceOf(AxisEvents.class, this.events);
+        return this.events = getInstanceOf(AxisEvents.class, this.events);
     }
 
     public Axis setEvents(AxisEvents events) {
@@ -896,7 +896,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getFloor() {
-        return getInstanceOf(int.class, this.floor);
+        return this.floor = getInstanceOf(int.class, this.floor);
     }
 
     public Axis setFloor(int floor) {
@@ -905,7 +905,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public AxisGrid getGrid() {
-        return getInstanceOf(AxisGrid.class, this.grid);
+        return this.grid = getInstanceOf(AxisGrid.class, this.grid);
     }
 
     public Axis setGrid(AxisGrid grid) {
@@ -914,7 +914,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getGridLineColor() {
-        return getInstanceOf(HighchartsColor.class, this.gridLineColor);
+        return this.gridLineColor = getInstanceOf(HighchartsColor.class, this.gridLineColor);
     }
 
     public Axis setGridLineColor(HighchartsColor gridLineColor) {
@@ -923,7 +923,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsDashStyleValue getGridLineDashStyle() {
-        return getInstanceOf(HighchartsDashStyleValue.class, this.gridLineDashStyle);
+        return this.gridLineDashStyle = getInstanceOf(HighchartsDashStyleValue.class, this.gridLineDashStyle);
     }
 
     public Axis setGridLineDashStyle(HighchartsDashStyleValue gridLineDashStyle) {
@@ -932,7 +932,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public String getGridLineInterpolation() {
-        return getInstanceOf(String.class, this.gridLineInterpolation);
+        return this.gridLineInterpolation = getInstanceOf(String.class, this.gridLineInterpolation);
     }
 
     public Axis setGridLineInterpolation(String gridLineInterpolation) {
@@ -941,7 +941,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getGridLineWidth() {
-        return getInstanceOf(int.class, this.gridLineWidth);
+        return this.gridLineWidth = getInstanceOf(int.class, this.gridLineWidth);
     }
 
     public Axis setGridLineWidth(int gridLineWidth) {
@@ -950,7 +950,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getGridZIndex() {
-        return getInstanceOf(int.class, this.gridZIndex);
+        return this.gridZIndex = getInstanceOf(int.class, this.gridZIndex);
     }
 
     public Axis setGridZIndex(int gridZIndex) {
@@ -959,7 +959,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getHeight() {
-        return getInstanceOf(HighchartsSize.class, this.height);
+        return this.height = getInstanceOf(HighchartsSize.class, this.height);
     }
 
     public Axis setHeight(HighchartsSize height) {
@@ -968,7 +968,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public String getId() {
-        return getInstanceOf(String.class, this.id);
+        return this.id = getInstanceOf(String.class, this.id);
     }
 
     public Axis setId(String id) {
@@ -977,7 +977,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public AxisLabels getLabels() {
-        return getInstanceOf(AxisLabels.class, this.labels);
+        return this.labels = getInstanceOf(AxisLabels.class, this.labels);
     }
 
     public Axis setLabels(AxisLabels labels) {
@@ -986,7 +986,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getLeft() {
-        return getInstanceOf(HighchartsSize.class, this.left);
+        return this.left = getInstanceOf(HighchartsSize.class, this.left);
     }
 
     public Axis setLeft(HighchartsSize left) {
@@ -995,7 +995,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getLineColor() {
-        return getInstanceOf(HighchartsColor.class, this.lineColor);
+        return this.lineColor = getInstanceOf(HighchartsColor.class, this.lineColor);
     }
 
     public Axis setLineColor(HighchartsColor lineColor) {
@@ -1004,7 +1004,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getLineWidth() {
-        return getInstanceOf(int.class, this.lineWidth);
+        return this.lineWidth = getInstanceOf(int.class, this.lineWidth);
     }
 
     public Axis setLineWidth(int lineWidth) {
@@ -1013,7 +1013,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getLinkedTo() {
-        return getInstanceOf(int.class, this.linkedTo);
+        return this.linkedTo = getInstanceOf(int.class, this.linkedTo);
     }
 
     public Axis setLinkedTo(int linkedTo) {
@@ -1022,7 +1022,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMargin() {
-        return getInstanceOf(int.class, this.margin);
+        return this.margin = getInstanceOf(int.class, this.margin);
     }
 
     public Axis setMargin(int margin) {
@@ -1031,7 +1031,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public Double getMax() {
-        return getInstanceOf(Double.class, this.max);
+        return this.max = getInstanceOf(Double.class, this.max);
     }
 
     public Axis setMax(Double max) {
@@ -1040,7 +1040,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMaxPadding() {
-        return getInstanceOf(int.class, this.maxPadding);
+        return this.maxPadding = getInstanceOf(int.class, this.maxPadding);
     }
 
     public Axis setMaxPadding(int maxPadding) {
@@ -1049,7 +1049,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMaxRange() {
-        return getInstanceOf(int.class, this.maxRange);
+        return this.maxRange = getInstanceOf(int.class, this.maxRange);
     }
 
     public Axis setMaxRange(int maxRange) {
@@ -1058,7 +1058,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMaxZoom() {
-        return getInstanceOf(int.class, this.maxZoom);
+        return this.maxZoom = getInstanceOf(int.class, this.maxZoom);
     }
 
     public Axis setMaxZoom(int maxZoom) {
@@ -1067,7 +1067,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public Double getMin() {
-        return getInstanceOf(Double.class, this.min);
+        return this.min = getInstanceOf(Double.class, this.min);
     }
 
     public Axis setMin(Double min) {
@@ -1076,7 +1076,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMinPadding() {
-        return getInstanceOf(int.class, this.minPadding);
+        return this.minPadding = getInstanceOf(int.class, this.minPadding);
     }
 
     public Axis setMinPadding(int minPadding) {
@@ -1085,7 +1085,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMinRange() {
-        return getInstanceOf(int.class, this.minRange);
+        return this.minRange = getInstanceOf(int.class, this.minRange);
     }
 
     public Axis setMinRange(int minRange) {
@@ -1094,7 +1094,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMinTickInterval() {
-        return getInstanceOf(int.class, this.minTickInterval);
+        return this.minTickInterval = getInstanceOf(int.class, this.minTickInterval);
     }
 
     public Axis setMinTickInterval(int minTickInterval) {
@@ -1103,7 +1103,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getMinorGridLineColor() {
-        return getInstanceOf(HighchartsColor.class, this.minorGridLineColor);
+        return this.minorGridLineColor = getInstanceOf(HighchartsColor.class, this.minorGridLineColor);
     }
 
     public Axis setMinorGridLineColor(HighchartsColor minorGridLineColor) {
@@ -1112,7 +1112,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsDashStyleValue getMinorGridLineDashStyle() {
-        return getInstanceOf(HighchartsDashStyleValue.class, this.minorGridLineDashStyle);
+        return this.minorGridLineDashStyle = getInstanceOf(HighchartsDashStyleValue.class, this.minorGridLineDashStyle);
     }
 
     public Axis setMinorGridLineDashStyle(HighchartsDashStyleValue minorGridLineDashStyle) {
@@ -1121,7 +1121,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMinorGridLineWidth() {
-        return getInstanceOf(int.class, this.minorGridLineWidth);
+        return this.minorGridLineWidth = getInstanceOf(int.class, this.minorGridLineWidth);
     }
 
     public Axis setMinorGridLineWidth(int minorGridLineWidth) {
@@ -1130,7 +1130,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getMinorTickColor() {
-        return getInstanceOf(HighchartsColor.class, this.minorTickColor);
+        return this.minorTickColor = getInstanceOf(HighchartsColor.class, this.minorTickColor);
     }
 
     public Axis setMinorTickColor(HighchartsColor minorTickColor) {
@@ -1139,7 +1139,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getMinorTickInterval() {
-        return getInstanceOf(HighchartsSize.class, this.minorTickInterval);
+        return this.minorTickInterval = getInstanceOf(HighchartsSize.class, this.minorTickInterval);
     }
 
     public Axis setMinorTickInterval(HighchartsSize minorTickInterval) {
@@ -1148,7 +1148,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMinorTickLength() {
-        return getInstanceOf(int.class, this.minorTickLength);
+        return this.minorTickLength = getInstanceOf(int.class, this.minorTickLength);
     }
 
     public Axis setMinorTickLength(int minorTickLength) {
@@ -1157,7 +1157,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public String getMinorTickPosition() {
-        return getInstanceOf(String.class, this.minorTickPosition);
+        return this.minorTickPosition = getInstanceOf(String.class, this.minorTickPosition);
     }
 
     public Axis setMinorTickPosition(String minorTickPosition) {
@@ -1166,7 +1166,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getMinorTickWidth() {
-        return getInstanceOf(int.class, this.minorTickWidth);
+        return this.minorTickWidth = getInstanceOf(int.class, this.minorTickWidth);
     }
 
     public Axis setMinorTickWidth(int minorTickWidth) {
@@ -1175,7 +1175,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getMinorTicks() {
-        return getInstanceOf(boolean.class, this.minorTicks);
+        return this.minorTicks = getInstanceOf(boolean.class, this.minorTicks);
     }
 
     public Axis setMinorTicks(boolean minorTicks) {
@@ -1184,7 +1184,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getOffset() {
-        return getInstanceOf(int.class, this.offset);
+        return this.offset = getInstanceOf(int.class, this.offset);
     }
 
     public Axis setOffset(int offset) {
@@ -1193,7 +1193,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getOpposite() {
-        return getInstanceOf(boolean.class, this.opposite);
+        return this.opposite = getInstanceOf(boolean.class, this.opposite);
     }
 
     public Axis setOpposite(boolean opposite) {
@@ -1202,7 +1202,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getOrdinal() {
-        return getInstanceOf(boolean.class, this.ordinal);
+        return this.ordinal = getInstanceOf(boolean.class, this.ordinal);
     }
 
     public Axis setOrdinal(boolean ordinal) {
@@ -1211,7 +1211,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getOverscroll() {
-        return getInstanceOf(int.class, this.overscroll);
+        return this.overscroll = getInstanceOf(int.class, this.overscroll);
     }
 
     public Axis setOverscroll(int overscroll) {
@@ -1220,7 +1220,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getPane() {
-        return getInstanceOf(int.class, this.pane);
+        return this.pane = getInstanceOf(int.class, this.pane);
     }
 
     public Axis setPane(int pane) {
@@ -1229,7 +1229,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public PlotBand[] getPlotBands() {
-        return getInstanceOf(PlotBand[].class, this.plotBands);
+        return this.plotBands = getInstanceOf(PlotBand[].class, this.plotBands);
     }
 
     public Axis setPlotBands(PlotBand[] plotBands) {
@@ -1238,7 +1238,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public PlotLine[] getPlotLines() {
-        return getInstanceOf(PlotLine[].class, this.plotLines);
+        return this.plotLines = getInstanceOf(PlotLine[].class, this.plotLines);
     }
 
     public Axis setPlotLines(PlotLine[] plotLines) {
@@ -1247,7 +1247,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getRange() {
-        return getInstanceOf(int.class, this.range);
+        return this.range = getInstanceOf(int.class, this.range);
     }
 
     public Axis setRange(int range) {
@@ -1256,7 +1256,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getReversed() {
-        return getInstanceOf(boolean.class, this.reversed);
+        return this.reversed = getInstanceOf(boolean.class, this.reversed);
     }
 
     public Axis setReversed(boolean reversed) {
@@ -1265,7 +1265,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getReversedStacks() {
-        return getInstanceOf(boolean.class, this.reversedStacks);
+        return this.reversedStacks = getInstanceOf(boolean.class, this.reversedStacks);
     }
 
     public Axis setReversedStacks(boolean reversedStacks) {
@@ -1274,7 +1274,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public Scrollbar getScrollbar() {
-        return getInstanceOf(Scrollbar.class, this.scrollbar);
+        return this.scrollbar = getInstanceOf(Scrollbar.class, this.scrollbar);
     }
 
     public Axis setScrollbar(Scrollbar scrollbar) {
@@ -1283,7 +1283,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getShowEmpty() {
-        return getInstanceOf(boolean.class, this.showEmpty);
+        return this.showEmpty = getInstanceOf(boolean.class, this.showEmpty);
     }
 
     public Axis setShowEmpty(boolean showEmpty) {
@@ -1292,7 +1292,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getShowFirstLabel() {
-        return getInstanceOf(boolean.class, this.showFirstLabel);
+        return this.showFirstLabel = getInstanceOf(boolean.class, this.showFirstLabel);
     }
 
     public Axis setShowFirstLabel(boolean showFirstLabel) {
@@ -1301,7 +1301,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getShowLastLabel() {
-        return getInstanceOf(boolean.class, this.showLastLabel);
+        return this.showLastLabel = getInstanceOf(boolean.class, this.showLastLabel);
     }
 
     public Axis setShowLastLabel(boolean showLastLabel) {
@@ -1310,7 +1310,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getSoftMax() {
-        return getInstanceOf(int.class, this.softMax);
+        return this.softMax = getInstanceOf(int.class, this.softMax);
     }
 
     public Axis setSoftMax(int softMax) {
@@ -1319,7 +1319,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getSoftMin() {
-        return getInstanceOf(int.class, this.softMin);
+        return this.softMin = getInstanceOf(int.class, this.softMin);
     }
 
     public Axis setSoftMin(int softMin) {
@@ -1328,7 +1328,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getStartOfWeek() {
-        return getInstanceOf(int.class, this.startOfWeek);
+        return this.startOfWeek = getInstanceOf(int.class, this.startOfWeek);
     }
 
     public Axis setStartOfWeek(int startOfWeek) {
@@ -1337,7 +1337,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getStartOnTick() {
-        return getInstanceOf(boolean.class, this.startOnTick);
+        return this.startOnTick = getInstanceOf(boolean.class, this.startOnTick);
     }
 
     public Axis setStartOnTick(boolean startOnTick) {
@@ -1346,7 +1346,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getTickAmount() {
-        return getInstanceOf(int.class, this.tickAmount);
+        return this.tickAmount = getInstanceOf(int.class, this.tickAmount);
     }
 
     public Axis setTickAmount(int tickAmount) {
@@ -1355,7 +1355,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getTickColor() {
-        return getInstanceOf(HighchartsColor.class, this.tickColor);
+        return this.tickColor = getInstanceOf(HighchartsColor.class, this.tickColor);
     }
 
     public Axis setTickColor(HighchartsColor tickColor) {
@@ -1364,7 +1364,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getTickInterval() {
-        return getInstanceOf(int.class, this.tickInterval);
+        return this.tickInterval = getInstanceOf(int.class, this.tickInterval);
     }
 
     public Axis setTickInterval(int tickInterval) {
@@ -1373,7 +1373,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getTickLength() {
-        return getInstanceOf(int.class, this.tickLength);
+        return this.tickLength = getInstanceOf(int.class, this.tickLength);
     }
 
     public Axis setTickLength(int tickLength) {
@@ -1382,7 +1382,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getTickPixelInterval() {
-        return getInstanceOf(int.class, this.tickPixelInterval);
+        return this.tickPixelInterval = getInstanceOf(int.class, this.tickPixelInterval);
     }
 
     public Axis setTickPixelInterval(int tickPixelInterval) {
@@ -1391,7 +1391,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public String getTickPosition() {
-        return getInstanceOf(String.class, this.tickPosition);
+        return this.tickPosition = getInstanceOf(String.class, this.tickPosition);
     }
 
     public Axis setTickPosition(String tickPosition) {
@@ -1400,7 +1400,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getTickPositioner() {
-        return getInstanceOf(HighchartsCallbackFunction.class, this.tickPositioner);
+        return this.tickPositioner = getInstanceOf(HighchartsCallbackFunction.class, this.tickPositioner);
     }
 
     public Axis setTickPositioner(HighchartsCallbackFunction tickPositioner) {
@@ -1409,7 +1409,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int[] getTickPositions() {
-        return getInstanceOf(int[].class, this.tickPositions);
+        return this.tickPositions = getInstanceOf(int[].class, this.tickPositions);
     }
 
     public Axis setTickPositions(int[] tickPositions) {
@@ -1418,7 +1418,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public int getTickWidth() {
-        return getInstanceOf(int.class, this.tickWidth);
+        return this.tickWidth = getInstanceOf(int.class, this.tickWidth);
     }
 
     public Axis setTickWidth(int tickWidth) {
@@ -1427,7 +1427,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public String getTickmarkPlacement() {
-        return getInstanceOf(String.class, this.tickmarkPlacement);
+        return this.tickmarkPlacement = getInstanceOf(String.class, this.tickmarkPlacement);
     }
 
     public Axis setTickmarkPlacement(String tickmarkPlacement) {
@@ -1436,7 +1436,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public AxisTitle getTitle() {
-        return getInstanceOf(AxisTitle.class, this.title);
+        return this.title = getInstanceOf(AxisTitle.class, this.title);
     }
 
     public Axis setTitle(AxisTitle title) {
@@ -1445,7 +1445,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getTop() {
-        return getInstanceOf(HighchartsSize.class, this.top);
+        return this.top = getInstanceOf(HighchartsSize.class, this.top);
     }
 
     public Axis setTop(HighchartsSize top) {
@@ -1454,7 +1454,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAxisType getType() {
-        return getInstanceOf(HighchartsAxisType.class, this.type);
+        return this.type = getInstanceOf(HighchartsAxisType.class, this.type);
     }
 
     public Axis setType(HighchartsAxisType type) {
@@ -1463,7 +1463,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getUniqueNames() {
-        return getInstanceOf(boolean.class, this.uniqueNames);
+        return this.uniqueNames = getInstanceOf(boolean.class, this.uniqueNames);
     }
 
     public Axis setUniqueNames(boolean uniqueNames) {
@@ -1472,7 +1472,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public List<Map<String, List<Integer>>> getUnits() {
-        return getInstanceOf(List.class, this.units);
+        return this.units = getInstanceOf(List.class, this.units);
     }
 
     public Axis setUnits(List<Map<String, List<Integer>>> units) {
@@ -1481,7 +1481,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getVisible() {
-        return getInstanceOf(boolean.class, this.visible);
+        return this.visible = getInstanceOf(boolean.class, this.visible);
     }
 
     public Axis setVisible(boolean visible) {
@@ -1490,7 +1490,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getWidth() {
-        return getInstanceOf(HighchartsSize.class, this.width);
+        return this.width = getInstanceOf(HighchartsSize.class, this.width);
     }
 
     public Axis setWidth(HighchartsSize width) {
@@ -1499,7 +1499,7 @@ public class Axis implements Serializable, DrosteDeflater {
     }
 
     public boolean getZoomEnabled() {
-        return getInstanceOf(boolean.class, this.zoomEnabled);
+        return this.zoomEnabled = getInstanceOf(boolean.class, this.zoomEnabled);
     }
 
     public Axis setZoomEnabled(boolean zoomEnabled) {

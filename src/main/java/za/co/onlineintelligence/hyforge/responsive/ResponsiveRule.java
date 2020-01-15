@@ -48,7 +48,7 @@ public class ResponsiveRule implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsOptions getChartOptions() {
-        return getInstanceOf(HighchartsOptions.class, this.chartOptions);
+        return this.chartOptions = getInstanceOf(HighchartsOptions.class, this.chartOptions);
     }
 
     public ResponsiveRule setChartOptions(HighchartsOptions chartOptions) {
@@ -57,7 +57,7 @@ public class ResponsiveRule implements Serializable, DrosteDeflater {
     }
 
     public ResponsiveRuleCondition getCondition() {
-        return getInstanceOf(ResponsiveRuleCondition.class, this.condition);
+        return this.condition = getInstanceOf(ResponsiveRuleCondition.class, this.condition);
     }
 
     public ResponsiveRule setCondition(ResponsiveRuleCondition condition) {

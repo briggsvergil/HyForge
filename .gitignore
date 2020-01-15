@@ -1,0 +1,24 @@
+*.class
+*.o
+*.log
+**/nbproject
+**/target
+**/.gitignore
+!.gitignore
+**/node_modules
+**/bin
+*.vscode
+*.idea
+
+#android ignores
+*.iml
+**/.gradle
+**/local.properties
+**/.idea/caches/build_file_checksums.ser
+**/.idea/libraries
+**/.idea/modules.xml
+**/.idea/workspace.xml
+**/.DS_Store
+**/build
+**/captures
+**/.externalNativeBuild

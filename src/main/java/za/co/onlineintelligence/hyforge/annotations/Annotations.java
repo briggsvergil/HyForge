@@ -112,7 +112,7 @@ public class Annotations implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public ControlPointOptions getControlPointOptions() {
-        return getInstanceOf(ControlPointOptions.class, this.controlPointOptions);
+        return this.controlPointOptions = getInstanceOf(ControlPointOptions.class, this.controlPointOptions);
     }
 
     public Annotations setControlPointOptions(ControlPointOptions controlPointOptions) {
@@ -121,7 +121,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public String getDraggable() {
-        return getInstanceOf(String.class, this.draggable);
+        return this.draggable = getInstanceOf(String.class, this.draggable);
     }
 
     public Annotations setDraggable(String draggable) {
@@ -130,7 +130,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public AnnotationsEvents getEvents() {
-        return getInstanceOf(AnnotationsEvents.class, this.events);
+        return this.events = getInstanceOf(AnnotationsEvents.class, this.events);
     }
 
     public Annotations setEvents(AnnotationsEvents events) {
@@ -139,7 +139,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getId() {
-        return getInstanceOf(HighchartsSize.class, this.id);
+        return this.id = getInstanceOf(HighchartsSize.class, this.id);
     }
 
     public Annotations setId(HighchartsSize id) {
@@ -148,7 +148,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public LabelOptions getLabelOptions() {
-        return getInstanceOf(LabelOptions.class, this.labelOptions);
+        return this.labelOptions = getInstanceOf(LabelOptions.class, this.labelOptions);
     }
 
     public Annotations setLabelOptions(LabelOptions labelOptions) {
@@ -157,7 +157,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public AnnotationsLabels[] getLabels() {
-        return getInstanceOf(AnnotationsLabels[].class, this.labels);
+        return this.labels = getInstanceOf(AnnotationsLabels[].class, this.labels);
     }
 
     public Annotations setLabels(AnnotationsLabels[] labels) {
@@ -166,7 +166,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public ShapeOptions getShapeOptions() {
-        return getInstanceOf(ShapeOptions.class, this.shapeOptions);
+        return this.shapeOptions = getInstanceOf(ShapeOptions.class, this.shapeOptions);
     }
 
     public Annotations setShapeOptions(ShapeOptions shapeOptions) {
@@ -175,7 +175,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public AnnotationShapes[] getShapes() {
-        return getInstanceOf(AnnotationShapes[].class, this.shapes);
+        return this.shapes = getInstanceOf(AnnotationShapes[].class, this.shapes);
     }
 
     public Annotations setShapes(AnnotationShapes[] shapes) {
@@ -184,7 +184,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public Boolean getVisible() {
-        return getInstanceOf(Boolean.class, this.visible);
+        return this.visible = getInstanceOf(Boolean.class, this.visible);
     }
 
     public Annotations setVisible(Boolean visible) {
@@ -193,7 +193,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public Integer getZIndex() {
-        return getInstanceOf(Integer.class, this.zIndex);
+        return this.zIndex = getInstanceOf(Integer.class, this.zIndex);
     }
 
     public Annotations setZIndex(Integer zIndex) {

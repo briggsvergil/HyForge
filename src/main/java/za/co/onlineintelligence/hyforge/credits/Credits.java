@@ -7,6 +7,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import za.co.onlineintelligence.hyforge.common.HighchartsAlignObject;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Credits HighchartsAPI Class
@@ -68,7 +70,7 @@ public class Credits implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(Boolean.class, this.enabled);
     }
 
     public Credits setEnabled(Boolean enabled) {
@@ -77,7 +79,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public String getHref() {
-        return this.href;
+        return getInstanceOf(String.class, this.href);
     }
 
     public Credits setHref(String href) {
@@ -86,7 +88,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public String getMapText() {
-        return this.mapText;
+        return getInstanceOf(String.class, this.mapText);
     }
 
     public Credits setMapText(String mapText) {
@@ -95,7 +97,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public String getMapTextFull() {
-        return this.mapTextFull;
+        return getInstanceOf(String.class, this.mapTextFull);
     }
 
     public Credits setMapTextFull(String mapTextFull) {
@@ -104,7 +106,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAlignObject getPosition() {
-        return this.position;
+        return getInstanceOf(HighchartsAlignObject.class, this.position);
     }
 
     public Credits setPosition(HighchartsAlignObject position) {
@@ -113,7 +115,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Credits setStyle(HighchartsCSS style) {
@@ -122,7 +124,7 @@ public class Credits implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return this.text;
+        return getInstanceOf(String.class, this.text);
     }
 
     public Credits setText(String text) {

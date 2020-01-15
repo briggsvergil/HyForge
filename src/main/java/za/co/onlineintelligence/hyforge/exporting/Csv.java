@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Csv  HighchartsAPI Class
@@ -83,7 +85,7 @@ public class Csv implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsCallbackFunction getColumnHeaderFormatter() {
-        return this.columnHeaderFormatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.columnHeaderFormatter);
     }
 
     public Csv setColumnHeaderFormatter(HighchartsCallbackFunction columnHeaderFormatter) {
@@ -92,7 +94,7 @@ public class Csv implements Serializable, DrosteDeflater {
     }
 
     public String getDateFormat() {
-        return this.dateFormat;
+        return getInstanceOf(String.class, this.dateFormat);
     }
 
     public Csv setDateFormat(String dateFormat) {
@@ -101,7 +103,7 @@ public class Csv implements Serializable, DrosteDeflater {
     }
 
     public String getDecimalPoint() {
-        return this.decimalPoint;
+        return getInstanceOf(String.class, this.decimalPoint);
     }
 
     public Csv setDecimalPoint(String decimalPoint) {
@@ -110,7 +112,7 @@ public class Csv implements Serializable, DrosteDeflater {
     }
 
     public String getItemDelimiter() {
-        return this.itemDelimiter;
+        return getInstanceOf(String.class, this.itemDelimiter);
     }
 
     public Csv setItemDelimiter(String itemDelimiter) {
@@ -119,7 +121,7 @@ public class Csv implements Serializable, DrosteDeflater {
     }
 
     public String getLineDelimiter() {
-        return this.lineDelimiter;
+        return getInstanceOf(String.class, this.lineDelimiter);
     }
 
     public Csv setLineDelimiter(String lineDelimiter) {

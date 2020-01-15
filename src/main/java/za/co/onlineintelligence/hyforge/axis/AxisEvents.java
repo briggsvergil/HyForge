@@ -8,6 +8,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * AxisEvents HighchartsAPI Class
  *
@@ -75,7 +77,7 @@ public class AxisEvents implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsCallbackFunction getAfterBreaks() {
-        return this.afterBreaks;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.afterBreaks);
     }
 
     public AxisEvents setAfterBreaks(HighchartsCallbackFunction afterBreaks) {
@@ -84,7 +86,7 @@ public class AxisEvents implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getAfterSetExtremes() {
-        return this.afterSetExtremes;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.afterSetExtremes);
     }
 
     public AxisEvents setAfterSetExtremes(HighchartsCallbackFunction afterSetExtremes) {
@@ -93,7 +95,7 @@ public class AxisEvents implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getPointBreak() {
-        return this.pointBreak;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.pointBreak);
     }
 
     public AxisEvents setPointBreak(HighchartsCallbackFunction pointBreak) {
@@ -102,7 +104,7 @@ public class AxisEvents implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getPointInBreak() {
-        return this.pointInBreak;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.pointInBreak);
     }
 
     public AxisEvents setPointInBreak(HighchartsCallbackFunction pointInBreak) {
@@ -111,7 +113,7 @@ public class AxisEvents implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getSetExtremes() {
-        return this.setExtremes;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.setExtremes);
     }
 
     public AxisEvents setSetExtremes(HighchartsCallbackFunction setExtremes) {

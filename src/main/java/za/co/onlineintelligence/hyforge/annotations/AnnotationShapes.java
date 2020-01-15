@@ -2,12 +2,16 @@ package za.co.onlineintelligence.hyforge.annotations;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 
 /**
  * AnnotationShapes  HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class AnnotationShapes extends ShapeOptions implements Serializable, DrosteDeflater {
@@ -18,31 +22,35 @@ public class AnnotationShapes extends ShapeOptions implements Serializable, Dros
 
     /**
      * Id of the marker which will be drawn at the final vertex of the
-     path. Custom markers can be defined in defs property.
+     * path. Custom markers can be defined in defs property.
+     *
      * @since 6.0.0
      */
     private String markerEnd;
 
     /**
      * Id of the marker which will be drawn at the first vertex of the
-     path. Custom markers can be defined in defs property.
+     * path. Custom markers can be defined in defs property.
+     *
      * @since 6.0.0
      */
     private String markerStart;
 
     /**
      * This option defines the point to which the shape will be
-     connected. It can be either the point which exists in the
-     series - it is referenced by the point's id - or a new point with
-     defined x, y properties and optionally axes.
+     * connected. It can be either the point which exists in the
+     * series - it is referenced by the point's id - or a new point with
+     * defined x, y properties and optionally axes.
+     *
      * @since 6.0.0
      */
     private HighchartsPoint point;
 
     /**
      * An array of points for the shape. This option is available for
-     shapes which can use multiple points such as path. A point can be
-     either a point object or a point's id.
+     * shapes which can use multiple points such as path. A point can be
+     * either a point object or a point's id.
+     *
      * @since 6.0.0
      */
     private HighchartsPoint[] points;
@@ -51,37 +59,37 @@ public class AnnotationShapes extends ShapeOptions implements Serializable, Dros
         Getters and Builder-Style Setters
     */
     public String getMarkerEnd() {
-        return this.markerEnd;
+        return getInstanceOf(String.class, this.markerEnd);
     }
 
-    public AnnotationShapes setMarkerEnd(String markerEnd){
+    public AnnotationShapes setMarkerEnd(String markerEnd) {
         this.markerEnd = markerEnd;
         return this;
     }
 
     public String getMarkerStart() {
-        return this.markerStart;
+        return getInstanceOf(String.class, this.markerStart);
     }
 
-    public AnnotationShapes setMarkerStart(String markerStart){
+    public AnnotationShapes setMarkerStart(String markerStart) {
         this.markerStart = markerStart;
         return this;
     }
 
     public HighchartsPoint getPoint() {
-        return this.point;
+        return getInstanceOf(HighchartsPoint.class, this.point);
     }
 
-    public AnnotationShapes setPoint(HighchartsPoint point){
+    public AnnotationShapes setPoint(HighchartsPoint point) {
         this.point = point;
         return this;
     }
 
     public HighchartsPoint[] getPoints() {
-        return this.points;
+        return getInstanceOf(HighchartsPoint[].class, this.points);
     }
 
-    public AnnotationShapes setPoints(HighchartsPoint[] points){
+    public AnnotationShapes setPoints(HighchartsPoint[] points) {
         this.points = points;
         return this;
     }

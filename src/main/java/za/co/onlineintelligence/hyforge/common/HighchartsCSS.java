@@ -1,17 +1,16 @@
 package za.co.onlineintelligence.hyforge.common;
 
-import java.io.Serializable;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsCursorValue;
 
+import java.io.Serializable;
+import java.lang.reflect.Field;
+
 /**
- *
  * @author Sean
  */
-public class HighchartsCSS implements Serializable
-{
+public class HighchartsCSS implements Serializable, DrosteDeflater {
 
-    public HighchartsCSS()
-    {
+    public HighchartsCSS() {
     }
 
     private String background;
@@ -38,234 +37,222 @@ public class HighchartsCSS implements Serializable
     private String whiteSpace;
     private Integer width;
 
-    public String getBackground()
-    {
+    public String getBackground() {
         return background;
     }
 
-    public void setBackground(String background)
-    {
+    public HighchartsCSS setBackground(String background) {
         this.background = background;
+        return this;
     }
 
-    public HighchartsColorString getBackgroundColor()
-    {
+    public HighchartsColorString getBackgroundColor() {
         return backgroundColor;
     }
 
-    public void setBackgroundColor(HighchartsColorString backgroundColor)
-    {
+    public HighchartsCSS setBackgroundColor(HighchartsColorString backgroundColor) {
         this.backgroundColor = backgroundColor;
+        return this;
     }
 
-    public String getBorder()
-    {
+    public String getBorder() {
         return border;
     }
 
-    public void setBorder(String border)
-    {
+    public HighchartsCSS setBorder(String border) {
         this.border = border;
+        return this;
     }
 
-    public Integer getBorderRadius()
-    {
+    public Integer getBorderRadius() {
         return borderRadius;
     }
 
-    public void setBorderRadius(Integer borderRadius)
-    {
+    public HighchartsCSS setBorderRadius(Integer borderRadius) {
         this.borderRadius = borderRadius;
+        return this;
     }
 
-    public HighchartsColorString getColor()
-    {
+    public HighchartsColorString getColor() {
         return color;
     }
 
-    public void setColor(HighchartsColorString color)
-    {
+    public HighchartsCSS setColor(HighchartsColorString color) {
         this.color = color;
+        return this;
     }
 
-    public HighchartsCursorValue getCursor()
-    {
+    public HighchartsCSS setColor(String colorString) {
+        this.color = new HighchartsColorString(colorString);
+        return this;
+    }
+
+    public HighchartsCursorValue getCursor() {
         return cursor;
     }
 
-    public void setCursor(HighchartsCursorValue cursor)
-    {
+    public HighchartsCSS setCursor(HighchartsCursorValue cursor) {
         this.cursor = cursor;
+        return this;
     }
 
-    public String getFontFamily()
-    {
+    public String getFontFamily() {
         return fontFamily;
     }
 
-    public void setFontFamily(String fontFamily)
-    {
+    public HighchartsCSS setFontFamily(String fontFamily) {
         this.fontFamily = fontFamily;
+        return this;
     }
 
-    public String getFontSize()
-    {
+    public String getFontSize() {
         return fontSize;
     }
 
-    public void setFontSize(String fontSize)
-    {
+    public HighchartsCSS setFontSize(String fontSize) {
         this.fontSize = fontSize;
+        return this;
     }
 
-    public String getFontWeight()
-    {
+    public String getFontWeight() {
         return fontWeight;
     }
 
-    public void setFontWeight(String fontWeight)
-    {
+    public HighchartsCSS setFontWeight(String fontWeight) {
         this.fontWeight = fontWeight;
+        return this;
     }
 
-    public Integer getHeight()
-    {
+    public Integer getHeight() {
         return height;
     }
 
-    public void setHeight(Integer height)
-    {
+    public HighchartsCSS setHeight(Integer height) {
         this.height = height;
+        return this;
     }
 
-    public Integer getLineWidth()
-    {
+    public Integer getLineWidth() {
         return lineWidth;
     }
 
-    public void setLineWidth(Integer lineWidth)
-    {
+    public HighchartsCSS setLineWidth(Integer lineWidth) {
         this.lineWidth = lineWidth;
+        return this;
     }
 
-    public Integer getOpacity()
-    {
+    public Integer getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(Integer opacity)
-    {
+    public HighchartsCSS setOpacity(Integer opacity) {
         this.opacity = opacity;
+        return this;
     }
 
-    public String getPadding()
-    {
+    public String getPadding() {
         return padding;
     }
 
-    public void setPadding(String padding)
-    {
+    public HighchartsCSS setPadding(String padding) {
         this.padding = padding;
+        return this;
     }
 
-    public String getPointerEvents()
-    {
+    public String getPointerEvents() {
         return pointerEvents;
     }
 
-    public void setPointerEvents(String pointerEvents)
-    {
+    public HighchartsCSS setPointerEvents(String pointerEvents) {
         this.pointerEvents = pointerEvents;
+        return this;
     }
 
-    public String getPosition()
-    {
+    public String getPosition() {
         return position;
     }
 
-    public void setPosition(String position)
-    {
+    public HighchartsCSS setPosition(String position) {
         this.position = position;
+        return this;
     }
 
-    public String getTextAlign()
-    {
+    public String getTextAlign() {
         return textAlign;
     }
 
-    public void setTextAlign(String textAlign)
-    {
+    public HighchartsCSS setTextAlign(String textAlign) {
         this.textAlign = textAlign;
+        return this;
     }
 
-    public String getTextDecoration()
-    {
+    public String getTextDecoration() {
         return textDecoration;
     }
 
-    public void setTextDecoration(String textDecoration)
-    {
+    public HighchartsCSS setTextDecoration(String textDecoration) {
         this.textDecoration = textDecoration;
+        return this;
     }
 
-    public String getTextOutline()
-    {
+    public String getTextOutline() {
         return textOutline;
     }
 
-    public void setTextOutline(String textOutline)
-    {
+    public HighchartsCSS setTextOutline(String textOutline) {
         this.textOutline = textOutline;
+        return this;
     }
 
-    public String getTextOverflow()
-    {
+    public String getTextOverflow() {
         return textOverflow;
     }
 
-    public void setTextOverflow(String textOverflow)
-    {
+    public HighchartsCSS setTextOverflow(String textOverflow) {
         this.textOverflow = textOverflow;
+        return this;
     }
 
-    public String getTop()
-    {
+    public String getTop() {
         return top;
     }
 
-    public void setTop(String top)
-    {
+    public HighchartsCSS setTop(String top) {
         this.top = top;
+        return this;
     }
 
-    public String getTransition()
-    {
+    public String getTransition() {
         return transition;
     }
 
-    public void setTransition(String transition)
-    {
+    public HighchartsCSS setTransition(String transition) {
         this.transition = transition;
+        return this;
     }
 
-    public String getWhiteSpace()
-    {
+    public String getWhiteSpace() {
         return whiteSpace;
     }
 
-    public void setWhiteSpace(String whiteSpace)
-    {
+    public HighchartsCSS setWhiteSpace(String whiteSpace) {
         this.whiteSpace = whiteSpace;
+        return this;
     }
 
-    public Integer getWidth()
-    {
+    public Integer getWidth() {
         return width;
     }
 
-    public void setWidth(Integer width)
-    {
+    public HighchartsCSS setWidth(Integer width) {
         this.width = width;
+        return this;
     }
 
+    @Override
+    public String deflateField(Field field, int tabLevel) {
+        String s = delegateFieldDeflation(field, "width", width==null,
+                () -> width + "px");
+        return s!=null && s.equals(RTS)? DrosteDeflater.super.deflateField(field, tabLevel) : s;
+    }
 }

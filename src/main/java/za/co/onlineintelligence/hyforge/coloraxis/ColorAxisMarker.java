@@ -5,6 +5,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
+import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
+import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
 
 /**
@@ -52,6 +54,11 @@ public class ColorAxisMarker implements Serializable, DrosteDeflater {
 
     public ColorAxisMarker setColor(HighchartsColor color) {
         this.color = color;
+        return this;
+    }
+
+    public ColorAxisMarker setColor(String colorString) {
+        this.color = new HighchartsColorString(colorString);
         return this;
     }
 

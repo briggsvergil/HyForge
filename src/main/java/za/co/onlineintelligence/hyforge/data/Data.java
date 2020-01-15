@@ -8,6 +8,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Data  HighchartsAPI Class
@@ -266,7 +268,7 @@ public class Data implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsCallbackFunction getBeforeParse() {
-        return this.beforeParse;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.beforeParse);
     }
 
     public Data setBeforeParse(HighchartsCallbackFunction beforeParse) {
@@ -275,7 +277,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Object[][] getColumns() {
-        return this.columns;
+        return getInstanceOf(Object[][].class, this.columns);
     }
 
     public Data setColumns(Object[][] columns) {
@@ -284,7 +286,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getColumnsURL() {
-        return this.columnsURL;
+        return getInstanceOf(String.class, this.columnsURL);
     }
 
     public Data setColumnsURL(String columnsURL) {
@@ -293,7 +295,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getComplete() {
-        return this.complete;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.complete);
     }
 
     public Data setComplete(HighchartsCallbackFunction complete) {
@@ -302,7 +304,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getCsv() {
-        return this.csv;
+        return getInstanceOf(String.class, this.csv);
     }
 
     public Data setCsv(String csv) {
@@ -311,7 +313,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getCsvURL() {
-        return this.csvURL;
+        return getInstanceOf(String.class, this.csvURL);
     }
 
     public Data setCsvURL(String csvURL) {
@@ -320,7 +322,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Integer getDataRefreshRate() {
-        return this.dataRefreshRate;
+        return getInstanceOf(Integer.class, this.dataRefreshRate);
     }
 
     public Data setDataRefreshRate(Integer dataRefreshRate) {
@@ -329,7 +331,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getDateFormat() {
-        return this.dateFormat;
+        return getInstanceOf(String.class, this.dateFormat);
     }
 
     public Data setDateFormat(String dateFormat) {
@@ -338,7 +340,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getDecimalPoint() {
-        return this.decimalPoint;
+        return getInstanceOf(String.class, this.decimalPoint);
     }
 
     public Data setDecimalPoint(String decimalPoint) {
@@ -347,7 +349,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Boolean getEnablePolling() {
-        return this.enablePolling;
+        return getInstanceOf(Boolean.class, this.enablePolling);
     }
 
     public Data setEnablePolling(Boolean enablePolling) {
@@ -356,7 +358,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Integer getEndColumn() {
-        return this.endColumn;
+        return getInstanceOf(Integer.class, this.endColumn);
     }
 
     public Data setEndColumn(Integer endColumn) {
@@ -365,7 +367,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Integer getEndRow() {
-        return this.endRow;
+        return getInstanceOf(Integer.class, this.endRow);
     }
 
     public Data setEndRow(Integer endRow) {
@@ -374,7 +376,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Boolean getFirstRowAsNames() {
-        return this.firstRowAsNames;
+        return getInstanceOf(Boolean.class, this.firstRowAsNames);
     }
 
     public Data setFirstRowAsNames(Boolean firstRowAsNames) {
@@ -383,7 +385,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getGoogleSpreadsheetKey() {
-        return this.googleSpreadsheetKey;
+        return getInstanceOf(String.class, this.googleSpreadsheetKey);
     }
 
     public Data setGoogleSpreadsheetKey(String googleSpreadsheetKey) {
@@ -392,7 +394,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getGoogleSpreadsheetWorksheet() {
-        return this.googleSpreadsheetWorksheet;
+        return getInstanceOf(String.class, this.googleSpreadsheetWorksheet);
     }
 
     public Data setGoogleSpreadsheetWorksheet(String googleSpreadsheetWorksheet) {
@@ -401,7 +403,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getItemDelimiter() {
-        return this.itemDelimiter;
+        return getInstanceOf(String.class, this.itemDelimiter);
     }
 
     public Data setItemDelimiter(String itemDelimiter) {
@@ -410,7 +412,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getLineDelimiter() {
-        return this.lineDelimiter;
+        return getInstanceOf(String.class, this.lineDelimiter);
     }
 
     public Data setLineDelimiter(String lineDelimiter) {
@@ -419,7 +421,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getParseDate() {
-        return this.parseDate;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.parseDate);
     }
 
     public Data setParseDate(HighchartsCallbackFunction parseDate) {
@@ -428,7 +430,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getParsed() {
-        return this.parsed;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.parsed);
     }
 
     public Data setParsed(HighchartsCallbackFunction parsed) {
@@ -437,7 +439,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Object[][] getRows() {
-        return this.rows;
+        return getInstanceOf(Object[][].class, this.rows);
     }
 
     public Data setRows(Object[][] rows) {
@@ -446,7 +448,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getRowsURL() {
-        return this.rowsURL;
+        return getInstanceOf(String.class, this.rowsURL);
     }
 
     public Data setRowsURL(String rowsURL) {
@@ -455,7 +457,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public List<Map<String, Integer>> getSeriesMapping() {
-        return this.seriesMapping;
+        return getInstanceOf(List.class, this.seriesMapping);
     }
 
     public Data setSeriesMapping(List<Map<String, Integer>> seriesMapping) {
@@ -464,7 +466,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Integer getStartColumn() {
-        return this.startColumn;
+        return getInstanceOf(Integer.class, this.startColumn);
     }
 
     public Data setStartColumn(Integer startColumn) {
@@ -473,7 +475,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Integer getStartRow() {
-        return this.startRow;
+        return getInstanceOf(Integer.class, this.startRow);
     }
 
     public Data setStartRow(Integer startRow) {
@@ -482,7 +484,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public Boolean getSwitchRowsAndColumns() {
-        return this.switchRowsAndColumns;
+        return getInstanceOf(Boolean.class, this.switchRowsAndColumns);
     }
 
     public Data setSwitchRowsAndColumns(Boolean switchRowsAndColumns) {
@@ -491,7 +493,7 @@ public class Data implements Serializable, DrosteDeflater {
     }
 
     public String getTable() {
-        return this.table;
+        return getInstanceOf(String.class, this.table);
     }
 
     public Data setTable(String table) {

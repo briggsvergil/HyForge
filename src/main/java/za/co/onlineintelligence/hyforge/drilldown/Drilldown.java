@@ -7,6 +7,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import za.co.onlineintelligence.hyforge.plotoptions.HighchartsSeriesPlotOptions;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Drilldown  HighchartsAPI Class
@@ -97,7 +99,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsCSS getActiveAxisLabelStyle() {
-        return this.activeAxisLabelStyle;
+        return getInstanceOf(HighchartsCSS.class, this.activeAxisLabelStyle);
     }
 
     public Drilldown setActiveAxisLabelStyle(HighchartsCSS activeAxisLabelStyle) {
@@ -106,7 +108,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getActiveDataLabelStyle() {
-        return this.activeDataLabelStyle;
+        return getInstanceOf(HighchartsCSS.class, this.activeDataLabelStyle);
     }
 
     public Drilldown setActiveDataLabelStyle(HighchartsCSS activeDataLabelStyle) {
@@ -115,7 +117,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public Boolean getAllowPointDrilldown() {
-        return this.allowPointDrilldown;
+        return getInstanceOf(Boolean.class, this.allowPointDrilldown);
     }
 
     public Drilldown setAllowPointDrilldown(Boolean allowPointDrilldown) {
@@ -124,7 +126,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public Integer getAnimation() {
-        return this.animation;
+        return getInstanceOf(Integer.class, this.animation);
     }
 
     public Drilldown setAnimation(Integer animation) {
@@ -133,7 +135,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public DrillUpButton getDrillUpButton() {
-        return this.drillUpButton;
+        return getInstanceOf(DrillUpButton.class, this.drillUpButton);
     }
 
     public Drilldown setDrillUpButton(DrillUpButton drillUpButton) {
@@ -142,7 +144,7 @@ public class Drilldown implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions[] getSeries() {
-        return this.series;
+        return getInstanceOf(HighchartsSeriesPlotOptions[].class, this.series);
     }
 
     public Drilldown setSeries(HighchartsSeriesPlotOptions[] series) {

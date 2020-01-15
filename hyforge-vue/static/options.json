@@ -1,0 +1,501 @@
+    {
+        "model": {
+            "accessibility": "",
+            "allowPointSelect": "",
+            "animation": "",
+            "animationLimit": "",
+            "boostBlending": "",
+            "className": "",
+            "clip": "",
+            "color": "",
+            "colorAxis": "",
+            "colorIndex": "",
+            "colorKey": "",
+            "connectEnds": "",
+            "connectNulls": "",
+            "cropThreshold": "",
+            "cursor": "",
+            "dashStyle": "",
+            "dataLabels": "",
+            "dataSorting": "",
+            "description": "",
+            "dragDrop": "",
+            "enableMouseTracking": "",
+            "events": "",
+            "findNearestPointBy": "",
+            "getExtremesFromAll": "",
+            "includeInDataExport": "",
+            "keys": "",
+            "label": "",
+            "linecap": "",
+            "lineWidth": "",
+            "linkedTo": "",
+            "marker": "",
+            "negativeColor": "",
+            "opacity": "",
+            "point": "",
+            "pointDescriptionFormatter": "",
+            "pointInterval": "",
+            "pointIntervalUnit": "",
+            "pointPlacement": "",
+            "pointStart": "",
+            "selected": "",
+            "shadow": "",
+            "showCheckbox": "",
+            "showInLegend": "",
+            "skipKeyboardNavigation": "",
+            "softThreshold": "",
+            "stacking": "",
+            "states": "",
+            "step": "",
+            "stickyTracking": "",
+            "threshold": "",
+            "tooltip": "",
+            "turboThreshold": "",
+            "visible": "",
+            "zoneAxis": "",
+            "zones": ""
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "ACCESSIBILITY",
+                    "model": "accessibility",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "ALLOW POINT SELECT",
+                    "model": "allowPointSelect",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "ANIMATION",
+                    "model": "animation",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "ANIMATION LIMIT",
+                    "model": "animationLimit",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "BOOST BLENDING",
+                    "model": "boostBlending",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "CLASS NAME",
+                    "model": "className",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "CLIP",
+                    "model": "clip",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "COLOR",
+                    "model": "color",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "COLOR AXIS",
+                    "model": "colorAxis",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "COLOR INDEX",
+                    "model": "colorIndex",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "COLOR KEY",
+                    "model": "colorKey",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "CONNECT ENDS",
+                    "model": "connectEnds",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "CONNECT NULLS",
+                    "model": "connectNulls",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "CROP THRESHOLD",
+                    "model": "cropThreshold",
+                    "readonly": false
+                },
+                {
+                    "type": "checklist",
+                    "label": "CURSOR",
+                    "model": "cursor",
+                    "readonly": false,
+                    "values": [
+                        "alias",
+                        "all-scroll",
+                        "auto",
+                        "cell",
+                        "col-resize",
+                        "context-menu",
+                        "copy",
+                        "crosshair",
+                        "default",
+                        "e-resize",
+                        "ew-resize",
+                        "grab",
+                        "grabbing",
+                        "help",
+                        "move",
+                        "n-resize",
+                        "ne-resize",
+                        "nesw-resize",
+                        "no-drop",
+                        "none",
+                        "not-allowed",
+                        "ns-resize",
+                        "nw-resize",
+                        "nwse-resize",
+                        "pointer",
+                        "progress",
+                        "row-resize",
+                        "s-resize",
+                        "se-resize",
+                        "sw-resize",
+                        "text",
+                        "vertical-text",
+                        "w-resize",
+                        "wait",
+                        "zoom-in",
+                        "zoom-out"
+                    ]
+                },
+                {
+                    "type": "checklist",
+                    "label": "DASH STYLE",
+                    "model": "dashStyle",
+                    "readonly": false,
+                    "values": [
+                        "Dash",
+                        "DashDot",
+                        "Dot",
+                        "LongDash",
+                        "LongDashDot",
+                        "LongDashDotDot",
+                        "ShortDash",
+                        "ShortDashDot",
+                        "ShortDashDotDot",
+                        "ShortDot",
+                        "Solid"
+                    ]
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "DATA LABELS",
+                    "model": "dataLabels",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "DATA SORTING",
+                    "model": "dataSorting",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "DESCRIPTION",
+                    "model": "description",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "DRAG DROP",
+                    "model": "dragDrop",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "ENABLE MOUSE TRACKING",
+                    "model": "enableMouseTracking",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "EVENTS",
+                    "model": "events",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "FIND NEAREST POINT BY",
+                    "model": "findNearestPointBy",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "GET EXTREMES FROM ALL",
+                    "model": "getExtremesFromAll",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "INCLUDE IN DATA EXPORT",
+                    "model": "includeInDataExport",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "KEYS",
+                    "model": "keys",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "LABEL",
+                    "model": "label",
+                    "readonly": false
+                },
+                {
+                    "type": "checklist",
+                    "label": "LINECAP",
+                    "model": "linecap",
+                    "readonly": false,
+                    "values": [
+                        "butt",
+                        "round",
+                        "square"
+                    ]
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "LINE WIDTH",
+                    "model": "lineWidth",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "LINKED TO",
+                    "model": "linkedTo",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "MARKER",
+                    "model": "marker",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "NEGATIVE COLOR",
+                    "model": "negativeColor",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "OPACITY",
+                    "model": "opacity",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "POINT",
+                    "model": "point",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "POINT DESCRIPTION FORMATTER",
+                    "model": "pointDescriptionFormatter",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "POINT INTERVAL",
+                    "model": "pointInterval",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "POINT INTERVAL UNIT",
+                    "model": "pointIntervalUnit",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "POINT PLACEMENT",
+                    "model": "pointPlacement",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "POINT START",
+                    "model": "pointStart",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "SELECTED",
+                    "model": "selected",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "SHADOW",
+                    "model": "shadow",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "SHOW CHECKBOX",
+                    "model": "showCheckbox",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "SHOW IN LEGEND",
+                    "model": "showInLegend",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "SKIP KEYBOARD NAVIGATION",
+                    "model": "skipKeyboardNavigation",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "SOFT THRESHOLD",
+                    "model": "softThreshold",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "STACKING",
+                    "model": "stacking",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "STATES",
+                    "model": "states",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "STEP",
+                    "model": "step",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "STICKY TRACKING",
+                    "model": "stickyTracking",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "THRESHOLD",
+                    "model": "threshold",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "TOOLTIP",
+                    "model": "tooltip",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "number",
+                    "label": "TURBO THRESHOLD",
+                    "model": "turboThreshold",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "checkbox",
+                    "label": "VISIBLE",
+                    "model": "visible",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "ZONE AXIS",
+                    "model": "zoneAxis",
+                    "readonly": false
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "ZONES",
+                    "model": "zones",
+                    "readonly": false
+                }
+            ]
+        }
+    }

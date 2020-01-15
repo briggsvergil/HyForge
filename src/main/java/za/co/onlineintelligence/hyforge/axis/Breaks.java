@@ -1,19 +1,20 @@
 package za.co.onlineintelligence.hyforge.axis;
 
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+
 import java.io.Serializable;
 import java.util.Objects;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 /**
  * Breaks HighchartsAPI Class
  *
  * @author Sean Briggs
  */
-public class Breaks implements Serializable, DrosteDeflater
-{
+public class Breaks implements Serializable, DrosteDeflater {
 
-    public Breaks()
-    {
+    public Breaks() {
     }
 
     /**
@@ -51,53 +52,44 @@ public class Breaks implements Serializable, DrosteDeflater
     /*
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
-    public int getBreakSize()
-    {
-        return this.breakSize;
+    public int getBreakSize() {
+        return getInstanceOf(int.class, this.breakSize);
     }
 
-    public Breaks setBreakSize(int breakSize)
-    {
+    public Breaks setBreakSize(int breakSize) {
         this.breakSize = breakSize;
         return this;
     }
 
-    public int getFrom()
-    {
-        return this.from;
+    public int getFrom() {
+        return getInstanceOf(int.class, this.from);
     }
 
-    public Breaks setFrom(int from)
-    {
+    public Breaks setFrom(int from) {
         this.from = from;
         return this;
     }
 
-    public int getRepeat()
-    {
-        return this.repeat;
+    public int getRepeat() {
+        return getInstanceOf(int.class, this.repeat);
     }
 
-    public Breaks setRepeat(int repeat)
-    {
+    public Breaks setRepeat(int repeat) {
         this.repeat = repeat;
         return this;
     }
 
-    public int getTo()
-    {
-        return this.to;
+    public int getTo() {
+        return getInstanceOf(int.class, this.to);
     }
 
-    public Breaks setTo(int to)
-    {
+    public Breaks setTo(int to) {
         this.to = to;
         return this;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int hash = 3;
         hash = 17 * hash + Objects.hashCode(this.breakSize);
         hash = 17 * hash + Objects.hashCode(this.from);
@@ -108,8 +100,7 @@ public class Breaks implements Serializable, DrosteDeflater
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return '{'
                 + "breakSize:" + breakSize
                 + ", from:" + from

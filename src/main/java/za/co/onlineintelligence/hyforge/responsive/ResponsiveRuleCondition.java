@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ResponsiveRuleCondition  HighchartsAPI Class
@@ -60,7 +62,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsCallbackFunction getCallback() {
-        return this.callback;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.callback);
     }
 
     public ResponsiveRuleCondition setCallback(HighchartsCallbackFunction callback) {
@@ -69,7 +71,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
     }
 
     public Integer getMaxHeight() {
-        return this.maxHeight;
+        return getInstanceOf(Integer.class, this.maxHeight);
     }
 
     public ResponsiveRuleCondition setMaxHeight(Integer maxHeight) {
@@ -78,7 +80,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
     }
 
     public Integer getMaxWidth() {
-        return this.maxWidth;
+        return getInstanceOf(Integer.class, this.maxWidth);
     }
 
     public ResponsiveRuleCondition setMaxWidth(Integer maxWidth) {
@@ -87,7 +89,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
     }
 
     public Integer getMinHeight() {
-        return this.minHeight;
+        return getInstanceOf(Integer.class, this.minHeight);
     }
 
     public ResponsiveRuleCondition setMinHeight(Integer minHeight) {
@@ -96,7 +98,7 @@ public class ResponsiveRuleCondition implements Serializable, DrosteDeflater {
     }
 
     public Integer getMinWidth() {
-        return this.minWidth;
+        return getInstanceOf(Integer.class, this.minWidth);
     }
 
     public ResponsiveRuleCondition setMinWidth(Integer minWidth) {

@@ -6,6 +6,8 @@ import java.util.Objects;
 import org.javatuples.Pair;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * DateTimeLabelFormats HighchartsAPI Class
  *
@@ -60,7 +62,7 @@ public class DateTimeLabelFormats implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public String getDay() {
-        return this.day;
+        return getInstanceOf(String.class, this.day);
     }
 
     public DateTimeLabelFormats setDay(String day) {
@@ -69,7 +71,7 @@ public class DateTimeLabelFormats implements Serializable, DrosteDeflater {
     }
 
     public Pair<String, Boolean> getHour() {
-        return this.hour;
+        return getInstanceOf(Pair.class, this.hour);
     }
 
     public DateTimeLabelFormats setHour(Pair<String, Boolean> hour) {
@@ -78,7 +80,7 @@ public class DateTimeLabelFormats implements Serializable, DrosteDeflater {
     }
 
     public Pair<String, Boolean> getMillisecond() {
-        return this.millisecond;
+        return getInstanceOf(Pair.class, this.millisecond);
     }
 
     public DateTimeLabelFormats setMillisecond(Pair<String, Boolean> millisecond) {
@@ -87,7 +89,7 @@ public class DateTimeLabelFormats implements Serializable, DrosteDeflater {
     }
 
     public Pair<String, Boolean> getMinute() {
-        return this.minute;
+        return getInstanceOf(Pair.class, this.minute);
     }
 
     public DateTimeLabelFormats setMinute(Pair<String, Boolean> minute) {
@@ -96,7 +98,7 @@ public class DateTimeLabelFormats implements Serializable, DrosteDeflater {
     }
 
     public Pair<String, Boolean> getMonth() {
-        return this.month;
+        return getInstanceOf(Pair.class, this.month);
     }
 
     public DateTimeLabelFormats setMonth(Pair<String, Boolean> month) {
@@ -105,7 +107,7 @@ public class DateTimeLabelFormats implements Serializable, DrosteDeflater {
     }
 
     public Pair<String, Boolean> getSecond() {
-        return this.second;
+        return getInstanceOf(Pair.class, this.second);
     }
 
     public DateTimeLabelFormats setSecond(Pair<String, Boolean> second) {
@@ -114,7 +116,7 @@ public class DateTimeLabelFormats implements Serializable, DrosteDeflater {
     }
 
     public Pair<String, Boolean> getWeek() {
-        return this.week;
+        return getInstanceOf(Pair.class, this.week);
     }
 
     public DateTimeLabelFormats setWeek(Pair<String, Boolean> week) {
@@ -123,7 +125,7 @@ public class DateTimeLabelFormats implements Serializable, DrosteDeflater {
     }
 
     public Pair<String, Boolean> getYear() {
-        return this.year;
+        return getInstanceOf(Pair.class, this.year);
     }
 
     public DateTimeLabelFormats setYear(Pair<String, Boolean> year) {

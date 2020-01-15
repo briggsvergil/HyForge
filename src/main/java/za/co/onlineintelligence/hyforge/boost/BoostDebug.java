@@ -5,6 +5,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * BoostDebug  HighchartsAPI Class
@@ -76,7 +78,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Boolean getShowSkipSummary() {
-        return this.showSkipSummary;
+        return getInstanceOf(Boolean.class, this.showSkipSummary);
     }
 
     public BoostDebug setShowSkipSummary(Boolean showSkipSummary) {
@@ -85,7 +87,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeBufferCopy() {
-        return this.timeBufferCopy;
+        return getInstanceOf(Boolean.class, this.timeBufferCopy);
     }
 
     public BoostDebug setTimeBufferCopy(Boolean timeBufferCopy) {
@@ -94,7 +96,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeKDTree() {
-        return this.timeKDTree;
+        return getInstanceOf(Boolean.class, this.timeKDTree);
     }
 
     public BoostDebug setTimeKDTree(Boolean timeKDTree) {
@@ -103,7 +105,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeRendering() {
-        return this.timeRendering;
+        return getInstanceOf(Boolean.class, this.timeRendering);
     }
 
     public BoostDebug setTimeRendering(Boolean timeRendering) {
@@ -112,7 +114,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeSeriesProcessing() {
-        return this.timeSeriesProcessing;
+        return getInstanceOf(Boolean.class, this.timeSeriesProcessing);
     }
 
     public BoostDebug setTimeSeriesProcessing(Boolean timeSeriesProcessing) {
@@ -121,7 +123,7 @@ public class BoostDebug implements Serializable, DrosteDeflater {
     }
 
     public Boolean getTimeSetup() {
-        return this.timeSetup;
+        return getInstanceOf(Boolean.class, this.timeSetup);
     }
 
     public BoostDebug setTimeSetup(Boolean timeSetup) {

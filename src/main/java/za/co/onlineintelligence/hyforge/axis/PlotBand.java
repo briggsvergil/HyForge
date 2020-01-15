@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.*;
+import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
 /**
  * PlotBands HighchartsAPI Class
@@ -132,6 +133,11 @@ public class PlotBand implements Serializable, DrosteDeflater {
 
     public PlotBand setColor(HighchartsColor color) {
         this.color = color;
+        return this;
+    }
+
+    public PlotBand setColor(String colorString) {
+        this.color = new HighchartsColorString(colorString);
         return this;
     }
 

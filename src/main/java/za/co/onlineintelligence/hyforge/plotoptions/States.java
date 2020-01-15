@@ -6,6 +6,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * States HighchartsAPI Class
@@ -45,7 +47,7 @@ public class States implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Hover getHover() {
-        return this.hover;
+        return getInstanceOf(Hover.class, this.hover);
     }
 
     public States setHover(Hover hover) {
@@ -54,7 +56,7 @@ public class States implements Serializable, DrosteDeflater {
     }
 
     public Integer getNormal() {
-        return this.normal;
+        return getInstanceOf(Integer.class, this.normal);
     }
 
     public States setNormal(Integer normal) {
@@ -63,7 +65,7 @@ public class States implements Serializable, DrosteDeflater {
     }
 
     public Select getSelect() {
-        return this.select;
+        return getInstanceOf(Select.class, this.select);
     }
 
     public States setSelect(Select select) {
@@ -73,7 +75,7 @@ public class States implements Serializable, DrosteDeflater {
 
 
     public Inactive getInactive() {
-        return this.inactive;
+        return getInstanceOf(Inactive.class, this.inactive);
     }
 
     public States setInactive(Inactive inactive) {

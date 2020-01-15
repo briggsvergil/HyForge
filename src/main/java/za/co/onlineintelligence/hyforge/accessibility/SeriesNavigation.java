@@ -6,6 +6,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * SeriesNavigation HighchartsAPI Class
@@ -59,7 +61,7 @@ public class SeriesNavigation implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getMode() {
-        return this.mode;
+        return getInstanceOf(String.class, this.mode);
     }
 
     public SeriesNavigation setMode(String mode) {
@@ -68,7 +70,7 @@ public class SeriesNavigation implements Serializable, DrosteDeflater {
     }
 
     public Integer getPointNavigationEnabledThreshold() {
-        return this.pointNavigationEnabledThreshold;
+        return getInstanceOf(Integer.class, this.pointNavigationEnabledThreshold);
     }
 
     public SeriesNavigation setPointNavigationEnabledThreshold(Integer pointNavigationEnabledThreshold) {
@@ -77,7 +79,7 @@ public class SeriesNavigation implements Serializable, DrosteDeflater {
     }
 
     public boolean getSkipNullPoints() {
-        return this.skipNullPoints;
+        return getInstanceOf(boolean.class, this.skipNullPoints);
     }
 
     public SeriesNavigation setSkipNullPoints(boolean skipNullPoints) {

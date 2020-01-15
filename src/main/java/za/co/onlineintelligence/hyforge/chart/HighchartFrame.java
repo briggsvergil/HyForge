@@ -6,6 +6,7 @@ import java.util.Objects;
 
 import org.javatuples.Pair;
 import za.co.onlineintelligence.hyforge.common.*;
+import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.isField;
 
@@ -50,6 +51,11 @@ public class HighchartFrame implements Serializable, DrosteDeflater {
 
     public HighchartFrame setColor(HighchartsColor color) {
         this.color = color;
+        return this;
+    }
+
+    public HighchartFrame setColor(String colorString) {
+        this.color = new HighchartsColorString(colorString);
         return this;
     }
 

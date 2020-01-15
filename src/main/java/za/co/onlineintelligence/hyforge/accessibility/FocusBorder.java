@@ -8,6 +8,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * FocusBorder HighchartsAPI Class
@@ -58,7 +60,7 @@ public class FocusBorder implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public FocusBorder setEnabled(boolean enabled) {
@@ -67,7 +69,7 @@ public class FocusBorder implements Serializable, DrosteDeflater {
     }
 
     public boolean getHideBrowserFocusOutline() {
-        return this.hideBrowserFocusOutline;
+        return getInstanceOf(boolean.class, this.hideBrowserFocusOutline);
     }
 
     public FocusBorder setHideBrowserFocusOutline(boolean hideBrowserFocusOutline) {
@@ -76,7 +78,7 @@ public class FocusBorder implements Serializable, DrosteDeflater {
     }
 
     public int getMargin() {
-        return this.margin;
+        return getInstanceOf(int.class, this.margin);
     }
 
     public FocusBorder setMargin(int margin) {
@@ -85,7 +87,7 @@ public class FocusBorder implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public FocusBorder setStyle(HighchartsCSS style) {

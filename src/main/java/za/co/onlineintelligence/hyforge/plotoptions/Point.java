@@ -5,6 +5,8 @@ package za.co.onlineintelligence.hyforge.plotoptions;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Point HighchartsAPI Class
@@ -25,7 +27,7 @@ public class Point implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public PointEvents getEvents() {
-        return this.events;
+        return getInstanceOf(PointEvents.class, this.events);
     }
 
     public Point setEvents(PointEvents events) {

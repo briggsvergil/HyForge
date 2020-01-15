@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.HighchartsOptions;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ResponsiveRule  HighchartsAPI Class
@@ -46,7 +48,7 @@ public class ResponsiveRule implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsOptions getChartOptions() {
-        return this.chartOptions;
+        return getInstanceOf(HighchartsOptions.class, this.chartOptions);
     }
 
     public ResponsiveRule setChartOptions(HighchartsOptions chartOptions) {
@@ -55,7 +57,7 @@ public class ResponsiveRule implements Serializable, DrosteDeflater {
     }
 
     public ResponsiveRuleCondition getCondition() {
-        return this.condition;
+        return getInstanceOf(ResponsiveRuleCondition.class, this.condition);
     }
 
     public ResponsiveRule setCondition(ResponsiveRuleCondition condition) {

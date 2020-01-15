@@ -8,6 +8,8 @@ import za.co.onlineintelligence.hyforge.common.HighchartsAnimationOptionsObject;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * LegendNavigation HighchartsAPI Class
@@ -77,7 +79,7 @@ public class LegendNavigation implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsColor getActiveColor() {
-        return this.activeColor;
+        return getInstanceOf(HighchartsColor.class, this.activeColor);
     }
 
     public LegendNavigation setActiveColor(HighchartsColor activeColor) {
@@ -86,7 +88,7 @@ public class LegendNavigation implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAnimationOptionsObject getAnimation() {
-        return this.animation;
+        return getInstanceOf(HighchartsAnimationOptionsObject.class, this.animation);
     }
 
     public LegendNavigation setAnimation(HighchartsAnimationOptionsObject animation) {
@@ -95,7 +97,7 @@ public class LegendNavigation implements Serializable, DrosteDeflater {
     }
 
     public Integer getArrowSize() {
-        return this.arrowSize;
+        return getInstanceOf(Integer.class, this.arrowSize);
     }
 
     public LegendNavigation setArrowSize(Integer arrowSize) {
@@ -104,7 +106,7 @@ public class LegendNavigation implements Serializable, DrosteDeflater {
     }
 
     public Boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(Boolean.class, this.enabled);
     }
 
     public LegendNavigation setEnabled(Boolean enabled) {
@@ -113,7 +115,7 @@ public class LegendNavigation implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getInactiveColor() {
-        return this.inactiveColor;
+        return getInstanceOf(HighchartsColor.class, this.inactiveColor);
     }
 
     public LegendNavigation setInactiveColor(HighchartsColor inactiveColor) {
@@ -122,7 +124,7 @@ public class LegendNavigation implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public LegendNavigation setStyle(HighchartsCSS style) {

@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ScreenReaderSection HighchartsAPI Class
@@ -84,7 +86,7 @@ public class ScreenReaderSection implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getAfterChartFormat() {
-        return this.afterChartFormat;
+        return getInstanceOf(String.class, this.afterChartFormat);
     }
 
     public ScreenReaderSection setAfterChartFormat(String afterChartFormat) {
@@ -93,7 +95,7 @@ public class ScreenReaderSection implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getAfterChartFormatter() {
-        return this.afterChartFormatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.afterChartFormatter);
     }
 
     public ScreenReaderSection setAfterChartFormatter(HighchartsCallbackFunction afterChartFormatter) {
@@ -102,7 +104,7 @@ public class ScreenReaderSection implements Serializable, DrosteDeflater {
     }
 
     public String getAxisRangeDateFormat() {
-        return this.axisRangeDateFormat;
+        return getInstanceOf(String.class, this.axisRangeDateFormat);
     }
 
     public ScreenReaderSection setAxisRangeDateFormat(String axisRangeDateFormat) {
@@ -111,7 +113,7 @@ public class ScreenReaderSection implements Serializable, DrosteDeflater {
     }
 
     public String getBeforeChartFormat() {
-        return this.beforeChartFormat;
+        return getInstanceOf(String.class, this.beforeChartFormat);
     }
 
     public ScreenReaderSection setBeforeChartFormat(String beforeChartFormat) {
@@ -120,7 +122,7 @@ public class ScreenReaderSection implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getBeforeChartFormatter() {
-        return this.beforeChartFormatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.beforeChartFormatter);
     }
 
     public ScreenReaderSection setBeforeChartFormatter(HighchartsCallbackFunction beforeChartFormatter) {
@@ -129,7 +131,7 @@ public class ScreenReaderSection implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getOnViewDataTableClick() {
-        return this.onViewDataTableClick;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.onViewDataTableClick);
     }
 
     public ScreenReaderSection setOnViewDataTableClick(HighchartsCallbackFunction onViewDataTableClick) {

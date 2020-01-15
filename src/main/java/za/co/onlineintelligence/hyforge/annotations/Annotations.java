@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsSize;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Annotations  HighchartsAPI Class
@@ -110,7 +112,7 @@ public class Annotations implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public ControlPointOptions getControlPointOptions() {
-        return this.controlPointOptions;
+        return getInstanceOf(ControlPointOptions.class, this.controlPointOptions);
     }
 
     public Annotations setControlPointOptions(ControlPointOptions controlPointOptions) {
@@ -119,7 +121,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public String getDraggable() {
-        return this.draggable;
+        return getInstanceOf(String.class, this.draggable);
     }
 
     public Annotations setDraggable(String draggable) {
@@ -128,7 +130,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public AnnotationsEvents getEvents() {
-        return this.events;
+        return getInstanceOf(AnnotationsEvents.class, this.events);
     }
 
     public Annotations setEvents(AnnotationsEvents events) {
@@ -137,7 +139,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getId() {
-        return this.id;
+        return getInstanceOf(HighchartsSize.class, this.id);
     }
 
     public Annotations setId(HighchartsSize id) {
@@ -146,7 +148,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public LabelOptions getLabelOptions() {
-        return this.labelOptions;
+        return getInstanceOf(LabelOptions.class, this.labelOptions);
     }
 
     public Annotations setLabelOptions(LabelOptions labelOptions) {
@@ -155,7 +157,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public AnnotationsLabels[] getLabels() {
-        return this.labels;
+        return getInstanceOf(AnnotationsLabels[].class, this.labels);
     }
 
     public Annotations setLabels(AnnotationsLabels[] labels) {
@@ -164,7 +166,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public ShapeOptions getShapeOptions() {
-        return this.shapeOptions;
+        return getInstanceOf(ShapeOptions.class, this.shapeOptions);
     }
 
     public Annotations setShapeOptions(ShapeOptions shapeOptions) {
@@ -173,7 +175,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public AnnotationShapes[] getShapes() {
-        return this.shapes;
+        return getInstanceOf(AnnotationShapes[].class, this.shapes);
     }
 
     public Annotations setShapes(AnnotationShapes[] shapes) {
@@ -182,7 +184,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public Boolean getVisible() {
-        return this.visible;
+        return getInstanceOf(Boolean.class, this.visible);
     }
 
     public Annotations setVisible(Boolean visible) {
@@ -191,7 +193,7 @@ public class Annotations implements Serializable, DrosteDeflater {
     }
 
     public Integer getZIndex() {
-        return this.zIndex;
+        return getInstanceOf(Integer.class, this.zIndex);
     }
 
     public Annotations setZIndex(Integer zIndex) {

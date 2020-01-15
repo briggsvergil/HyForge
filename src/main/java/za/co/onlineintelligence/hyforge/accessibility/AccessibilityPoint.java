@@ -8,6 +8,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Point HighchartsAPI Class
@@ -84,7 +86,7 @@ public class AccessibilityPoint implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getDateFormat() {
-        return this.dateFormat;
+        return getInstanceOf(String.class, this.dateFormat);
     }
 
     public AccessibilityPoint setDateFormat(String dateFormat) {
@@ -93,7 +95,7 @@ public class AccessibilityPoint implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getDateFormatter() {
-        return this.dateFormatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.dateFormatter);
     }
 
     public AccessibilityPoint setDateFormatter(HighchartsCallbackFunction dateFormatter) {
@@ -102,7 +104,7 @@ public class AccessibilityPoint implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getDescriptionFormatter() {
-        return this.descriptionFormatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.descriptionFormatter);
     }
 
     public AccessibilityPoint setDescriptionFormatter(HighchartsCallbackFunction descriptionFormatter) {
@@ -111,7 +113,7 @@ public class AccessibilityPoint implements Serializable, DrosteDeflater {
     }
 
     public int getValueDecimals() {
-        return this.valueDecimals;
+        return getInstanceOf(int.class, this.valueDecimals);
     }
 
     public AccessibilityPoint setValueDecimals(int valueDecimals) {
@@ -120,7 +122,7 @@ public class AccessibilityPoint implements Serializable, DrosteDeflater {
     }
 
     public String getValuePrefix() {
-        return this.valuePrefix;
+        return getInstanceOf(String.class, this.valuePrefix);
     }
 
     public AccessibilityPoint setValuePrefix(String valuePrefix) {
@@ -129,7 +131,7 @@ public class AccessibilityPoint implements Serializable, DrosteDeflater {
     }
 
     public String getValueSuffix() {
-        return this.valueSuffix;
+        return getInstanceOf(String.class, this.valueSuffix);
     }
 
     public AccessibilityPoint setValueSuffix(String valueSuffix) {

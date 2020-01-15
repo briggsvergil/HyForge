@@ -10,6 +10,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * AxisGrid HighchartsAPI Class
  *
@@ -62,7 +64,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsColorString getBorderColor() {
-        return this.borderColor;
+        return getInstanceOf(HighchartsColorString.class, this.borderColor);
     }
 
     public AxisGrid setBorderColor(HighchartsColorString borderColor) {
@@ -71,7 +73,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
     }
 
     public int getBorderWidth() {
-        return this.borderWidth;
+        return getInstanceOf(int.class, this.borderWidth);
     }
 
     public AxisGrid setBorderWidth(int borderWidth) {
@@ -80,7 +82,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
     }
 
     public int getCellHeight() {
-        return this.cellHeight;
+        return getInstanceOf(int.class, this.cellHeight);
     }
 
     public AxisGrid setCellHeight(int cellHeight) {
@@ -89,7 +91,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
     }
 
     public Object getColumns() {
-        return this.columns;
+        return getInstanceOf(Object.class, this.columns);
     }
 
     public AxisGrid setColumns(Object columns) {
@@ -98,7 +100,7 @@ public class AxisGrid implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public AxisGrid setEnabled(boolean enabled) {

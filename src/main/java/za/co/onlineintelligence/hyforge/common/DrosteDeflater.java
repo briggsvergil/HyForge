@@ -1,16 +1,21 @@
 package za.co.onlineintelligence.hyforge.common;
 
-import org.javatuples.Pair;
+import com.google.common.base.CaseFormat;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 
+import javax.annotation.Nullable;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-import java.util.*;
-import java.util.Map.Entry;
-import java.util.stream.Collector;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
-import static java.util.AbstractMap.*;
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.*;
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getAllFields;
 
 /**
@@ -122,7 +127,7 @@ public interface DrosteDeflater {
         fields = getAllFields(fields, this.getClass());
 
         //print field names paired with their values
-        for (Field field :fields) {
+        for (Field field : fields) {
             String sField = this.deflateField(field, tabLevel);
             result.append(sField != null ? sField : "");
         }
@@ -267,7 +272,9 @@ public interface DrosteDeflater {
         } catch (Exception e) {
             result.append("\n\nEXCEPTION: [").append(e).append("]\n");
             result.append("STACK TRACE: [\n");
-            Arrays.stream(e.getStackTrace()).forEach(ste -> result.append(ste).append("\n"));
+            for (StackTraceElement ste : e.getStackTrace()) {
+                result.append(ste).append("\n");
+            }
             result.append("]\n");
 
         }
@@ -289,10 +296,149 @@ public interface DrosteDeflater {
      * @return the serialized field
      */
     default String delegateFieldDeflation(Field field, String fieldCompare,
-                                          boolean isFieldNull, CommonUtils.StringSupplier supplier) {
-        Boolean b = CommonUtils.isField(field, fieldCompare, isFieldNull);
+                                          boolean isFieldNull, StringSupplier supplier) {
+        Boolean b = isField(field, fieldCompare, isFieldNull);
         return b != null ? b ? supplier.get()
                 : RTS
                 : null;
+    }
+
+    static JsonElement deIonize(Class<?> clazz, @Nullable String title) {
+
+        /**
+         * Vue-Forms-Generator JSON structure:
+         *
+         * {
+         *      model: {*field names and initial values*},
+         *      schema: {fields[{*field1Opts*}, {*field2Opts*},...]},
+         *      formOptions: {*formOptions*}
+         *
+         *      *Field Options:
+         *      -type: string
+         *      -inputType: string
+         *      -label: string
+         *      -model: string - reference to field listed in model
+         *      -readonly: bool
+         *      -disabled: bool
+         *      -featured: bool
+         *      -required: bool
+         *      -placeholder: String
+         *      -min: number
+         *      -hint: string
+         *      -*validator: ...
+         *      -values: array of strings for enum
+         *      -default: dependent on type
+         * }
+         */
+
+        List<Field> fieldList = new ArrayList<>();
+        fieldList = getAllFields(fieldList, clazz);
+
+        JsonObject vueObj = new JsonObject();
+        JsonObject modelObj = new JsonObject();
+        JsonObject schemaObj = new JsonObject();
+        JsonArray fieldsArray = new JsonArray();
+//        if (title != null && !title.isEmpty()) vueObj.addProperty("title", title);
+
+        for (Field f : fieldList) {
+            f.setAccessible(true);
+
+            JsonObject fieldObj = new JsonObject();
+            String displayLabel = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, f.getName()).replace('_', ' ');
+            Class<?> type = f.getType();
+            Class<?> componentType = type.getComponentType();
+//            System.out.println("Field: " + f.getName() + ", Type: " + type + ", ComponentType: " + (componentType!=null? componentType : "N/A"));
+
+            String inputString = "input";
+            String typeString = "";
+            String inputType = "text";
+            boolean readonly = false;
+            Boolean featured = null;
+            Boolean required = null;
+            Boolean disabled = null;
+            Integer min = null;
+            String hint = null;
+            String placeholder = null;
+
+            /*Object o = null;
+            try {
+                o = f.get(clazz);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }*/
+            Annotation[] annotations = f.getAnnotations();
+            final Exporting[] exportAnnotation = {null};
+            Arrays.stream(annotations)
+                    .filter(annotation -> annotation instanceof Exporting)
+                    .map(annotation -> exportAnnotation[0] = (Exporting) annotation);
+
+            if (exportAnnotation[0] != null) {
+                disabled = exportAnnotation[0].disabled();
+                readonly = exportAnnotation[0].readonly();
+                required = exportAnnotation[0].required();
+                featured = exportAnnotation[0].featured();
+                String label = exportAnnotation[0].label();
+                displayLabel = label.isEmpty() ? displayLabel : label;
+                hint = exportAnnotation[0].hint();
+                hint = hint.isEmpty() ? null : hint;
+                min = exportAnnotation[0].minimum();
+                placeholder = exportAnnotation[0].placeholder();
+            }
+
+            modelObj.addProperty(f.getName(), "");
+            //sub structure
+            //TODO: make allowances for enum (inputstring = checklist)
+            if (type.isAssignableFrom(DrosteDeflater.class) || DrosteDeflater.class.isAssignableFrom(type)) {
+                //TODO: build separate structure for these...
+            } else if (type.isArray()) {
+                typeString = "N/A";
+            } else if (isReflectedFieldANumber(type)) {
+                typeString = "number";
+            } else if (boolean.class.isAssignableFrom(type) || Boolean.class.isAssignableFrom(type)) {
+                typeString = "boolean";
+            } else if (type.isEnum()) {
+                typeString = "enum";
+            } else {
+                typeString = "string";
+            }
+
+            if (typeString.equals("boolean")) {
+                inputType = "checkbox";
+            } else if (typeString.equals("number")) {
+                inputType = "number";
+            } else if (typeString.equals("enum")) {
+                inputString = "checklist";
+                inputType = null;
+            }
+
+            fieldObj.addProperty("type", inputString);
+            if (inputType != null) fieldObj.addProperty("inputType", inputType);
+            fieldObj.addProperty("label", displayLabel);
+            fieldObj.addProperty("model", f.getName());
+            fieldObj.addProperty("readonly", readonly);
+
+            if(inputString.equals("checklist")) {
+                JsonArray arr = new JsonArray();
+                for (Object o : type.getEnumConstants()) {
+                    arr.add(o.toString());
+                }
+                fieldObj.add("values", arr);
+            }
+
+            if (featured != null) fieldObj.addProperty("featured", featured);
+            if (required != null) fieldObj.addProperty("required", required);
+            if (disabled != null) fieldObj.addProperty("disabled", disabled);
+            if (hint != null) fieldObj.addProperty("hint", hint);
+            if (min != null && min != 0) fieldObj.addProperty("min", min);
+            if (placeholder != null) fieldObj.addProperty("placeholder", placeholder);
+
+            fieldsArray.add(fieldObj);
+        }
+
+        vueObj.add("model", modelObj);
+        schemaObj.add("fields", fieldsArray);
+        vueObj.add("schema", schemaObj);
+
+        return vueObj;
     }
 }

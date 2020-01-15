@@ -5,6 +5,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Accessibility HighchartsAPI Class
@@ -175,7 +177,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public AnnounceNewData getAnnounceNewData() {
-        return this.announceNewData;
+        return getInstanceOf(AnnounceNewData.class, this.announceNewData);
     }
 
     public Accessibility setAnnounceNewData(AnnounceNewData announceNewData) {
@@ -184,7 +186,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public String getCustomComponents() {
-        return this.customComponents;
+        return getInstanceOf(String.class, this.customComponents);
     }
 
     public Accessibility setCustomComponents(String customComponents) {
@@ -193,7 +195,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public String getDescription() {
-        return this.description;
+        return getInstanceOf(String.class, this.description);
     }
 
     public Accessibility setDescription(String description) {
@@ -202,7 +204,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public Accessibility setEnabled(boolean enabled) {
@@ -211,7 +213,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public HighContrastTheme getHighContrastTheme() {
-        return this.highContrastTheme;
+        return getInstanceOf(HighContrastTheme.class, this.highContrastTheme);
     }
 
     public Accessibility setHighContrastTheme(HighContrastTheme highContrastTheme) {
@@ -220,7 +222,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public KeyboardNavigation getKeyboardNavigation() {
-        return this.keyboardNavigation;
+        return getInstanceOf(KeyboardNavigation.class, this.keyboardNavigation);
     }
 
     public Accessibility setKeyboardNavigation(KeyboardNavigation keyboardNavigation) {
@@ -229,7 +231,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public String getLandmarkVerbosity() {
-        return this.landmarkVerbosity;
+        return getInstanceOf(String.class, this.landmarkVerbosity);
     }
 
     public Accessibility setLandmarkVerbosity(String landmarkVerbosity) {
@@ -238,7 +240,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public String getLinkedDescription() {
-        return this.linkedDescription;
+        return getInstanceOf(String.class, this.linkedDescription);
     }
 
     public Accessibility setLinkedDescription(String linkedDescription) {
@@ -247,7 +249,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public AccessibilityPoint getPoint() {
-        return this.point;
+        return getInstanceOf(AccessibilityPoint.class, this.point);
     }
 
     public Accessibility setPoint(AccessibilityPoint point) {
@@ -256,7 +258,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public ScreenReaderSection getScreenReaderSection() {
-        return this.screenReaderSection;
+        return getInstanceOf(ScreenReaderSection.class, this.screenReaderSection);
     }
 
     public Accessibility setScreenReaderSection(ScreenReaderSection screenReaderSection) {
@@ -265,7 +267,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public SeriesAccessibilityOptions getSeries() {
-        return this.series;
+        return getInstanceOf(SeriesAccessibilityOptions.class, this.series);
     }
 
     public Accessibility setSeries(SeriesAccessibilityOptions series) {
@@ -274,7 +276,7 @@ public class Accessibility implements Serializable, DrosteDeflater {
     }
 
     public String getTypeDescription() {
-        return this.typeDescription;
+        return getInstanceOf(String.class, this.typeDescription);
     }
 
     public Accessibility setTypeDescription(String typeDescription) {

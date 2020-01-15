@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.*;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsAlignValue;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * AxisLabels HighchartsAPI Class
  *
@@ -73,7 +75,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
      * retrieved by calling `this.axis.defaultLabelFormatter.call(this)` within
      * the function.
      * <p>
-     * Defaults to: ```js function() { return this.value; } ```
+     * Defaults to:>.class,  ```js function() { return getInstanceOf(this.value; } ``)`
      */
     private HighchartsCallbackFunction formatter;
 
@@ -223,7 +225,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsAlignValue getAlign() {
-        return this.align;
+        return getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public AxisLabels setAlign(HighchartsAlignValue align) {
@@ -232,7 +234,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public HighchartsRotation getAutoRotation() {
-        return this.autoRotation;
+        return getInstanceOf(HighchartsRotation.class, this.autoRotation);
     }
 
     public AxisLabels setAutoRotation(HighchartsRotation autoRotation) {
@@ -241,7 +243,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getAutoRotationLimit() {
-        return this.autoRotationLimit;
+        return getInstanceOf(int.class, this.autoRotationLimit);
     }
 
     public AxisLabels setAutoRotationLimit(int autoRotationLimit) {
@@ -250,7 +252,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getDistance() {
-        return this.distance;
+        return getInstanceOf(int.class, this.distance);
     }
 
     public AxisLabels setDistance(int distance) {
@@ -259,7 +261,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public AxisLabels setEnabled(boolean enabled) {
@@ -268,7 +270,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public String getFormat() {
-        return this.format;
+        return getInstanceOf(String.class, this.format);
     }
 
     public AxisLabels setFormat(String format) {
@@ -277,7 +279,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getFormatter() {
-        return this.formatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
     }
 
     public AxisLabels setFormatter(HighchartsCallbackFunction formatter) {
@@ -286,7 +288,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getIndentation() {
-        return this.indentation;
+        return getInstanceOf(int.class, this.indentation);
     }
 
     public AxisLabels setIndentation(int indentation) {
@@ -295,7 +297,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getMaxStaggerLines() {
-        return this.maxStaggerLines;
+        return getInstanceOf(int.class, this.maxStaggerLines);
     }
 
     public AxisLabels setMaxStaggerLines(int maxStaggerLines) {
@@ -304,7 +306,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public String getOverflow() {
-        return this.overflow;
+        return getInstanceOf(String.class, this.overflow);
     }
 
     public AxisLabels setOverflow(String overflow) {
@@ -313,7 +315,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getPadding() {
-        return this.padding;
+        return getInstanceOf(int.class, this.padding);
     }
 
     public AxisLabels setPadding(int padding) {
@@ -322,7 +324,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public String getPosition3d() {
-        return this.position3d;
+        return getInstanceOf(String.class, this.position3d);
     }
 
     public AxisLabels setPosition3d(String position3d) {
@@ -331,7 +333,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public boolean getReserveSpace() {
-        return this.reserveSpace;
+        return getInstanceOf(boolean.class, this.reserveSpace);
     }
 
     public AxisLabels setReserveSpace(boolean reserveSpace) {
@@ -340,7 +342,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public double getRotation() {
-        return this.rotation;
+        return getInstanceOf(double.class, this.rotation);
     }
 
     public AxisLabels setRotation(double rotation) {
@@ -349,7 +351,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public boolean getSkew3d() {
-        return this.skew3d;
+        return getInstanceOf(boolean.class, this.skew3d);
     }
 
     public AxisLabels setSkew3d(boolean skew3d) {
@@ -358,7 +360,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getStaggerLines() {
-        return this.staggerLines;
+        return getInstanceOf(int.class, this.staggerLines);
     }
 
     public AxisLabels setStaggerLines(int staggerLines) {
@@ -367,7 +369,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getStep() {
-        return this.step;
+        return getInstanceOf(int.class, this.step);
     }
 
     public AxisLabels setStep(int step) {
@@ -376,7 +378,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public AxisLabels setStyle(HighchartsCSS style) {
@@ -385,7 +387,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public boolean getUseHTML() {
-        return this.useHTML;
+        return getInstanceOf(boolean.class, this.useHTML);
     }
 
     public AxisLabels setUseHTML(boolean useHTML) {
@@ -394,7 +396,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getX() {
-        return this.x;
+        return getInstanceOf(int.class, this.x);
     }
 
     public AxisLabels setX(int x) {
@@ -403,7 +405,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getY() {
-        return this.y;
+        return getInstanceOf(int.class, this.y);
     }
 
     public AxisLabels setY(int y) {
@@ -412,7 +414,7 @@ public class AxisLabels implements Serializable, DrosteDeflater {
     }
 
     public int getZIndex() {
-        return this.zIndex;
+        return getInstanceOf(int.class, this.zIndex);
     }
 
     public AxisLabels setZIndex(int zIndex) {

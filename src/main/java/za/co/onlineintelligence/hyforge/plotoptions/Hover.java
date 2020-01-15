@@ -8,6 +8,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Hover HighchartsAPI Class
@@ -78,7 +80,7 @@ public class Hover implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Integer getAnimation() {
-        return this.animation;
+        return getInstanceOf(Integer.class, this.animation);
     }
 
     public Hover setAnimation(Integer animation) {
@@ -87,7 +89,7 @@ public class Hover implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public Hover setEnabled(boolean enabled) {
@@ -96,7 +98,7 @@ public class Hover implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getFillColor() {
-        return this.fillColor;
+        return getInstanceOf(HighchartsColor.class, this.fillColor);
     }
 
     public Hover setFillColor(HighchartsColor fillColor) {
@@ -105,7 +107,7 @@ public class Hover implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getLineColor() {
-        return this.lineColor;
+        return getInstanceOf(HighchartsColor.class, this.lineColor);
     }
 
     public Hover setLineColor(HighchartsColor lineColor) {
@@ -119,7 +121,7 @@ public class Hover implements Serializable, DrosteDeflater {
     }
 
     public int getLineWidth() {
-        return this.lineWidth;
+        return getInstanceOf(int.class, this.lineWidth);
     }
 
     public Hover setLineWidth(int lineWidth) {
@@ -128,7 +130,7 @@ public class Hover implements Serializable, DrosteDeflater {
     }
 
     public int getLineWidthPlus() {
-        return this.lineWidthPlus;
+        return getInstanceOf(int.class, this.lineWidthPlus);
     }
 
     public Hover setLineWidthPlus(int lineWidthPlus) {
@@ -137,7 +139,7 @@ public class Hover implements Serializable, DrosteDeflater {
     }
 
     public int getRadius() {
-        return this.radius;
+        return getInstanceOf(int.class, this.radius);
     }
 
     public Hover setRadius(int radius) {
@@ -146,7 +148,7 @@ public class Hover implements Serializable, DrosteDeflater {
     }
 
     public int getRadiusPlus() {
-        return this.radiusPlus;
+        return getInstanceOf(int.class, this.radiusPlus);
     }
 
     public Hover setRadiusPlus(int radiusPlus) {

@@ -7,6 +7,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Select HighchartsAPI Class
@@ -50,7 +52,7 @@ public class Select implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public Select setEnabled(boolean enabled) {
@@ -59,7 +61,7 @@ public class Select implements Serializable {
     }
 
     public HighchartsColor getFillColor() {
-        return this.fillColor;
+        return getInstanceOf(HighchartsColor.class, this.fillColor);
     }
 
     public Select setFillColor(HighchartsColor fillColor) {
@@ -68,7 +70,7 @@ public class Select implements Serializable {
     }
 
     public HighchartsColor getLineColor() {
-        return this.lineColor;
+        return getInstanceOf(HighchartsColor.class, this.lineColor);
     }
 
     public Select setLineColor(HighchartsColor lineColor) {
@@ -77,7 +79,7 @@ public class Select implements Serializable {
     }
 
     public int getLineWidth() {
-        return this.lineWidth;
+        return getInstanceOf(int.class, this.lineWidth);
     }
 
     public Select setLineWidth(int lineWidth) {
@@ -86,7 +88,7 @@ public class Select implements Serializable {
     }
 
     public int getRadius() {
-        return this.radius;
+        return getInstanceOf(int.class, this.radius);
     }
 
     public Select setRadius(int radius) {

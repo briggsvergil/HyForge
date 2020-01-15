@@ -252,9 +252,10 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
 
     public Series setData(Double[] y) {
         List<HighchartsPoint> points = new ArrayList<>(Arrays.asList(getData()));
-        Arrays.stream(y)
-                .forEach(e -> points.add(new HighchartsPoint()
-                        .setY(e)));
+        for (Double e : y) {
+            points.add(new HighchartsPoint()
+                    .setY(e));
+        }
         this.data = points.toArray(new HighchartsPoint[0]);
 
         return this;
@@ -272,9 +273,10 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
 
     public Series setData_Y_Values(Object... y) {
         List<HighchartsPoint> points = new ArrayList<>(Arrays.asList(getData()));
-        Arrays.stream(y)
-                .forEach(e -> points.add(new HighchartsPoint()
-                        .setY(e)));
+        for (Object e : y) {
+            points.add(new HighchartsPoint()
+                    .setY(e));
+        }
         this.data = points.toArray(new HighchartsPoint[0]);
 
         return this;
@@ -292,7 +294,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     @SuppressWarnings("varargs")
     public Series setData(Object... data) {
         List<HighchartsPoint> points = new ArrayList<>(Arrays.asList(getData()));
-        Arrays.stream(data).forEach(o -> {
+        for (Object o : data) {
             if (o instanceof Double || o instanceof Integer) {
                 points.add(new HighchartsPoint().setY(o));
             } else if (o.getClass().isArray()) {
@@ -323,7 +325,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
                 }
             }
 
-        });
+        }
 
         this.data = points.toArray(new HighchartsPoint[0]);
         return this;
@@ -345,10 +347,11 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     @SuppressWarnings("varargs")
     public <X, Y> Series setData_X_Y_Pairs(Pair<X, Y>... x_y_Tuple) {
         List<HighchartsPoint> points = new ArrayList<>(Arrays.asList(getData()));
-        Arrays.stream(x_y_Tuple)
-                .forEach(e -> points.add(new HighchartsPoint()
-                        .setX(e.getValue0())
-                        .setY(e.getValue1())));
+        for (Pair<X, Y> e : x_y_Tuple) {
+            points.add(new HighchartsPoint()
+                    .setX(e.getValue0())
+                    .setY(e.getValue1()));
+        }
         this.data = points.toArray(new HighchartsPoint[0]);
 
         return this;
@@ -362,10 +365,11 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
      */
     public Series setData_X_Y_Pairs(double[][] x_y_pairs) {
         List<HighchartsPoint> points = new ArrayList<>(Arrays.asList(getData()));
-        Arrays.stream(x_y_pairs)
-                .forEach(e -> points.add(new HighchartsPoint()
-                        .setX(e[0])
-                        .setY(e[1])));
+        for (double[] e : x_y_pairs) {
+            points.add(new HighchartsPoint()
+                    .setX(e[0])
+                    .setY(e[1]));
+        }
         this.data = points.toArray(new HighchartsPoint[0]);
 
         return this;
@@ -384,10 +388,11 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     @SuppressWarnings("varargs")
     public <Y> Series setData_Named_Y_Points(Pair<String, Y>... name_y_Tuple) {
         List<HighchartsPoint> points = new ArrayList<>(Arrays.asList(getData()));
-        Arrays.stream(name_y_Tuple)
-                .forEach(e -> points.add(new HighchartsPoint()
-                        .setName(e.getValue0())
-                        .setY(e.getValue1())));
+        for (Pair<String, Y> e : name_y_Tuple) {
+            points.add(new HighchartsPoint()
+                    .setName(e.getValue0())
+                    .setY(e.getValue1()));
+        }
         this.data = points.toArray(new HighchartsPoint[0]);
 
         return this;
@@ -406,11 +411,12 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     @SuppressWarnings("varargs")
     public <X> Series setData_X_Low_High_Points(Triplet<X, Integer, Integer>... x_low_high_Tuple) {
         List<HighchartsPoint> points = new ArrayList<>(Arrays.asList(getData()));
-        Arrays.stream(x_low_high_Tuple)
-                .forEach(e -> points.add(new HighchartsPoint()
-                        .setX(e.getValue0())
-                        .setLow(e.getValue1())
-                        .setHigh(e.getValue2())));
+        for (Triplet<X, Integer, Integer> e : x_low_high_Tuple) {
+            points.add(new HighchartsPoint()
+                    .setX(e.getValue0())
+                    .setLow(e.getValue1())
+                    .setHigh(e.getValue2()));
+        }
         this.data = points.toArray(new HighchartsPoint[0]);
 
         return this;
@@ -428,13 +434,24 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     @SuppressWarnings("varargs")
     public Series setData_Named_Low_High_Points(Triplet<String, Integer, Integer>... name_low_high_Tuple) {
         List<HighchartsPoint> points = new ArrayList<>(Arrays.asList(getData()));
-        Arrays.stream(name_low_high_Tuple)
-                .forEach(e -> points.add(new HighchartsPoint()
-                        .setName(e.getValue0())
-                        .setLow(e.getValue1())
-                        .setHigh(e.getValue2())));
+        for (Triplet<String, Integer, Integer> e : name_low_high_Tuple) {
+            points.add(new HighchartsPoint()
+                    .setName(e.getValue0())
+                    .setLow(e.getValue1())
+                    .setHigh(e.getValue2()));
+        }
         this.data = points.toArray(new HighchartsPoint[0]);
 
+        return this;
+    }
+
+    public Series addPoint(HighchartsPoint point) {
+        if(this.data == null) {
+            this.data = new HighchartsPoint[0];
+        }
+        int len = this.data.length;
+        this.data = Arrays.copyOf(this.data, len + 1);
+        this.data[len] = point;
         return this;
     }
 

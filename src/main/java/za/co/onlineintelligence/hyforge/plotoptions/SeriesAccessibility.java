@@ -28,14 +28,14 @@ public class SeriesAccessibility implements Serializable
      *
      * @since 7.1.0
      */
-    private boolean enabled;
+    private Boolean enabled;
 
     /**
      * Expose only the series element to screen readers, not its points.
      *
      * @since 7.1.0
      */
-    private boolean exposeAsGroupOnly;
+    private Boolean exposeAsGroupOnly;
 
     /**
      * Keyboard navigation for a series

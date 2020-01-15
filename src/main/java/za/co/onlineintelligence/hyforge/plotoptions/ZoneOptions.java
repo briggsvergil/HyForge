@@ -4,12 +4,16 @@ package za.co.onlineintelligence.hyforge.plotoptions;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsDashStyleValue;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 
 /**
  * Zones HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class ZoneOptions implements Serializable {
@@ -20,31 +24,36 @@ public class ZoneOptions implements Serializable {
 
     /**
      * Styled mode only. A custom class name for the zone.
+     *
      * @since 5.0.0
      */
     private String className;
 
     /**
      * Defines the color of the series.
+     *
      * @since 4.1.0
      */
     private HighchartsColor color;
 
     /**
      * A name for the dash style to use for the graph.
+     *
      * @since 4.1.0
      */
     private HighchartsDashStyleValue dashStyle;
 
     /**
      * Defines the fill color for the series (in area type series)
+     *
      * @since 4.1.0
      */
     private HighchartsColor fillColor;
 
     /**
      * The value up to where the zone extends, if undefined the zones
-     stretches to the last value in the series.
+     * stretches to the last value in the series.
+     *
      * @since 4.1.0
      */
     private int value;
@@ -53,7 +62,7 @@ public class ZoneOptions implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getClassName() {
-        return this.className;
+        return getInstanceOf(String.class, this.className);
     }
 
     public ZoneOptions setClassName(String className) {
@@ -62,7 +71,7 @@ public class ZoneOptions implements Serializable {
     }
 
     public HighchartsColor getColor() {
-        return this.color;
+        return getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public ZoneOptions setColor(HighchartsColor color) {
@@ -71,7 +80,7 @@ public class ZoneOptions implements Serializable {
     }
 
     public HighchartsDashStyleValue getDashStyle() {
-        return this.dashStyle;
+        return getInstanceOf(HighchartsDashStyleValue.class, this.dashStyle);
     }
 
     public ZoneOptions setDashStyle(HighchartsDashStyleValue dashStyle) {
@@ -80,7 +89,7 @@ public class ZoneOptions implements Serializable {
     }
 
     public HighchartsColor getFillColor() {
-        return this.fillColor;
+        return getInstanceOf(HighchartsColor.class, this.fillColor);
     }
 
     public ZoneOptions setFillColor(HighchartsColor fillColor) {
@@ -89,7 +98,7 @@ public class ZoneOptions implements Serializable {
     }
 
     public int getValue() {
-        return this.value;
+        return getInstanceOf(int.class, this.value);
     }
 
     public ZoneOptions setValue(int value) {

@@ -9,9 +9,12 @@ import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * DragHandle HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class DragHandle implements Serializable {
@@ -22,46 +25,53 @@ public class DragHandle implements Serializable {
 
     /**
      * The class name of the drag handles. Defaults to `highcharts-drag-handle`.
+     *
      * @since 6.2.0
      */
     private String className;
 
     /**
      * The fill color of the drag handles.
+     *
      * @since 6.2.0
      */
     private HighchartsColor color;
 
     /**
      * The mouse cursor to use for the drag handles. By default this is
-     intelligently switching between `ew-resize` and `ns-resize` depending on
-     the direction the point is being dragged.
+     * intelligently switching between `ew-resize` and `ns-resize` depending on
+     * the direction the point is being dragged.
+     *
      * @since 6.2.0
      */
     private String cursor;
 
     /**
      * The line color of the drag handles.
+     *
      * @since 6.2.0
      */
     private HighchartsColorString lineColor;
 
     /**
      * The line width for the drag handles.
+     *
      * @since 6.2.0
      */
     private int lineWidth;
 
     /**
      * Function to define the SVG path to use for the drag handles. Takes the
-     point as argument. Should return an SVG path in array format. The SVG
-     path is automatically positioned on the point.
+     * point as argument. Should return an SVG path in array format. The SVG
+     * path is automatically positioned on the point.
+     *
      * @since 6.2.0
      */
     private HighchartsCallbackFunction pathFormatter;
 
     /**
      * The z index for the drag handles.
+     *
      * @since 6.2.0
      */
     private int zIndex;
@@ -70,7 +80,7 @@ public class DragHandle implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getClassName() {
-        return this.className;
+        return getInstanceOf(String.class, this.className);
     }
 
     public DragHandle setClassName(String className) {
@@ -79,7 +89,7 @@ public class DragHandle implements Serializable {
     }
 
     public HighchartsColor getColor() {
-        return this.color;
+        return getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public DragHandle setColor(HighchartsColor color) {
@@ -88,7 +98,7 @@ public class DragHandle implements Serializable {
     }
 
     public String getCursor() {
-        return this.cursor;
+        return getInstanceOf(String.class, this.cursor);
     }
 
     public DragHandle setCursor(String cursor) {
@@ -97,7 +107,7 @@ public class DragHandle implements Serializable {
     }
 
     public HighchartsColorString getLineColor() {
-        return this.lineColor;
+        return getInstanceOf(HighchartsColorString.class, this.lineColor);
     }
 
     public DragHandle setLineColor(HighchartsColorString lineColor) {
@@ -106,7 +116,7 @@ public class DragHandle implements Serializable {
     }
 
     public int getLineWidth() {
-        return this.lineWidth;
+        return getInstanceOf(int.class, this.lineWidth);
     }
 
     public DragHandle setLineWidth(int lineWidth) {
@@ -115,7 +125,7 @@ public class DragHandle implements Serializable {
     }
 
     public HighchartsCallbackFunction getPathFormatter() {
-        return this.pathFormatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.pathFormatter);
     }
 
     public DragHandle setPathFormatter(HighchartsCallbackFunction pathFormatter) {
@@ -124,7 +134,7 @@ public class DragHandle implements Serializable {
     }
 
     public int getZIndex() {
-        return this.zIndex;
+        return getInstanceOf(int.class, this.zIndex);
     }
 
     public DragHandle setZIndex(int zIndex) {

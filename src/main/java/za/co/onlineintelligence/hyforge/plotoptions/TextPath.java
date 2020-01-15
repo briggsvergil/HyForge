@@ -5,6 +5,8 @@ import za.co.onlineintelligence.hyforge.common.HighchartsSVGAttributes;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * TextPath HighchartsAPI Class
@@ -36,7 +38,7 @@ public class TextPath implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsSVGAttributes getAttributes() {
-        return this.attributes;
+        return getInstanceOf(HighchartsSVGAttributes.class, this.attributes);
     }
 
     public TextPath setAttributes(HighchartsSVGAttributes attributes) {
@@ -45,7 +47,7 @@ public class TextPath implements Serializable {
     }
 
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public TextPath setEnabled(boolean enabled) {

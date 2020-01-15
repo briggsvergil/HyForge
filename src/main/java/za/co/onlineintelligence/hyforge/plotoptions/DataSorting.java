@@ -5,6 +5,8 @@ package za.co.onlineintelligence.hyforge.plotoptions;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * DataSorting HighchartsAPI Class
@@ -43,7 +45,7 @@ public class DataSorting implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public DataSorting setEnabled(boolean enabled) {
@@ -52,7 +54,7 @@ public class DataSorting implements Serializable {
     }
 
     public boolean getMatchByName() {
-        return this.matchByName;
+        return getInstanceOf(boolean.class, this.matchByName);
     }
 
     public DataSorting setMatchByName(boolean matchByName) {
@@ -61,7 +63,7 @@ public class DataSorting implements Serializable {
     }
 
     public String getSortKey() {
-        return this.sortKey;
+        return getInstanceOf(String.class, this.sortKey);
     }
 
     public DataSorting setSortKey(String sortKey) {

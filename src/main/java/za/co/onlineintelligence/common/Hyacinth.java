@@ -1,5 +1,8 @@
 package za.co.onlineintelligence.common;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -14,6 +17,7 @@ import za.co.onlineintelligence.hyforge.axis.Axis;
 import za.co.onlineintelligence.hyforge.axis.AxisLabels;
 import za.co.onlineintelligence.hyforge.axis.AxisTitle;
 import za.co.onlineintelligence.hyforge.chart.Chart;
+import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.common.HighchartsShadowOptionsObject;
@@ -246,14 +250,17 @@ public class Hyacinth {
 
     public static void main(String[] args) {
         Hyacinth instance = new Hyacinth();
-        instance.createBasicBarChart("Basic Bar Chart Using Highcharts");
+//        instance.createBasicBarChart("Basic Bar Chart Using Highcharts");
 //        instance.createScatterPlot("Height Versus Weight of 507 Individuals by Gender");
 //        instance.createComboScatterAndLine();
-        String s = instance.forge.hydrate();
-
-        PostRequest(s);
-        System.out.println("Chart data sent to Node Server at: " + URL);
-        System.out.println("CHART TEST: \n" + s);
+//        String s = instance.forge.hydrate();
+        JsonElement vueFormGenerator = DrosteDeflater.deIonize(HighchartsSeriesPlotOptions.class, "");
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String gsonS = gson.toJson(vueFormGenerator);
+        System.out.println("Vue Forms Generator: " + gsonS);
+//        PostRequest(s);
+//        System.out.println("Chart data sent to Node Server at: " + URL);
+//        System.out.println("CHART TEST: \n" + s);
 
     }
 }

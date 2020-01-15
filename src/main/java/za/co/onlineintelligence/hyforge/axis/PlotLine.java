@@ -8,6 +8,7 @@ import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.common.HighchartsLabel;
 import za.co.onlineintelligence.hyforge.common.HighchartsMouseEvents;
 import za.co.onlineintelligence.hyforge.common.enums.*;
+import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
 /**
  * PlotLines HighchartsAPI Class
@@ -109,6 +110,11 @@ public class PlotLine implements Serializable, DrosteDeflater {
 
     public PlotLine setColor(HighchartsColorString color) {
         this.color = color;
+        return this;
+    }
+
+    public PlotLine setColor(String colorString) {
+        this.color = new HighchartsColorString(colorString);
         return this;
     }
 

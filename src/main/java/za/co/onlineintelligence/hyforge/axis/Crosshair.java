@@ -7,6 +7,9 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.*;
 import za.co.onlineintelligence.hyforge.common.enums.*;
+import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 /**
  * Crosshair HighchartsAPI Class
@@ -81,7 +84,7 @@ public class Crosshair implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public String getClassName() {
-        return this.className;
+        return getInstanceOf(String.class, this.className);
     }
 
     public Crosshair setClassName(String className) {
@@ -90,7 +93,7 @@ public class Crosshair implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getColor() {
-        return this.color;
+        return getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public Crosshair setColor(HighchartsColor color) {
@@ -98,8 +101,13 @@ public class Crosshair implements Serializable, DrosteDeflater {
         return this;
     }
 
+    public Crosshair setColor(String colorString) {
+        this.color = new HighchartsColorString(colorString);
+        return this;
+    }
+
     public HighchartsDashStyleValue getDashStyle() {
-        return this.dashStyle;
+        return getInstanceOf(HighchartsDashStyleValue.class, this.dashStyle);
     }
 
     public Crosshair setDashStyle(HighchartsDashStyleValue dashStyle) {
@@ -108,7 +116,7 @@ public class Crosshair implements Serializable, DrosteDeflater {
     }
 
     public CrosshairLabel getLabel() {
-        return this.label;
+        return getInstanceOf(CrosshairLabel.class, this.label);
     }
 
     public Crosshair setLabel(CrosshairLabel label) {
@@ -117,7 +125,7 @@ public class Crosshair implements Serializable, DrosteDeflater {
     }
 
     public boolean getSnap() {
-        return this.snap;
+        return getInstanceOf(boolean.class, this.snap);
     }
 
     public Crosshair setSnap(boolean snap) {
@@ -126,7 +134,7 @@ public class Crosshair implements Serializable, DrosteDeflater {
     }
 
     public int getWidth() {
-        return this.width;
+        return getInstanceOf(int.class, this.width);
     }
 
     public Crosshair setWidth(int width) {
@@ -135,7 +143,7 @@ public class Crosshair implements Serializable, DrosteDeflater {
     }
 
     public int getZIndex() {
-        return this.zIndex;
+        return getInstanceOf(int.class, this.zIndex);
     }
 
     public Crosshair setZIndex(int zIndex) {

@@ -2,6 +2,7 @@ package za.co.onlineintelligence.hyforge.series;
 
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
+import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.common.HighchartsDataGroupingInfo;
 
 import java.io.Serializable;
@@ -65,6 +66,11 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
 
     public HighchartsPoint setColor(HighchartsColor color) {
         this.color = color;
+        return this;
+    }
+
+    public HighchartsPoint setColor(String colorString) {
+        this.color = new HighchartsColorString(colorString);
         return this;
     }
 

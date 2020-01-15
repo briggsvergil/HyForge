@@ -7,6 +7,8 @@ import za.co.onlineintelligence.hyforge.common.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * @author Sean Briggs
  */
@@ -45,7 +47,7 @@ public class ResetZoomButton implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsAlignObject getPosition() {
-        return this.position;
+        return getInstanceOf(HighchartsAlignObject.class, this.position);
     }
 
     public ResetZoomButton setPosition(HighchartsAlignObject position) {
@@ -54,7 +56,7 @@ public class ResetZoomButton implements Serializable, DrosteDeflater {
     }
 
     public String getRelativeTo() {
-        return this.relativeTo;
+        return getInstanceOf(String.class, this.relativeTo);
     }
 
     public ResetZoomButton setRelativeTo(String relativeTo) {
@@ -63,7 +65,7 @@ public class ResetZoomButton implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSVGAttributes getTheme() {
-        return this.theme;
+        return getInstanceOf(HighchartsSVGAttributes.class, this.theme);
     }
 
     public ResetZoomButton setTheme(HighchartsSVGAttributes theme) {

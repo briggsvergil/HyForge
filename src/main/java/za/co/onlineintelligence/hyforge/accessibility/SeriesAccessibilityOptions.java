@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * Series  HighchartsAPI Class
  *
@@ -51,7 +53,7 @@ public class SeriesAccessibilityOptions implements Serializable, DrosteDeflater 
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Boolean getDescribeSingleSeries() {
-        return this.describeSingleSeries;
+        return getInstanceOf(Boolean.class, this.describeSingleSeries);
     }
 
     public SeriesAccessibilityOptions setDescribeSingleSeries(Boolean describeSingleSeries) {
@@ -60,7 +62,7 @@ public class SeriesAccessibilityOptions implements Serializable, DrosteDeflater 
     }
 
     public HighchartsCallbackFunction getDescriptionFormatter() {
-        return this.descriptionFormatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.descriptionFormatter);
     }
 
     public SeriesAccessibilityOptions setDescriptionFormatter(HighchartsCallbackFunction descriptionFormatter) {
@@ -69,7 +71,7 @@ public class SeriesAccessibilityOptions implements Serializable, DrosteDeflater 
     }
 
     public Integer getPointDescriptionEnabledThreshold() {
-        return this.pointDescriptionEnabledThreshold;
+        return getInstanceOf(Integer.class, this.pointDescriptionEnabledThreshold);
     }
 
     public SeriesAccessibilityOptions setPointDescriptionEnabledThreshold(Integer pointDescriptionEnabledThreshold) {

@@ -2,14 +2,15 @@ package za.co.onlineintelligence.hyforge.chart;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 import za.co.onlineintelligence.hyforge.common.*;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
- *
  * @author Sean
  */
-public class Chart implements Serializable, DrosteDeflater
-{
+public class Chart implements Serializable, DrosteDeflater {
     public Chart() {
     }
 
@@ -21,14 +22,14 @@ public class Chart implements Serializable, DrosteDeflater
      * "When using multiple axis, the ticks of two or more opposite axes will
      * automatically be aligned by adding ticks to the axis or axes with the
      * least ticks, as if `tickAmount` were specified.
-     *
+     * <p>
      * This can be prevented by setting `alignTicks` to false. If the grid lines
      * look messy, it's a good idea to hide them for the secondary axis by
      * setting `gridLineWidth` to 0.
-     *
+     * <p>
      * If `startOnTick` or `endOnTick` in an axis options are set to false, then
      * the `alignTicks ` will be disabled for the axis.
-     *
+     * <p>
      * Disabled for logarithmic axes."
      */
     private Boolean alignTicks;
@@ -39,14 +40,14 @@ public class Chart implements Serializable, DrosteDeflater
      * only animation not affected by this option is the initial series
      * animation, see
      * [plotOptions.series.animation](#plotOptions.series.animation).
-     *
+     * <p>
      * The animation can either be set as a boolean or a configuration object.
      * If `true`, it will use the 'swing' jQuery easing and a duration of 500
      * ms. If used as a configuration object, the following properties are
      * supported:
-     *
+     * <p>
      * - **duration**: The duration of the animation in milliseconds.
-     *
+     * <p>
      * - **easing**: A string reference to an easing function set on the `Math`
      * object. See [the easing
      * demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/)."
@@ -54,7 +55,7 @@ public class Chart implements Serializable, DrosteDeflater
     private Boolean animation;
     /**
      * "The background color or gradient for the outer chart area."
-     *
+     * <p>
      * Can be color string, gradient object or pattern object
      */
     private HighchartsColor backgroundColor;
@@ -102,7 +103,7 @@ public class Chart implements Serializable, DrosteDeflater
      * pixels. If given a _percentage string_ (for example `'56%'`), the height
      * is given as the percentage of the actual chart width. This allows for
      * preserving the aspect ratio across responsive sizes.
-     *
+     * <p>
      * By default (when `null`) the height is calculated from the offset height
      * of the containing element, or 400 pixels if the containing element's
      * height is 0."
@@ -144,7 +145,7 @@ public class Chart implements Serializable, DrosteDeflater
      * numbers in the array designate top, right, bottom and left respectively.
      * Use the options `marginTop`, `marginRight`, `marginBottom` and
      * `marginLeft` for shorthand setting of one option.
-     *
+     * <p>
      * By default there is no margin. The actual space is dynamically calculated
      * from the offset of axis labels, axis title, title, subtitle and legend in
      * addition to the `spacingTop`, `spacingRight`, `spacingBottom` and
@@ -219,7 +220,7 @@ public class Chart implements Serializable, DrosteDeflater
     /**
      * Allow panning in a chart. Best used with [panKey](#chart.panKey) to
      * combine zooming and panning.
-     *
+     * <p>
      * On touch devices, when the
      * [tooltip.followTouchMove](#tooltip.followTouchMove) option is `true`
      * (default), panning requires two fingers. To allow panning with one
@@ -230,7 +231,7 @@ public class Chart implements Serializable, DrosteDeflater
     /**
      * Common options for all yAxes rendered in a parallel coordinates plot.
      * This feature requires `modules/parallel-coordinates.js`.
-     *
+     * <p>
      * The default options are: ```js parallelAxes: { lineWidth: 1, // classic
      * mode only gridlinesWidth: 0, // classic mode only title: { text: '',
      * reserveSpace: false }, labels: { x: 0, y: 0, align: 'center',
@@ -329,7 +330,7 @@ public class Chart implements Serializable, DrosteDeflater
      * typically on mobile devices, a native browser scrollbar is presented.
      * This scrollbar provides smooth scrolling for the contents of the plot
      * area, whereas the title, legend and unaffected axes are fixed.
-     *
+     * <p>
      * Since v7.1.2, a scrollable plot area can be defined for either horizontal
      * or vertical scrolling, depending on whether the `minWidth` or `minHeight`
      * option is set.
@@ -426,7 +427,7 @@ public class Chart implements Serializable, DrosteDeflater
      * The default series type for the chart. Can be any of the chart types
      * listed under [plotOptions](#plotOptions) and [series](#series) or can be
      * a series provided by an additional module.
-     *
+     * <p>
      * In TypeScript this option has no effect in sense of typing and instead
      * the `type` option must always be set in the series.
      *
@@ -458,598 +459,511 @@ public class Chart implements Serializable, DrosteDeflater
     /*
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
-    public boolean getAlignTicks()
-    {
-        return this.alignTicks;
+    public boolean getAlignTicks() {
+        return getInstanceOf(boolean.class, this.alignTicks);
     }
 
-    public Chart setAlignTicks(boolean alignTicks)
-    {
+    public Chart setAlignTicks(boolean alignTicks) {
         this.alignTicks = alignTicks;
         return this;
     }
 
-    public boolean getAnimation()
-    {
-        return this.animation;
+    public boolean getAnimation() {
+        return getInstanceOf(boolean.class, this.animation);
     }
 
-    public Chart setAnimation(boolean animation)
-    {
+    public Chart setAnimation(boolean animation) {
         this.animation = animation;
         return this;
     }
 
-    public HighchartsColor getBackgroundColor()
-    {
-        return this.backgroundColor;
+    public HighchartsColor getBackgroundColor() {
+        return getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
-    public Chart setBackgroundColor(HighchartsColor backgroundColor)
-    {
+    public Chart setBackgroundColor(HighchartsColor backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
     }
 
-    public HighchartsColor getBorderColor()
-    {
-        return this.borderColor;
+    public HighchartsColor getBorderColor() {
+        return getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
-    public Chart setBorderColor(HighchartsColor borderColor)
-    {
+    public Chart setBorderColor(HighchartsColor borderColor) {
         this.borderColor = borderColor;
         return this;
     }
 
-    public int getBorderRadius()
-    {
-        return this.borderRadius;
+    public int getBorderRadius() {
+        return getInstanceOf(int.class, this.borderRadius);
     }
 
-    public Chart setBorderRadius(int borderRadius)
-    {
+    public Chart setBorderRadius(int borderRadius) {
         this.borderRadius = borderRadius;
         return this;
     }
 
-    public int getBorderWidth()
-    {
-        return this.borderWidth;
+    public int getBorderWidth() {
+        return getInstanceOf(int.class, this.borderWidth);
     }
 
-    public Chart setBorderWidth(int borderWidth)
-    {
+    public Chart setBorderWidth(int borderWidth) {
         this.borderWidth = borderWidth;
         return this;
     }
 
-    public String getClassName()
-    {
-        return this.className;
+    public String getClassName() {
+        return getInstanceOf(String.class, this.className);
     }
 
-    public Chart setClassName(String className)
-    {
+    public Chart setClassName(String className) {
         this.className = className;
         return this;
     }
 
-    public int getColorCount()
-    {
-        return this.colorCount;
+    public int getColorCount() {
+        return getInstanceOf(int.class, this.colorCount);
     }
 
-    public Chart setColorCount(int colorCount)
-    {
+    public Chart setColorCount(int colorCount) {
         this.colorCount = colorCount;
         return this;
     }
 
-    public String getDefaultSeriesType()
-    {
-        return this.defaultSeriesType;
+    public String getDefaultSeriesType() {
+        return getInstanceOf(String.class, this.defaultSeriesType);
     }
 
-    public Chart setDefaultSeriesType(String defaultSeriesType)
-    {
+    @Deprecated
+    public Chart setDefaultSeriesType(String defaultSeriesType) {
         this.defaultSeriesType = defaultSeriesType;
         return this;
     }
 
-    public boolean getDisplayErrors()
-    {
-        return this.displayErrors;
+    public boolean getDisplayErrors() {
+        return getInstanceOf(boolean.class, this.displayErrors);
     }
 
-    public Chart setDisplayErrors(boolean displayErrors)
-    {
+    public Chart setDisplayErrors(boolean displayErrors) {
         this.displayErrors = displayErrors;
         return this;
     }
 
-    public ChartEvents getEvents()
-    {
-        return this.events;
+    public ChartEvents getEvents() {
+        return getInstanceOf(ChartEvents.class, this.events);
     }
 
-    public Chart setEvents(ChartEvents events)
-    {
+    public Chart setEvents(ChartEvents events) {
         this.events = events;
         return this;
     }
 
-    public HighchartsSize getHeight()
-    {
-        return this.height;
+    public HighchartsSize getHeight() {
+        return getInstanceOf(HighchartsSize.class, this.height);
     }
 
-    public Chart setHeight(HighchartsSize height)
-    {
+    public Chart setHeight(HighchartsSize height) {
         this.height = height;
         return this;
     }
 
-    public boolean getIgnoreHiddenSeries()
-    {
-        return this.ignoreHiddenSeries;
+    public Chart setHeightPixels(int pixels) {
+        this.height = new HighchartsSizePixels(pixels);
+        return this;
     }
 
-    public Chart setIgnoreHiddenSeries(boolean ignoreHiddenSeries)
-    {
+    public Chart setWidthPixels(int pixels) {
+        this.width = new HighchartsSizePixels(pixels);
+        return this;
+    }
+
+    public Chart setHeightPercentage(String percentage) {
+        this.height = new HighchartsSizePercentage(percentage);
+        return this;
+    }
+
+    public Chart setWidthPercentage(String percentage) {
+        this.width = new HighchartsSizePercentage(percentage);
+        return this;
+    }
+
+    public boolean getIgnoreHiddenSeries() {
+        return getInstanceOf(boolean.class, this.ignoreHiddenSeries);
+    }
+
+    public Chart setIgnoreHiddenSeries(boolean ignoreHiddenSeries) {
         this.ignoreHiddenSeries = ignoreHiddenSeries;
         return this;
     }
 
-    public boolean getInverted()
-    {
-        return this.inverted;
+    public boolean getInverted() {
+        return getInstanceOf(boolean.class, this.inverted);
     }
 
-    public Chart setInverted(boolean inverted)
-    {
+    public Chart setInverted(boolean inverted) {
         this.inverted = inverted;
         return this;
     }
 
-    public String getMap()
-    {
-        return this.map;
+    public String getMap() {
+        return getInstanceOf(String.class, this.map);
     }
 
-    public Chart setMap(String map)
-    {
+    public Chart setMap(String map) {
         this.map = map;
         return this;
     }
 
-    public MapTransforms getMapTransforms()
-    {
-        return this.mapTransforms;
+    public MapTransforms getMapTransforms() {
+        return getInstanceOf(MapTransforms.class, this.mapTransforms);
     }
 
-    public Chart setMapTransforms(MapTransforms mapTransforms)
-    {
+    public Chart setMapTransforms(MapTransforms mapTransforms) {
         this.mapTransforms = mapTransforms;
         return this;
     }
 
-    public int[] getMargin()
-    {
-        return this.margin;
+    public int[] getMargin() {
+        return getInstanceOf(int[].class, this.margin);
     }
 
-    public Chart setMargin(int[] margin)
-    {
+    public Chart setMargin(int[] margin) {
         this.margin = margin;
-        if (this.margin.length == 1)
-        {
+        if (this.margin.length == 1) {
             this.marginTop = this.margin[0];
             this.marginRight = this.margin[0];
             this.marginBottom = this.margin[0];
             this.marginLeft = this.margin[0];
-        } else if (this.margin.length == 4)
-        {
+        } else if (this.margin.length == 4) {
             this.marginTop = this.margin[0];
             this.marginRight = this.margin[1];
             this.marginBottom = this.margin[2];
             this.marginLeft = this.margin[3];
-        } else
-        {
+        } else {
             throw new HighChartsException("Incorrect number of margin arguments "
                     + "in Chart. Expected 1 or 4, found " + this.margin.length);
         }
         return this;
     }
 
-    public int getMarginBottom()
-    {
-        return this.marginBottom;
+    public int getMarginBottom() {
+        return getInstanceOf(int.class, this.marginBottom);
     }
 
-    public Chart setMarginBottom(int marginBottom)
-    {
+    public Chart setMarginBottom(int marginBottom) {
         this.marginBottom = marginBottom;
         return this;
     }
 
-    public int getMarginLeft()
-    {
-        return this.marginLeft;
+    public int getMarginLeft() {
+        return getInstanceOf(int.class, this.marginLeft);
     }
 
-    public Chart setMarginLeft(int marginLeft)
-    {
+    public Chart setMarginLeft(int marginLeft) {
         this.marginLeft = marginLeft;
         return this;
     }
 
-    public int getMarginRight()
-    {
-        return this.marginRight;
+    public int getMarginRight() {
+        return getInstanceOf(int.class, this.marginRight);
     }
 
-    public Chart setMarginRight(int marginRight)
-    {
+    public Chart setMarginRight(int marginRight) {
         this.marginRight = marginRight;
         return this;
     }
 
-    public int getMarginTop()
-    {
-        return this.marginTop;
+    public int getMarginTop() {
+        return getInstanceOf(int.class, this.marginTop);
     }
 
-    public Chart setMarginTop(int marginTop)
-    {
+    public Chart setMarginTop(int marginTop) {
         this.marginTop = marginTop;
         return this;
     }
 
-    public HighchartsCallbackFunction getNumberFormatter()
-    {
-        return this.numberFormatter;
+    public HighchartsCallbackFunction getNumberFormatter() {
+        return getInstanceOf(HighchartsCallbackFunction.class, this.numberFormatter);
     }
 
-    public Chart setNumberFormatter(HighchartsCallbackFunction numberFormatter)
-    {
+    public Chart setNumberFormatter(HighchartsCallbackFunction numberFormatter) {
         this.numberFormatter = numberFormatter;
         return this;
     }
 
-    public Options3d getOptions3d()
-    {
-        return this.options3d;
+    public Options3d getOptions3d() {
+        return getInstanceOf(Options3d.class, this.options3d);
     }
 
-    public Chart setOptions3d(Options3d options3d)
-    {
+    public Chart setOptions3d(Options3d options3d) {
         this.options3d = options3d;
         return this;
     }
 
-    public String getPanKey()
-    {
-        return this.panKey;
+    public String getPanKey() {
+        return getInstanceOf(String.class, this.panKey);
     }
 
-    public Chart setPanKey(String panKey)
-    {
+    public Chart setPanKey(String panKey) {
         this.panKey = panKey;
         return this;
     }
 
-    public Panning getPanning()
-    {
-        return this.panning;
+    public Panning getPanning() {
+        return getInstanceOf(Panning.class, this.panning);
     }
 
-    public Chart setPanning(Panning panning)
-    {
+    public Chart setPanning(Panning panning) {
         this.panning = panning;
         return this;
     }
 
-    public ParallelAxes getParallelAxes()
-    {
-        return this.parallelAxes;
+    public ParallelAxes getParallelAxes() {
+        return getInstanceOf(ParallelAxes.class, this.parallelAxes);
     }
 
-    public Chart setParallelAxes(ParallelAxes parallelAxes)
-    {
+    public Chart setParallelAxes(ParallelAxes parallelAxes) {
         this.parallelAxes = parallelAxes;
         return this;
     }
 
-    public boolean getParallelCoordinates()
-    {
-        return this.parallelCoordinates;
+    public boolean getParallelCoordinates() {
+        return getInstanceOf(boolean.class, this.parallelCoordinates);
     }
 
-    public Chart setParallelCoordinates(boolean parallelCoordinates)
-    {
+    public Chart setParallelCoordinates(boolean parallelCoordinates) {
         this.parallelCoordinates = parallelCoordinates;
         return this;
     }
 
-    public String getPinchType()
-    {
-        return this.pinchType;
+    public String getPinchType() {
+        return getInstanceOf(String.class, this.pinchType);
     }
 
-    public Chart setPinchType(String pinchType)
-    {
+    public Chart setPinchType(String pinchType) {
         this.pinchType = pinchType;
         return this;
     }
 
-    public HighchartsColor getPlotBackgroundColor()
-    {
-        return this.plotBackgroundColor;
+    public HighchartsColor getPlotBackgroundColor() {
+        return getInstanceOf(HighchartsColor.class, this.plotBackgroundColor);
     }
 
-    public Chart setPlotBackgroundColor(HighchartsColor plotBackgroundColor)
-    {
+    public Chart setPlotBackgroundColor(HighchartsColor plotBackgroundColor) {
         this.plotBackgroundColor = plotBackgroundColor;
         return this;
     }
 
-    public String getPlotBackgroundImage()
-    {
-        return this.plotBackgroundImage;
+    public String getPlotBackgroundImage() {
+        return getInstanceOf(String.class, this.plotBackgroundImage);
     }
 
-    public Chart setPlotBackgroundImage(String plotBackgroundImage)
-    {
+    public Chart setPlotBackgroundImage(String plotBackgroundImage) {
         this.plotBackgroundImage = plotBackgroundImage;
         return this;
     }
 
-    public HighchartsColor getPlotBorderColor()
-    {
-        return this.plotBorderColor;
+    public HighchartsColor getPlotBorderColor() {
+        return getInstanceOf(HighchartsColor.class, this.plotBorderColor);
     }
 
-    public Chart setPlotBorderColor(HighchartsColor plotBorderColor)
-    {
+    public Chart setPlotBorderColor(HighchartsColor plotBorderColor) {
         this.plotBorderColor = plotBorderColor;
         return this;
     }
 
-    public int getPlotBorderWidth()
-    {
-        return this.plotBorderWidth;
+    public int getPlotBorderWidth() {
+        return getInstanceOf(int.class, this.plotBorderWidth);
     }
 
-    public Chart setPlotBorderWidth(int plotBorderWidth)
-    {
+    public Chart setPlotBorderWidth(int plotBorderWidth) {
         this.plotBorderWidth = plotBorderWidth;
         return this;
     }
 
-    public boolean getPlotShadow()
-    {
-        return this.plotShadow;
+    public boolean getPlotShadow() {
+        return getInstanceOf(boolean.class, this.plotShadow);
     }
 
-    public Chart setPlotShadow(boolean plotShadow)
-    {
+    public Chart setPlotShadow(boolean plotShadow) {
         this.plotShadow = plotShadow;
         return this;
     }
 
-    public boolean getPolar()
-    {
-        return this.polar;
+    public boolean getPolar() {
+        return getInstanceOf(boolean.class, this.polar);
     }
 
-    public Chart setPolar(boolean polar)
-    {
+    public Chart setPolar(boolean polar) {
         this.polar = polar;
         return this;
     }
 
-    public boolean getReflow()
-    {
-        return this.reflow;
+    public boolean getReflow() {
+        return getInstanceOf(boolean.class, this.reflow);
     }
 
-    public Chart setReflow(boolean reflow)
-    {
+    public Chart setReflow(boolean reflow) {
         this.reflow = reflow;
         return this;
     }
 
-    public String getRenderTo()
-    {
-        return this.renderTo;
+    public String getRenderTo() {
+        return getInstanceOf(String.class, this.renderTo);
     }
 
-    public Chart setRenderTo(String renderTo)
-    {
+    public Chart setRenderTo(String renderTo) {
         this.renderTo = renderTo;
         return this;
     }
 
-    public ResetZoomButton getResetZoomButton()
-    {
-        return this.resetZoomButton;
+    public ResetZoomButton getResetZoomButton() {
+        return getInstanceOf(ResetZoomButton.class, this.resetZoomButton);
     }
 
-    public Chart setResetZoomButton(ResetZoomButton resetZoomButton)
-    {
+    public Chart setResetZoomButton(ResetZoomButton resetZoomButton) {
         this.resetZoomButton = resetZoomButton;
         return this;
     }
 
-    public ScrollablePlotArea getScrollablePlotArea()
-    {
-        return this.scrollablePlotArea;
+    public ScrollablePlotArea getScrollablePlotArea() {
+        return getInstanceOf(ScrollablePlotArea.class, this.scrollablePlotArea);
     }
 
-    public Chart setScrollablePlotArea(ScrollablePlotArea scrollablePlotArea)
-    {
+    public Chart setScrollablePlotArea(ScrollablePlotArea scrollablePlotArea) {
         this.scrollablePlotArea = scrollablePlotArea;
         return this;
     }
 
-    public HighchartsColor getSelectionMarkerFill()
-    {
-        return this.selectionMarkerFill;
+    public HighchartsColor getSelectionMarkerFill() {
+        return getInstanceOf(HighchartsColor.class, this.selectionMarkerFill);
     }
 
-    public Chart setSelectionMarkerFill(HighchartsColor selectionMarkerFill)
-    {
+    public Chart setSelectionMarkerFill(HighchartsColor selectionMarkerFill) {
         this.selectionMarkerFill = selectionMarkerFill;
         return this;
     }
 
-    public boolean isShadow()
-    {
-        return this.shadow;
+    public boolean isShadow() {
+        return getInstanceOf(boolean.class, this.shadow);
     }
 
-    public Chart setShadow(boolean shadow)
-    {
+    public Chart setShadow(boolean shadow) {
         this.shadow = shadow;
         return this;
     }
 
-    public boolean getShowAxes()
-    {
-        return this.showAxes;
+    public boolean getShowAxes() {
+        return getInstanceOf(boolean.class, this.showAxes);
     }
 
-    public Chart setShowAxes(boolean showAxes)
-    {
+    public Chart setShowAxes(boolean showAxes) {
         this.showAxes = showAxes;
         return this;
     }
 
-    public int[] getSpacing()
-    {
-        return this.spacing;
+    public int[] getSpacing() {
+        return getInstanceOf(int[].class, this.spacing);
     }
 
-    public Chart setSpacing(int[] spacing)
-    {
+    public Chart setSpacing(int[] spacing) {
         this.spacing = spacing;
         return this;
     }
 
-    public int getSpacingBottom()
-    {
-        return this.spacingBottom;
+    public int getSpacingBottom() {
+        return getInstanceOf(int.class, this.spacingBottom);
     }
 
-    public Chart setSpacingBottom(int spacingBottom)
-    {
+    public Chart setSpacingBottom(int spacingBottom) {
         this.spacingBottom = spacingBottom;
         return this;
     }
 
-    public int getSpacingLeft()
-    {
-        return this.spacingLeft;
+    public int getSpacingLeft() {
+        return getInstanceOf(int.class, this.spacingLeft);
     }
 
-    public Chart setSpacingLeft(int spacingLeft)
-    {
+    public Chart setSpacingLeft(int spacingLeft) {
         this.spacingLeft = spacingLeft;
         return this;
     }
 
-    public int getSpacingRight()
-    {
-        return this.spacingRight;
+    public int getSpacingRight() {
+        return getInstanceOf(int.class, this.spacingRight);
     }
 
-    public Chart setSpacingRight(int spacingRight)
-    {
+    public Chart setSpacingRight(int spacingRight) {
         this.spacingRight = spacingRight;
         return this;
     }
 
-    public int getSpacingTop()
-    {
-        return this.spacingTop;
+    public int getSpacingTop() {
+        return getInstanceOf(int.class, this.spacingTop);
     }
 
-    public Chart setSpacingTop(int spacingTop)
-    {
+    public Chart setSpacingTop(int spacingTop) {
         this.spacingTop = spacingTop;
         return this;
     }
 
-    public HighchartsCSS getStyle()
-    {
-        return this.style;
+    public HighchartsCSS getStyle() {
+        return getInstanceOf(HighchartsCSS.class, this.style);
     }
 
-    public Chart setStyle(HighchartsCSS style)
-    {
+    public Chart setStyle(HighchartsCSS style) {
         this.style = style;
         return this;
     }
 
-    public boolean getStyledMode()
-    {
-        return this.styledMode;
+    public boolean getStyledMode() {
+        return getInstanceOf(boolean.class, this.styledMode);
     }
 
-    public Chart setStyledMode(boolean styledMode)
-    {
+    public Chart setStyledMode(boolean styledMode) {
         this.styledMode = styledMode;
         return this;
     }
 
-    public String getType()
-    {
-        return this.type;
+    public String getType() {
+        return getInstanceOf(String.class, this.type);
     }
 
-    public Chart setType(String type)
-    {
+    public Chart setType(String type) {
         this.type = type;
         return this;
     }
 
-    public HighchartsSize getWidth()
-    {
-        return this.width;
+    public HighchartsSize getWidth() {
+        return getInstanceOf(HighchartsSize.class, this.width);
     }
 
-    public Chart setWidth(HighchartsSize width)
-    {
+    public Chart setWidth(HighchartsSize width) {
         this.width = width;
         return this;
     }
 
-    public String getZoomKey()
-    {
-        return this.zoomKey;
+    public String getZoomKey() {
+        return getInstanceOf(String.class, this.zoomKey);
     }
 
-    public Chart setZoomKey(String zoomKey)
-    {
+    public Chart setZoomKey(String zoomKey) {
         this.zoomKey = zoomKey;
         return this;
     }
 
-    public String getZoomType()
-    {
-        return this.zoomType;
+    public String getZoomType() {
+        return getInstanceOf(String.class, this.zoomType);
     }
 
-    public Chart setZoomType(String zoomType)
-    {
+    public Chart setZoomType(String zoomType) {
         this.zoomType = zoomType;
         return this;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int hash = 3;
         hash = 17 * hash + Objects.hashCode(this.alignTicks);
         hash = 17 * hash + Objects.hashCode(this.animation);
@@ -1108,8 +1022,7 @@ public class Chart implements Serializable, DrosteDeflater
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return '{'
                 + "alignTicks:" + alignTicks
                 + ", animation:" + animation

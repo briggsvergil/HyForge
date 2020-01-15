@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
+import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
+import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 
 /**
@@ -55,7 +59,7 @@ public class DataClasses implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsColor getColor() {
-        return this.color;
+        return getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public DataClasses setColor(HighchartsColor color){
@@ -63,8 +67,13 @@ public class DataClasses implements Serializable, DrosteDeflater {
         return this;
     }
 
+    public DataClasses setColor(String colorString) {
+        this.color = new HighchartsColorString(colorString);
+        return this;
+    }
+
     public Integer getFrom() {
-        return this.from;
+        return getInstanceOf(Integer.class, this.from);
     }
 
     public DataClasses setFrom(Integer from){
@@ -73,7 +82,7 @@ public class DataClasses implements Serializable, DrosteDeflater {
     }
 
     public String getName() {
-        return this.name;
+        return getInstanceOf(String.class, this.name);
     }
 
     public DataClasses setName(String name){
@@ -82,7 +91,7 @@ public class DataClasses implements Serializable, DrosteDeflater {
     }
 
     public Integer getTo() {
-        return this.to;
+        return getInstanceOf(Integer.class, this.to);
     }
 
     public DataClasses setTo(Integer to){

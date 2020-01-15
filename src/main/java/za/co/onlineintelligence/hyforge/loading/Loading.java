@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Loading  HighchartsAPI Class
@@ -53,7 +55,7 @@ public class Loading implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Integer getHideDuration() {
-        return this.hideDuration;
+        return getInstanceOf(Integer.class, this.hideDuration);
     }
 
     public Loading setHideDuration(Integer hideDuration) {
@@ -62,7 +64,7 @@ public class Loading implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getLabelStyle() {
-        return this.labelStyle;
+        return getInstanceOf(HighchartsCSS.class, this.labelStyle);
     }
 
     public Loading setLabelStyle(HighchartsCSS labelStyle) {
@@ -71,7 +73,7 @@ public class Loading implements Serializable, DrosteDeflater {
     }
 
     public Integer getShowDuration() {
-        return this.showDuration;
+        return getInstanceOf(Integer.class, this.showDuration);
     }
 
     public Loading setShowDuration(Integer showDuration) {
@@ -80,7 +82,7 @@ public class Loading implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Loading setStyle(HighchartsCSS style) {

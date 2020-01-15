@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsSize;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Pane  HighchartsAPI Class
@@ -63,7 +65,7 @@ public class Pane implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public Background[] getBackground() {
-        return this.background;
+        return getInstanceOf(Background[].class, this.background);
     }
 
     public Pane setBackground(Background[] background) {
@@ -72,7 +74,7 @@ public class Pane implements Serializable, DrosteDeflater {
     }
 
     public Object[] getCenter() {
-        return this.center;
+        return getInstanceOf(Object[].class, this.center);
     }
 
     public Pane setCenter(Object[] center) {
@@ -81,7 +83,7 @@ public class Pane implements Serializable, DrosteDeflater {
     }
 
     public Integer getEndAngle() {
-        return this.endAngle;
+        return getInstanceOf(Integer.class, this.endAngle);
     }
 
     public Pane setEndAngle(Integer endAngle) {
@@ -90,7 +92,7 @@ public class Pane implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSize getSize() {
-        return this.size;
+        return getInstanceOf(HighchartsSize.class, this.size);
     }
 
     public Pane setSize(HighchartsSize size) {
@@ -99,7 +101,7 @@ public class Pane implements Serializable, DrosteDeflater {
     }
 
     public Integer getStartAngle() {
-        return this.startAngle;
+        return getInstanceOf(Integer.class, this.startAngle);
     }
 
     public Pane setStartAngle(Integer startAngle) {

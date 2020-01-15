@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import za.co.onlineintelligence.hyforge.common.HighchartsLabelIntersectBoxObject;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * SeriesLabelOptions HighchartsAPI Class
@@ -92,7 +94,7 @@ public class SeriesLabelOptions implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsLabelIntersectBoxObject[] getBoxesToAvoid() {
-        return this.boxesToAvoid;
+        return getInstanceOf(HighchartsLabelIntersectBoxObject[].class, this.boxesToAvoid);
     }
 
     public SeriesLabelOptions setBoxesToAvoid(HighchartsLabelIntersectBoxObject[] boxesToAvoid) {
@@ -101,7 +103,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public boolean getConnectorAllowed() {
-        return this.connectorAllowed;
+        return getInstanceOf(boolean.class, this.connectorAllowed);
     }
 
     public SeriesLabelOptions setConnectorAllowed(boolean connectorAllowed) {
@@ -110,7 +112,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public int getConnectorNeighbourDistance() {
-        return this.connectorNeighbourDistance;
+        return getInstanceOf(int.class, this.connectorNeighbourDistance);
     }
 
     public SeriesLabelOptions setConnectorNeighbourDistance(int connectorNeighbourDistance) {
@@ -119,7 +121,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public boolean getEnabled() {
-        return this.enabled;
+        return getInstanceOf(boolean.class, this.enabled);
     }
 
     public SeriesLabelOptions setEnabled(boolean enabled) {
@@ -128,7 +130,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public Integer getMaxFontSize() {
-        return this.maxFontSize;
+        return getInstanceOf(Integer.class, this.maxFontSize);
     }
 
     public SeriesLabelOptions setMaxFontSize(Integer maxFontSize) {
@@ -137,7 +139,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public Integer getMinFontSize() {
-        return this.minFontSize;
+        return getInstanceOf(Integer.class, this.minFontSize);
     }
 
     public SeriesLabelOptions setMinFontSize(Integer minFontSize) {
@@ -146,7 +148,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public Boolean getOnArea() {
-        return this.onArea;
+        return getInstanceOf(Boolean.class, this.onArea);
     }
 
     public SeriesLabelOptions setOnArea(Boolean onArea) {
@@ -155,7 +157,7 @@ public class SeriesLabelOptions implements Serializable {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public SeriesLabelOptions setStyle(HighchartsCSS style) {

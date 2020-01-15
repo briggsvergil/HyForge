@@ -7,6 +7,8 @@ import za.co.onlineintelligence.hyforge.common.*;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsVerticalAlignValue;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsAlignValue;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * LabelOptions  HighchartsAPI Class
@@ -190,7 +192,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsAlignValue getAlign() {
-        return this.align;
+        return getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public LabelOptions setAlign(HighchartsAlignValue align) {
@@ -199,7 +201,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getAllowOverlap() {
-        return this.allowOverlap;
+        return getInstanceOf(Boolean.class, this.allowOverlap);
     }
 
     public LabelOptions setAllowOverlap(Boolean allowOverlap) {
@@ -208,7 +210,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBackgroundColor() {
-        return this.backgroundColor;
+        return getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
     public LabelOptions setBackgroundColor(HighchartsColor backgroundColor) {
@@ -217,7 +219,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColorString getBorderColor() {
-        return this.borderColor;
+        return getInstanceOf(HighchartsColorString.class, this.borderColor);
     }
 
     public LabelOptions setBorderColor(HighchartsColorString borderColor) {
@@ -226,7 +228,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getBorderRadius() {
-        return this.borderRadius;
+        return getInstanceOf(Integer.class, this.borderRadius);
     }
 
     public LabelOptions setBorderRadius(Integer borderRadius) {
@@ -235,7 +237,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getBorderWidth() {
-        return this.borderWidth;
+        return getInstanceOf(Integer.class, this.borderWidth);
     }
 
     public LabelOptions setBorderWidth(Integer borderWidth) {
@@ -244,7 +246,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return this.className;
+        return getInstanceOf(String.class, this.className);
     }
 
     public LabelOptions setClassName(String className) {
@@ -253,7 +255,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getCrop() {
-        return this.crop;
+        return getInstanceOf(Boolean.class, this.crop);
     }
 
     public LabelOptions setCrop(Boolean crop) {
@@ -262,7 +264,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getDistance() {
-        return this.distance;
+        return getInstanceOf(Integer.class, this.distance);
     }
 
     public LabelOptions setDistance(Integer distance) {
@@ -271,7 +273,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getFormat() {
-        return this.format;
+        return getInstanceOf(String.class, this.format);
     }
 
     public LabelOptions setFormat(String format) {
@@ -280,7 +282,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getFormatter() {
-        return this.formatter;
+        return getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
     }
 
     public LabelOptions setFormatter(HighchartsCallbackFunction formatter) {
@@ -289,7 +291,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getOverflow() {
-        return this.overflow;
+        return getInstanceOf(String.class, this.overflow);
     }
 
     public LabelOptions setOverflow(String overflow) {
@@ -298,7 +300,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getPadding() {
-        return this.padding;
+        return getInstanceOf(Integer.class, this.padding);
     }
 
     public LabelOptions setPadding(Integer padding) {
@@ -307,7 +309,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsShadowOptionsObject getShadow() {
-        return this.shadow;
+        return getInstanceOf(HighchartsShadowOptionsObject.class, this.shadow);
     }
 
     public LabelOptions setShadow(HighchartsShadowOptionsObject shadow) {
@@ -316,7 +318,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getShape() {
-        return this.shape;
+        return getInstanceOf(String.class, this.shape);
     }
 
     public LabelOptions setShape(String shape) {
@@ -325,7 +327,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public LabelOptions setStyle(HighchartsCSS style) {
@@ -334,7 +336,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return this.text;
+        return getInstanceOf(String.class, this.text);
     }
 
     public LabelOptions setText(String text) {
@@ -343,7 +345,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getUseHTML() {
-        return this.useHTML;
+        return getInstanceOf(Boolean.class, this.useHTML);
     }
 
     public LabelOptions setUseHTML(Boolean useHTML) {
@@ -352,7 +354,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return this.verticalAlign;
+        return getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public LabelOptions setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -361,7 +363,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getX() {
-        return this.x;
+        return getInstanceOf(Integer.class, this.x);
     }
 
     public LabelOptions setX(Integer x) {
@@ -370,7 +372,7 @@ public class LabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getY() {
-        return this.y;
+        return getInstanceOf(Integer.class, this.y);
     }
 
     public LabelOptions setY(Integer y) {

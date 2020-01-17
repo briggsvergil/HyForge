@@ -5,6 +5,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ExportButtons  HighchartsAPI Class
@@ -29,7 +31,7 @@ public class ExportButtons implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public ContextButton getContextButton() {
-        return this.contextButton;
+        return this.contextButton = getInstanceOf(ContextButton.class, this.contextButton);
     }
 
     public ExportButtons setContextButton(ContextButton contextButton) {

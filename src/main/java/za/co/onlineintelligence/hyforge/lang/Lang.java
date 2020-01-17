@@ -3,10 +3,13 @@ package za.co.onlineintelligence.hyforge.lang;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.google.gson.JsonElement;
 import za.co.onlineintelligence.hyforge.accessibility.Accessibility;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.DrosteSeperation;
 import za.co.onlineintelligence.hyforge.stocktools.StockTools;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 
 /**
@@ -271,7 +274,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
         Getters and Builder-Style Setters
     */
     public Accessibility getAccessibility() {
-        return this.accessibility;
+        return this.accessibility = getInstanceOf(Accessibility.class, this.accessibility);
     }
 
     public Lang setAccessibility(Accessibility accessibility) {
@@ -280,7 +283,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getContextButtonTitle() {
-        return this.contextButtonTitle;
+        return this.contextButtonTitle = getInstanceOf(String.class, this.contextButtonTitle);
     }
 
     public Lang setContextButtonTitle(String contextButtonTitle) {
@@ -289,7 +292,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getDecimalPoint() {
-        return this.decimalPoint;
+        return this.decimalPoint = getInstanceOf(String.class, this.decimalPoint);
     }
 
     public Lang setDecimalPoint(String decimalPoint) {
@@ -298,7 +301,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getDownloadCSV() {
-        return this.downloadCSV;
+        return this.downloadCSV = getInstanceOf(String.class, this.downloadCSV);
     }
 
     public Lang setDownloadCSV(String downloadCSV) {
@@ -307,7 +310,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getDownloadJPEG() {
-        return this.downloadJPEG;
+        return this.downloadJPEG = getInstanceOf(String.class, this.downloadJPEG);
     }
 
     public Lang setDownloadJPEG(String downloadJPEG) {
@@ -316,7 +319,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getDownloadPDF() {
-        return this.downloadPDF;
+        return this.downloadPDF = getInstanceOf(String.class, this.downloadPDF);
     }
 
     public Lang setDownloadPDF(String downloadPDF) {
@@ -325,7 +328,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getDownloadPNG() {
-        return this.downloadPNG;
+        return this.downloadPNG = getInstanceOf(String.class, this.downloadPNG);
     }
 
     public Lang setDownloadPNG(String downloadPNG) {
@@ -334,7 +337,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getDownloadSVG() {
-        return this.downloadSVG;
+        return this.downloadSVG = getInstanceOf(String.class, this.downloadSVG);
     }
 
     public Lang setDownloadSVG(String downloadSVG) {
@@ -343,7 +346,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getDownloadXLS() {
-        return this.downloadXLS;
+        return this.downloadXLS = getInstanceOf(String.class, this.downloadXLS);
     }
 
     public Lang setDownloadXLS(String downloadXLS) {
@@ -352,7 +355,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getDrillUpText() {
-        return this.drillUpText;
+        return this.drillUpText = getInstanceOf(String.class, this.drillUpText);
     }
 
     public Lang setDrillUpText(String drillUpText) {
@@ -361,7 +364,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getInvalidDate() {
-        return this.invalidDate;
+        return this.invalidDate = getInstanceOf(String.class, this.invalidDate);
     }
 
     public Lang setInvalidDate(String invalidDate) {
@@ -370,7 +373,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getLoading() {
-        return this.loading;
+        return this.loading = getInstanceOf(String.class, this.loading);
     }
 
     public Lang setLoading(String loading) {
@@ -379,7 +382,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String[] getMonths() {
-        return this.months;
+        return this.months = getInstanceOf(String[].class, this.months);
     }
 
     public Lang setMonths(String[] months) {
@@ -388,7 +391,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public Object getNavigation() {
-        return this.navigation;
+        return this.navigation = getInstanceOf(Object.class, this.navigation);
     }
 
     public Lang setNavigation(Object navigation) {
@@ -397,7 +400,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getNoData() {
-        return this.noData;
+        return this.noData = getInstanceOf(String.class, this.noData);
     }
 
     public Lang setNoData(String noData) {
@@ -406,7 +409,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public Integer getNumericSymbolMagnitude() {
-        return this.numericSymbolMagnitude;
+        return this.numericSymbolMagnitude = getInstanceOf(Integer.class, this.numericSymbolMagnitude);
     }
 
     public Lang setNumericSymbolMagnitude(Integer numericSymbolMagnitude) {
@@ -415,7 +418,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String[] getNumericSymbols() {
-        return this.numericSymbols;
+        return this.numericSymbols = getInstanceOf(String[].class, this.numericSymbols);
     }
 
     public Lang setNumericSymbols(String[] numericSymbols) {
@@ -424,7 +427,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getOpenInCloud() {
-        return this.openInCloud;
+        return this.openInCloud = getInstanceOf(String.class, this.openInCloud);
     }
 
     public Lang setOpenInCloud(String openInCloud) {
@@ -433,7 +436,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getPrintChart() {
-        return this.printChart;
+        return this.printChart = getInstanceOf(String.class, this.printChart);
     }
 
     public Lang setPrintChart(String printChart) {
@@ -442,7 +445,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getRangeSelectorFrom() {
-        return this.rangeSelectorFrom;
+        return this.rangeSelectorFrom = getInstanceOf(String.class, this.rangeSelectorFrom);
     }
 
     public Lang setRangeSelectorFrom(String rangeSelectorFrom) {
@@ -451,7 +454,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getRangeSelectorTo() {
-        return this.rangeSelectorTo;
+        return this.rangeSelectorTo = getInstanceOf(String.class, this.rangeSelectorTo);
     }
 
     public Lang setRangeSelectorTo(String rangeSelectorTo) {
@@ -460,7 +463,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getRangeSelectorZoom() {
-        return this.rangeSelectorZoom;
+        return this.rangeSelectorZoom = getInstanceOf(String.class, this.rangeSelectorZoom);
     }
 
     public Lang setRangeSelectorZoom(String rangeSelectorZoom) {
@@ -469,7 +472,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getResetZoom() {
-        return this.resetZoom;
+        return this.resetZoom = getInstanceOf(String.class, this.resetZoom);
     }
 
     public Lang setResetZoom(String resetZoom) {
@@ -478,7 +481,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getResetZoomTitle() {
-        return this.resetZoomTitle;
+        return this.resetZoomTitle = getInstanceOf(String.class, this.resetZoomTitle);
     }
 
     public Lang setResetZoomTitle(String resetZoomTitle) {
@@ -487,7 +490,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String[] getShortMonths() {
-        return this.shortMonths;
+        return this.shortMonths = getInstanceOf(String[].class, this.shortMonths);
     }
 
     public Lang setShortMonths(String[] shortMonths) {
@@ -496,7 +499,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String[] getShortWeekdays() {
-        return this.shortWeekdays;
+        return this.shortWeekdays = getInstanceOf(String[].class, this.shortWeekdays);
     }
 
     public Lang setShortWeekdays(String[] shortWeekdays) {
@@ -505,7 +508,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public StockTools getStockTools() {
-        return this.stockTools;
+        return this.stockTools = getInstanceOf(StockTools.class, this.stockTools);
     }
 
     public Lang setStockTools(StockTools stockTools) {
@@ -514,7 +517,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getThousandsSep() {
-        return this.thousandsSep;
+        return this.thousandsSep = getInstanceOf(String.class, this.thousandsSep);
     }
 
     public Lang setThousandsSep(String thousandsSep) {
@@ -523,7 +526,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getViewData() {
-        return this.viewData;
+        return this.viewData = getInstanceOf(String.class, this.viewData);
     }
 
     public Lang setViewData(String viewData) {
@@ -532,7 +535,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getViewFullscreen() {
-        return this.viewFullscreen;
+        return this.viewFullscreen = getInstanceOf(String.class, this.viewFullscreen);
     }
 
     public Lang setViewFullscreen(String viewFullscreen) {
@@ -541,7 +544,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String[] getWeekdays() {
-        return this.weekdays;
+        return this.weekdays = getInstanceOf(String[].class, this.weekdays);
     }
 
     public Lang setWeekdays(String[] weekdays) {
@@ -550,7 +553,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getZoomIn() {
-        return this.zoomIn;
+        return this.zoomIn = getInstanceOf(String.class, this.zoomIn);
     }
 
     public Lang setZoomIn(String zoomIn) {
@@ -559,7 +562,7 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getZoomOut() {
-        return this.zoomOut;
+        return this.zoomOut = getInstanceOf(String.class, this.zoomOut);
     }
 
     public Lang setZoomOut(String zoomOut) {
@@ -652,8 +655,4 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
         return this.deflateFields();
     }
 
-    @Override
-    public String deflateClass() {
-        return null;
-    }
 }

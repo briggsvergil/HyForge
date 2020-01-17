@@ -5,6 +5,8 @@ package za.co.onlineintelligence.hyforge.plotoptions;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * DragDrop HighchartsAPI Class
@@ -120,7 +122,7 @@ public class DragDrop implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public DragHandle getDragHandle() {
-        return this.dragHandle;
+        return this.dragHandle = getInstanceOf(DragHandle.class, this.dragHandle);
     }
 
     public DragDrop setDragHandle(DragHandle dragHandle) {
@@ -129,7 +131,7 @@ public class DragDrop implements Serializable {
     }
 
     public int getDragMaxX() {
-        return this.dragMaxX;
+        return this.dragMaxX = getInstanceOf(int.class, this.dragMaxX);
     }
 
     public DragDrop setDragMaxX(int dragMaxX) {
@@ -138,7 +140,7 @@ public class DragDrop implements Serializable {
     }
 
     public int getDragMaxY() {
-        return this.dragMaxY;
+        return this.dragMaxY = getInstanceOf(int.class, this.dragMaxY);
     }
 
     public DragDrop setDragMaxY(int dragMaxY) {
@@ -147,7 +149,7 @@ public class DragDrop implements Serializable {
     }
 
     public int getDragMinX() {
-        return this.dragMinX;
+        return this.dragMinX = getInstanceOf(int.class, this.dragMinX);
     }
 
     public DragDrop setDragMinX(int dragMinX) {
@@ -156,7 +158,7 @@ public class DragDrop implements Serializable {
     }
 
     public int getDragMinY() {
-        return this.dragMinY;
+        return this.dragMinY = getInstanceOf(int.class, this.dragMinY);
     }
 
     public DragDrop setDragMinY(int dragMinY) {
@@ -165,7 +167,7 @@ public class DragDrop implements Serializable {
     }
 
     public int getDragPrecisionX() {
-        return this.dragPrecisionX;
+        return this.dragPrecisionX = getInstanceOf(int.class, this.dragPrecisionX);
     }
 
     public DragDrop setDragPrecisionX(int dragPrecisionX) {
@@ -174,7 +176,7 @@ public class DragDrop implements Serializable {
     }
 
     public int getDragPrecisionY() {
-        return this.dragPrecisionY;
+        return this.dragPrecisionY = getInstanceOf(int.class, this.dragPrecisionY);
     }
 
     public DragDrop setDragPrecisionY(int dragPrecisionY) {
@@ -183,7 +185,7 @@ public class DragDrop implements Serializable {
     }
 
     public int getDragSensitivity() {
-        return this.dragSensitivity;
+        return this.dragSensitivity = getInstanceOf(int.class, this.dragSensitivity);
     }
 
     public DragDrop setDragSensitivity(int dragSensitivity) {
@@ -192,7 +194,7 @@ public class DragDrop implements Serializable {
     }
 
     public boolean getDraggableX() {
-        return this.draggableX;
+        return this.draggableX = getInstanceOf(boolean.class, this.draggableX);
     }
 
     public DragDrop setDraggableX(boolean draggableX) {
@@ -201,7 +203,7 @@ public class DragDrop implements Serializable {
     }
 
     public boolean getDraggableY() {
-        return this.draggableY;
+        return this.draggableY = getInstanceOf(boolean.class, this.draggableY);
     }
 
     public DragDrop setDraggableY(boolean draggableY) {
@@ -210,7 +212,7 @@ public class DragDrop implements Serializable {
     }
 
     public String getGroupBy() {
-        return this.groupBy;
+        return this.groupBy = getInstanceOf(String.class, this.groupBy);
     }
 
     public DragDrop setGroupBy(String groupBy) {
@@ -219,7 +221,7 @@ public class DragDrop implements Serializable {
     }
 
     public Object getGuideBox() {
-        return this.guideBox;
+        return this.guideBox = getInstanceOf(Object.class, this.guideBox);
     }
 
     public DragDrop setGuideBox(Object guideBox) {
@@ -228,7 +230,7 @@ public class DragDrop implements Serializable {
     }
 
     public boolean getLiveRedraw() {
-        return this.liveRedraw;
+        return this.liveRedraw = getInstanceOf(boolean.class, this.liveRedraw);
     }
 
     public DragDrop setLiveRedraw(boolean liveRedraw) {

@@ -1,5 +1,6 @@
 package za.co.onlineintelligence.hyforge.series;
 
+import com.google.gson.JsonElement;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
@@ -7,6 +8,8 @@ import za.co.onlineintelligence.hyforge.common.HighchartsDataGroupingInfo;
 
 import java.io.Serializable;
 import java.util.List;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 /**
  * This class stands as a wrapper for all the information that can be set in the `data` structure for a series.
@@ -52,7 +55,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public String getCategory() {
-        return category;
+        return this.category = getInstanceOf(String.class, this.category);
     }
 
     public HighchartsPoint setCategory(String category) {
@@ -61,7 +64,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getColor() {
-        return color;
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public HighchartsPoint setColor(HighchartsColor color) {
@@ -75,7 +78,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public Integer getColorIndex() {
-        return colorIndex;
+        return this.colorIndex = getInstanceOf(Integer.class, this.colorIndex);
     }
 
     public HighchartsPoint setColorIndex(Integer colorIndex) {
@@ -84,7 +87,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public HighchartsDataGroupingInfo getDataGroupingInfo() {
-        return dataGroupingInfo;
+        return this.dataGroupingInfo = getInstanceOf(HighchartsDataGroupingInfo.class, this.dataGroupingInfo);
     }
 
     public HighchartsPoint setDataGroupingInfo(HighchartsDataGroupingInfo dataGroupingInfo) {
@@ -93,7 +96,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public Integer getHigh() {
-        return high;
+        return this.high = getInstanceOf(Integer.class, this.high);
     }
 
     public HighchartsPoint setHigh(Integer high) {
@@ -102,7 +105,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public int getIndex() {
-        return index;
+        return this.index = getInstanceOf(int.class, this.index);
     }
 
     public HighchartsPoint setIndex(int index) {
@@ -111,7 +114,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public Integer getLow() {
-        return low;
+        return this.low = getInstanceOf(Integer.class, this.low);
     }
 
     public HighchartsPoint setLow(Integer low) {
@@ -120,7 +123,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public String getName() {
-        return name;
+        return this.name = getInstanceOf(String.class, this.name);
     }
 
     public HighchartsPoint setName(String name) {
@@ -129,7 +132,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public HighchartsPointOptions getOptions() {
-        return options;
+        return this.options = getInstanceOf(HighchartsPointOptions.class, this.options);
     }
 
     public HighchartsPoint setOptions(HighchartsPointOptions options) {
@@ -138,7 +141,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public Series getSeries() {
-        return series;
+        return this.series = getInstanceOf(Series.class, this.series);
     }
 
     public HighchartsPoint setSeries(Series series) {
@@ -147,7 +150,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public Boolean getSliced() {
-        return sliced;
+        return this.sliced = getInstanceOf(Boolean.class, this.sliced);
     }
 
     public HighchartsPoint setSliced(Boolean sliced) {
@@ -156,7 +159,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public Integer getTotal() {
-        return total;
+        return this.total = getInstanceOf(Integer.class, this.total);
     }
 
     public HighchartsPoint setTotal(Integer total) {
@@ -165,7 +168,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public boolean isVisible() {
-        return visible;
+        return this.visible = getInstanceOf(boolean.class, this.visible);
     }
 
     public HighchartsPoint setVisible(boolean visible) {
@@ -174,7 +177,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public Object getX() {
-        return x;
+        return this.x = getInstanceOf(Object.class, this.x);
     }
 
     public HighchartsPoint setX(Object x) {
@@ -183,7 +186,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
     }
 
     public Object getY() {
-        return y;
+        return this.y = getInstanceOf(Object.class, this.y);
     }
 
     public HighchartsPoint setY(Object y) {
@@ -223,7 +226,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
                 DrosteDeflater.super.deflateFields(ignoreName, nameDelegate, tabLevel);
             }
         } else {
-            return "";
+            return null;
         }
         return null;
     }

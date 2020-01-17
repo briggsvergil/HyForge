@@ -5,6 +5,8 @@ import za.co.onlineintelligence.hyforge.common.enums.HighchartsVerticalAlignValu
 
 import java.io.Serializable;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * @author Sean
  */
@@ -20,7 +22,7 @@ public class HighchartsAlignObject implements Serializable, DrosteDeflater {
     private int y;
 
     public HighchartsAlignValue getAlign() {
-        return align;
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public void setAlign(HighchartsAlignValue align) {
@@ -28,7 +30,7 @@ public class HighchartsAlignObject implements Serializable, DrosteDeflater {
     }
 
     public boolean isAlignByTranslate() {
-        return alignByTranslate;
+        return this.alignByTranslate = getInstanceOf(boolean.class, this.alignByTranslate);
     }
 
     public void setAlignByTranslate(boolean alignByTranslate) {
@@ -36,7 +38,7 @@ public class HighchartsAlignObject implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return verticalAlign;
+        return this.verticalAlign = getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public void setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -44,7 +46,7 @@ public class HighchartsAlignObject implements Serializable, DrosteDeflater {
     }
 
     public int getX() {
-        return x;
+        return this.x = getInstanceOf(int.class, this.x);
     }
 
     public void setX(int x) {
@@ -52,7 +54,7 @@ public class HighchartsAlignObject implements Serializable, DrosteDeflater {
     }
 
     public int getY() {
-        return y;
+        return this.y = getInstanceOf(int.class, this.y);
     }
 
     public void setY(int y) {

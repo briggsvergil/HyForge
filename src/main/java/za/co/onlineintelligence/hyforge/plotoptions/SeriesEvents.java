@@ -7,6 +7,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * AnnotationsEvents HighchartsAPI Class
@@ -22,7 +24,6 @@ public class SeriesEvents implements Serializable {
     /**
      * Fires after the series has finished its initial animation, or in case
      * animation is disabled, immediately as the series is displayed.
-     *
      *
      * @since 4.0.0
      */
@@ -89,7 +90,7 @@ public class SeriesEvents implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsCallbackFunction getAfterAnimate() {
-        return this.afterAnimate;
+        return this.afterAnimate = getInstanceOf(HighchartsCallbackFunction.class, this.afterAnimate);
     }
 
     public SeriesEvents setAfterAnimate(HighchartsCallbackFunction afterAnimate) {
@@ -98,7 +99,7 @@ public class SeriesEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getCheckboxClick() {
-        return this.checkboxClick;
+        return this.checkboxClick = getInstanceOf(HighchartsCallbackFunction.class, this.checkboxClick);
     }
 
     public SeriesEvents setCheckboxClick(HighchartsCallbackFunction checkboxClick) {
@@ -107,7 +108,7 @@ public class SeriesEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getClick() {
-        return this.click;
+        return this.click = getInstanceOf(HighchartsCallbackFunction.class, this.click);
     }
 
     public SeriesEvents setClick(HighchartsCallbackFunction click) {
@@ -116,7 +117,7 @@ public class SeriesEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getHide() {
-        return this.hide;
+        return this.hide = getInstanceOf(HighchartsCallbackFunction.class, this.hide);
     }
 
     public SeriesEvents setHide(HighchartsCallbackFunction hide) {
@@ -125,7 +126,7 @@ public class SeriesEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getLegendItemClick() {
-        return this.legendItemClick;
+        return this.legendItemClick = getInstanceOf(HighchartsCallbackFunction.class, this.legendItemClick);
     }
 
     public SeriesEvents setLegendItemClick(HighchartsCallbackFunction legendItemClick) {
@@ -134,7 +135,7 @@ public class SeriesEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getMouseOut() {
-        return this.mouseOut;
+        return this.mouseOut = getInstanceOf(HighchartsCallbackFunction.class, this.mouseOut);
     }
 
     public SeriesEvents setMouseOut(HighchartsCallbackFunction mouseOut) {
@@ -143,7 +144,7 @@ public class SeriesEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getMouseOver() {
-        return this.mouseOver;
+        return this.mouseOver = getInstanceOf(HighchartsCallbackFunction.class, this.mouseOver);
     }
 
     public SeriesEvents setMouseOver(HighchartsCallbackFunction mouseOver) {
@@ -152,7 +153,7 @@ public class SeriesEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getShow() {
-        return this.show;
+        return this.show = getInstanceOf(HighchartsCallbackFunction.class, this.show);
     }
 
     public SeriesEvents setShow(HighchartsCallbackFunction show) {

@@ -4,11 +4,9 @@ import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.util.Objects;
 
-import org.javatuples.Pair;
 import za.co.onlineintelligence.hyforge.common.*;
-import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
-import static za.co.onlineintelligence.hyforge.common.CommonUtils.isField;
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 /**
  * @author Sean Briggs
@@ -46,7 +44,7 @@ public class HighchartFrame implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsColor getColor() {
-        return this.color;
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public HighchartFrame setColor(HighchartsColor color) {
@@ -60,7 +58,7 @@ public class HighchartFrame implements Serializable, DrosteDeflater {
     }
 
     public int getSize() {
-        return this.size;
+        return this.size = getInstanceOf(int.class, this.size);
     }
 
     public HighchartFrame setSize(int size) {
@@ -69,7 +67,7 @@ public class HighchartFrame implements Serializable, DrosteDeflater {
     }
 
     public BooleanStringWrapper getVisible() {
-        return this.visible;
+        return this.visible = getInstanceOf(BooleanStringWrapper.class, this.visible);
     }
 
     public HighchartFrame setVisible(BooleanStringWrapper visible) {
@@ -104,7 +102,6 @@ public class HighchartFrame implements Serializable, DrosteDeflater {
      *
      * @param field    A tuple of The field currently being serialized and the owner class,
      *                 in most cases the owner will be simply (this), otherwise it will be the superclass(es)
-     * @param tabLevel This is the number of whitespace tabs to create before Key-Value pairs.
      * @return
      */
     @Override

@@ -6,6 +6,8 @@ import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * @author Sean Briggs
  */
@@ -48,7 +50,7 @@ public class Title implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public int getMargin() {
-        return this.margin;
+        return this.margin = getInstanceOf(int.class, this.margin);
     }
 
     public Title setMargin(int margin) {
@@ -57,7 +59,7 @@ public class Title implements Serializable, DrosteDeflater {
     }
 
     public int getRotation() {
-        return this.rotation;
+        return this.rotation = getInstanceOf(int.class, this.rotation);
     }
 
     public Title setRotation(int rotation) {
@@ -66,7 +68,7 @@ public class Title implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return this.text;
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public Title setText(String text) {
@@ -75,7 +77,7 @@ public class Title implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Title setStyle(HighchartsCSS style) {

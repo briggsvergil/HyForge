@@ -7,6 +7,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * KeyboardNavigation HighchartsAPI Class
@@ -63,7 +65,7 @@ public class KeyboardNavigation implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getEnabled() {
-        return this.enabled;
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public KeyboardNavigation setEnabled(boolean enabled) {
@@ -72,7 +74,7 @@ public class KeyboardNavigation implements Serializable, DrosteDeflater {
     }
 
     public FocusBorder getFocusBorder() {
-        return this.focusBorder;
+        return this.focusBorder = getInstanceOf(FocusBorder.class, this.focusBorder);
     }
 
     public KeyboardNavigation setFocusBorder(FocusBorder focusBorder) {
@@ -81,7 +83,7 @@ public class KeyboardNavigation implements Serializable, DrosteDeflater {
     }
 
     public String[] getOrder() {
-        return this.order;
+        return this.order = getInstanceOf(String[].class, this.order);
     }
 
     public KeyboardNavigation setOrder(String[] order) {
@@ -90,7 +92,7 @@ public class KeyboardNavigation implements Serializable, DrosteDeflater {
     }
 
     public SeriesNavigation getSeriesNavigation() {
-        return this.seriesNavigation;
+        return this.seriesNavigation = getInstanceOf(SeriesNavigation.class, this.seriesNavigation);
     }
 
     public KeyboardNavigation setSeriesNavigation(SeriesNavigation seriesNavigation) {
@@ -99,7 +101,7 @@ public class KeyboardNavigation implements Serializable, DrosteDeflater {
     }
 
     public boolean getWrapAround() {
-        return this.wrapAround;
+        return this.wrapAround = getInstanceOf(boolean.class, this.wrapAround);
     }
 
     public KeyboardNavigation setWrapAround(boolean wrapAround) {

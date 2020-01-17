@@ -2,11 +2,15 @@ package za.co.onlineintelligence.hyforge.annotations;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 
 /**
  * ControlPointOptionsStyle  HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class ControlPointOptionsStyle implements Serializable, DrosteDeflater {
@@ -34,28 +38,28 @@ public class ControlPointOptionsStyle implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getFill() {
-        return this.fill;
+        return this.fill = getInstanceOf(String.class, this.fill);
     }
 
-    public ControlPointOptionsStyle setFill(String fill){
+    public ControlPointOptionsStyle setFill(String fill) {
         this.fill = fill;
         return this;
     }
 
     public String getStroke() {
-        return this.stroke;
+        return this.stroke = getInstanceOf(String.class, this.stroke);
     }
 
-    public ControlPointOptionsStyle setStroke(String stroke){
+    public ControlPointOptionsStyle setStroke(String stroke) {
         this.stroke = stroke;
         return this;
     }
 
     public Integer getStroke_Width() {
-        return this.stroke_width;
+        return this.stroke_width = getInstanceOf(Integer.class, this.stroke_width);
     }
 
-    public ControlPointOptionsStyle setStroke_Width(Integer stroke_width){
+    public ControlPointOptionsStyle setStroke_Width(Integer stroke_width) {
         this.stroke_width = stroke_width;
         return this;
     }

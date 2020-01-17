@@ -5,6 +5,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ControlPointOptions  HighchartsAPI Class
@@ -51,7 +53,7 @@ public class ControlPointOptions implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Integer getHeight() {
-        return this.height;
+        return this.height = getInstanceOf(Integer.class, this.height);
     }
 
     public ControlPointOptions setHeight(Integer height) {
@@ -60,7 +62,7 @@ public class ControlPointOptions implements Serializable, DrosteDeflater {
     }
 
     public Object getPositioner() {
-        return this.positioner;
+        return this.positioner = getInstanceOf(Object.class, this.positioner);
     }
 
     public ControlPointOptions setPositioner(Object positioner) {
@@ -69,7 +71,7 @@ public class ControlPointOptions implements Serializable, DrosteDeflater {
     }
 
     public ControlPointOptionsStyle getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(ControlPointOptionsStyle.class, this.style);
     }
 
     public ControlPointOptions setStyle(ControlPointOptionsStyle style) {
@@ -78,7 +80,7 @@ public class ControlPointOptions implements Serializable, DrosteDeflater {
     }
 
     public String getSymbol() {
-        return this.symbol;
+        return this.symbol = getInstanceOf(String.class, this.symbol);
     }
 
     public ControlPointOptions setSymbol(String symbol) {
@@ -87,7 +89,7 @@ public class ControlPointOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getVisible() {
-        return this.visible;
+        return this.visible = getInstanceOf(Boolean.class, this.visible);
     }
 
     public ControlPointOptions setVisible(Boolean visible) {
@@ -96,7 +98,7 @@ public class ControlPointOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getWidth() {
-        return this.width;
+        return this.width = getInstanceOf(Integer.class, this.width);
     }
 
     public ControlPointOptions setWidth(Integer width) {

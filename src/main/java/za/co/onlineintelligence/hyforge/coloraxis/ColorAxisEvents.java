@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ColorAxisEvents  HighchartsAPI Class
@@ -28,7 +30,7 @@ public class ColorAxisEvents implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsCallbackFunction getLegendItemClick() {
-        return this.legendItemClick;
+        return this.legendItemClick = getInstanceOf(HighchartsCallbackFunction.class, this.legendItemClick);
     }
 
     public ColorAxisEvents setLegendItemClick(HighchartsCallbackFunction legendItemClick) {

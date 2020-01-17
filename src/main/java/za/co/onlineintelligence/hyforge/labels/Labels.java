@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Labels  HighchartsAPI Class
@@ -32,7 +34,7 @@ public class Labels implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public LabelItem[] getItems() {
-        return this.items;
+        return this.items = getInstanceOf(LabelItem[].class, this.items);
     }
 
     public Labels setItems(LabelItem[] items) {
@@ -41,7 +43,7 @@ public class Labels implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Labels setStyle(HighchartsCSS style) {

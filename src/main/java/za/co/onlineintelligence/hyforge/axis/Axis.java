@@ -7,6 +7,7 @@ import za.co.onlineintelligence.hyforge.common.enums.HighchartsDashStyleValue;
 import za.co.onlineintelligence.hyforge.scrollbar.Scrollbar;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -1688,7 +1689,9 @@ public class Axis implements Serializable, DrosteDeflater {
         if (this.categories == null) {
             this.categories = new String[0];
         }
-        CommonUtils.addE(this.categories, category);
+        int len = this.categories.length;
+        this.categories = Arrays.copyOf(this.categories, len + 1);
+        this.categories[len] = category;
         return this;
     }
 

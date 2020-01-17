@@ -252,7 +252,7 @@ public class HighchartsCSS implements Serializable, DrosteDeflater {
     @Override
     public String deflateField(Field field, int tabLevel) {
         String s = delegateFieldDeflation(field, "width", width==null,
-                () -> width + "px");
+                () -> DrosteDeflater.getTabString(tabLevel) + "width:'" + width + "px'");
         return s!=null && s.equals(RTS)? DrosteDeflater.super.deflateField(field, tabLevel) : s;
     }
 }

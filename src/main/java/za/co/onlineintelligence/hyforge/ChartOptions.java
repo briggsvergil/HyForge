@@ -521,7 +521,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
 
     public Axis[] getXAxis() {
         if (xAxis == null) {
-            xAxis = new Axis[1];
+            xAxis = new Axis[]{new Axis()};
         }
         return xAxis;
     }
@@ -538,7 +538,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
 
     public Axis[] getYAxis() {
         if (yAxis == null) {
-            yAxis = new Axis[1];
+            yAxis = new Axis[]{new Axis()};
         }
         return yAxis;
     }
@@ -562,6 +562,7 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
         String JSON;
         try {
             JSON = this.deflateFields();
+            JSON = JSON.replace("\r", "").replace("\n", "");
         } catch (Exception e) {
             JSON = "{ error: \"" + e.getMessage() + "\", stack: \"" + Arrays.toString(e.getStackTrace()) + "\" }";
         }

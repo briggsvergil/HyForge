@@ -1,5 +1,7 @@
 package za.co.onlineintelligence.hyforge.legend;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import za.co.onlineintelligence.hyforge.accessibility.Accessibility;
 import za.co.onlineintelligence.hyforge.common.*;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsAlignValue;
@@ -831,7 +833,7 @@ public class Legend implements Serializable, DrosteDeflater {
 
     @Override
     public String deflateField(Field field, int tabLevel) {
-        String s = DrosteDeflater.super.delegateFieldDeflation(field, "shadow", shadow==null,
+        String s = DrosteDeflater.super.delegateFieldDeflation(field, "shadow", shadow == null,
                 () -> {
                     String shadow = this.shadow.deflateFields(true, "shadow", tabLevel + 1);
                     if (shadow.substring(shadow.indexOf('{') + 1, shadow.indexOf('}')).trim().length() > 0) {
@@ -840,6 +842,6 @@ public class Legend implements Serializable, DrosteDeflater {
                         return DrosteDeflater.getTabString(tabLevel) + "shadow: true,\n";
                     }
                 });
-        return s!=null && s.equals(RTS)? DrosteDeflater.super.deflateField(field, tabLevel) : s;
+        return s != null && s.equals(RTS) ? DrosteDeflater.super.deflateField(field, tabLevel) : s;
     }
 }

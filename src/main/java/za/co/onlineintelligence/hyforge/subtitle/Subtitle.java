@@ -7,6 +7,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import za.co.onlineintelligence.hyforge.common.enums.*;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * @author Sean Briggs
  */
@@ -92,7 +94,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsAlignValue getAlign() {
-        return this.align;
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public Subtitle setAlign(HighchartsAlignValue align) {
@@ -101,7 +103,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
     }
 
     public boolean getFloating() {
-        return this.floating;
+        return this.floating = getInstanceOf(boolean.class, this.floating);
     }
 
     public Subtitle setFloating(boolean floating) {
@@ -110,7 +112,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Subtitle setStyle(HighchartsCSS style) {
@@ -119,7 +121,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return this.text;
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public Subtitle setText(String text) {
@@ -128,7 +130,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
     }
 
     public boolean getUseHTML() {
-        return this.useHTML;
+        return this.useHTML = getInstanceOf(boolean.class, this.useHTML);
     }
 
     public Subtitle setUseHTML(boolean useHTML) {
@@ -137,7 +139,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return this.verticalAlign;
+        return this.verticalAlign = getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public Subtitle setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -146,7 +148,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
     }
 
     public int getWidthAdjust() {
-        return this.widthAdjust;
+        return this.widthAdjust = getInstanceOf(int.class, this.widthAdjust);
     }
 
     public Subtitle setWidthAdjust(int widthAdjust) {
@@ -155,7 +157,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
     }
 
     public int getX() {
-        return this.x;
+        return this.x = getInstanceOf(int.class, this.x);
     }
 
     public Subtitle setX(int x) {
@@ -164,7 +166,7 @@ public class Subtitle implements Serializable, DrosteDeflater {
     }
 
     public int getY() {
-        return this.y;
+        return this.y = getInstanceOf(int.class, this.y);
     }
 
     public Subtitle setY(int y) {

@@ -3,9 +3,12 @@ package za.co.onlineintelligence.hyforge.global;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.google.gson.JsonElement;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.DrosteSeperation;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 
 /**
@@ -79,7 +82,7 @@ public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
         Getters and Builder-Style Setters
     */
     public HighchartsCallbackFunction getDate() {
-        return this.Date;
+        return this.Date = getInstanceOf(HighchartsCallbackFunction.class, this.Date);
     }
 
     public Global setDate(HighchartsCallbackFunction Date) {
@@ -88,7 +91,7 @@ public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getVMLRadialGradientURL() {
-        return this.VMLRadialGradientURL;
+        return this.VMLRadialGradientURL = getInstanceOf(String.class, this.VMLRadialGradientURL);
     }
 
     public Global setVMLRadialGradientURL(String VMLRadialGradientURL) {
@@ -97,7 +100,7 @@ public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getCanvasToolsURL() {
-        return this.canvasToolsURL;
+        return this.canvasToolsURL = getInstanceOf(String.class, this.canvasToolsURL);
     }
 
     public Global setCanvasToolsURL(String canvasToolsURL) {
@@ -106,7 +109,7 @@ public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public HighchartsCallbackFunction getGetTimezoneOffset() {
-        return this.getTimezoneOffset;
+        return this.getTimezoneOffset = getInstanceOf(HighchartsCallbackFunction.class, this.getTimezoneOffset);
     }
 
     public Global setGetTimezoneOffset(HighchartsCallbackFunction getTimezoneOffset) {
@@ -115,7 +118,7 @@ public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public String getTimezone() {
-        return this.timezone;
+        return this.timezone = getInstanceOf(String.class, this.timezone);
     }
 
     public Global setTimezone(String timezone) {
@@ -124,7 +127,7 @@ public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public Integer getTimezoneOffset() {
-        return this.timezoneOffset;
+        return this.timezoneOffset = getInstanceOf(Integer.class, this.timezoneOffset);
     }
 
     public Global setTimezoneOffset(Integer timezoneOffset) {
@@ -133,7 +136,7 @@ public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
     public Boolean getUseUTC() {
-        return this.useUTC;
+        return this.useUTC = getInstanceOf(Boolean.class, this.useUTC);
     }
 
     public Global setUseUTC(Boolean useUTC) {

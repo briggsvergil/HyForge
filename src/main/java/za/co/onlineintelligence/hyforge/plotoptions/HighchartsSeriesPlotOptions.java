@@ -1,6 +1,5 @@
 package za.co.onlineintelligence.hyforge.plotoptions;
 
-import org.javatuples.Pair;
 import za.co.onlineintelligence.hyforge.coloraxis.ColorAxis;
 import za.co.onlineintelligence.hyforge.common.*;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsCursorValue;
@@ -10,6 +9,8 @@ import za.co.onlineintelligence.hyforge.tooltip.Tooltip;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 /**
  * @author Sean
@@ -548,7 +549,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
      */
 
     public SeriesAccessibility getAccessibility() {
-        return accessibility;
+        return this.accessibility = getInstanceOf(SeriesAccessibility.class, this.accessibility);
     }
 
     public HighchartsSeriesPlotOptions setAccessibility(SeriesAccessibility accessibility) {
@@ -557,7 +558,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public boolean isAllowPointSelect() {
-        return allowPointSelect;
+        return this.allowPointSelect = getInstanceOf(boolean.class, this.allowPointSelect);
     }
 
     public HighchartsSeriesPlotOptions setAllowPointSelect(boolean allowPointSelect) {
@@ -566,7 +567,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getAnimation() {
-        return animation;
+        return this.animation = getInstanceOf(Integer.class, this.animation);
     }
 
     public HighchartsSeriesPlotOptions setAnimation(Integer animation) {
@@ -575,7 +576,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getAnimationLimit() {
-        return animationLimit;
+        return this.animationLimit = getInstanceOf(Integer.class, this.animationLimit);
     }
 
     public HighchartsSeriesPlotOptions setAnimationLimit(Integer animationLimit) {
@@ -584,7 +585,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getBoostBlending() {
-        return boostBlending;
+        return this.boostBlending = getInstanceOf(String.class, this.boostBlending);
     }
 
     public HighchartsSeriesPlotOptions setBoostBlending(String boostBlending) {
@@ -593,7 +594,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getClassName() {
-        return className;
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public HighchartsSeriesPlotOptions setClassName(String className) {
@@ -602,7 +603,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getClip() {
-        return clip;
+        return this.clip = getInstanceOf(Boolean.class, this.clip);
     }
 
     public HighchartsSeriesPlotOptions setClip(Boolean clip) {
@@ -611,7 +612,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public HighchartsColor getColor() {
-        return color;
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public HighchartsSeriesPlotOptions setColor(HighchartsColor color) {
@@ -625,7 +626,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public ColorAxis getColorAxis() {
-        return colorAxis;
+        return this.colorAxis = getInstanceOf(ColorAxis.class, this.colorAxis);
     }
 
     public HighchartsSeriesPlotOptions setColorAxis(ColorAxis colorAxis) {
@@ -634,7 +635,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getColorIndex() {
-        return colorIndex;
+        return this.colorIndex = getInstanceOf(Integer.class, this.colorIndex);
     }
 
     public HighchartsSeriesPlotOptions setColorIndex(Integer colorIndex) {
@@ -643,7 +644,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getColorKey() {
-        return colorKey;
+        return this.colorKey = getInstanceOf(String.class, this.colorKey);
     }
 
     public HighchartsSeriesPlotOptions setColorKey(String colorKey) {
@@ -652,7 +653,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getConnectEnds() {
-        return connectEnds;
+        return this.connectEnds = getInstanceOf(Boolean.class, this.connectEnds);
     }
 
     public HighchartsSeriesPlotOptions setConnectEnds(Boolean connectEnds) {
@@ -661,7 +662,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getConnectNulls() {
-        return connectNulls;
+        return this.connectNulls = getInstanceOf(Boolean.class, this.connectNulls);
     }
 
     public HighchartsSeriesPlotOptions setConnectNulls(Boolean connectNulls) {
@@ -670,7 +671,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getCropThreshold() {
-        return cropThreshold;
+        return this.cropThreshold = getInstanceOf(Integer.class, this.cropThreshold);
     }
 
     public HighchartsSeriesPlotOptions setCropThreshold(Integer cropThreshold) {
@@ -679,7 +680,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public HighchartsCursorValue getCursor() {
-        return cursor;
+        return this.cursor = getInstanceOf(HighchartsCursorValue.class, this.cursor);
     }
 
     public HighchartsSeriesPlotOptions setCursor(HighchartsCursorValue cursor) {
@@ -688,7 +689,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public HighchartsDashStyleValue getDashStyle() {
-        return dashStyle;
+        return this.dashStyle = getInstanceOf(HighchartsDashStyleValue.class, this.dashStyle);
     }
 
     public HighchartsSeriesPlotOptions setDashStyle(HighchartsDashStyleValue dashStyle) {
@@ -697,7 +698,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public DataLabel getDataLabels() {
-        return dataLabels;
+        return this.dataLabels = getInstanceOf(DataLabel.class, this.dataLabels);
     }
 
     public HighchartsSeriesPlotOptions setDataLabels(DataLabel dataLabels) {
@@ -706,7 +707,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public DataSorting getDataSorting() {
-        return dataSorting;
+        return this.dataSorting = getInstanceOf(DataSorting.class, this.dataSorting);
     }
 
     public HighchartsSeriesPlotOptions setDataSorting(DataSorting dataSorting) {
@@ -715,7 +716,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getDescription() {
-        return description;
+        return this.description = getInstanceOf(String.class, this.description);
     }
 
     public HighchartsSeriesPlotOptions setDescription(String description) {
@@ -724,7 +725,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public DragDrop getDragDrop() {
-        return dragDrop;
+        return this.dragDrop = getInstanceOf(DragDrop.class, this.dragDrop);
     }
 
     public HighchartsSeriesPlotOptions setDragDrop(DragDrop dragDrop) {
@@ -733,7 +734,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getEnableMouseTracking() {
-        return enableMouseTracking;
+        return this.enableMouseTracking = getInstanceOf(Boolean.class, this.enableMouseTracking);
     }
 
     public HighchartsSeriesPlotOptions setEnableMouseTracking(Boolean enableMouseTracking) {
@@ -742,7 +743,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public SeriesEvents getEvents() {
-        return events;
+        return this.events = getInstanceOf(SeriesEvents.class, this.events);
     }
 
     public HighchartsSeriesPlotOptions setEvents(SeriesEvents events) {
@@ -751,7 +752,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getFindNearestPointBy() {
-        return findNearestPointBy;
+        return this.findNearestPointBy = getInstanceOf(String.class, this.findNearestPointBy);
     }
 
     public HighchartsSeriesPlotOptions setFindNearestPointBy(String findNearestPointBy) {
@@ -760,7 +761,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getGetExtremesFromAll() {
-        return getExtremesFromAll;
+        return this.getExtremesFromAll = getInstanceOf(Boolean.class, this.getExtremesFromAll);
     }
 
     public HighchartsSeriesPlotOptions setGetExtremesFromAll(Boolean getExtremesFromAll) {
@@ -769,7 +770,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getIncludeInDataExport() {
-        return includeInDataExport;
+        return this.includeInDataExport = getInstanceOf(Boolean.class, this.includeInDataExport);
     }
 
     public HighchartsSeriesPlotOptions setIncludeInDataExport(Boolean includeInDataExport) {
@@ -778,7 +779,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String[] getKeys() {
-        return keys;
+        return this.keys = getInstanceOf(String[].class, this.keys);
     }
 
     public HighchartsSeriesPlotOptions setKeys(String[] keys) {
@@ -787,7 +788,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public SeriesLabelOptions getLabel() {
-        return label;
+        return this.label = getInstanceOf(SeriesLabelOptions.class, this.label);
     }
 
     public HighchartsSeriesPlotOptions setLabel(SeriesLabelOptions label) {
@@ -796,7 +797,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public HighchartsSeriesLinecapValue getLinecap() {
-        return linecap;
+        return this.linecap = getInstanceOf(HighchartsSeriesLinecapValue.class, this.linecap);
     }
 
     public HighchartsSeriesPlotOptions setLinecap(HighchartsSeriesLinecapValue linecap) {
@@ -805,7 +806,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getLineWidth() {
-        return lineWidth;
+        return this.lineWidth = getInstanceOf(Integer.class, this.lineWidth);
     }
 
     public HighchartsSeriesPlotOptions setLineWidth(Integer lineWidth) {
@@ -814,7 +815,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getLinkedTo() {
-        return linkedTo;
+        return this.linkedTo = getInstanceOf(String.class, this.linkedTo);
     }
 
     public HighchartsSeriesPlotOptions setLinkedTo(String linkedTo) {
@@ -823,7 +824,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Marker getMarker() {
-        return marker;
+        return this.marker = getInstanceOf(Marker.class, this.marker);
     }
 
     public HighchartsSeriesPlotOptions setMarker(Marker marker) {
@@ -832,7 +833,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public HighchartsColor getNegativeColor() {
-        return negativeColor;
+        return this.negativeColor = getInstanceOf(HighchartsColor.class, this.negativeColor);
     }
 
     public HighchartsSeriesPlotOptions setNegativeColor(HighchartsColor negativeColor) {
@@ -841,7 +842,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getOpacity() {
-        return opacity;
+        return this.opacity = getInstanceOf(Integer.class, this.opacity);
     }
 
     public HighchartsSeriesPlotOptions setOpacity(Integer opacity) {
@@ -850,7 +851,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Point getPoint() {
-        return point;
+        return this.point = getInstanceOf(Point.class, this.point);
     }
 
     public HighchartsSeriesPlotOptions setPoint(Point point) {
@@ -859,7 +860,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public HighchartsCallbackFunction getPointDescriptionFormatter() {
-        return pointDescriptionFormatter;
+        return this.pointDescriptionFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.pointDescriptionFormatter);
     }
 
     public HighchartsSeriesPlotOptions setPointDescriptionFormatter(HighchartsCallbackFunction pointDescriptionFormatter) {
@@ -868,7 +869,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getPointInterval() {
-        return pointInterval;
+        return this.pointInterval = getInstanceOf(Integer.class, this.pointInterval);
     }
 
     public HighchartsSeriesPlotOptions setPointInterval(Integer pointInterval) {
@@ -877,7 +878,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getPointIntervalUnit() {
-        return pointIntervalUnit;
+        return this.pointIntervalUnit = getInstanceOf(String.class, this.pointIntervalUnit);
     }
 
     public HighchartsSeriesPlotOptions setPointIntervalUnit(String pointIntervalUnit) {
@@ -886,7 +887,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public PointPlacement getPointPlacement() {
-        return pointPlacement;
+        return this.pointPlacement = getInstanceOf(PointPlacement.class, this.pointPlacement);
     }
 
     public HighchartsSeriesPlotOptions setPointPlacement(PointPlacement pointPlacement) {
@@ -895,7 +896,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getPointStart() {
-        return pointStart;
+        return this.pointStart = getInstanceOf(Integer.class, this.pointStart);
     }
 
     public HighchartsSeriesPlotOptions setPointStart(Integer pointStart) {
@@ -904,7 +905,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getSelected() {
-        return selected;
+        return this.selected = getInstanceOf(Boolean.class, this.selected);
     }
 
     public HighchartsSeriesPlotOptions setSelected(Boolean selected) {
@@ -913,7 +914,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public HighchartsShadowOptionsObject getShadow() {
-        return shadow;
+        return this.shadow = getInstanceOf(HighchartsShadowOptionsObject.class, this.shadow);
     }
 
     public HighchartsSeriesPlotOptions setShadow(HighchartsShadowOptionsObject shadow) {
@@ -922,7 +923,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getShowCheckbox() {
-        return showCheckbox;
+        return this.showCheckbox = getInstanceOf(Boolean.class, this.showCheckbox);
     }
 
     public HighchartsSeriesPlotOptions setShowCheckbox(Boolean showCheckbox) {
@@ -931,7 +932,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getShowInLegend() {
-        return showInLegend;
+        return this.showInLegend = getInstanceOf(Boolean.class, this.showInLegend);
     }
 
     public HighchartsSeriesPlotOptions setShowInLegend(Boolean showInLegend) {
@@ -940,7 +941,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getSkipKeyboardNavigation() {
-        return skipKeyboardNavigation;
+        return this.skipKeyboardNavigation = getInstanceOf(Boolean.class, this.skipKeyboardNavigation);
     }
 
     public HighchartsSeriesPlotOptions setSkipKeyboardNavigation(Boolean skipKeyboardNavigation) {
@@ -949,7 +950,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getSoftThreshold() {
-        return softThreshold;
+        return this.softThreshold = getInstanceOf(Boolean.class, this.softThreshold);
     }
 
     public HighchartsSeriesPlotOptions setSoftThreshold(Boolean softThreshold) {
@@ -958,7 +959,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getStacking() {
-        return stacking;
+        return this.stacking = getInstanceOf(String.class, this.stacking);
     }
 
     public HighchartsSeriesPlotOptions setStacking(String stacking) {
@@ -967,7 +968,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public States getStates() {
-        return states;
+        return this.states = getInstanceOf(States.class, this.states);
     }
 
     public HighchartsSeriesPlotOptions setStates(States states) {
@@ -976,7 +977,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getStep() {
-        return step;
+        return this.step = getInstanceOf(String.class, this.step);
     }
 
     public HighchartsSeriesPlotOptions setStep(String step) {
@@ -985,7 +986,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getStickyTracking() {
-        return stickyTracking;
+        return this.stickyTracking = getInstanceOf(Boolean.class, this.stickyTracking);
     }
 
     public HighchartsSeriesPlotOptions setStickyTracking(Boolean stickyTracking) {
@@ -994,7 +995,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getThreshold() {
-        return threshold;
+        return this.threshold = getInstanceOf(Integer.class, this.threshold);
     }
 
     public HighchartsSeriesPlotOptions setThreshold(Integer threshold) {
@@ -1003,7 +1004,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Tooltip getTooltip() {
-        return tooltip;
+        return this.tooltip = getInstanceOf(Tooltip.class, this.tooltip);
     }
 
     public HighchartsSeriesPlotOptions setTooltip(Tooltip tooltip) {
@@ -1012,7 +1013,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Integer getTurboThreshold() {
-        return turboThreshold;
+        return this.turboThreshold = getInstanceOf(Integer.class, this.turboThreshold);
     }
 
     public HighchartsSeriesPlotOptions setTurboThreshold(Integer turboThreshold) {
@@ -1021,7 +1022,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public Boolean getVisible() {
-        return visible;
+        return this.visible = getInstanceOf(Boolean.class, this.visible);
     }
 
     public HighchartsSeriesPlotOptions setVisible(Boolean visible) {
@@ -1030,7 +1031,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public String getZoneAxis() {
-        return zoneAxis;
+        return this.zoneAxis = getInstanceOf(String.class, this.zoneAxis);
     }
 
     public HighchartsSeriesPlotOptions setZoneAxis(String zoneAxis) {
@@ -1039,7 +1040,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     public ZoneOptions[] getZones() {
-        return zones;
+        return this.zones = getInstanceOf(ZoneOptions[].class, this.zones);
     }
 
     public HighchartsSeriesPlotOptions setZones(ZoneOptions[] zones) {
@@ -1049,14 +1050,13 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
 
     @Override
     public String deflateField(Field field, int tabLevel) {
-        String ss = DrosteDeflater.super.delegateFieldDeflation(field, "shadow", shadow==null,
+        String ss = DrosteDeflater.super.delegateFieldDeflation(field, "shadow", shadow == null,
                 () -> {
                     String s = shadow.deflateFields();
-                    if (s==null || s.isEmpty()) {
+                    if (s == null || s.isEmpty()) {
                         return DrosteDeflater.getTabString(tabLevel) + "shadow: true,\n";
-                    }
-                    else return s;
+                    } else return s;
                 });
-        return ss!=null && ss.equals(RTS)? DrosteDeflater.super.deflateField(field, tabLevel) : ss;
+        return ss != null && ss.equals(RTS) ? DrosteDeflater.super.deflateField(field, tabLevel) : ss;
     }
 }

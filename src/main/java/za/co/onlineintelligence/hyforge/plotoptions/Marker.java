@@ -8,9 +8,12 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ColorAxisMarker HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class Marker implements Serializable, DrosteDeflater {
@@ -21,38 +24,40 @@ public class Marker implements Serializable, DrosteDeflater {
 
     /**
      * Enable or disable the point marker. If `undefined`, the markers
-     are hidden when the data is dense, and shown for more widespread
-     data points.
+     * are hidden when the data is dense, and shown for more widespread
+     * data points.
      */
     private Boolean enabled;
 
     /**
      * The threshold for how dense the point markers should be before
-     they are hidden, given that `enabled` is not defined. The number
-     indicates the horizontal distance between the two closest points
-     in the series, as multiples of the `marker.radius`. In other
-     words, the default value of 2 means points are hidden if
-     overlapping horizontally.
+     * they are hidden, given that `enabled` is not defined. The number
+     * indicates the horizontal distance between the two closest points
+     * in the series, as multiples of the `marker.radius`. In other
+     * words, the default value of 2 means points are hidden if
+     * overlapping horizontally.
+     *
      * @since 6.0.5
      */
     private Integer enabledThreshold;
 
     /**
      * The fill color of the point marker. When `undefined`, the series'
-     or point's color is used.
+     * or point's color is used.
      */
     private HighchartsColor fillColor;
 
     /**
      * Image markers only. Set the image width explicitly. When using
-     this option, a `width` must also be set.
+     * this option, a `width` must also be set.
+     *
      * @since 4.0.4
      */
     private Integer height;
 
     /**
      * The color of the point marker's outline. When `undefined`, the
-     series' or point's color is used.
+     * series' or point's color is used.
      */
     private HighchartsColor lineColor;
 
@@ -73,24 +78,25 @@ public class Marker implements Serializable, DrosteDeflater {
 
     /**
      * A predefined shape or symbol for the marker. When undefined, the
-     symbol is pulled from options.symbols. Other possible values are
-     `'circle'`, `'square'`,`'diamond'`, `'triangle'` and
-     `'triangle-down'`.
-
-     Additionally, the URL to a graphic can be given on this form:
-     `'url(graphic.png)'`. Note that for the image to be applied to
-     exported charts, its URL needs to be accessible by the export
-     server.
-
-     Custom callbacks for symbol path generation can also be added to
-     `Highcharts.SVGRenderer.prototype.symbols`. The callback is then
-     used by its method name, as shown in the demo.
+     * symbol is pulled from options.symbols. Other possible values are
+     * `'circle'`, `'square'`,`'diamond'`, `'triangle'` and
+     * `'triangle-down'`.
+     * <p>
+     * Additionally, the URL to a graphic can be given on this form:
+     * `'url(graphic.png)'`. Note that for the image to be applied to
+     * exported charts, its URL needs to be accessible by the export
+     * server.
+     * <p>
+     * Custom callbacks for symbol path generation can also be added to
+     * `Highcharts.SVGRenderer.prototype.symbols`. The callback is then
+     * used by its method name, as shown in the demo.
      */
     private String symbol;
 
     /**
      * Image markers only. Set the image width explicitly. When using
-     this option, a `height` must also be set.
+     * this option, a `height` must also be set.
+     *
      * @since 4.0.4
      */
     private Integer width;
@@ -99,7 +105,7 @@ public class Marker implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public boolean getEnabled() {
-        return this.enabled;
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public Marker setEnabled(boolean enabled) {
@@ -108,7 +114,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public int getEnabledThreshold() {
-        return this.enabledThreshold;
+        return this.enabledThreshold = getInstanceOf(int.class, this.enabledThreshold);
     }
 
     public Marker setEnabledThreshold(int enabledThreshold) {
@@ -117,7 +123,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getFillColor() {
-        return this.fillColor;
+        return this.fillColor = getInstanceOf(HighchartsColor.class, this.fillColor);
     }
 
     public Marker setFillColor(HighchartsColor fillColor) {
@@ -126,7 +132,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public int getHeight() {
-        return this.height;
+        return this.height = getInstanceOf(int.class, this.height);
     }
 
     public Marker setHeight(int height) {
@@ -135,7 +141,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getLineColor() {
-        return this.lineColor;
+        return this.lineColor = getInstanceOf(HighchartsColor.class, this.lineColor);
     }
 
     public Marker setLineColor(HighchartsColor lineColor) {
@@ -144,7 +150,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public int getLineWidth() {
-        return this.lineWidth;
+        return this.lineWidth = getInstanceOf(int.class, this.lineWidth);
     }
 
     public Marker setLineWidth(int lineWidth) {
@@ -153,7 +159,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public int getRadius() {
-        return this.radius;
+        return this.radius = getInstanceOf(int.class, this.radius);
     }
 
     public Marker setRadius(int radius) {
@@ -162,7 +168,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public States getStates() {
-        return this.states;
+        return this.states = getInstanceOf(States.class, this.states);
     }
 
     public Marker setStates(States states) {
@@ -171,7 +177,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public String getSymbol() {
-        return this.symbol;
+        return this.symbol = getInstanceOf(String.class, this.symbol);
     }
 
     public Marker setSymbol(String symbol) {
@@ -180,7 +186,7 @@ public class Marker implements Serializable, DrosteDeflater {
     }
 
     public int getWidth() {
-        return this.width;
+        return this.width = getInstanceOf(int.class, this.width);
     }
 
     public Marker setWidth(int width) {

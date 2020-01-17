@@ -5,6 +5,8 @@ package za.co.onlineintelligence.hyforge.plotoptions;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Inactive HighchartsAPI Class
@@ -32,7 +34,7 @@ public class Inactive implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Integer getAnimation() {
-        return this.animation;
+        return this.animation = getInstanceOf(Integer.class, this.animation);
     }
 
     public Inactive setAnimation(Integer animation) {
@@ -41,7 +43,7 @@ public class Inactive implements Serializable {
     }
 
     public int getOpacity() {
-        return this.opacity;
+        return this.opacity = getInstanceOf(int.class, this.opacity);
     }
 
     public Inactive setOpacity(int opacity) {

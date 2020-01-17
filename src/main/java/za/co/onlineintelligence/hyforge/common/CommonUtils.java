@@ -1,5 +1,7 @@
 package za.co.onlineintelligence.hyforge.common;
 
+import com.google.gson.JsonElement;
+
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.Arrays;

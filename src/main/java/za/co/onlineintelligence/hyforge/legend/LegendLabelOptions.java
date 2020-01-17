@@ -4,14 +4,18 @@ package za.co.onlineintelligence.hyforge.legend;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsAlignValue;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * LegendLabelOptions HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class LegendLabelOptions implements Serializable, DrosteDeflater {
@@ -22,61 +26,69 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
 
     /**
      * The alignment of the labels compared to the bubble
-     legend. Can be one of `left`, `center` or `right`.
+     * legend. Can be one of `left`, `center` or `right`.
+     *
      * @since 7.0.0
      */
     private HighchartsAlignValue align;
 
     /**
      * Whether to allow data labels to overlap.
+     *
      * @since 7.0.0
      */
     private Boolean allowOverlap;
 
     /**
      * An additional class name to apply to the bubble legend
-     label graphical elements. This option does not replace
-     default class names of the graphical element.
+     * label graphical elements. This option does not replace
+     * default class names of the graphical element.
+     *
      * @since 7.0.0
      */
     private String className;
 
     /**
      * A [format string](http://docs.highcharts.com/#formatting)
-     for the bubble legend labels. Available variables are the
-     same as for `formatter`.
+     * for the bubble legend labels. Available variables are the
+     * same as for `formatter`.
+     *
      * @since 7.0.0
      */
     private String format;
 
     /**
      * Available `this` properties are:
-
-     - `this.value`: The bubble value.
-
-     - `this.radius`: The radius of the bubble range.
-
-     - `this.center`: The center y position of the range.
+     * <p>
+     * - `this.value`: The bubble value.
+     * <p>
+     * - `this.radius`: The radius of the bubble range.
+     * <p>
+     * - `this.center`: The center y position of the range.
+     *
      * @since 7.0.0
      */
     private HighchartsCallbackFunction formatter;
 
     /**
      * CSS styles for the labels.
+     *
      * @since 7.0.0
      */
     private HighchartsCSS style;
 
     /**
      * The x position offset of the label relative to the
-     connector.
+     * connector.
+     *
      * @since 7.0.0
      */
     private Integer x;
 
     /**
      * The y position offset of the label relative to the
-     connector.
+     * connector.
+     *
      * @since 7.0.0
      */
     private Integer y;
@@ -85,7 +97,7 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsAlignValue getAlign() {
-        return this.align;
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public LegendLabelOptions setAlign(HighchartsAlignValue align) {
@@ -94,7 +106,7 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Boolean getAllowOverlap() {
-        return this.allowOverlap;
+        return this.allowOverlap = getInstanceOf(Boolean.class, this.allowOverlap);
     }
 
     public LegendLabelOptions setAllowOverlap(Boolean allowOverlap) {
@@ -103,7 +115,7 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return this.className;
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public LegendLabelOptions setClassName(String className) {
@@ -112,7 +124,7 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
     }
 
     public String getFormat() {
-        return this.format;
+        return this.format = getInstanceOf(String.class, this.format);
     }
 
     public LegendLabelOptions setFormat(String format) {
@@ -121,7 +133,7 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getFormatter() {
-        return this.formatter;
+        return this.formatter = getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
     }
 
     public LegendLabelOptions setFormatter(HighchartsCallbackFunction formatter) {
@@ -130,7 +142,7 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public LegendLabelOptions setStyle(HighchartsCSS style) {
@@ -139,7 +151,7 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getX() {
-        return this.x;
+        return this.x = getInstanceOf(Integer.class, this.x);
     }
 
     public LegendLabelOptions setX(Integer x) {
@@ -148,7 +160,7 @@ public class LegendLabelOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getY() {
-        return this.y;
+        return this.y = getInstanceOf(Integer.class, this.y);
     }
 
     public LegendLabelOptions setY(Integer y) {

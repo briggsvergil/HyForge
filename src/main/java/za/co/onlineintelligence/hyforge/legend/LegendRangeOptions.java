@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * LegendRangeOptions HighchartsAPI Class
@@ -50,7 +52,7 @@ public class LegendRangeOptions implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsColor getBorderColor() {
-        return this.borderColor;
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public LegendRangeOptions setBorderColor(HighchartsColor borderColor) {
@@ -59,7 +61,7 @@ public class LegendRangeOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getColor() {
-        return this.color;
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public LegendRangeOptions setColor(HighchartsColor color) {
@@ -68,7 +70,7 @@ public class LegendRangeOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getConnectorColor() {
-        return this.connectorColor;
+        return this.connectorColor = getInstanceOf(HighchartsColor.class, this.connectorColor);
     }
 
     public LegendRangeOptions setConnectorColor(HighchartsColor connectorColor) {
@@ -77,7 +79,7 @@ public class LegendRangeOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getValue() {
-        return this.value;
+        return this.value = getInstanceOf(Integer.class, this.value);
     }
 
     public LegendRangeOptions setValue(Integer value) {

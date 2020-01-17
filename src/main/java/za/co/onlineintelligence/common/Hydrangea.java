@@ -106,4 +106,95 @@ public class Hydrangea {
             {180.3, 73.2}, {167.6, 76.3}, {183.0, 65.9}, {183.0, 90.9}, {179.1, 89.1},
             {170.2, 62.3}, {177.8, 82.7}, {179.1, 79.1}, {190.5, 98.2}, {177.8, 84.1},
             {180.3, 83.2}, {180.3, 83.2}};
+
+    public String sTest = "{" +
+            "\"chart\":{" +
+            "\"height\":400," +
+            "\"renderTo\":\"graph-container-37450a8cef96ed3c90abd093deb369d7\"," +
+            "\"width\":1100," +
+            "\"zoomType\":\"x\"" +
+            "}," +
+            "\"credits\":{" +
+            "\"enabled\":false" +
+            "}," +
+            "\"exporting\":{" +
+            "\"buttons\":{" +
+            "\"contextButton\":{" +
+            "\"onclick\":function(){window.downloadSvg(this,m7rNrJ);}}," +
+            "\"url\":\"http\\\\x3A\\\\x2F\\\\x2Flocalhost\\\\x3A8081\\\\x2FCore\\\\x2FFileServlet\"" +
+            "}," +
+            "\"legend\":{" +
+            "\"align\":\"center\"," +
+            "\"borderRadius\":5," +
+            "\"borderWidth\":1," +
+            "\"enabled\":false," +
+            "\"itemStyle\":{" +
+            "\"fontWeight\":\"normal\"," +
+            "\"width\":\"150px\"" +
+            "}," +
+            "\"layout\":\"horizontal\"," +
+            "\"verticalAlign\":\"top\"," +
+            "\"x\":-10," +
+            "\"y\":15" +
+            "}," +
+            "\"plotOptions\":{" +
+            "\"column\":{" +
+            "\"dataLabels\":{" +
+            "\"enabled\":false" +
+            "}" +
+            "}" +
+            "}," +
+            "\"series\":{" +
+            "\"data\":[" +
+            "4.0," +
+            "1.0," +
+            "1.0," +
+            "1.0," +
+            "1.0," +
+            "1.0," +
+            "1.0," +
+            "8.0," +
+            "6.0," +
+            "4.0," +
+            "7.0," +
+            "2.0" +
+            "]," +
+            "\"name\":\"Default\"," +
+            "\"type\":\"column\"" +
+            "}," +
+            "\"subtitle\":{" +
+            "\"text\":\"\"" +
+            "}," +
+            "\"title\":{" +
+            "\"text\":\"\"" +
+            "}," +
+            "\"xAxis\":{" +
+            "\"categories\":[" +
+            "\"Alarm Type Level 3\"," +
+            "\"Brun\"," +
+            "\"Business\"," +
+            "\"Code black\"," +
+            "\"Code green\"," +
+            "\"Code red\"," +
+            "\"Code yellow\"," +
+            "\"Detected\"," +
+            "\"House\"," +
+            "\"Mental\"," +
+            "\"No Movement\"," +
+            "\"Secure\"" +
+            "]," +
+            "\"title\":{" +
+            "\"margin\":20," +
+            "\"text\":\"Simple Category\"" +
+            "}" +
+            "}," +
+            "\"yAxis\":{" +
+            "\"allowDecimals\":false," +
+            "\"min\":0.0," +
+            "\"title\":{" +
+            "\"margin\":20," +
+            "\"text\":\"Total\"" +
+            "}" +
+            "}" +
+            "}";
 }

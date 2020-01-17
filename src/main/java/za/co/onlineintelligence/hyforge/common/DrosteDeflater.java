@@ -42,6 +42,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getAllFields;
 public interface DrosteDeflater {
 
     String RTS = "$RTS$";
+    String QUOTE = "'";
 
     /**
      * Static method to return a string of tabs given a number of tabs to create.
@@ -107,20 +108,20 @@ public interface DrosteDeflater {
     default String deflateFields(boolean ignoreName, String nameDelegate, int tabLevel) {
 
         StringBuilder result = new StringBuilder();
-        String newLine = System.getProperty("line.separator");
-        String tab = getTabString(tabLevel);
+        String newLine = "";
+//        String newLine = System.getProperty("line.separator");
+//        String tab = getTabString(tabLevel);
+        String tab = "";
         if (nameDelegate != null) {
             String fieldType = ignoreName ?
                     nameDelegate +
                             (nameDelegate.length() > 0 ? ": " : "")
                     : this.getClass().getSimpleName().toLowerCase() + ": ";
+//            if(fieldType.length() > 0) fieldType = "\"" + fieldType + "\"";
             result.append(fieldType)
                     .append("{")
                     .append(newLine);
         }
-
-        //determine fields declared in this class only (no fields of superclass)
-//        Field[] fields = this.getClass().getDeclaredFields();
 
         //Get all fields from (this) and (super) recursively
         List<Field> fields = new ArrayList<>();
@@ -140,8 +141,8 @@ public interface DrosteDeflater {
             int k;
             do {
                 i = result.substring(0, j).lastIndexOf(",");
-                k = result.lastIndexOf("'");
-                j = k > 0 ? result.substring(0, k).lastIndexOf("'") : -1;
+                k = result.lastIndexOf(QUOTE);
+                j = k > 0 ? result.substring(0, k).lastIndexOf(QUOTE) : -1;
                 withinString = (i > 0) && (i > j) && (i < k);
             } while (withinString);
 
@@ -149,7 +150,7 @@ public interface DrosteDeflater {
                 result.deleteCharAt(i);
             }
         }
-        result.append(tab, 0, tab.length() - 2);
+//        result.append(tab, 0, tab.length() - 2);
         result.append(nameDelegate != null ? "}" : "");
 
         return result.toString();
@@ -167,9 +168,11 @@ public interface DrosteDeflater {
      */
     default String deflateField(Field field, int tabLevel) {
         StringBuilder result = new StringBuilder();
-        String newLine = System.getProperty("line.separator");
-        String tab = getTabString(tabLevel);
-        String fieldName = field.getName().replace('_', '-');
+        String newLine = "";
+//        String newLine = System.getProperty("line.separator");
+//        String tab = getTabString(tabLevel);
+        String tab = "";
+        String fieldName = QUOTE + field.getName().replace('_', '-') + QUOTE;
         try {
             //requires access to private field:
             field.setAccessible(true);
@@ -212,6 +215,7 @@ public interface DrosteDeflater {
                                     .append(Arrays.stream(arr)
                                             .filter(Objects::nonNull)
                                             .map(ff -> ff.deflateFields(true, "", tabLevel + 1))
+                                            .filter(Objects::nonNull)
                                             .collect(Collectors.joining(", ")))
                                     .append(arr.length < 2 ? "" : "]");
                         } else {
@@ -222,7 +226,7 @@ public interface DrosteDeflater {
                                 result.append(arr.length < 2 ? "" : "[")
                                         .append(Arrays.stream((String[]) f)
                                                 .filter(Objects::nonNull)
-                                                .map(s -> '\'' + s + '\'')
+                                                .map(s -> QUOTE + s + QUOTE)
                                                 .collect(Collectors.joining(", ")))
                                         .append(arr.length < 2 ? "" : "]");
                             } else {
@@ -245,9 +249,9 @@ public interface DrosteDeflater {
                         }
                     } else if (f instanceof HighchartsColorString) {
                         result.append(fieldName)
-                                .append(": '")
+                                .append(": ").append(QUOTE)
                                 .append(((HighchartsColorString) f).getColor())
-                                .append("'");
+                                .append(QUOTE);
                     } else {
                         //recurse and serialize all the fields within the subclass
                         result.append(((DrosteDeflater) f).deflateFields(true, fieldName, tabLevel + 1));
@@ -258,9 +262,9 @@ public interface DrosteDeflater {
                     result.append(": ");
                     //if the field is a string or an enum, surround value with single quotes.
                     if (field.getType() == String.class) {
-                        result.append("'").append(f).append("'");
+                        result.append(QUOTE).append(f).append(QUOTE);
                     } else if (f instanceof Enum) {
-                        result.append("'").append(f.toString().replace('_', '-')).append("'");
+                        result.append(QUOTE).append(f.toString().replace('_', '-')).append(QUOTE);
                     } else {
                         result.append(f);
                     }
@@ -417,7 +421,7 @@ public interface DrosteDeflater {
             fieldObj.addProperty("model", f.getName());
             fieldObj.addProperty("readonly", readonly);
 
-            if(inputString.equals("checklist")) {
+            if (inputString.equals("checklist")) {
                 JsonArray arr = new JsonArray();
                 for (Object o : type.getEnumConstants()) {
                     arr.add(o.toString());

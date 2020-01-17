@@ -3,6 +3,8 @@ package za.co.onlineintelligence.hyforge.exporting;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 public class HighchartsExportingMenuObject implements DrosteDeflater {
 
     public HighchartsExportingMenuObject() {
@@ -26,7 +28,7 @@ public class HighchartsExportingMenuObject implements DrosteDeflater {
     private String textKey;
 
     public HighchartsCallbackFunction getOnClick() {
-        return onClick;
+        return this.onClick = getInstanceOf(HighchartsCallbackFunction.class, this.onClick);
     }
 
     public HighchartsExportingMenuObject setOnClick(HighchartsCallbackFunction onClick) {
@@ -35,7 +37,7 @@ public class HighchartsExportingMenuObject implements DrosteDeflater {
     }
 
     public Boolean getSeperator() {
-        return seperator;
+        return this.seperator = getInstanceOf(Boolean.class, this.seperator);
     }
 
     public HighchartsExportingMenuObject setSeperator(Boolean seperator) {
@@ -44,7 +46,7 @@ public class HighchartsExportingMenuObject implements DrosteDeflater {
     }
 
     public String getText() {
-        return text;
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public HighchartsExportingMenuObject setText(String text) {
@@ -53,7 +55,7 @@ public class HighchartsExportingMenuObject implements DrosteDeflater {
     }
 
     public String getTextKey() {
-        return textKey;
+        return this.textKey = getInstanceOf(String.class, this.textKey);
     }
 
     public HighchartsExportingMenuObject setTextKey(String textKey) {

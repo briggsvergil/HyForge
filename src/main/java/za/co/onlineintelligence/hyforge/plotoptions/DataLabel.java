@@ -10,6 +10,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.*;
 import za.co.onlineintelligence.hyforge.common.enums.*;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * DataLabels HighchartsAPI Class
  *
@@ -291,7 +293,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartsAlignValue getAlign() {
-        return this.align;
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public DataLabel setAlign(HighchartsAlignValue align) {
@@ -300,7 +302,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public boolean getAllowOverlap() {
-        return this.allowOverlap;
+        return this.allowOverlap = getInstanceOf(boolean.class, this.allowOverlap);
     }
 
     public DataLabel setAllowOverlap(boolean allowOverlap) {
@@ -309,7 +311,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBackgroundColor() {
-        return this.backgroundColor;
+        return this.backgroundColor = getInstanceOf(HighchartsColor.class, this.backgroundColor);
     }
 
     public DataLabel setBackgroundColor(HighchartsColor backgroundColor) {
@@ -318,7 +320,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getBorderColor() {
-        return this.borderColor;
+        return this.borderColor = getInstanceOf(HighchartsColor.class, this.borderColor);
     }
 
     public DataLabel setBorderColor(HighchartsColor borderColor) {
@@ -327,7 +329,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public int getBorderRadius() {
-        return this.borderRadius;
+        return this.borderRadius = getInstanceOf(int.class, this.borderRadius);
     }
 
     public DataLabel setBorderRadius(int borderRadius) {
@@ -336,7 +338,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public int getBorderWidth() {
-        return this.borderWidth;
+        return this.borderWidth = getInstanceOf(int.class, this.borderWidth);
     }
 
     public DataLabel setBorderWidth(int borderWidth) {
@@ -345,7 +347,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public String getClassName() {
-        return this.className;
+        return this.className = getInstanceOf(String.class, this.className);
     }
 
     public DataLabel setClassName(String className) {
@@ -354,7 +356,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColor getColor() {
-        return this.color;
+        return this.color = getInstanceOf(HighchartsColor.class, this.color);
     }
 
     public DataLabel setColor(HighchartsColor color) {
@@ -363,7 +365,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public boolean getCrop() {
-        return this.crop;
+        return this.crop = getInstanceOf(boolean.class, this.crop);
     }
 
     public DataLabel setCrop(boolean crop) {
@@ -372,7 +374,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public boolean getDefer() {
-        return this.defer;
+        return this.defer = getInstanceOf(boolean.class, this.defer);
     }
 
     public DataLabel setDefer(boolean defer) {
@@ -381,7 +383,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public boolean getEnabled() {
-        return this.enabled;
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
     public DataLabel setEnabled(boolean enabled) {
@@ -390,7 +392,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public Filter getFilter() {
-        return this.filter;
+        return this.filter = getInstanceOf(Filter.class, this.filter);
     }
 
     public DataLabel setFilter(Filter filter) {
@@ -399,7 +401,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public String getFormat() {
-        return this.format;
+        return this.format = getInstanceOf(String.class, this.format);
     }
 
     public DataLabel setFormat(String format) {
@@ -408,7 +410,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getFormatter() {
-        return this.formatter;
+        return this.formatter = getInstanceOf(HighchartsCallbackFunction.class, this.formatter);
     }
 
     public DataLabel setFormatter(HighchartsCallbackFunction formatter) {
@@ -417,7 +419,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public boolean getInside() {
-        return this.inside;
+        return this.inside = getInstanceOf(boolean.class, this.inside);
     }
 
     public DataLabel setInside(boolean inside) {
@@ -426,7 +428,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public String getNullFormat() {
-        return this.nullFormat;
+        return this.nullFormat = getInstanceOf(String.class, this.nullFormat);
     }
 
     public DataLabel setNullFormat(String nullFormat) {
@@ -435,7 +437,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCallbackFunction getNullFormatter() {
-        return this.nullFormatter;
+        return this.nullFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.nullFormatter);
     }
 
     public DataLabel setNullFormatter(HighchartsCallbackFunction nullFormatter) {
@@ -444,7 +446,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsDataLabelsOverflowValue getOverflow() {
-        return this.overflow;
+        return this.overflow = getInstanceOf(HighchartsDataLabelsOverflowValue.class, this.overflow);
     }
 
     public DataLabel setOverflow(HighchartsDataLabelsOverflowValue overflow) {
@@ -453,7 +455,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public int getPadding() {
-        return this.padding;
+        return this.padding = getInstanceOf(int.class, this.padding);
     }
 
     public DataLabel setPadding(int padding) {
@@ -462,7 +464,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAlignValue getPosition() {
-        return this.position;
+        return this.position = getInstanceOf(HighchartsAlignValue.class, this.position);
     }
 
     public DataLabel setPosition(HighchartsAlignValue position) {
@@ -471,7 +473,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public int getRotation() {
-        return this.rotation;
+        return this.rotation = getInstanceOf(int.class, this.rotation);
     }
 
     public DataLabel setRotation(int rotation) {
@@ -480,7 +482,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsShadowOptionsObject getShadow() {
-        return this.shadow;
+        return this.shadow = getInstanceOf(HighchartsShadowOptionsObject.class, this.shadow);
     }
 
     public DataLabel setShadow(HighchartsShadowOptionsObject shadow) {
@@ -489,7 +491,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public String getShape() {
-        return this.shape;
+        return this.shape = getInstanceOf(String.class, this.shape);
     }
 
     public DataLabel setShape(String shape) {
@@ -498,7 +500,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public DataLabel setStyle(HighchartsCSS style) {
@@ -507,7 +509,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public TextPath getTextPath() {
-        return this.textPath;
+        return this.textPath = getInstanceOf(TextPath.class, this.textPath);
     }
 
     public DataLabel setTextPath(TextPath textPath) {
@@ -516,7 +518,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public boolean getUseHTML() {
-        return this.useHTML;
+        return this.useHTML = getInstanceOf(boolean.class, this.useHTML);
     }
 
     public DataLabel setUseHTML(boolean useHTML) {
@@ -525,7 +527,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return this.verticalAlign;
+        return this.verticalAlign = getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public DataLabel setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -534,7 +536,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public int getX() {
-        return this.x;
+        return this.x = getInstanceOf(int.class, this.x);
     }
 
     public DataLabel setX(int x) {
@@ -543,7 +545,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public int getY() {
-        return this.y;
+        return this.y = getInstanceOf(int.class, this.y);
     }
 
     public DataLabel setY(int y) {
@@ -552,7 +554,7 @@ public class DataLabel implements Serializable, DrosteDeflater {
     }
 
     public int getZ() {
-        return this.z;
+        return this.z = getInstanceOf(int.class, this.z);
     }
 
     public DataLabel setZ(int z) {

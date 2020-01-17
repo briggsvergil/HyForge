@@ -3,15 +3,14 @@ package za.co.onlineintelligence.hyforge.chart;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
- *
  * @author Sean Briggs
  */
-public class ScrollablePlotArea implements Serializable
-{
+public class ScrollablePlotArea implements Serializable {
 
-    public ScrollablePlotArea()
-    {
+    public ScrollablePlotArea() {
     }
 
     /**
@@ -58,64 +57,53 @@ public class ScrollablePlotArea implements Serializable
     /*
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
-    public int getMinHeight()
-    {
-        return this.minHeight;
+    public int getMinHeight() {
+        return this.minHeight = getInstanceOf(int.class, this.minHeight);
     }
 
-    public ScrollablePlotArea setMinHeight(int minHeight)
-    {
+    public ScrollablePlotArea setMinHeight(int minHeight) {
         this.minHeight = minHeight;
         return this;
     }
 
-    public int getMinWidth()
-    {
-        return this.minWidth;
+    public int getMinWidth() {
+        return this.minWidth = getInstanceOf(int.class, this.minWidth);
     }
 
-    public ScrollablePlotArea setMinWidth(int minWidth)
-    {
+    public ScrollablePlotArea setMinWidth(int minWidth) {
         this.minWidth = minWidth;
         return this;
     }
 
-    public int getOpacity()
-    {
-        return this.opacity;
+    public int getOpacity() {
+        return this.opacity = getInstanceOf(int.class, this.opacity);
     }
 
-    public ScrollablePlotArea setOpacity(int opacity)
-    {
+    public ScrollablePlotArea setOpacity(int opacity) {
         this.opacity = opacity;
         return this;
     }
 
-    public int getScrollPositionX()
-    {
-        return this.scrollPositionX;
+    public int getScrollPositionX() {
+        return this.scrollPositionX = getInstanceOf(int.class, this.scrollPositionX);
     }
 
-    public ScrollablePlotArea setScrollPositionX(int scrollPositionX)
-    {
+    public ScrollablePlotArea setScrollPositionX(int scrollPositionX) {
         this.scrollPositionX = scrollPositionX;
         return this;
     }
 
-    public int getScrollPositionY()
-    {
-        return this.scrollPositionY;
+    public int getScrollPositionY() {
+        return this.scrollPositionY = getInstanceOf(int.class, this.scrollPositionY);
     }
 
-    public ScrollablePlotArea setScrollPositionY(int scrollPositionY)
-    {
+    public ScrollablePlotArea setScrollPositionY(int scrollPositionY) {
         this.scrollPositionY = scrollPositionY;
         return this;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int hash = 3;
         hash = 17 * hash + Objects.hashCode(this.minHeight);
         hash = 17 * hash + Objects.hashCode(this.minWidth);
@@ -127,8 +115,7 @@ public class ScrollablePlotArea implements Serializable
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return '{'
                 + "minHeight:" + minHeight
                 + ", minWidth:" + minWidth

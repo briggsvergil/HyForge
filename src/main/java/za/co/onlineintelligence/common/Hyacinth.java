@@ -251,23 +251,23 @@ public class Hyacinth {
 
     public static void main(String[] args) {
         Hyacinth instance = new Hyacinth();
-////        instance.createBasicBarChart("Basic Bar Chart Using Highcharts");
-////        instance.createScatterPlot("Height Versus Weight of 507 Individuals by Gender");
-//        instance.createComboScatterAndLine();
-//        String s = instance.forge.hydrate();
+//        instance.createBasicBarChart("Basic Bar Chart Using Highcharts");
+//        instance.createScatterPlot("Height Versus Weight of 507 Individuals by Gender");
+        instance.createComboScatterAndLine();
+        String s = instance.forge.hydrate();
 //        JsonElement vueFormGenerator = DrosteDeflater.deIonize(HighchartsSeriesPlotOptions.class, "");
 //        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 //        String gsonS = gson.toJson(vueFormGenerator);
-////        System.out.println("Vue Forms Generator: " + gsonS);
+//        System.out.println("Vue Forms Generator: " + gsonS);
 //        PostRequest(s);
 //        System.out.println("Chart data sent to Node Server at: " + URL);
-//        System.out.println("CHART TEST: \n" + s);
-        float soIn = instance.getInt();
-        System.out.println("VALUE: [" + soIn + "]");
+        System.out.println("CHART TEST: \n" + s);
+//        float soIn = instance.getInt();
+//        System.out.println("VALUE: [" + soIn + "]");
 
     }
 
-    private float getInt() {
-        return this.otherForge = CommonUtils.getInstanceOf(float.class, this.otherForge);
-    }
+//    private float getInt() {
+//        return this.otherForge = CommonUtils.getInstanceOf(float.class, this.otherForge);
+//    }
 }

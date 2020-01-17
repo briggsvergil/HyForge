@@ -3,15 +3,14 @@ package za.co.onlineintelligence.hyforge.chart;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
- *
  * @author Sean Briggs
  */
-public class Panning implements Serializable
-{
+public class Panning implements Serializable {
 
-    public Panning()
-    {
+    public Panning() {
     }
 
     /**
@@ -28,31 +27,26 @@ public class Panning implements Serializable
     /*
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
-    public boolean getEnabled()
-    {
-        return this.enabled;
+    public boolean getEnabled() {
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
-    public Panning setEnabled(boolean enabled)
-    {
+    public Panning setEnabled(boolean enabled) {
         this.enabled = enabled;
         return this;
     }
 
-    public String getType()
-    {
-        return this.type;
+    public String getType() {
+        return this.type = getInstanceOf(String.class, this.type);
     }
 
-    public Panning setType(String type)
-    {
+    public Panning setType(String type) {
         this.type = type;
         return this;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int hash = 3;
         hash = 17 * hash + Objects.hashCode(this.enabled);
         hash = 17 * hash + Objects.hashCode(this.type);
@@ -61,8 +55,7 @@ public class Panning implements Serializable
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return '{'
                 + "enabled:" + enabled
                 + ", type:" + type

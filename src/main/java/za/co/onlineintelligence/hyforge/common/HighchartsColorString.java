@@ -1,6 +1,6 @@
 package za.co.onlineintelligence.hyforge.common;
 
-import org.javatuples.Pair;
+import com.google.gson.JsonElement;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 /**
  * @author Sean
  */
-public class HighchartsColorString implements Serializable, HighchartsColor, DrosteDeflater {
+public class HighchartsColorString implements Serializable, HighchartsColor {
 
     private String color;
 
@@ -32,10 +32,4 @@ public class HighchartsColorString implements Serializable, HighchartsColor, Dro
         return "\"" + color + "\"";
     }
 
-    @Override
-    public String deflateField(Field field, int tabLevel) {
-        String s = DrosteDeflater.super.delegateFieldDeflation(field, "color", color==null,
-                () -> color);
-        return s!=null && s.equals(RTS)? DrosteDeflater.super.deflateField(field, tabLevel) : s;
-    }
 }

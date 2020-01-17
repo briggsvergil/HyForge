@@ -1,10 +1,11 @@
 package za.co.onlineintelligence.hyforge.series;
 
-import org.javatuples.Pair;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
 import java.lang.reflect.Field;
 import java.time.ZonedDateTime;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 /**
  * Class to create an X or Y point as a datetime object.
@@ -15,6 +16,7 @@ public class HighchartsDateTimePoint implements DrosteDeflater {
     public HighchartsDateTimePoint() {
 
     }
+
     public HighchartsDateTimePoint(ZonedDateTime dateTime) {
         this.dateTime = dateTime;
     }
@@ -22,7 +24,7 @@ public class HighchartsDateTimePoint implements DrosteDeflater {
     private ZonedDateTime dateTime;
 
     public ZonedDateTime getDateTime() {
-        return dateTime;
+        return this.dateTime = getInstanceOf(ZonedDateTime.class, this.dateTime);
     }
 
     public void setDateTime(ZonedDateTime dateTime) {
@@ -31,8 +33,8 @@ public class HighchartsDateTimePoint implements DrosteDeflater {
 
     @Override
     public String deflateField(Field field, int tabLevel) {
-        String s = DrosteDeflater.super.delegateFieldDeflation(field, "dateTime", dateTime==null,
+        String s = DrosteDeflater.super.delegateFieldDeflation(field, "dateTime", dateTime == null,
                 () -> dateTime.toInstant().toEpochMilli() + "");
-        return s!=null && s.equals(RTS)? DrosteDeflater.super.deflateField(field, tabLevel) : s;
+        return s != null && s.equals(RTS) ? DrosteDeflater.super.deflateField(field, tabLevel) : s;
     }
 }

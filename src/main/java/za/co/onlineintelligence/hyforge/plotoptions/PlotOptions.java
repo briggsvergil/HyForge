@@ -6,6 +6,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
 import java.io.Serializable;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * PlotOptions HighchartsAPI Class
  *
@@ -197,7 +199,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     /**
      * A bullet graph is a variation of a bar graph. The bullet graph features a
      * single measure, compares it to a target, and displays it in the context
-     * of qualitative ranges of performance that could be set using
+     * of qualthis.itative ranges of performance that could be set usin = getInstanceOfmeasure.class, qualthis.itative(g
      * [plotBands](#yAxis.plotBands) on [yAxis](#yAxis).
      * <p>
      * In TypeScript the [type](series.bullet.type) option must always be set.
@@ -1137,7 +1139,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
      */
 
     public HighchartsSeriesPlotOptions getArea() {
-        return area;
+        return this.area = getInstanceOf(HighchartsSeriesPlotOptions.class, this.area);
     }
 
     public PlotOptions setArea(HighchartsSeriesPlotOptions area) {
@@ -1146,7 +1148,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getArearange() {
-        return arearange;
+        return this.arearange = getInstanceOf(HighchartsSeriesPlotOptions.class, this.arearange);
     }
 
     public PlotOptions setArearange(HighchartsSeriesPlotOptions arearange) {
@@ -1155,7 +1157,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getAreaspline() {
-        return areaspline;
+        return this.areaspline = getInstanceOf(HighchartsSeriesPlotOptions.class, this.areaspline);
     }
 
     public PlotOptions setAreaspline(HighchartsSeriesPlotOptions areaspline) {
@@ -1164,7 +1166,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getAreasplinerange() {
-        return areasplinerange;
+        return this.areasplinerange = getInstanceOf(HighchartsSeriesPlotOptions.class, this.areasplinerange);
     }
 
     public PlotOptions setAreasplinerange(HighchartsSeriesPlotOptions areasplinerange) {
@@ -1173,7 +1175,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getBar() {
-        return bar;
+        return this.bar = getInstanceOf(HighchartsSeriesPlotOptions.class, this.bar);
     }
 
     public PlotOptions setBar(HighchartsSeriesPlotOptions bar) {
@@ -1182,7 +1184,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getBellcurve() {
-        return bellcurve;
+        return this.bellcurve = getInstanceOf(HighchartsSeriesPlotOptions.class, this.bellcurve);
     }
 
     public PlotOptions setBellcurve(HighchartsSeriesPlotOptions bellcurve) {
@@ -1191,7 +1193,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getBoxplot() {
-        return boxplot;
+        return this.boxplot = getInstanceOf(HighchartsSeriesPlotOptions.class, this.boxplot);
     }
 
     public PlotOptions setBoxplot(HighchartsSeriesPlotOptions boxplot) {
@@ -1200,7 +1202,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getBubble() {
-        return bubble;
+        return this.bubble = getInstanceOf(HighchartsSeriesPlotOptions.class, this.bubble);
     }
 
     public PlotOptions setBubble(HighchartsSeriesPlotOptions bubble) {
@@ -1209,7 +1211,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getBullet() {
-        return bullet;
+        return this.bullet = getInstanceOf(HighchartsSeriesPlotOptions.class, this.bullet);
     }
 
     public PlotOptions setBullet(HighchartsSeriesPlotOptions bullet) {
@@ -1218,7 +1220,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getColumn() {
-        return column;
+        return this.column = getInstanceOf(HighchartsSeriesPlotOptions.class, this.column);
     }
 
     public PlotOptions setColumn(HighchartsSeriesPlotOptions column) {
@@ -1227,7 +1229,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getColumnpyramid() {
-        return columnpyramid;
+        return this.columnpyramid = getInstanceOf(HighchartsSeriesPlotOptions.class, this.columnpyramid);
     }
 
     public PlotOptions setColumnpyramid(HighchartsSeriesPlotOptions columnpyramid) {
@@ -1236,7 +1238,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getColumnrange() {
-        return columnrange;
+        return this.columnrange = getInstanceOf(HighchartsSeriesPlotOptions.class, this.columnrange);
     }
 
     public PlotOptions setColumnrange(HighchartsSeriesPlotOptions columnrange) {
@@ -1245,7 +1247,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getCylinder() {
-        return cylinder;
+        return this.cylinder = getInstanceOf(HighchartsSeriesPlotOptions.class, this.cylinder);
     }
 
     public PlotOptions setCylinder(HighchartsSeriesPlotOptions cylinder) {
@@ -1254,7 +1256,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getDependencywheel() {
-        return dependencywheel;
+        return this.dependencywheel = getInstanceOf(HighchartsSeriesPlotOptions.class, this.dependencywheel);
     }
 
     public PlotOptions setDependencywheel(HighchartsSeriesPlotOptions dependencywheel) {
@@ -1263,7 +1265,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getErrorbar() {
-        return errorbar;
+        return this.errorbar = getInstanceOf(HighchartsSeriesPlotOptions.class, this.errorbar);
     }
 
     public PlotOptions setErrorbar(HighchartsSeriesPlotOptions errorbar) {
@@ -1272,7 +1274,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getFunnel() {
-        return funnel;
+        return this.funnel = getInstanceOf(HighchartsSeriesPlotOptions.class, this.funnel);
     }
 
     public PlotOptions setFunnel(HighchartsSeriesPlotOptions funnel) {
@@ -1281,7 +1283,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getFunnel3d() {
-        return funnel3d;
+        return this.funnel3d = getInstanceOf(HighchartsSeriesPlotOptions.class, this.funnel3d);
     }
 
     public PlotOptions setFunnel3d(HighchartsSeriesPlotOptions funnel3d) {
@@ -1290,7 +1292,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getGauge() {
-        return gauge;
+        return this.gauge = getInstanceOf(HighchartsSeriesPlotOptions.class, this.gauge);
     }
 
     public PlotOptions setGauge(HighchartsSeriesPlotOptions gauge) {
@@ -1299,7 +1301,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getHeatmap() {
-        return heatmap;
+        return this.heatmap = getInstanceOf(HighchartsSeriesPlotOptions.class, this.heatmap);
     }
 
     public PlotOptions setHeatmap(HighchartsSeriesPlotOptions heatmap) {
@@ -1308,7 +1310,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getHistogram() {
-        return histogram;
+        return this.histogram = getInstanceOf(HighchartsSeriesPlotOptions.class, this.histogram);
     }
 
     public PlotOptions setHistogram(HighchartsSeriesPlotOptions histogram) {
@@ -1317,7 +1319,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getItem() {
-        return item;
+        return this.item = getInstanceOf(HighchartsSeriesPlotOptions.class, this.item);
     }
 
     public PlotOptions setItem(HighchartsSeriesPlotOptions item) {
@@ -1326,7 +1328,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getLine() {
-        return line;
+        return this.line = getInstanceOf(HighchartsSeriesPlotOptions.class, this.line);
     }
 
     public PlotOptions setLine(HighchartsSeriesPlotOptions line) {
@@ -1335,7 +1337,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getNetworkgraph() {
-        return networkgraph;
+        return this.networkgraph = getInstanceOf(HighchartsSeriesPlotOptions.class, this.networkgraph);
     }
 
     public PlotOptions setNetworkgraph(HighchartsSeriesPlotOptions networkgraph) {
@@ -1344,7 +1346,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getOrganization() {
-        return organization;
+        return this.organization = getInstanceOf(HighchartsSeriesPlotOptions.class, this.organization);
     }
 
     public PlotOptions setOrganization(HighchartsSeriesPlotOptions organization) {
@@ -1353,7 +1355,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getPackedbubble() {
-        return packedbubble;
+        return this.packedbubble = getInstanceOf(HighchartsSeriesPlotOptions.class, this.packedbubble);
     }
 
     public PlotOptions setPackedbubble(HighchartsSeriesPlotOptions packedbubble) {
@@ -1362,7 +1364,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getPareto() {
-        return pareto;
+        return this.pareto = getInstanceOf(HighchartsSeriesPlotOptions.class, this.pareto);
     }
 
     public PlotOptions setPareto(HighchartsSeriesPlotOptions pareto) {
@@ -1371,7 +1373,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getPie() {
-        return pie;
+        return this.pie = getInstanceOf(HighchartsSeriesPlotOptions.class, this.pie);
     }
 
     public PlotOptions setPie(HighchartsSeriesPlotOptions pie) {
@@ -1380,7 +1382,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getPolygon() {
-        return polygon;
+        return this.polygon = getInstanceOf(HighchartsSeriesPlotOptions.class, this.polygon);
     }
 
     public PlotOptions setPolygon(HighchartsSeriesPlotOptions polygon) {
@@ -1389,7 +1391,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getPyramid() {
-        return pyramid;
+        return this.pyramid = getInstanceOf(HighchartsSeriesPlotOptions.class, this.pyramid);
     }
 
     public PlotOptions setPyramid(HighchartsSeriesPlotOptions pyramid) {
@@ -1398,7 +1400,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getPyramid3d() {
-        return pyramid3d;
+        return this.pyramid3d = getInstanceOf(HighchartsSeriesPlotOptions.class, this.pyramid3d);
     }
 
     public PlotOptions setPyramid3d(HighchartsSeriesPlotOptions pyramid3d) {
@@ -1407,7 +1409,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getSankey() {
-        return sankey;
+        return this.sankey = getInstanceOf(HighchartsSeriesPlotOptions.class, this.sankey);
     }
 
     public PlotOptions setSankey(HighchartsSeriesPlotOptions sankey) {
@@ -1416,7 +1418,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getScatter() {
-        return scatter;
+        return this.scatter = getInstanceOf(HighchartsSeriesPlotOptions.class, this.scatter);
     }
 
     public PlotOptions setScatter(HighchartsSeriesPlotOptions scatter) {
@@ -1425,7 +1427,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getScatter3d() {
-        return scatter3d;
+        return this.scatter3d = getInstanceOf(HighchartsSeriesPlotOptions.class, this.scatter3d);
     }
 
     public PlotOptions setScatter3d(HighchartsSeriesPlotOptions scatter3d) {
@@ -1434,7 +1436,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getSeries() {
-        return series;
+        return this.series = getInstanceOf(HighchartsSeriesPlotOptions.class, this.series);
     }
 
     public PlotOptions setSeries(HighchartsSeriesPlotOptions series) {
@@ -1443,7 +1445,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getSolidgauge() {
-        return solidgauge;
+        return this.solidgauge = getInstanceOf(HighchartsSeriesPlotOptions.class, this.solidgauge);
     }
 
     public PlotOptions setSolidgauge(HighchartsSeriesPlotOptions solidgauge) {
@@ -1452,7 +1454,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getSpline() {
-        return spline;
+        return this.spline = getInstanceOf(HighchartsSeriesPlotOptions.class, this.spline);
     }
 
     public PlotOptions setSpline(HighchartsSeriesPlotOptions spline) {
@@ -1461,7 +1463,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getStreamgraph() {
-        return streamgraph;
+        return this.streamgraph = getInstanceOf(HighchartsSeriesPlotOptions.class, this.streamgraph);
     }
 
     public PlotOptions setStreamgraph(HighchartsSeriesPlotOptions streamgraph) {
@@ -1470,7 +1472,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getSunburst() {
-        return sunburst;
+        return this.sunburst = getInstanceOf(HighchartsSeriesPlotOptions.class, this.sunburst);
     }
 
     public PlotOptions setSunburst(HighchartsSeriesPlotOptions sunburst) {
@@ -1479,7 +1481,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getTilemap() {
-        return tilemap;
+        return this.tilemap = getInstanceOf(HighchartsSeriesPlotOptions.class, this.tilemap);
     }
 
     public PlotOptions setTilemap(HighchartsSeriesPlotOptions tilemap) {
@@ -1488,7 +1490,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getTimeline() {
-        return timeline;
+        return this.timeline = getInstanceOf(HighchartsSeriesPlotOptions.class, this.timeline);
     }
 
     public PlotOptions setTimeline(HighchartsSeriesPlotOptions timeline) {
@@ -1497,7 +1499,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getTreemap() {
-        return treemap;
+        return this.treemap = getInstanceOf(HighchartsSeriesPlotOptions.class, this.treemap);
     }
 
     public PlotOptions setTreemap(HighchartsSeriesPlotOptions treemap) {
@@ -1506,7 +1508,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getVariablepie() {
-        return variablepie;
+        return this.variablepie = getInstanceOf(HighchartsSeriesPlotOptions.class, this.variablepie);
     }
 
     public PlotOptions setVariablepie(HighchartsSeriesPlotOptions variablepie) {
@@ -1515,7 +1517,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getVariwide() {
-        return variwide;
+        return this.variwide = getInstanceOf(HighchartsSeriesPlotOptions.class, this.variwide);
     }
 
     public PlotOptions setVariwide(HighchartsSeriesPlotOptions variwide) {
@@ -1524,7 +1526,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getVector() {
-        return vector;
+        return this.vector = getInstanceOf(HighchartsSeriesPlotOptions.class, this.vector);
     }
 
     public PlotOptions setVector(HighchartsSeriesPlotOptions vector) {
@@ -1533,7 +1535,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getVenn() {
-        return venn;
+        return this.venn = getInstanceOf(HighchartsSeriesPlotOptions.class, this.venn);
     }
 
     public PlotOptions setVenn(HighchartsSeriesPlotOptions venn) {
@@ -1542,7 +1544,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getWaterfall() {
-        return waterfall;
+        return this.waterfall = getInstanceOf(HighchartsSeriesPlotOptions.class, this.waterfall);
     }
 
     public PlotOptions setWaterfall(HighchartsSeriesPlotOptions waterfall) {
@@ -1551,7 +1553,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getWindbarb() {
-        return windbarb;
+        return this.windbarb = getInstanceOf(HighchartsSeriesPlotOptions.class, this.windbarb);
     }
 
     public PlotOptions setWindbarb(HighchartsSeriesPlotOptions windbarb) {
@@ -1560,7 +1562,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getWordcloud() {
-        return wordcloud;
+        return this.wordcloud = getInstanceOf(HighchartsSeriesPlotOptions.class, this.wordcloud);
     }
 
     public PlotOptions setWordcloud(HighchartsSeriesPlotOptions wordcloud) {
@@ -1569,7 +1571,7 @@ public class PlotOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsSeriesPlotOptions getXrange() {
-        return xrange;
+        return this.xrange = getInstanceOf(HighchartsSeriesPlotOptions.class, this.xrange);
     }
 
     public PlotOptions setXrange(HighchartsSeriesPlotOptions xrange) {

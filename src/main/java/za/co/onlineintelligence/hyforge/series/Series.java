@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * Series HighchartsAPI Class
  *
@@ -110,7 +112,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
 
 
     public String getId() {
-        return id;
+        return this.id = getInstanceOf(String.class, this.id);
     }
 
     public Series setId(String id) {
@@ -119,7 +121,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public int getIndex() {
-        return index;
+        return this.index = getInstanceOf(int.class, this.index);
     }
 
     public Series setIndex(int index) {
@@ -128,7 +130,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public int getLegendIndex() {
-        return legendIndex;
+        return this.legendIndex = getInstanceOf(int.class, this.legendIndex);
     }
 
     public Series setLegendIndex(int legendIndex) {
@@ -137,7 +139,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public HighchartsSeriesMapDataOptions[] getMapData() {
-        return mapData;
+        return this.mapData = getInstanceOf(HighchartsSeriesMapDataOptions[].class, this.mapData);
     }
 
     public Series setMapData(HighchartsSeriesMapDataOptions[] mapData) {
@@ -146,7 +148,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public String getName() {
-        return name;
+        return this.name = getInstanceOf(String.class, this.name);
     }
 
     public Series setName(String name) {
@@ -155,7 +157,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public O getOptions() {
-        return options;
+        return this.options;
     }
 
     public Series setOptions(O options) {
@@ -164,7 +166,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public HighchartsSize getStack() {
-        return stack;
+        return this.stack = getInstanceOf(HighchartsSize.class, this.stack);
     }
 
     public Series setStack(HighchartsSize stack) {
@@ -173,7 +175,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public String getType() {
-        return type;
+        return this.type = getInstanceOf(String.class, this.type);
     }
 
     protected Series setType(String type) {
@@ -182,7 +184,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public HighchartsSize getxAxis() {
-        return xAxis;
+        return this.xAxis = getInstanceOf(HighchartsSize.class, this.xAxis);
     }
 
     public Series setxAxis(HighchartsSize xAxis) {
@@ -191,7 +193,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public HighchartsSize getyAxis() {
-        return yAxis;
+        return this.yAxis = getInstanceOf(HighchartsSize.class, this.yAxis);
     }
 
     public Series setyAxis(HighchartsSize yAxis) {
@@ -200,7 +202,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public int getzIndex() {
-        return zIndex;
+        return this.zIndex = getInstanceOf(int.class, this.zIndex);
     }
 
     public Series setzIndex(int zIndex) {
@@ -209,11 +211,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public HighchartsPoint[] getData() {
-        if (data == null) {
-            this.data = new HighchartsPoint[0];
-        }
-
-        return data;
+        return this.data = getInstanceOf(HighchartsPoint[].class, this.data);
     }
 
     /**
@@ -446,7 +444,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     }
 
     public Series addPoint(HighchartsPoint point) {
-        if(this.data == null) {
+        if (this.data == null) {
             this.data = new HighchartsPoint[0];
         }
         int len = this.data.length;

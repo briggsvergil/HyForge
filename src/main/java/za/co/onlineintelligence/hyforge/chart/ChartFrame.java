@@ -5,6 +5,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 /**
  * @author Sean Briggs
  */
@@ -84,7 +86,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
     public HighchartFrame getBack() {
-        return this.back;
+        return this.back = getInstanceOf(HighchartFrame.class, this.back);
     }
 
     public ChartFrame setBack(HighchartFrame back) {
@@ -93,7 +95,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
     }
 
     public HighchartFrame getBottom() {
-        return this.bottom;
+        return this.bottom = getInstanceOf(HighchartFrame.class, this.bottom);
     }
 
     public ChartFrame setBottom(HighchartFrame bottom) {
@@ -102,7 +104,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
     }
 
     public HighchartFrame getFront() {
-        return this.front;
+        return this.front = getInstanceOf(HighchartFrame.class, this.front);
     }
 
     public ChartFrame setFront(HighchartFrame front) {
@@ -111,7 +113,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
     }
 
     public HighchartFrame getLeft() {
-        return this.left;
+        return this.left = getInstanceOf(HighchartFrame.class, this.left);
     }
 
     public ChartFrame setLeft(HighchartFrame left) {
@@ -120,7 +122,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
     }
 
     public HighchartFrame getRight() {
-        return this.right;
+        return this.right = getInstanceOf(HighchartFrame.class, this.right);
     }
 
     public ChartFrame setRight(HighchartFrame right) {
@@ -129,7 +131,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
     }
 
     public HighchartFrame getSide() {
-        return this.side;
+        return this.side = getInstanceOf(HighchartFrame.class, this.side);
     }
 
     public ChartFrame setSide(HighchartFrame side) {
@@ -138,7 +140,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
     }
 
     public int getSize() {
-        return this.size;
+        return this.size = getInstanceOf(int.class, this.size);
     }
 
     public ChartFrame setSize(int size) {
@@ -147,7 +149,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
     }
 
     public HighchartFrame getTop() {
-        return this.top;
+        return this.top = getInstanceOf(HighchartFrame.class, this.top);
     }
 
     public ChartFrame setTop(HighchartFrame top) {
@@ -156,7 +158,7 @@ public class ChartFrame implements Serializable, DrosteDeflater {
     }
 
     public String getVisible() {
-        return this.visible;
+        return this.visible = getInstanceOf(String.class, this.visible);
     }
 
     public ChartFrame setVisible(String visible) {

@@ -5,6 +5,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Responsive  HighchartsAPI Class
@@ -29,7 +31,7 @@ public class Responsive implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public ResponsiveRule[] getRules() {
-        return this.rules;
+        return this.rules = getInstanceOf(ResponsiveRule[].class, this.rules);
     }
 
     public Responsive setRules(ResponsiveRule[] rules) {

@@ -2,18 +2,19 @@ package za.co.onlineintelligence.hyforge.plotoptions;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
+
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 /**
  * SeriesAccessibility HighchartsAPI Class
  *
  * @author Sean Briggs
  */
-public class SeriesAccessibility implements Serializable
-{
+public class SeriesAccessibility implements Serializable {
 
-    public SeriesAccessibility()
-    {
+    public SeriesAccessibility() {
     }
 
     /**
@@ -56,64 +57,53 @@ public class SeriesAccessibility implements Serializable
     /*
 		Getters and Builder-ControlPointOptionsStyle Setters
      */
-    public String getDescription()
-    {
-        return this.description;
+    public String getDescription() {
+        return this.description = getInstanceOf(String.class, this.description);
     }
 
-    public SeriesAccessibility setDescription(String description)
-    {
+    public SeriesAccessibility setDescription(String description) {
         this.description = description;
         return this;
     }
 
-    public boolean getEnabled()
-    {
-        return this.enabled;
+    public boolean getEnabled() {
+        return this.enabled = getInstanceOf(boolean.class, this.enabled);
     }
 
-    public SeriesAccessibility setEnabled(boolean enabled)
-    {
+    public SeriesAccessibility setEnabled(boolean enabled) {
         this.enabled = enabled;
         return this;
     }
 
-    public boolean getExposeAsGroupOnly()
-    {
-        return this.exposeAsGroupOnly;
+    public boolean getExposeAsGroupOnly() {
+        return this.exposeAsGroupOnly = getInstanceOf(boolean.class, this.exposeAsGroupOnly);
     }
 
-    public SeriesAccessibility setExposeAsGroupOnly(boolean exposeAsGroupOnly)
-    {
+    public SeriesAccessibility setExposeAsGroupOnly(boolean exposeAsGroupOnly) {
         this.exposeAsGroupOnly = exposeAsGroupOnly;
         return this;
     }
 
-    public Boolean getKeyboardNavigation()
-    {
-        return this.keyboardNavigation;
+    public Boolean getKeyboardNavigation() {
+        return this.keyboardNavigation = getInstanceOf(Boolean.class, this.keyboardNavigation);
     }
 
-    public SeriesAccessibility setKeyboardNavigation(Boolean keyboardNavigation)
-    {
+    public SeriesAccessibility setKeyboardNavigation(Boolean keyboardNavigation) {
         this.keyboardNavigation = keyboardNavigation;
         return this;
     }
 
-    public HighchartsCallbackFunction getPointDescriptionFormatter()
-    {
-        return this.pointDescriptionFormatter;
+    public HighchartsCallbackFunction getPointDescriptionFormatter() {
+        return this.pointDescriptionFormatter = getInstanceOf(HighchartsCallbackFunction.class, this.pointDescriptionFormatter);
     }
 
-    public SeriesAccessibility setPointDescriptionFormatter(HighchartsCallbackFunction pointDescriptionFormatter)
-    {
+    public SeriesAccessibility setPointDescriptionFormatter(HighchartsCallbackFunction pointDescriptionFormatter) {
         this.pointDescriptionFormatter = pointDescriptionFormatter;
         return this;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int hash = 3;
         hash = 17 * hash + Objects.hashCode(this.description);
         hash = 17 * hash + Objects.hashCode(this.enabled);
@@ -125,8 +115,7 @@ public class SeriesAccessibility implements Serializable
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return '{'
                 + "description:" + description
                 + ", enabled:" + enabled

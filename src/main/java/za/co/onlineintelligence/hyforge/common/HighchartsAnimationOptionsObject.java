@@ -2,6 +2,8 @@ package za.co.onlineintelligence.hyforge.common;
 
 import java.io.Serializable;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 public class HighchartsAnimationOptionsObject implements Serializable, DrosteDeflater {
 
     public HighchartsAnimationOptionsObject() {
@@ -14,7 +16,7 @@ public class HighchartsAnimationOptionsObject implements Serializable, DrosteDef
     private HighchartsCallbackFunction step;
 
     public HighchartsCallbackFunction getComplete() {
-        return complete;
+        return this.complete = getInstanceOf(HighchartsCallbackFunction.class, this.complete);
     }
 
     public void setComplete(HighchartsCallbackFunction complete) {
@@ -22,7 +24,7 @@ public class HighchartsAnimationOptionsObject implements Serializable, DrosteDef
     }
 
     public Integer getDuration() {
-        return duration;
+        return this.duration = getInstanceOf(Integer.class, this.duration);
     }
 
     public void setDuration(Integer duration) {
@@ -30,7 +32,7 @@ public class HighchartsAnimationOptionsObject implements Serializable, DrosteDef
     }
 
     public String getEasing() {
-        return easing;
+        return this.easing = getInstanceOf(String.class, this.easing);
     }
 
     public void setEasing(String easing) {
@@ -38,7 +40,7 @@ public class HighchartsAnimationOptionsObject implements Serializable, DrosteDef
     }
 
     public HighchartsCallbackFunction getStep() {
-        return step;
+        return this.step = getInstanceOf(HighchartsCallbackFunction.class, this.step);
     }
 
     public void setStep(HighchartsCallbackFunction step) {

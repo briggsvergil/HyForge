@@ -1,5 +1,7 @@
 package za.co.onlineintelligence.hyforge.common;
 
+import com.google.gson.JsonElement;
+
 /**
  * @author Sean Briggs.
  */

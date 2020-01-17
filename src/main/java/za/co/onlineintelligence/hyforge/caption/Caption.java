@@ -8,6 +8,8 @@ import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsVerticalAlignValue;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsAlignValue;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Caption  HighchartsAPI Class
@@ -98,7 +100,7 @@ public class Caption implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsAlignValue getAlign() {
-        return this.align;
+        return this.align = getInstanceOf(HighchartsAlignValue.class, this.align);
     }
 
     public Caption setAlign(HighchartsAlignValue align) {
@@ -107,7 +109,7 @@ public class Caption implements Serializable, DrosteDeflater {
     }
 
     public Boolean getFloating() {
-        return this.floating;
+        return this.floating = getInstanceOf(Boolean.class, this.floating);
     }
 
     public Caption setFloating(Boolean floating) {
@@ -116,7 +118,7 @@ public class Caption implements Serializable, DrosteDeflater {
     }
 
     public Integer getMargin() {
-        return this.margin;
+        return this.margin = getInstanceOf(Integer.class, this.margin);
     }
 
     public Caption setMargin(Integer margin) {
@@ -125,7 +127,7 @@ public class Caption implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public Caption setStyle(HighchartsCSS style) {
@@ -134,7 +136,7 @@ public class Caption implements Serializable, DrosteDeflater {
     }
 
     public String getText() {
-        return this.text;
+        return this.text = getInstanceOf(String.class, this.text);
     }
 
     public Caption setText(String text) {
@@ -143,7 +145,7 @@ public class Caption implements Serializable, DrosteDeflater {
     }
 
     public Boolean getUseHTML() {
-        return this.useHTML;
+        return this.useHTML = getInstanceOf(Boolean.class, this.useHTML);
     }
 
     public Caption setUseHTML(Boolean useHTML) {
@@ -152,7 +154,7 @@ public class Caption implements Serializable, DrosteDeflater {
     }
 
     public HighchartsVerticalAlignValue getVerticalAlign() {
-        return this.verticalAlign;
+        return this.verticalAlign = getInstanceOf(HighchartsVerticalAlignValue.class, this.verticalAlign);
     }
 
     public Caption setVerticalAlign(HighchartsVerticalAlignValue verticalAlign) {
@@ -161,7 +163,7 @@ public class Caption implements Serializable, DrosteDeflater {
     }
 
     public Integer getX() {
-        return this.x;
+        return this.x = getInstanceOf(Integer.class, this.x);
     }
 
     public Caption setX(Integer x) {
@@ -170,7 +172,7 @@ public class Caption implements Serializable, DrosteDeflater {
     }
 
     public Integer getY() {
-        return this.y;
+        return this.y = getInstanceOf(Integer.class, this.y);
     }
 
     public Caption setY(Integer y) {

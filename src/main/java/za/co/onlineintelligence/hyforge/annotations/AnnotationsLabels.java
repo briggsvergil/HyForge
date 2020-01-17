@@ -6,6 +6,8 @@ import java.util.Objects;
 import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * AnnotationsLabels  HighchartsAPI Class
@@ -32,7 +34,7 @@ public class AnnotationsLabels extends LabelOptions implements Serializable, Dro
         Getters and Builder-Style Setters
     */
     public HighchartsPoint getPoint() {
-        return this.point;
+        return this.point = getInstanceOf(HighchartsPoint.class, this.point);
     }
 
     public AnnotationsLabels setPoint(HighchartsPoint point) {

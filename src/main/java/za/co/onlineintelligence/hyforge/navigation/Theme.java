@@ -9,6 +9,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Theme HighchartsAPI Class
@@ -46,7 +48,7 @@ public class Theme implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsColor getFill() {
-        return this.fill;
+        return this.fill = getInstanceOf(HighchartsColor.class, this.fill);
     }
 
     public Theme setFill(HighchartsColor fill) {
@@ -55,7 +57,7 @@ public class Theme implements Serializable, DrosteDeflater {
     }
 
     public Integer getPadding() {
-        return this.padding;
+        return this.padding = getInstanceOf(Integer.class, this.padding);
     }
 
     public Theme setPadding(Integer padding) {
@@ -64,7 +66,7 @@ public class Theme implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColorString getStroke() {
-        return this.stroke;
+        return this.stroke = getInstanceOf(HighchartsColorString.class, this.stroke);
     }
 
     public Theme setStroke(HighchartsColorString stroke) {

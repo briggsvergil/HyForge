@@ -7,6 +7,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * ShapeOptions  HighchartsAPI Class
@@ -80,7 +82,7 @@ public class ShapeOptions implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsColor getFill() {
-        return this.fill;
+        return this.fill = getInstanceOf(HighchartsColor.class, this.fill);
     }
 
     public ShapeOptions setFill(HighchartsColor fill) {
@@ -89,7 +91,7 @@ public class ShapeOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getHeight() {
-        return this.height;
+        return this.height = getInstanceOf(Integer.class, this.height);
     }
 
     public ShapeOptions setHeight(Integer height) {
@@ -98,7 +100,7 @@ public class ShapeOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getR() {
-        return this.r;
+        return this.r = getInstanceOf(Integer.class, this.r);
     }
 
     public ShapeOptions setR(Integer r) {
@@ -107,7 +109,7 @@ public class ShapeOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getSnap() {
-        return this.snap;
+        return this.snap = getInstanceOf(Integer.class, this.snap);
     }
 
     public ShapeOptions setSnap(Integer snap) {
@@ -116,7 +118,7 @@ public class ShapeOptions implements Serializable, DrosteDeflater {
     }
 
     public HighchartsColorString getStroke() {
-        return this.stroke;
+        return this.stroke = getInstanceOf(HighchartsColorString.class, this.stroke);
     }
 
     public ShapeOptions setStroke(HighchartsColorString stroke) {
@@ -125,7 +127,7 @@ public class ShapeOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getStrokeWidth() {
-        return this.strokeWidth;
+        return this.strokeWidth = getInstanceOf(Integer.class, this.strokeWidth);
     }
 
     public ShapeOptions setStrokeWidth(Integer strokeWidth) {
@@ -134,7 +136,7 @@ public class ShapeOptions implements Serializable, DrosteDeflater {
     }
 
     public String getType() {
-        return this.type;
+        return this.type = getInstanceOf(String.class, this.type);
     }
 
     public ShapeOptions setType(String type) {
@@ -143,7 +145,7 @@ public class ShapeOptions implements Serializable, DrosteDeflater {
     }
 
     public Integer getWidth() {
-        return this.width;
+        return this.width = getInstanceOf(Integer.class, this.width);
     }
 
     public ShapeOptions setWidth(Integer width) {

@@ -66,10 +66,11 @@ public class PointEvents implements Serializable {
 
     /**
      * Fires when the legend item belonging to the pie point (slice) is
-     clicked. The `this` keyword refers to the point itself. One
-     parameter, `event`, is passed to the function, containing common
-     event information. The default action is to toggle the visibility of
-     the point. This can be prevented by calling `event.preventDefault()`.
+     * clicked. The `this` keyword refers to the point itself. One
+     * parameter, `event`, is passed to the function, containing common
+     * event information. The default action is to toggle the visibility of
+     * the point. This can be prevented by calling `event.preventDefault()`.
+     *
      * @since 1.2.0
      */
     private HighchartsCallbackFunction legendItemClick;
@@ -130,7 +131,7 @@ public class PointEvents implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public HighchartsCallbackFunction getClick() {
-        return this.click;
+        return this.click = getInstanceOf(HighchartsCallbackFunction.class, this.click);
     }
 
     public PointEvents setClick(HighchartsCallbackFunction click) {
@@ -139,7 +140,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getDrag() {
-        return this.drag;
+        return this.drag = getInstanceOf(HighchartsCallbackFunction.class, this.drag);
     }
 
     public PointEvents setDrag(HighchartsCallbackFunction drag) {
@@ -148,7 +149,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getDragStart() {
-        return this.dragStart;
+        return this.dragStart = getInstanceOf(HighchartsCallbackFunction.class, this.dragStart);
     }
 
     public PointEvents setDragStart(HighchartsCallbackFunction dragStart) {
@@ -157,7 +158,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getDrop() {
-        return this.drop;
+        return this.drop = getInstanceOf(HighchartsCallbackFunction.class, this.drop);
     }
 
     public PointEvents setDrop(HighchartsCallbackFunction drop) {
@@ -166,7 +167,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getMouseOut() {
-        return this.mouseOut;
+        return this.mouseOut = getInstanceOf(HighchartsCallbackFunction.class, this.mouseOut);
     }
 
     public PointEvents setMouseOut(HighchartsCallbackFunction mouseOut) {
@@ -175,7 +176,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getMouseOver() {
-        return this.mouseOver;
+        return this.mouseOver = getInstanceOf(HighchartsCallbackFunction.class, this.mouseOver);
     }
 
     public PointEvents setMouseOver(HighchartsCallbackFunction mouseOver) {
@@ -184,7 +185,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getRemove() {
-        return this.remove;
+        return this.remove = getInstanceOf(HighchartsCallbackFunction.class, this.remove);
     }
 
     public PointEvents setRemove(HighchartsCallbackFunction remove) {
@@ -193,7 +194,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getSelect() {
-        return this.select;
+        return this.select = getInstanceOf(HighchartsCallbackFunction.class, this.select);
     }
 
     public PointEvents setSelect(HighchartsCallbackFunction select) {
@@ -202,7 +203,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getUnselect() {
-        return this.unselect;
+        return this.unselect = getInstanceOf(HighchartsCallbackFunction.class, this.unselect);
     }
 
     public PointEvents setUnselect(HighchartsCallbackFunction unselect) {
@@ -211,7 +212,7 @@ public class PointEvents implements Serializable {
     }
 
     public HighchartsCallbackFunction getUpdate() {
-        return this.update;
+        return this.update = getInstanceOf(HighchartsCallbackFunction.class, this.update);
     }
 
     public PointEvents setUpdate(HighchartsCallbackFunction update) {
@@ -229,7 +230,7 @@ public class PointEvents implements Serializable {
     /*
         Builder-Style Setters
     */
-    public PointEvents setLegendItemClick(HighchartsCallbackFunction legendItemClick){
+    public PointEvents setLegendItemClick(HighchartsCallbackFunction legendItemClick) {
         this.legendItemClick = legendItemClick;
         return this;
     }

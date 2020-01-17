@@ -5,6 +5,8 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.*;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * NoData  HighchartsAPI Class
@@ -48,7 +50,7 @@ public class NoData implements Serializable, DrosteDeflater {
         Getters and Builder-Style Setters
     */
     public HighchartsSVGAttributes getAttr() {
-        return this.attr;
+        return this.attr = getInstanceOf(HighchartsSVGAttributes.class, this.attr);
     }
 
     public NoData setAttr(HighchartsSVGAttributes attr) {
@@ -57,7 +59,7 @@ public class NoData implements Serializable, DrosteDeflater {
     }
 
     public HighchartsAlignObject getPosition() {
-        return this.position;
+        return this.position = getInstanceOf(HighchartsAlignObject.class, this.position);
     }
 
     public NoData setPosition(HighchartsAlignObject position) {
@@ -66,7 +68,7 @@ public class NoData implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getStyle() {
-        return this.style;
+        return this.style = getInstanceOf(HighchartsCSS.class, this.style);
     }
 
     public NoData setStyle(HighchartsCSS style) {
@@ -75,7 +77,7 @@ public class NoData implements Serializable, DrosteDeflater {
     }
 
     public Boolean getUseHTML() {
-        return this.useHTML;
+        return this.useHTML = getInstanceOf(Boolean.class, this.useHTML);
     }
 
     public NoData setUseHTML(Boolean useHTML) {

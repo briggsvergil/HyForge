@@ -9,6 +9,8 @@ import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import za.co.onlineintelligence.hyforge.common.HighchartsStockToolsBindingsObject;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Navigation HighchartsAPI Class
@@ -111,7 +113,7 @@ public class Navigation implements Serializable, DrosteDeflater {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public Annotations getAnnotationsOptions() {
-        return this.annotationsOptions;
+        return this.annotationsOptions = getInstanceOf(Annotations.class, this.annotationsOptions);
     }
 
     public Navigation setAnnotationsOptions(Annotations annotationsOptions) {
@@ -120,7 +122,7 @@ public class Navigation implements Serializable, DrosteDeflater {
     }
 
     public List<HighchartsStockToolsBindingsObject> getBindings() {
-        return this.bindings;
+        return this.bindings = getInstanceOf(List.class, this.bindings);
     }
 
     public Navigation setBindings(List<HighchartsStockToolsBindingsObject> bindings) {
@@ -129,7 +131,7 @@ public class Navigation implements Serializable, DrosteDeflater {
     }
 
     public String getBindingsClassName() {
-        return this.bindingsClassName;
+        return this.bindingsClassName = getInstanceOf(String.class, this.bindingsClassName);
     }
 
     public Navigation setBindingsClassName(String bindingsClassName) {
@@ -138,7 +140,7 @@ public class Navigation implements Serializable, DrosteDeflater {
     }
 
     public ButtonOptions getButtonOptions() {
-        return this.buttonOptions;
+        return this.buttonOptions = getInstanceOf(ButtonOptions.class, this.buttonOptions);
     }
 
     public Navigation setButtonOptions(ButtonOptions buttonOptions) {
@@ -147,7 +149,7 @@ public class Navigation implements Serializable, DrosteDeflater {
     }
 
     public Events getEvents() {
-        return this.events;
+        return this.events = getInstanceOf(Events.class, this.events);
     }
 
     public Navigation setEvents(Events events) {
@@ -156,7 +158,7 @@ public class Navigation implements Serializable, DrosteDeflater {
     }
 
     public String getIconsURL() {
-        return this.iconsURL;
+        return this.iconsURL = getInstanceOf(String.class, this.iconsURL);
     }
 
     public Navigation setIconsURL(String iconsURL) {
@@ -165,7 +167,7 @@ public class Navigation implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getMenuItemHoverStyle() {
-        return this.menuItemHoverStyle;
+        return this.menuItemHoverStyle = getInstanceOf(HighchartsCSS.class, this.menuItemHoverStyle);
     }
 
     public Navigation setMenuItemHoverStyle(HighchartsCSS menuItemHoverStyle) {
@@ -174,7 +176,7 @@ public class Navigation implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getMenuItemStyle() {
-        return this.menuItemStyle;
+        return this.menuItemStyle = getInstanceOf(HighchartsCSS.class, this.menuItemStyle);
     }
 
     public Navigation setMenuItemStyle(HighchartsCSS menuItemStyle) {
@@ -183,7 +185,7 @@ public class Navigation implements Serializable, DrosteDeflater {
     }
 
     public HighchartsCSS getMenuStyle() {
-        return this.menuStyle;
+        return this.menuStyle = getInstanceOf(HighchartsCSS.class, this.menuStyle);
     }
 
     public Navigation setMenuStyle(HighchartsCSS menuStyle) {

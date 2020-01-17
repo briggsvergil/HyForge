@@ -3,9 +3,12 @@ package za.co.onlineintelligence.hyforge.plotoptions;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+
 
 /**
  * Filter HighchartsAPI Class
+ *
  * @author Sean Briggs
  */
 public class Filter implements Serializable {
@@ -16,22 +19,25 @@ public class Filter implements Serializable {
 
     /**
      * The operator to compare by. Can be one of `>`, `<`, `>=`, `<=`,
-     `==`, and `===`.
+     * `==`, and `===`.
+     *
      * @since 6.0.3
      */
     private String operator;
 
     /**
      * The point property to filter by. Point options are passed
-     directly to properties, additionally there are `y` value,
-     `percentage` and others listed under {Highcharts.Point}
-     members.
+     * directly to properties, additionally there are `y` value,
+     * `percentage` and others listed under {Highcharts.Point}
+     * members.
+     *
      * @since 6.0.3
      */
     private String property;
 
     /**
      * The value to compare against.
+     *
      * @since 6.0.3
      */
     private int value;
@@ -40,7 +46,7 @@ public class Filter implements Serializable {
         Getters and Builder-ControlPointOptionsStyle Setters
     */
     public String getOperator() {
-        return this.operator;
+        return this.operator = getInstanceOf(String.class, this.operator);
     }
 
     public Filter setOperator(String operator) {
@@ -49,7 +55,7 @@ public class Filter implements Serializable {
     }
 
     public String getProperty() {
-        return this.property;
+        return this.property = getInstanceOf(String.class, this.property);
     }
 
     public Filter setProperty(String property) {
@@ -58,7 +64,7 @@ public class Filter implements Serializable {
     }
 
     public int getValue() {
-        return this.value;
+        return this.value = getInstanceOf(int.class, this.value);
     }
 
     public Filter setValue(int value) {

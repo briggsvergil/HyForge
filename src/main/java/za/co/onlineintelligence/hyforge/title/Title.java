@@ -1,6 +1,6 @@
 package za.co.onlineintelligence.hyforge.title;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 
 import java.io.Serializable;
@@ -11,7 +11,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 /**
  * @author Sean Briggs
  */
-public class Title implements Serializable, DrosteDeflater {
+public class Title implements Serializable, Exportable {
 
     public Title() {
     }

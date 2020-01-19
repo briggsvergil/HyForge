@@ -4,6 +4,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import za.co.onlineintelligence.hyforge.accessibility.Accessibility;
 import za.co.onlineintelligence.hyforge.common.*;
+import za.co.onlineintelligence.hyforge.common.annotations.DelegateDeflate;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsAlignValue;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsVerticalAlignValue;
 import za.co.onlineintelligence.hyforge.title.Title;
@@ -20,7 +21,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Legend implements Serializable, DrosteDeflater {
+public class Legend implements Serializable, Exportable {
 
 
     public Legend() {
@@ -256,6 +257,7 @@ public class Legend implements Serializable, DrosteDeflater {
      * an object configuration containing `color`, `offsetX`, `offsetY`,
      * `opacity` and `width`.
      */
+    @DelegateDeflate
     private HighchartsShadowOptionsObject shadow;
 
     /**
@@ -832,16 +834,24 @@ public class Legend implements Serializable, DrosteDeflater {
     }
 
     @Override
-    public String deflateField(Field field, int tabLevel) {
-        String s = DrosteDeflater.super.delegateFieldDeflation(field, "shadow", shadow == null,
-                () -> {
-                    String shadow = this.shadow.deflateFields(true, "shadow", tabLevel + 1);
-                    if (shadow.substring(shadow.indexOf('{') + 1, shadow.indexOf('}')).trim().length() > 0) {
-                        return shadow;
-                    } else {
-                        return DrosteDeflater.getTabString(tabLevel) + "shadow: true,\n";
-                    }
-                });
-        return s != null && s.equals(RTS) ? DrosteDeflater.super.deflateField(field, tabLevel) : s;
+    public Object getDelegatedValue(Field field) {
+        if(field.getName().equalsIgnoreCase("shadow")) {
+            JsonElement o = shadow!=null ? shadow.serializeClass() : null;
+            return o!=null && o.isJsonNull()? true : o;
+        }
+        return null;
     }
+//    @Override
+//    public String deflateField(Field field, int tabLevel) {
+//        String s = Exportable.super.delegateFieldDeflation(field, "shadow", shadow == null,
+//                () -> {
+//                    String shadow = this.shadow.deflateFields(true, "shadow", tabLevel + 1);
+//                    if (shadow.substring(shadow.indexOf('{') + 1, shadow.indexOf('}')).trim().length() > 0) {
+//                        return shadow;
+//                    } else {
+//                        return Exportable.getTabString(tabLevel) + "shadow: true,\n";
+//                    }
+//                });
+//        return s != null && s.equals(RTS) ? Exportable.super.deflateField(field, tabLevel) : s;
+//    }
 }

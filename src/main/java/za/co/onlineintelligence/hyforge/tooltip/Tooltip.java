@@ -18,7 +18,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Tooltip implements Serializable, DrosteDeflater {
+public class Tooltip implements Serializable, Exportable {
 
 
     public Tooltip() {

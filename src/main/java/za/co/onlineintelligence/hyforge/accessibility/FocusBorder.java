@@ -5,7 +5,7 @@ package za.co.onlineintelligence.hyforge.accessibility;
 import java.io.Serializable;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
@@ -16,7 +16,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class FocusBorder implements Serializable, DrosteDeflater {
+public class FocusBorder implements Serializable, Exportable {
 
 
     public FocusBorder() {

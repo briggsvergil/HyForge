@@ -8,7 +8,7 @@ public interface DrosteSeperation {
      *
      * @return
      */
-    String hydrateClass();
+//    String hydrateClass();
 
     default String deflateClass() {
         return "";

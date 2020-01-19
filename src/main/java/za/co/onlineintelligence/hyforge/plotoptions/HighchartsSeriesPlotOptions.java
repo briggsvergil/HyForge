@@ -1,7 +1,9 @@
 package za.co.onlineintelligence.hyforge.plotoptions;
 
+import com.google.gson.JsonElement;
 import za.co.onlineintelligence.hyforge.coloraxis.ColorAxis;
 import za.co.onlineintelligence.hyforge.common.*;
+import za.co.onlineintelligence.hyforge.common.annotations.DelegateDeflate;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsCursorValue;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsDashStyleValue;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsSeriesLinecapValue;
@@ -15,7 +17,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 /**
  * @author Sean
  */
-public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater {
+public class HighchartsSeriesPlotOptions implements Serializable, Exportable {
     /**
      * Accessibility options for a series.
      *
@@ -410,6 +412,7 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
      * shadow can be an object configuration containing `color`, `offsetX`,
      * `offsetY`, `opacity` and `width`.
      */
+    @DelegateDeflate
     private HighchartsShadowOptionsObject shadow;
     /**
      * If true, a checkbox is displayed next to the legend item to allow
@@ -1049,14 +1052,23 @@ public class HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater
     }
 
     @Override
+    public Object getDelegatedValue(Field field) {
+        if(field.getName().equalsIgnoreCase("shadow")) {
+            JsonElement o = shadow!=null? shadow.serializeClass() : null;
+            return o!=null && o.isJsonNull()? true : o;
+        }
+        return null;
+    }
+
+    /*    @Override
     public String deflateField(Field field, int tabLevel) {
-        String ss = DrosteDeflater.super.delegateFieldDeflation(field, "shadow", shadow == null,
+        String ss = Exportable.super.delegateFieldDeflation(field, "shadow", shadow == null,
                 () -> {
                     String s = shadow.deflateFields();
                     if (s == null || s.isEmpty()) {
-                        return DrosteDeflater.getTabString(tabLevel) + "shadow: true,\n";
+                        return Exportable.getTabString(tabLevel) + "shadow: true,\n";
                     } else return s;
                 });
-        return ss != null && ss.equals(RTS) ? DrosteDeflater.super.deflateField(field, tabLevel) : ss;
-    }
+        return ss != null && ss.equals(RTS) ? Exportable.super.deflateField(field, tabLevel) : ss;
+    }*/
 }

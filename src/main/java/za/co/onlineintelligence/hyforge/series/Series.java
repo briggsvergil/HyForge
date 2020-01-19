@@ -1,9 +1,14 @@
 package za.co.onlineintelligence.hyforge.series;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsSize;
+import za.co.onlineintelligence.hyforge.common.annotations.DTODeflate;
+import za.co.onlineintelligence.hyforge.common.annotations.DelegateDeflate;
 import za.co.onlineintelligence.hyforge.plotoptions.HighchartsSeriesPlotOptions;
 
 import java.io.Serializable;
@@ -19,7 +24,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Series<O extends HighchartsSeriesPlotOptions> implements Serializable, DrosteDeflater {
+public class Series<O extends HighchartsSeriesPlotOptions> implements Serializable, Exportable {
 
     public Series() {
 
@@ -29,6 +34,7 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
         this.name = name;
     }
 
+    @DelegateDeflate
     private HighchartsPoint[] data;
 
     /**
@@ -67,9 +73,9 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
     /**
      * The Specific options for this series
      */
+    @DTODeflate
     private O options;
 
-    private Class<O> optionsClass;
 
     /**
      * This option allows grouping series in a stacked chart. The stack option
@@ -223,21 +229,45 @@ public class Series<O extends HighchartsSeriesPlotOptions> implements Serializab
         return this;
     }
 
-    /**
-     * Override the options field so the fields of that class appear as fields as this one.
-     *
-     * @param field    The field currently being serialized.
-     * @param tabLevel This is the number of whitespace tabs to create before Key-Value pairs.
-     * @return
-     */
-    @Override
+
+/*    @Override
     public String deflateField(Field field, int tabLevel) {
         String s = delegateFieldDeflation(field, "options", options == null,
                 () -> options.deflateFields(true, null, tabLevel));
-        return s != null && s.equals(RTS) ? DrosteDeflater.super.deflateField(field, tabLevel) : s;
+        return s != null && s.equals(RTS) ? Exportable.super.deflateField(field, tabLevel) : s;
+    }*/
+    /**
+     * Override the data field.
+     *
+     * @param field The field currently being serialized.
+     * @return
+     */
+    @Override
+    public Object getDelegatedValue(Field field) {
+        JsonArray arr = new JsonArray();
+        if (field.getName().equalsIgnoreCase("data")) {
+            if (data != null && data.length > 0) {
+                HighchartsPointState state = data[0].getState();
+                Object o = null;
+                for (HighchartsPoint p: data) {
+                    o = p.getValue(state);
+                    if (o == null) continue;
+                    if (o instanceof JsonArray) {
+                        arr.add((JsonArray) o);
+                    } else if (o instanceof Number) {
+                        arr.add((Number) o);
+                    } else if (o instanceof String) {
+                        arr.add((String) o);
+                    } else if (o instanceof JsonElement) {
+                        arr.add((JsonElement) o);
+                    }
+                }
+            }
+        }
+        return arr;
     }
 
-    /*
+/*
                 EASE-OF-USE METHODS
      */
 

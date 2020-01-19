@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.annotations.Annotations;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsCSS;
 import za.co.onlineintelligence.hyforge.common.HighchartsStockToolsBindingsObject;
 
@@ -17,7 +17,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Navigation implements Serializable, DrosteDeflater {
+public class Navigation implements Serializable, Exportable {
 
 
     public Navigation() {

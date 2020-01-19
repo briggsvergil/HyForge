@@ -2,7 +2,6 @@ const express = require('express')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
-const bp = require('body-parser')
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
@@ -22,17 +21,6 @@ async function start () {
     await nuxt.ready()
   }
 
-  app.use(bp.json())
-
-  app.post("/api", (req, res) => {
-    console.log('Chart POST received')
-    let buff = new Buffer(req.body.chartData, 'base64')
-    let text = buff.toString('ascii')
-    // ChartOpts = text
-    console.log(text)
-    res.send("200: All good!!")
-    this.$store.commit('SET_CHART', text)
-  })
   // Give nuxt middleware to express
   app.use(nuxt.render)
 

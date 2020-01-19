@@ -3,7 +3,7 @@ package za.co.onlineintelligence.hyforge.coloraxis;
 import java.io.Serializable;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
@@ -16,7 +16,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class ColorAxisMarker implements Serializable, DrosteDeflater {
+public class ColorAxisMarker implements Serializable, Exportable {
 
 
     public ColorAxisMarker() {

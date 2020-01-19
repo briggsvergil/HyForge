@@ -13,7 +13,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class NoData implements Serializable, DrosteDeflater {
+public class NoData implements Serializable, Exportable {
 
 
     public NoData() {

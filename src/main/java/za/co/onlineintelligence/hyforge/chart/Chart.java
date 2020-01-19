@@ -10,7 +10,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 /**
  * @author Sean
  */
-public class Chart implements Serializable, DrosteDeflater {
+public class Chart implements Serializable, Exportable {
     public Chart() {
     }
 

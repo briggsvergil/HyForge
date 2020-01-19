@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * @author Sean Briggs.
  */
-public class HighchartsSVGAttributes implements Serializable, DrosteDeflater {
+public class HighchartsSVGAttributes implements Serializable, Exportable {
 
     public HighchartsSVGAttributes() {
     }

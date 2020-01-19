@@ -3,7 +3,7 @@ package za.co.onlineintelligence.hyforge.drilldown;
 import java.io.Serializable;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsAlignObject;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
@@ -14,7 +14,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class DrillUpButton implements Serializable, DrosteDeflater {
+public class DrillUpButton implements Serializable, Exportable {
 
 
     public DrillUpButton() {

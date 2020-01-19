@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
-public class HighchartsAnimationOptionsObject implements Serializable, DrosteDeflater {
+public class HighchartsAnimationOptionsObject implements Serializable, Exportable {
 
     public HighchartsAnimationOptionsObject() {
 

@@ -1,7 +1,7 @@
 package za.co.onlineintelligence.hyforge.plotoptions;
 
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -13,7 +13,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  * States HighchartsAPI Class
  * @author Sean Briggs
  */
-public class States implements Serializable, DrosteDeflater {
+public class States implements Serializable, Exportable {
 
 
     public States() {

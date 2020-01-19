@@ -59,30 +59,6 @@ public interface DrosteDeflater {
     }
 
     /**
-     * Instance method to retrieve an array of field names where the fields are set, i.e. not null.
-     *
-     * @return
-     */
-    default List<String> getSetFields() {
-        try {
-            List<Field> fields = new ArrayList<>();
-            fields = getAllFields(fields, this.getClass());
-            return fields.stream().filter(field -> {
-                field.setAccessible(true);
-                try {
-                    return field.get(this) != null;
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-                return false;
-            }).map(Field::getName).collect(Collectors.toList());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return new ArrayList<>();
-    }
-
-    /**
      * The no-parameter overridden method of deflateFields(ignoreName, nameDelegate, tabLevel)
      * defaulting the parameters to true, empty string, and 1 respectively.
      *

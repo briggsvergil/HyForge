@@ -16,7 +16,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Crosshair implements Serializable, DrosteDeflater {
+public class Crosshair implements Serializable, Exportable {
 
     public Crosshair() {
     }

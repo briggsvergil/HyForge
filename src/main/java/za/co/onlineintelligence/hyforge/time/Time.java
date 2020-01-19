@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
@@ -14,7 +14,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Time implements Serializable, DrosteDeflater {
+public class Time implements Serializable, Exportable {
 
 
     public Time() {

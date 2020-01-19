@@ -10,7 +10,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 /**
  * @author Sean
  */
-public class HighchartsAlignObject implements Serializable, DrosteDeflater {
+public class HighchartsAlignObject implements Serializable, Exportable {
 
     public HighchartsAlignObject() {
     }

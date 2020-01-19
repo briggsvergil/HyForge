@@ -3,7 +3,7 @@ package za.co.onlineintelligence.hyforge.legend;
 import java.io.Serializable;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
@@ -14,7 +14,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class LegendRangeOptions implements Serializable, DrosteDeflater {
+public class LegendRangeOptions implements Serializable, Exportable {
 
 
     public LegendRangeOptions() {

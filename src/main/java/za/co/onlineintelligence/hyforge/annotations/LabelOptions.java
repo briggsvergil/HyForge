@@ -15,7 +15,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class LabelOptions implements Serializable, DrosteDeflater {
+public class LabelOptions implements Serializable, Exportable {
 
 
     public LabelOptions() {

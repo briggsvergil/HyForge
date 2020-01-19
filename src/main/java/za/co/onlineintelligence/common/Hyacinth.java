@@ -214,7 +214,8 @@ public class Hyacinth {
                         .setX(100)
                         .setY(70)
                         .setFloating(true)
-                        .setBorderWidth(1))
+                        .setBorderWidth(1)
+                .setItemStyle(new HighchartsCSS().setWidth(150)))
                 .setPlotOptions(new PlotOptions()
                         .setScatter(new HighchartsSeriesPlotOptions()
                                 .setMarker(new Marker()
@@ -251,11 +252,11 @@ public class Hyacinth {
 
     public static void main(String[] args) {
         Hyacinth instance = new Hyacinth();
-//        instance.createBasicBarChart("Basic Bar Chart Using Highcharts");
+        instance.createBasicBarChart("Basic Bar Chart Using Highcharts");
 //        instance.createScatterPlot("Height Versus Weight of 507 Individuals by Gender");
-        instance.createComboScatterAndLine();
-        String s = instance.forge.hydrate();
-//        JsonElement vueFormGenerator = DrosteDeflater.deIonize(HighchartsSeriesPlotOptions.class, "");
+//        instance.createComboScatterAndLine();
+        String s = instance.forge.hydrate(false);
+//        JsonElement vueFormGenerator = Exportable.deIonize(HighchartsSeriesPlotOptions.class, "");
 //        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 //        String gsonS = gson.toJson(vueFormGenerator);
 //        System.out.println("Vue Forms Generator: " + gsonS);

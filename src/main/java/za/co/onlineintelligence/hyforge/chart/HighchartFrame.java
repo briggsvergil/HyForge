@@ -5,13 +5,14 @@ import java.lang.reflect.Field;
 import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.common.*;
+import za.co.onlineintelligence.hyforge.common.annotations.DelegateDeflate;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
 /**
  * @author Sean Briggs
  */
-public class HighchartFrame implements Serializable, DrosteDeflater {
+public class HighchartFrame implements Serializable, Exportable {
 
     public HighchartFrame() {
     }
@@ -38,6 +39,7 @@ public class HighchartFrame implements Serializable, DrosteDeflater {
      *
      * @since 5.0.12
      */
+    @DelegateDeflate
     private BooleanStringWrapper visible;
 
     /*
@@ -100,16 +102,27 @@ public class HighchartFrame implements Serializable, DrosteDeflater {
      * If not null check visible.value -> if null return isBool if not return the quoted value
      * If not visible return to super.
      *
-     * @param field    A tuple of The field currently being serialized and the owner class,
-     *                 in most cases the owner will be simply (this), otherwise it will be the superclass(es)
+     * @param field A tuple of The field currently being serialized and the owner class,
+     *              in most cases the owner will be simply (this), otherwise it will be the superclass(es)
      * @return
      */
     @Override
+    public Object getDelegatedValue(Field field) {
+        if (field.getName().equalsIgnoreCase("visible")) {
+            return this.visible != null ?
+                    this.visible.getVal() == null ?
+                            this.visible.isBool()
+                            : this.visible.getVal()
+                    : null;
+        }
+        return null;
+    }
+    /*@Override
     public String deflateField(Field field, int tabLevel) {
-        String s = DrosteDeflater.super.delegateFieldDeflation(field, "visible", visible == null,
+        String s = Exportable.super.delegateFieldDeflation(field, "visible", visible == null,
                 () -> this.visible.getVal() == null ?
                         this.visible.isBool() + ""
                         : "'" + this.visible.getVal() + "'");
-        return s.equals(RTS) ? DrosteDeflater.super.deflateField(field, tabLevel) : s;
-    }
+        return s.equals(RTS) ? Exportable.super.deflateField(field, tabLevel) : s;
+    }*/
 }

@@ -11,7 +11,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 /**
  * @author Sean
  */
-public class HighchartsLabel implements Serializable, DrosteDeflater {
+public class HighchartsLabel implements Serializable, Exportable {
 
     public HighchartsLabel() {
     }

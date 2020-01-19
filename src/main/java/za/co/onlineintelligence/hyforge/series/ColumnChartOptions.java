@@ -1,6 +1,6 @@
 package za.co.onlineintelligence.hyforge.series;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.plotoptions.HighchartsSeriesPlotOptions;
@@ -15,7 +15,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class ColumnChartOptions extends HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater {
+public class ColumnChartOptions extends HighchartsSeriesPlotOptions implements Serializable, Exportable {
 
 
     public ColumnChartOptions() {

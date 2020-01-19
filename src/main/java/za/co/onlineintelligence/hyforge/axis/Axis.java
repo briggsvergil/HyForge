@@ -18,7 +18,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 /**
  * @author Sean Briggs
  */
-public class Axis implements Serializable, DrosteDeflater {
+public class Axis implements Serializable, Exportable {
 
     public Axis() {
     }

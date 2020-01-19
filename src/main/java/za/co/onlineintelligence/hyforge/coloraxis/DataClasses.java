@@ -2,7 +2,7 @@ package za.co.onlineintelligence.hyforge.coloraxis;
 
 import java.io.Serializable;
 import java.util.Objects;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.series.HighchartsPoint;
@@ -14,7 +14,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  * DataClasses  HighchartsAPI Class
  * @author Sean Briggs
  */
-public class DataClasses implements Serializable, DrosteDeflater {
+public class DataClasses implements Serializable, Exportable {
 
 
     public DataClasses() {

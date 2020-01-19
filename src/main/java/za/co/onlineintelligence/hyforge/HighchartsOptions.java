@@ -2,7 +2,7 @@ package za.co.onlineintelligence.hyforge;
 
 import za.co.onlineintelligence.hyforge.axis.Axis;
 import za.co.onlineintelligence.hyforge.coloraxis.ColorAxis;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.drilldown.Drilldown;
 import za.co.onlineintelligence.hyforge.labels.Labels;
 import za.co.onlineintelligence.hyforge.nodata.NoData;
@@ -32,7 +32,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class HighchartsOptions extends ChartOptions<HighchartsOptions> implements Serializable, DrosteDeflater {
+public class HighchartsOptions extends ChartOptions<HighchartsOptions> implements Serializable, Exportable {
 
     public HighchartsOptions() {
     }

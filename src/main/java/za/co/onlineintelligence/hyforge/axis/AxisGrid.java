@@ -7,7 +7,7 @@ package za.co.onlineintelligence.hyforge.axis;
 import java.io.Serializable;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
@@ -17,7 +17,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class AxisGrid implements Serializable, DrosteDeflater {
+public class AxisGrid implements Serializable, Exportable {
 
     public AxisGrid() {
     }

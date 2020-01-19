@@ -13,7 +13,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class AxisLabels implements Serializable, DrosteDeflater {
+public class AxisLabels implements Serializable, Exportable {
 
     public AxisLabels() {
     }

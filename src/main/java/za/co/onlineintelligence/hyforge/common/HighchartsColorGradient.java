@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * @author Sean
  */
-public class HighchartsColorGradient implements Serializable, HighchartsColor, DrosteDeflater {
+public class HighchartsColorGradient implements Serializable, HighchartsColor, Exportable {
 
     public HighchartsColorGradient() {
     }

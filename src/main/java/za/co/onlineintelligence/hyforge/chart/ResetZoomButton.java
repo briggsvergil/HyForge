@@ -12,7 +12,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 /**
  * @author Sean Briggs
  */
-public class ResetZoomButton implements Serializable, DrosteDeflater {
+public class ResetZoomButton implements Serializable, Exportable {
 
     public ResetZoomButton() {
     }

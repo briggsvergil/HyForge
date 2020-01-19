@@ -6,7 +6,7 @@ import java.util.Objects;
 
 import za.co.onlineintelligence.hyforge.HighchartsOptions;
 import za.co.onlineintelligence.hyforge.accessibility.Accessibility;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsExportingMimeTypeValue;
 
@@ -18,7 +18,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Exporting implements Serializable, DrosteDeflater {
+public class Exporting implements Serializable, Exportable {
 
 
     public Exporting() {

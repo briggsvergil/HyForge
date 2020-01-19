@@ -1,6 +1,6 @@
 package za.co.onlineintelligence.hyforge.series;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsSize;
 import za.co.onlineintelligence.hyforge.plotoptions.HighchartsSeriesPlotOptions;
@@ -14,7 +14,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  * PieChartOptions HighchartsAPI Class
  * @author Sean Briggs
  */
-public class PieChartOptions extends HighchartsSeriesPlotOptions implements Serializable, DrosteDeflater {
+public class PieChartOptions extends HighchartsSeriesPlotOptions implements Serializable, Exportable {
 
 
     public PieChartOptions() {

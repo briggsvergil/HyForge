@@ -2,14 +2,14 @@ package za.co.onlineintelligence.hyforge.mapnavigation;
 
 import java.io.Serializable;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 
 
 /**
  * MapNavigation  Highmaps Only Class
  * @author Sean Briggs
  */
-public class MapNavigation implements Serializable, DrosteDeflater {
+public class MapNavigation implements Serializable, Exportable {
 
     /**
      * TODO: On Highmaps Implementation

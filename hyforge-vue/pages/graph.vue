@@ -1,17 +1,18 @@
 <template>
   <section>
-    <highcharts :options="chartOptions"/>
-    <div>chart = {{ $store.state.chart }}</div>
+    <h1>Chart From API</h1>
+    <HyCharts
+      :height="'300px'"
+    />
+  <!-- <highcharts :options=data /> -->
   </section>
 </template>
 
 <script>
-import Vue from 'vue'
-import HighchartsVue from 'highcharts-vue'
-Vue.use(HighchartsVue)
+import HyCharts from '~/components/HyCharts.vue'
 export default {
-  data () {
-    return this.$store.state.chart
+  components: {
+    HyCharts
   }
 }
 </script>

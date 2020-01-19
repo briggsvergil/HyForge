@@ -3,7 +3,7 @@ package za.co.onlineintelligence.hyforge.common;
 /**
  * Wrapper for JS function string that can be used as a callback on events.
  *
- * This class deliberately does not implement the DrosteDeflater interface as the functions should not be serialized as
+ * This class deliberately does not implement the Exportable interface as the functions should not be serialized as
  * string objects, but injected directly into the JSON.
  * @author Sean
  */

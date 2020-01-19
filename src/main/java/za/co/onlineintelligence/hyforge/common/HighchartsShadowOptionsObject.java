@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * @author Sean
  */
-public class HighchartsShadowOptionsObject implements Serializable, DrosteDeflater {
+public class HighchartsShadowOptionsObject implements Serializable, Exportable {
 
     public HighchartsShadowOptionsObject() {
     }

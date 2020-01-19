@@ -16,7 +16,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class CrosshairLabel implements Serializable, DrosteDeflater {
+public class CrosshairLabel implements Serializable, Exportable {
 
     public CrosshairLabel() {
     }

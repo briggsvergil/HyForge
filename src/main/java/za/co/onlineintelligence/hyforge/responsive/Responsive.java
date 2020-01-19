@@ -3,7 +3,7 @@ package za.co.onlineintelligence.hyforge.responsive;
 import java.io.Serializable;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
@@ -13,7 +13,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Responsive implements Serializable, DrosteDeflater {
+public class Responsive implements Serializable, Exportable {
 
 
     public Responsive() {

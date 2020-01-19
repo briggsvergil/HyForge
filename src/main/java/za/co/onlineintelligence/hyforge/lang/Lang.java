@@ -5,7 +5,7 @@ import java.util.Objects;
 
 import com.google.gson.JsonElement;
 import za.co.onlineintelligence.hyforge.accessibility.Accessibility;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.DrosteSeperation;
 import za.co.onlineintelligence.hyforge.stocktools.StockTools;
 
@@ -17,7 +17,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
+public class Lang implements Serializable, Exportable, DrosteSeperation {
 
 
     public Lang() {
@@ -650,9 +650,9 @@ public class Lang implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
 
-    @Override
-    public String hydrateClass() {
-        return this.deflateFields();
-    }
+//    @Override
+//    public String hydrateClass() {
+//        return this.deflateFields();
+//    }
 
 }

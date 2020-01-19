@@ -17,7 +17,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class DataLabel implements Serializable, DrosteDeflater {
+public class DataLabel implements Serializable, Exportable {
 
     public DataLabel() {
     }

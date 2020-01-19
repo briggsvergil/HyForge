@@ -3,7 +3,7 @@ package za.co.onlineintelligence.hyforge.annotations;
 import java.io.Serializable;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsColor;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 
@@ -15,7 +15,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class ShapeOptions implements Serializable, DrosteDeflater {
+public class ShapeOptions implements Serializable, Exportable {
 
 
     public ShapeOptions() {

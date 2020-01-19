@@ -3,7 +3,7 @@ package za.co.onlineintelligence.hyforge.exporting;
 import java.io.Serializable;
 import java.util.Objects;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.common.HighchartsSymbol;
@@ -17,7 +17,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class ContextButton extends ButtonOptions implements Serializable, DrosteDeflater {
+public class ContextButton extends ButtonOptions implements Serializable, Exportable {
 
 
     public ContextButton() {

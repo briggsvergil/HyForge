@@ -2,7 +2,7 @@ package za.co.onlineintelligence.hyforge.plotoptions;
 
 //package za.co.onlineintelligence.hyforge;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 
 import java.io.Serializable;
 
@@ -13,7 +13,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class PlotOptions implements Serializable, DrosteDeflater {
+public class PlotOptions implements Serializable, Exportable {
 
     public PlotOptions() {
     }

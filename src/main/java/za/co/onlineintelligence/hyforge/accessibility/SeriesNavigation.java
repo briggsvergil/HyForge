@@ -1,7 +1,7 @@
 package za.co.onlineintelligence.hyforge.accessibility;
 //package za.co.onlineintelligence.hyforge;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -14,7 +14,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class SeriesNavigation implements Serializable, DrosteDeflater {
+public class SeriesNavigation implements Serializable, Exportable {
 
 
     public SeriesNavigation() {

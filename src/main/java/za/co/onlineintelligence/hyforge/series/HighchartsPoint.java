@@ -1,15 +1,14 @@
 package za.co.onlineintelligence.hyforge.series;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
-import za.co.onlineintelligence.hyforge.common.HighchartsColor;
-import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
-import za.co.onlineintelligence.hyforge.common.HighchartsDataGroupingInfo;
+import za.co.onlineintelligence.hyforge.common.*;
 
 import java.io.Serializable;
 import java.util.List;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
+import static za.co.onlineintelligence.hyforge.common.CommonUtils.getSetFields;
 
 /**
  * This class stands as a wrapper for all the information that can be set in the `data` structure for a series.
@@ -33,7 +32,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class HighchartsPoint implements Serializable, DrosteDeflater {
+public class HighchartsPoint implements Serializable, Exportable {
 
     private String category;
     private HighchartsColor color;
@@ -194,7 +193,7 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
         return this;
     }
 
-    @Override
+    /*@Override
     public String deflateFields(boolean ignoreName, String nameDelegate, int tabLevel) {
         List<String> setFields = this.getSetFields();
         int len = setFields.size();
@@ -223,10 +222,81 @@ public class HighchartsPoint implements Serializable, DrosteDeflater {
                 }
             } else {
                 //else delegate back to superclass
-                DrosteDeflater.super.deflateFields(ignoreName, nameDelegate, tabLevel);
+                Exportable.super.deflateFields(ignoreName, nameDelegate, tabLevel);
             }
         } else {
             return null;
+        }
+        return null;
+    }*/
+
+    /**
+     * Partial State pattern
+     * @return
+     */
+    public HighchartsPointState getState() {
+        List<String> setFields = getSetFields(this);
+        int len = setFields.size();
+
+        if (len > 0) {
+            if (len == 1) {
+                if (setFields.contains("y")) {
+                    return HighchartsPointState.Y;
+                } else {
+                    return HighchartsPointState.EMPTY;
+                }
+            } else if (len == 2) {
+                if (setFields.contains("y"))
+                    if (setFields.contains("x")) {
+                        return HighchartsPointState.X_Y;
+                    } else if (setFields.contains("name")) {
+                        return HighchartsPointState.NAMED_Y;
+                    }
+            } else if (len == 3) {
+                if (setFields.contains("low") && setFields.contains("high")) {
+                    if (setFields.contains("x")) {
+                        return HighchartsPointState.X_LOW_HIGH;
+                    } else if (setFields.contains("name")) {
+                        return HighchartsPointState.NAME_LOW_HIGH;
+                    }
+                }
+            } else {
+                return HighchartsPointState.DEFAULT;
+            }
+        }
+
+        return HighchartsPointState.EMPTY;
+    }
+
+    public Object getValue(HighchartsPointState state) {
+        switch (state) {
+            case Y: return this.y;
+            case NAMED_Y:
+                JsonArray arr = new JsonArray();
+                arr.add(this.name);
+                arr.add((Number) this.y);
+                return arr;
+            case X_Y:
+                arr = new JsonArray();
+                arr.add((Number) this.x);
+                arr.add((Number) this.y);
+                return arr;
+            case X_LOW_HIGH:
+                arr = new JsonArray();
+                arr.add((Number) this.x);
+                arr.add(this.low);
+                arr.add(this.high);
+                return arr;
+            case NAME_LOW_HIGH:
+                arr = new JsonArray();
+                arr.add(this.name);
+                arr.add(this.low);
+                arr.add(this.high);
+                return arr;
+            case DEFAULT:
+                return this.serializeClass();
+            case EMPTY:
+                return null;
         }
         return null;
     }

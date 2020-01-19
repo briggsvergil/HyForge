@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 /**
  * @author Sean Briggs.
  */
-public class HighchartsCustomSymbol implements HighchartsSymbol, DrosteSeperation, DrosteDeflater {
+public class HighchartsCustomSymbol implements HighchartsSymbol, DrosteSeperation, Exportable {
 
     public HighchartsCustomSymbol() {
     }
@@ -62,10 +62,10 @@ public class HighchartsCustomSymbol implements HighchartsSymbol, DrosteSeperatio
     }
 
 
-    @Override
-    public String hydrateClass() {
-        return "Highcharts.SVGRenderer.prototype.symbols." + name + " = " + function;
-    }
+//    @Override
+//    public String hydrateClass() {
+//        return "Highcharts.SVGRenderer.prototype.symbols." + name + " = " + function;
+//    }
 
     @Override
     public String deflateClass() {

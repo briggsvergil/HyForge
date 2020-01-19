@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import com.google.gson.JsonElement;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.DrosteSeperation;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
@@ -16,7 +16,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
+public class Global implements Serializable, Exportable, DrosteSeperation {
 
 
     public Global() {
@@ -172,13 +172,13 @@ public class Global implements Serializable, DrosteDeflater, DrosteSeperation {
     }
 
 
-    @Override
-    public String hydrateClass() {
-        return this.deflateFields();
-    }
-
-    @Override
-    public String deflateClass() {
-        return null;
-    }
+//    @Override
+//    public String hydrateClass() {
+//        return this.deflateFields();
+//    }
+//
+//    @Override
+//    public String deflateClass() {
+//        return null;
+//    }
 }

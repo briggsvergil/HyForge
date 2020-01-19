@@ -1,12 +1,16 @@
 package za.co.onlineintelligence.hyforge;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import za.co.onlineintelligence.hyforge.accessibility.Accessibility;
 import za.co.onlineintelligence.hyforge.annotations.Annotations;
 import za.co.onlineintelligence.hyforge.axis.Axis;
 import za.co.onlineintelligence.hyforge.boost.Boost;
 import za.co.onlineintelligence.hyforge.caption.Caption;
 import za.co.onlineintelligence.hyforge.chart.Chart;
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsColorString;
 import za.co.onlineintelligence.hyforge.credits.Credits;
 import za.co.onlineintelligence.hyforge.data.Data;
@@ -42,7 +46,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  * @author Sean Briggs
  */
 @SuppressWarnings("unchecked")
-public abstract class ChartOptions<T extends ChartOptions> implements DrosteDeflater {
+public abstract class ChartOptions<T extends ChartOptions> implements Exportable {
 /**
  * NOTE: Reference Highcharts 8.0.0 tree.json:
  *
@@ -558,11 +562,13 @@ public abstract class ChartOptions<T extends ChartOptions> implements DrosteDefl
      *
      * @return JSON String
      */
-    public String hydrate() {
+    public String hydrate(boolean prettyPrint) {
         String JSON;
         try {
-            JSON = this.deflateFields();
-            JSON = JSON.replace("\r", "").replace("\n", "");
+            JsonElement el = this.serializeClass();
+            Gson gson;
+            gson = prettyPrint? new GsonBuilder().setPrettyPrinting().create() : new Gson();
+            JSON = gson.toJson(el);
         } catch (Exception e) {
             JSON = "{ error: \"" + e.getMessage() + "\", stack: \"" + Arrays.toString(e.getStackTrace()) + "\" }";
         }

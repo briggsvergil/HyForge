@@ -17,7 +17,7 @@ import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
  *
  * @author Sean Briggs
  */
-public class PlotBand implements Serializable, DrosteDeflater {
+public class PlotBand implements Serializable, Exportable {
 
     public PlotBand() {
     }

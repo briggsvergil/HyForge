@@ -1,5 +1,6 @@
 package za.co.onlineintelligence.hyforge.common;
 
+import za.co.onlineintelligence.hyforge.common.annotations.DelegateDeflate;
 import za.co.onlineintelligence.hyforge.common.enums.HighchartsCursorValue;
 
 import java.io.Serializable;
@@ -8,7 +9,7 @@ import java.lang.reflect.Field;
 /**
  * @author Sean
  */
-public class HighchartsCSS implements Serializable, DrosteDeflater {
+public class HighchartsCSS implements Serializable, Exportable {
 
     public HighchartsCSS() {
     }
@@ -22,6 +23,7 @@ public class HighchartsCSS implements Serializable, DrosteDeflater {
     private String fontFamily;
     private String fontSize;
     private String fontWeight;
+    @DelegateDeflate
     private Integer height;
     private Integer lineWidth;
     private Integer opacity;
@@ -35,6 +37,7 @@ public class HighchartsCSS implements Serializable, DrosteDeflater {
     private String top;
     private String transition;
     private String whiteSpace;
+    @DelegateDeflate
     private Integer width;
 
     public String getBackground() {
@@ -250,9 +253,20 @@ public class HighchartsCSS implements Serializable, DrosteDeflater {
     }
 
     @Override
+    public Object getDelegatedValue(Field field) {
+        String fieldName = field.getName();
+        if (fieldName.equalsIgnoreCase("width")) {
+            return width == null ? null : width + "px";
+        } else if (fieldName.equalsIgnoreCase("height")) {
+            return height == null ? null : height + "px";
+        }
+        return null;
+    }
+
+    /*    @Override
     public String deflateField(Field field, int tabLevel) {
         String s = delegateFieldDeflation(field, "width", width==null,
-                () -> DrosteDeflater.getTabString(tabLevel) + "width:'" + width + "px'");
-        return s!=null && s.equals(RTS)? DrosteDeflater.super.deflateField(field, tabLevel) : s;
-    }
+                () -> Exportable.getTabString(tabLevel) + "width:'" + width + "px'");
+        return s!=null && s.equals(RTS)? Exportable.super.deflateField(field, tabLevel) : s;
+    }*/
 }

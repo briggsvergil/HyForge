@@ -1,11 +1,11 @@
 package za.co.onlineintelligence.hyforge.exporting;
 
-import za.co.onlineintelligence.hyforge.common.DrosteDeflater;
+import za.co.onlineintelligence.hyforge.common.Exportable;
 import za.co.onlineintelligence.hyforge.common.HighchartsCallbackFunction;
 
 import static za.co.onlineintelligence.hyforge.common.CommonUtils.getInstanceOf;
 
-public class HighchartsExportingMenuObject implements DrosteDeflater {
+public class HighchartsExportingMenuObject implements Exportable {
 
     public HighchartsExportingMenuObject() {
     }
